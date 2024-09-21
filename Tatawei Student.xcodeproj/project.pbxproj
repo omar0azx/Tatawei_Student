@@ -6,30 +6,44 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4E6AD31A2C9E3C920090CC9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E6AD3122C9E3C920090CC9D /* LaunchScreen.storyboard */; };
+		4E6AD31B2C9E3C920090CC9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E6AD3142C9E3C920090CC9D /* Main.storyboard */; };
+		4E6AD31C2C9E3C920090CC9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E6AD3172C9E3C920090CC9D /* Assets.xcassets */; };
+		4E6AD31E2C9E3C920090CC9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AD30B2C9E3C920090CC9D /* AppDelegate.swift */; };
+		4E6AD31F2C9E3C920090CC9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AD30C2C9E3C920090CC9D /* SceneDelegate.swift */; };
+		4E6AD3262C9E3CC40090CC9D /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AD3242C9E3CC40090CC9D /* Storyboarded.swift */; };
+		4E6AD3272C9E3CC40090CC9D /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AD3232C9E3CC40090CC9D /* MainCoordinator.swift */; };
+		4E6AD3282C9E3CC40090CC9D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AD3212C9E3CC40090CC9D /* Coordinator.swift */; };
+		4E6AD32D2C9E3CF30090CC9D /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AD32A2C9E3CF30090CC9D /* ContainerVC.swift */; };
+		4E6AD32F2C9E3D1D0090CC9D /* NavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AD32E2C9E3D1A0090CC9D /* NavigationVC.swift */; };
+		4E6AD3322C9E3E690090CC9D /* MainExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AD3302C9E3E690090CC9D /* MainExtensions.swift */; };
+		4E6AD3362C9E6C6C0090CC9D /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AD3352C9E6C6C0090CC9D /* HomeVC.swift */; };
+		4E6AD3382C9E6C800090CC9D /* ExploreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AD3372C9E6C800090CC9D /* ExploreVC.swift */; };
+		4E6AD33A2C9E6CDE0090CC9D /* EducationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AD3392C9E6CDE0090CC9D /* EducationVC.swift */; };
+		4E6AD33C2C9E6CFC0090CC9D /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AD33B2C9E6CFC0090CC9D /* ProfileVC.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		4E14CFC02C9E2FE400103405 /* Tatawei Student.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tatawei Student.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E6AD26D2C9E34DB0090CC9D /* omar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = omar.xcodeproj; sourceTree = "<group>"; };
+		4E6AD30B2C9E3C920090CC9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4E6AD30C2C9E3C920090CC9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4E6AD3112C9E3C920090CC9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4E6AD3132C9E3C920090CC9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4E6AD3172C9E3C920090CC9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4E6AD3182C9E3C920090CC9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E6AD3212C9E3CC40090CC9D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		4E6AD3232C9E3CC40090CC9D /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		4E6AD3242C9E3CC40090CC9D /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		4E6AD32A2C9E3CF30090CC9D /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
+		4E6AD32E2C9E3D1A0090CC9D /* NavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationVC.swift; sourceTree = "<group>"; };
+		4E6AD3302C9E3E690090CC9D /* MainExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainExtensions.swift; sourceTree = "<group>"; };
+		4E6AD3352C9E6C6C0090CC9D /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		4E6AD3372C9E6C800090CC9D /* ExploreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreVC.swift; sourceTree = "<group>"; };
+		4E6AD3392C9E6CDE0090CC9D /* EducationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationVC.swift; sourceTree = "<group>"; };
+		4E6AD33B2C9E6CFC0090CC9D /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		4E14CFD22C9E2FE600103405 /* Exceptions for "Tatawei Student" folder in "Tatawei Student" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 4E14CFBF2C9E2FE400103405 /* Tatawei Student */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		4E14CFC22C9E2FE400103405 /* Tatawei Student */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				4E14CFD22C9E2FE600103405 /* Exceptions for "Tatawei Student" folder in "Tatawei Student" target */,
-			);
-			path = "Tatawei Student";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4E14CFBD2C9E2FE400103405 /* Frameworks */ = {
@@ -45,7 +59,7 @@
 		4E14CFB72C9E2FE400103405 = {
 			isa = PBXGroup;
 			children = (
-				4E14CFC22C9E2FE400103405 /* Tatawei Student */,
+				4E6AD3192C9E3C920090CC9D /* Tatawei Student */,
 				4E14CFC12C9E2FE400103405 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +70,90 @@
 				4E14CFC02C9E2FE400103405 /* Tatawei Student.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4E6AD2742C9E34DB0090CC9D /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4E6AD30D2C9E3C920090CC9D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4E6AD30B2C9E3C920090CC9D /* AppDelegate.swift */,
+				4E6AD30C2C9E3C920090CC9D /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4E6AD30F2C9E3C920090CC9D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4E6AD32A2C9E3CF30090CC9D /* ContainerVC.swift */,
+				4E6AD32E2C9E3D1A0090CC9D /* NavigationVC.swift */,
+				4E6AD3352C9E6C6C0090CC9D /* HomeVC.swift */,
+				4E6AD3372C9E6C800090CC9D /* ExploreVC.swift */,
+				4E6AD3392C9E6CDE0090CC9D /* EducationVC.swift */,
+				4E6AD33B2C9E6CFC0090CC9D /* ProfileVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4E6AD3102C9E3C920090CC9D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4E6AD3152C9E3C920090CC9D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4E6AD3122C9E3C920090CC9D /* LaunchScreen.storyboard */,
+				4E6AD3142C9E3C920090CC9D /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4E6AD3162C9E3C920090CC9D /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				4E6AD3102C9E3C920090CC9D /* Model */,
+				4E6AD3152C9E3C920090CC9D /* View */,
+				4E6AD30F2C9E3C920090CC9D /* Controller */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		4E6AD3192C9E3C920090CC9D /* Tatawei Student */ = {
+			isa = PBXGroup;
+			children = (
+				4E6AD30D2C9E3C920090CC9D /* App */,
+				4E6AD3162C9E3C920090CC9D /* MVC */,
+				4E6AD3252C9E3CC40090CC9D /* Coordinator */,
+				4E6AD3312C9E3E690090CC9D /* Extantions */,
+				4E6AD3172C9E3C920090CC9D /* Assets.xcassets */,
+				4E6AD3182C9E3C920090CC9D /* Info.plist */,
+			);
+			path = "Tatawei Student";
+			sourceTree = "<group>";
+		};
+		4E6AD3252C9E3CC40090CC9D /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				4E6AD3212C9E3CC40090CC9D /* Coordinator.swift */,
+				4E6AD3242C9E3CC40090CC9D /* Storyboarded.swift */,
+				4E6AD3232C9E3CC40090CC9D /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		4E6AD3312C9E3E690090CC9D /* Extantions */ = {
+			isa = PBXGroup;
+			children = (
+				4E6AD3302C9E3E690090CC9D /* MainExtensions.swift */,
+			);
+			path = Extantions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,9 +170,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				4E14CFC22C9E2FE400103405 /* Tatawei Student */,
 			);
 			name = "Tatawei Student";
 			packageProductDependencies = (
@@ -110,6 +205,12 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4E14CFC12C9E2FE400103405 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4E6AD2742C9E34DB0090CC9D /* Products */;
+					ProjectRef = 4E6AD26D2C9E34DB0090CC9D /* omar.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				4E14CFBF2C9E2FE400103405 /* Tatawei Student */,
@@ -122,6 +223,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E6AD31A2C9E3C920090CC9D /* LaunchScreen.storyboard in Resources */,
+				4E6AD31B2C9E3C920090CC9D /* Main.storyboard in Resources */,
+				4E6AD31C2C9E3C920090CC9D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,10 +236,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E6AD33C2C9E6CFC0090CC9D /* ProfileVC.swift in Sources */,
+				4E6AD31E2C9E3C920090CC9D /* AppDelegate.swift in Sources */,
+				4E6AD31F2C9E3C920090CC9D /* SceneDelegate.swift in Sources */,
+				4E6AD3382C9E6C800090CC9D /* ExploreVC.swift in Sources */,
+				4E6AD33A2C9E6CDE0090CC9D /* EducationVC.swift in Sources */,
+				4E6AD3262C9E3CC40090CC9D /* Storyboarded.swift in Sources */,
+				4E6AD3362C9E6C6C0090CC9D /* HomeVC.swift in Sources */,
+				4E6AD32F2C9E3D1D0090CC9D /* NavigationVC.swift in Sources */,
+				4E6AD3272C9E3CC40090CC9D /* MainCoordinator.swift in Sources */,
+				4E6AD3282C9E3CC40090CC9D /* Coordinator.swift in Sources */,
+				4E6AD3322C9E3E690090CC9D /* MainExtensions.swift in Sources */,
+				4E6AD32D2C9E3CF30090CC9D /* ContainerVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4E6AD3122C9E3C920090CC9D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E6AD3112C9E3C920090CC9D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4E6AD3142C9E3C920090CC9D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E6AD3132C9E3C920090CC9D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4E14CFD42C9E2FE600103405 /* Debug */ = {
