@@ -7,8 +7,6 @@
 
 import UIKit
 
-import UIKit
-
 class NavigationVC: ContainerVC, Storyboarded {
     
     var coordinator: MainCoordinator?
@@ -137,7 +135,6 @@ class NavigationVC: ContainerVC, Storyboarded {
     }
     
     @IBAction func addNewInvite(_ sender: UIButton) {
-        
     }
     
 }
