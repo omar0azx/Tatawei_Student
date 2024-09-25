@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E03DD612C9FB3020029D915 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E03DD602C9FB3020029D915 /* GoogleService-Info.plist */; };
+		4E5C2C3B2C9FB613005C9342 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 4E5C2C3A2C9FB613005C9342 /* FirebaseAppCheck */; };
+		4E5C2C3D2C9FB614005C9342 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4E5C2C3C2C9FB614005C9342 /* FirebaseAuth */; };
+		4E5C2C3F2C9FB614005C9342 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 4E5C2C3E2C9FB614005C9342 /* FirebaseDatabase */; };
+		4E5C2C412C9FB614005C9342 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4E5C2C402C9FB614005C9342 /* FirebaseFirestore */; };
 		4E6AD31A2C9E3C920090CC9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E6AD3122C9E3C920090CC9D /* LaunchScreen.storyboard */; };
 		4E6AD31B2C9E3C920090CC9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E6AD3142C9E3C920090CC9D /* Main.storyboard */; };
 		4E6AD31C2C9E3C920090CC9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E6AD3172C9E3C920090CC9D /* Assets.xcassets */; };
@@ -25,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E03DD602C9FB3020029D915 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4E14CFC02C9E2FE400103405 /* Tatawei Student.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tatawei Student.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E6AD26D2C9E34DB0090CC9D /* omar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = omar.xcodeproj; sourceTree = "<group>"; };
 		4E6AD30B2C9E3C920090CC9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +56,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E5C2C3F2C9FB614005C9342 /* FirebaseDatabase in Frameworks */,
+				4E5C2C412C9FB614005C9342 /* FirebaseFirestore in Frameworks */,
+				4E5C2C3B2C9FB613005C9342 /* FirebaseAppCheck in Frameworks */,
+				4E5C2C3D2C9FB614005C9342 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				4E6AD3192C9E3C920090CC9D /* Tatawei Student */,
+				4E5C2C332C9FB526005C9342 /* Frameworks */,
 				4E14CFC12C9E2FE400103405 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +81,13 @@
 				4E14CFC02C9E2FE400103405 /* Tatawei Student.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4E5C2C332C9FB526005C9342 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		4E6AD2742C9E34DB0090CC9D /* Products */ = {
@@ -134,6 +152,7 @@
 				4E6AD3312C9E3E690090CC9D /* Extantions */,
 				4E6AD3172C9E3C920090CC9D /* Assets.xcassets */,
 				4E6AD3182C9E3C920090CC9D /* Info.plist */,
+				4E03DD602C9FB3020029D915 /* GoogleService-Info.plist */,
 			);
 			path = "Tatawei Student";
 			sourceTree = "<group>";
@@ -173,6 +192,10 @@
 			);
 			name = "Tatawei Student";
 			packageProductDependencies = (
+				4E5C2C3A2C9FB613005C9342 /* FirebaseAppCheck */,
+				4E5C2C3C2C9FB614005C9342 /* FirebaseAuth */,
+				4E5C2C3E2C9FB614005C9342 /* FirebaseDatabase */,
+				4E5C2C402C9FB614005C9342 /* FirebaseFirestore */,
 			);
 			productName = "Tatawei Student";
 			productReference = 4E14CFC02C9E2FE400103405 /* Tatawei Student.app */;
@@ -202,6 +225,9 @@
 			);
 			mainGroup = 4E14CFB72C9E2FE400103405;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				4E03DD622C9FB3820029D915 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4E14CFC12C9E2FE400103405 /* Products */;
 			projectDirPath = "";
@@ -224,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E6AD31A2C9E3C920090CC9D /* LaunchScreen.storyboard in Resources */,
+				4E03DD612C9FB3020029D915 /* GoogleService-Info.plist in Resources */,
 				4E6AD31B2C9E3C920090CC9D /* Main.storyboard in Resources */,
 				4E6AD31C2C9E3C920090CC9D /* Assets.xcassets in Resources */,
 			);
@@ -470,6 +497,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4E03DD622C9FB3820029D915 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4E5C2C3A2C9FB613005C9342 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4E03DD622C9FB3820029D915 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		4E5C2C3C2C9FB614005C9342 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4E03DD622C9FB3820029D915 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		4E5C2C3E2C9FB614005C9342 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4E03DD622C9FB3820029D915 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		4E5C2C402C9FB614005C9342 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4E03DD622C9FB3820029D915 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4E14CFB82C9E2FE400103405 /* Project object */;
 }
