@@ -230,7 +230,7 @@ class RegisterVC: UIViewController, Storyboarded, DataSelectionDelegate {
                 let successView = MessageView(message: "تم تسجيلك بنجاح، سيتم نقلك للصفحة الرئيسية بعد لحظات", animationName: "correct")
                 successView.show(in: self.view)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.3) {
-                    self.coordinator?.backNav()
+                    self.coordinator?.viewNavigationVC()
                     self.dismiss(animated: true)
                 }
             } else {

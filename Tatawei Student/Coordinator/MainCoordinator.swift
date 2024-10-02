@@ -17,27 +17,7 @@ final class MainCoordinator: Coordinator {
     
     //MARK: Initial View Controller
     func start() {
-        let navigationVC = NavigationVC.instantiate()
-        
-        let registerVC = RegisterVC.instantiate()
-        let loginVC = LoginVC.instantiate()
-        let homeVC = HomeVC.instantiate()
-        let exploreVC = ExploreVC.instantiate()
-        let educationVC = EducationVC.instantiate()
-        let profileVC = ProfileVC.instantiate()
-        
-        registerVC.coordinator = self
-        loginVC.coordinator = self
-        homeVC.coordinator = self
-        exploreVC.coordinator = self
-        educationVC.coordinator = self
-        profileVC.coordinator = self
-        navigationVC.coordinator = self
-        
-        navigationVC.viewControllers = [homeVC, exploreVC, educationVC, profileVC]
-        
-        self.navigationController.pushViewController(loginVC, animated: false)
-        
+        viewNavigationVC()
     }
     
     func viewRegisterVC() {
@@ -47,7 +27,7 @@ final class MainCoordinator: Coordinator {
         navigationController.present(vc, animated: true)
     }
     
-    func backNav() {
+    func viewNavigationVC() {
         let navigationVC = NavigationVC.instantiate()
         
         let registerVC = RegisterVC.instantiate()
