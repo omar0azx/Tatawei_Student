@@ -1,34 +1,27 @@
 //
-//  ProfileVC.swift
+//  ForgetPasswordVC.swift
 //  Tatawei Student
 //
-//  Created by omar alzhrani on 18/03/1446 AH.
+//  Created by omar alzhrani on 29/03/1446 AH.
 //
 
 import UIKit
 
-class ProfileVC: UIViewController, Storyboarded {
+class ForgetPasswordVC: UIViewController, Storyboarded {
     
     
     //MARK: - Varibales
     
     var coordinator: MainCoordinator?
-    
-    
-    //MARK: - IBOutleats
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.dismiss(animated: true)
+        }
+        
     }
 
-    
-    //MARK: - IBAcitions
-    
-    
-    //MARK: - Functions
-    
-    
 }

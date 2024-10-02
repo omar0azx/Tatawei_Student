@@ -1,8 +1,8 @@
 //
 //  MainExtensions.swift
-//  AZAIM
+//  Tatawei Student
 //
-//  Created by omar on 18/03/1445 AH.
+//  Created by omar alzhrani on 24/03/1446 AH.
 //
 
 import UIKit
@@ -408,22 +408,6 @@ extension String {
     
 }
 
-// String Extension for grabbing a character at a specific position (return's Character)
-extension String {
-    
-    func index(at position: Int, from start: Index? = nil) -> Index? {
-        let startingIndex = start ?? startIndex
-        return index(startingIndex, offsetBy: position, limitedBy: endIndex)
-    }
-    
-    func character(at position: Int) -> Character? {
-        guard position >= 0, let indexPosition = index(at: position) else {
-            return nil
-        }
-        return self[indexPosition]
-    }
-}
-
 // add strikethrough line style to String
 extension String {
     func strikeThrough(range: NSRange? = nil) -> NSAttributedString {
@@ -508,3 +492,47 @@ extension CATransition {
     }
 }
 
+extension UITextField: UIPickerViewDelegate, UIPickerViewDataSource {
+    // Function to convert the text field to a generic picker
+        func convertToPicker(options: [String]) {
+            let picker = UIPickerView()
+            picker.delegate = self
+            picker.dataSource = self
+
+            self.inputView = picker // Set the picker as inputView
+
+            // Store options in the text field's tag property for simplicity
+            self.tag = options.count // Store options count for use in the delegate methods
+            objc_setAssociatedObject(self, &UITextField.pickerOptionsKey, options, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+        
+        // MARK: - UIPickerViewDataSource methods
+        public func numberOfComponents(in pickerView: UIPickerView) -> Int {
+            return 1 // Single column picker
+        }
+
+        public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+            return pickerOptions?.count ?? 0 // Return the count of options
+        }
+        
+        // MARK: - UIPickerViewDelegate methods
+        public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+            return pickerOptions?[row] // Return the title for each row
+        }
+
+        public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+            self.text = pickerOptions?[row] // Update text field when an option is selected
+        }
+
+        // Function to dismiss the keyboard
+        @objc private func dismissKeyboard() {
+            self.resignFirstResponder()
+        }
+
+        // Helper to retrieve options from associated objects
+        private var pickerOptions: [String]? {
+            return objc_getAssociatedObject(self, &UITextField.pickerOptionsKey) as? [String]
+        }
+        
+        private static var pickerOptionsKey: UInt8 = 0
+}

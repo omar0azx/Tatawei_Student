@@ -9,13 +9,18 @@ import UIKit
 
 class NavigationVC: ContainerVC, Storyboarded {
     
+    
+    //MARK: - Varibales
+    
     var coordinator: MainCoordinator?
     
+    
+    //MARK: - IBOutleats
+    
     @IBOutlet weak var buttonsBarView: DesignableView!
-    
     @IBOutlet var navImages: [UIImageView]!
-    
     @IBOutlet var navButton: [UIButton]!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +34,54 @@ class NavigationVC: ContainerVC, Storyboarded {
         self.navigationItem.hidesBackButton = true
     }
     
+    
+    //MARK: - IBAcitions
+    
+    @IBAction func didPressNavButton(_ sender: UIButton) {
+        
+        if sender.tag < viewControllers.count {
+            switch sender.tag {
+                
+            case 0:
+                print(0)
+                navigate(to: 0, animated: true)
+                UIView.animate(withDuration: 0.1) {
+                    self.changeImageColor(index: 0)
+                    self.view.layoutIfNeeded()
+                }
+            case 1:
+                print(1)
+                navigate(to: 1, animated: true)
+                UIView.animate(withDuration: 0.1) {
+                    self.changeImageColor(index: 1)
+                    self.view.layoutIfNeeded()
+                }
+            case 2:
+                navigate(to: 2, animated: true)
+                UIView.animate(withDuration: 0.1) {
+                    self.changeImageColor(index: 2)
+                    self.view.layoutIfNeeded()
+                }
+            case 3:
+                navigate(to: 3, animated: true)
+                UIView.animate(withDuration: 0.1) {
+                    self.changeImageColor(index: 3)
+                    self.view.layoutIfNeeded()
+                }
+            default:
+                print("")
+            }
+            //        navigate(to: sender.tag, animated: true)
+        }
+    }
+    
+    @IBAction func addNewInvite(_ sender: UIButton) {
+        
+    }
+    
+    
+    //MARK: - Functions
+    
     func navigate(to selectedIndex: Int, animated: Bool = false) {
         var views = viewControllers.map(\.view)
         let selectedView = views.remove(at: selectedIndex)
@@ -38,7 +91,7 @@ class NavigationVC: ContainerVC, Storyboarded {
     }
     
     let shapeLayer = CAShapeLayer()
-
+    
     func setupCurvedView() {
         let width = view.frame.width
         let height = buttonsBarView.frame.height
@@ -95,49 +148,8 @@ class NavigationVC: ContainerVC, Storyboarded {
             }
         }
     }
-    
-    @IBAction func didPressNavButton(_ sender: UIButton) {
-        
-        if sender.tag < viewControllers.count {
-            switch sender.tag {
-                
-            case 0:
-                print(0)
-                navigate(to: 0, animated: true)
-                UIView.animate(withDuration: 0.1) {
-                    self.changeImageColor(index: 0)
-                    self.view.layoutIfNeeded()
-                }
-            case 1:
-                print(1)
-                navigate(to: 1, animated: true)
-                UIView.animate(withDuration: 0.1) {
-                    self.changeImageColor(index: 1)
-                    self.view.layoutIfNeeded()
-                }
-            case 2:
-                navigate(to: 2, animated: true)
-                UIView.animate(withDuration: 0.1) {
-                    self.changeImageColor(index: 2)
-                    self.view.layoutIfNeeded()
-                }
-            case 3:
-                navigate(to: 3, animated: true)
-                UIView.animate(withDuration: 0.1) {
-                    self.changeImageColor(index: 3)
-                    self.view.layoutIfNeeded()
-                }
-            default:
-                print("")
-            }
-            //        navigate(to: sender.tag, animated: true)
-        }
-    }
-    
-    @IBAction func addNewInvite(_ sender: UIButton) {
-    }
-    
 }
+    
 
 
     

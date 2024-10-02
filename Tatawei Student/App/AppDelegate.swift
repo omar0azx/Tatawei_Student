@@ -6,14 +6,25 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAppCheck
+import IQKeyboardManagerSwift
+import GoogleMaps
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        let providerFactory = TataweiAppCheckProviderFactory()
+        AppCheck.setAppCheckProviderFactory(providerFactory)
+        AppCheck.setAppCheckProviderFactory(AppCheckDebugProviderFactory())
+        FirebaseApp.configure()
+        
+        GMSServices.provideAPIKey("AIzaSyADEz8PXDl2MCv4hAy8tnDtDxRX-z6PJMk")
+        
+        IQKeyboardManager.shared.enable = true
         return true
     }
 
