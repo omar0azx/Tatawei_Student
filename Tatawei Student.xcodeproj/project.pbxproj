@@ -7,110 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E03DD612C9FB3020029D915 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E03DD602C9FB3020029D915 /* GoogleService-Info.plist */; };
-		4E4714462CA8CBC900BBAA73 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4E4714452CA8CBC900BBAA73 /* IQKeyboardManagerSwift */; };
-		4E4714492CA8FA2600BBAA73 /* InterestsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4714482CA8FA2600BBAA73 /* InterestsCell.swift */; };
-		4E47144D2CA9256900BBAA73 /* AppCheckProviderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E47144C2CA9256900BBAA73 /* AppCheckProviderFactory.swift */; };
-		4E5C2C3B2C9FB613005C9342 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 4E5C2C3A2C9FB613005C9342 /* FirebaseAppCheck */; };
-		4E5C2C3D2C9FB614005C9342 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4E5C2C3C2C9FB614005C9342 /* FirebaseAuth */; };
-		4E5C2C3F2C9FB614005C9342 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 4E5C2C3E2C9FB614005C9342 /* FirebaseDatabase */; };
-		4E5C2C412C9FB614005C9342 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4E5C2C402C9FB614005C9342 /* FirebaseFirestore */; };
-		4E68135C2CAA3310001C6E07 /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 4E68135B2CAA3310001C6E07 /* GoogleMaps */; };
-		4E68135E2CAA3E1E001C6E07 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E68135D2CAA3E1E001C6E07 /* MapVC.swift */; };
-		4E6813602CAB4ECD001C6E07 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E68135F2CAB4EBE001C6E07 /* StringExtensions.swift */; };
-		4E6813632CAB5913001C6E07 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 4E6813622CAB5913001C6E07 /* Lottie */; };
-		4E6813662CAB5963001C6E07 /* correct.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E6813652CAB5963001C6E07 /* correct.json */; };
-		4E6813682CAB5F71001C6E07 /* warning.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E6813672CAB5F71001C6E07 /* warning.json */; };
-		4E68136A2CACD10E001C6E07 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E6813692CACD10E001C6E07 /* loading.json */; };
-		4E68136C2CACDEDA001C6E07 /* ForgetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E68136B2CACDEDA001C6E07 /* ForgetPasswordVC.swift */; };
-		4E6813772CACEB21001C6E07 /* Cairo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E6813752CACEB21001C6E07 /* Cairo.ttf */; };
-		4E6813782CACEB21001C6E07 /* Cairo-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E6813732CACEB21001C6E07 /* Cairo-Light.ttf */; };
-		4E6813792CACEB21001C6E07 /* Cairo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E6813742CACEB21001C6E07 /* Cairo-Medium.ttf */; };
-		4E68137A2CACEB21001C6E07 /* Cairo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E6813702CACEB21001C6E07 /* Cairo-Bold.ttf */; };
-		4E68137D2CACEB21001C6E07 /* Cairo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E68136F2CACEB21001C6E07 /* Cairo-Black.ttf */; };
-		4E68137E2CACEB21001C6E07 /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E6813762CACEB21001C6E07 /* Cairo-SemiBold.ttf */; };
-		4E6AD31A2C9E3C920090CC9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E6AD3122C9E3C920090CC9D /* LaunchScreen.storyboard */; };
-		4E6AD31B2C9E3C920090CC9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E6AD3142C9E3C920090CC9D /* Main.storyboard */; };
-		4E6AD31C2C9E3C920090CC9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E6AD3172C9E3C920090CC9D /* Assets.xcassets */; };
-		4E6AD31E2C9E3C920090CC9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AD30B2C9E3C920090CC9D /* AppDelegate.swift */; };
-		4E6AD31F2C9E3C920090CC9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AD30C2C9E3C920090CC9D /* SceneDelegate.swift */; };
-		4E6AD3262C9E3CC40090CC9D /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AD3242C9E3CC40090CC9D /* Storyboarded.swift */; };
-		4E6AD3272C9E3CC40090CC9D /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AD3232C9E3CC40090CC9D /* MainCoordinator.swift */; };
-		4E6AD3282C9E3CC40090CC9D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AD3212C9E3CC40090CC9D /* Coordinator.swift */; };
-		4E6AD32D2C9E3CF30090CC9D /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AD32A2C9E3CF30090CC9D /* ContainerVC.swift */; };
-		4E6AD32F2C9E3D1D0090CC9D /* NavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AD32E2C9E3D1A0090CC9D /* NavigationVC.swift */; };
-		4E6AD3362C9E6C6C0090CC9D /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AD3352C9E6C6C0090CC9D /* HomeVC.swift */; };
-		4E6AD3382C9E6C800090CC9D /* ExploreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AD3372C9E6C800090CC9D /* ExploreVC.swift */; };
-		4E6AD33A2C9E6CDE0090CC9D /* EducationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AD3392C9E6CDE0090CC9D /* EducationVC.swift */; };
-		4E6AD33C2C9E6CFC0090CC9D /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AD33B2C9E6CFC0090CC9D /* ProfileVC.swift */; };
-		4EE1DB522CA515BD005F0BA8 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE1DB512CA515BD005F0BA8 /* Student.swift */; };
-		4EE1DB542CA51986005F0BA8 /* InterestCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE1DB532CA5195F005F0BA8 /* InterestCategories.swift */; };
-		4EE1DB572CA51C5D005F0BA8 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE1DB562CA51C52005F0BA8 /* AuthService.swift */; };
-		4EE1DB5A2CA520A1005F0BA8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE1DB592CA5209D005F0BA8 /* Constants.swift */; };
-		4EE1DB5C2CA524D4005F0BA8 /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE1DB5B2CA524CA005F0BA8 /* DataServices.swift */; };
-		4EE1DB602CA53311005F0BA8 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE1DB5F2CA53305005F0BA8 /* MessageView.swift */; };
-		4EE1DB622CA63271005F0BA8 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE1DB612CA63271005F0BA8 /* LoginVC.swift */; };
-		4EE1DB642CA632A1005F0BA8 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE1DB632CA632A1005F0BA8 /* RegisterVC.swift */; };
-		4EE1DB662CA6343F005F0BA8 /* MainExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE1DB652CA6343D005F0BA8 /* MainExtensions.swift */; };
+		F2D6C95A2CAD0DD1000E1713 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = F2D6C9592CAD0DD1000E1713 /* FirebaseDatabase */; };
+		F2D6C95C2CAD0DED000E1713 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = F2D6C95B2CAD0DED000E1713 /* FirebaseAppCheck */; };
+		F2D6C95F2CAD0E1C000E1713 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = F2D6C95E2CAD0E1C000E1713 /* Lottie */; };
+		F2D6C9612CAD0E48000E1713 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F2D6C9602CAD0E48000E1713 /* FirebaseAuth */; };
+		F2D6C9632CAD0E6F000E1713 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F2D6C9622CAD0E6F000E1713 /* FirebaseFirestore */; };
+		F2D6C9662CAD0F97000E1713 /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = F2D6C9652CAD0F97000E1713 /* GoogleMaps */; };
+		F2D6C9692CAD1035000E1713 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F2D6C9682CAD1035000E1713 /* IQKeyboardManagerSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4E03DD602C9FB3020029D915 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4E14CFC02C9E2FE400103405 /* Tatawei Student.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tatawei Student.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E4714482CA8FA2600BBAA73 /* InterestsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsCell.swift; sourceTree = "<group>"; };
-		4E47144C2CA9256900BBAA73 /* AppCheckProviderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCheckProviderFactory.swift; sourceTree = "<group>"; };
-		4E47144E2CA92A1F00BBAA73 /* Tatawei Student.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Tatawei Student.entitlements"; sourceTree = "<group>"; };
-		4E68135D2CAA3E1E001C6E07 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
-		4E68135F2CAB4EBE001C6E07 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
-		4E6813652CAB5963001C6E07 /* correct.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = correct.json; sourceTree = "<group>"; };
-		4E6813672CAB5F71001C6E07 /* warning.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = warning.json; sourceTree = "<group>"; };
-		4E6813692CACD10E001C6E07 /* loading.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
-		4E68136B2CACDEDA001C6E07 /* ForgetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordVC.swift; sourceTree = "<group>"; };
-		4E68136F2CACEB21001C6E07 /* Cairo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Black.ttf"; sourceTree = "<group>"; };
-		4E6813702CACEB21001C6E07 /* Cairo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Bold.ttf"; sourceTree = "<group>"; };
-		4E6813732CACEB21001C6E07 /* Cairo-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Light.ttf"; sourceTree = "<group>"; };
-		4E6813742CACEB21001C6E07 /* Cairo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Medium.ttf"; sourceTree = "<group>"; };
-		4E6813752CACEB21001C6E07 /* Cairo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cairo.ttf; sourceTree = "<group>"; };
-		4E6813762CACEB21001C6E07 /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
-		4E6AD26D2C9E34DB0090CC9D /* omar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = omar.xcodeproj; sourceTree = "<group>"; };
-		4E6AD30B2C9E3C920090CC9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4E6AD30C2C9E3C920090CC9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4E6AD3112C9E3C920090CC9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4E6AD3132C9E3C920090CC9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4E6AD3172C9E3C920090CC9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4E6AD3182C9E3C920090CC9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E6AD3212C9E3CC40090CC9D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		4E6AD3232C9E3CC40090CC9D /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-		4E6AD3242C9E3CC40090CC9D /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
-		4E6AD32A2C9E3CF30090CC9D /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
-		4E6AD32E2C9E3D1A0090CC9D /* NavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationVC.swift; sourceTree = "<group>"; };
-		4E6AD3352C9E6C6C0090CC9D /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		4E6AD3372C9E6C800090CC9D /* ExploreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreVC.swift; sourceTree = "<group>"; };
-		4E6AD3392C9E6CDE0090CC9D /* EducationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationVC.swift; sourceTree = "<group>"; };
-		4E6AD33B2C9E6CFC0090CC9D /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
-		4EE1DB512CA515BD005F0BA8 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
-		4EE1DB532CA5195F005F0BA8 /* InterestCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestCategories.swift; sourceTree = "<group>"; };
-		4EE1DB562CA51C52005F0BA8 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		4EE1DB592CA5209D005F0BA8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		4EE1DB5B2CA524CA005F0BA8 /* DataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
-		4EE1DB5F2CA53305005F0BA8 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
-		4EE1DB612CA63271005F0BA8 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		4EE1DB632CA632A1005F0BA8 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
-		4EE1DB652CA6343D005F0BA8 /* MainExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		4E14CFD22C9E2FE600103405 /* Exceptions for "Tatawei Student" folder in "Tatawei Student" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 4E14CFBF2C9E2FE400103405 /* Tatawei Student */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		4E14CFC22C9E2FE400103405 /* Tatawei Student */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				4E14CFD22C9E2FE600103405 /* Exceptions for "Tatawei Student" folder in "Tatawei Student" target */,
+			);
+			path = "Tatawei Student";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4E14CFBD2C9E2FE400103405 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E4714462CA8CBC900BBAA73 /* IQKeyboardManagerSwift in Frameworks */,
-				4E6813632CAB5913001C6E07 /* Lottie in Frameworks */,
-				4E5C2C3F2C9FB614005C9342 /* FirebaseDatabase in Frameworks */,
-				4E68135C2CAA3310001C6E07 /* GoogleMaps in Frameworks */,
-				4E5C2C412C9FB614005C9342 /* FirebaseFirestore in Frameworks */,
-				4E5C2C3B2C9FB613005C9342 /* FirebaseAppCheck in Frameworks */,
-				4E5C2C3D2C9FB614005C9342 /* FirebaseAuth in Frameworks */,
+				F2D6C9692CAD1035000E1713 /* IQKeyboardManagerSwift in Frameworks */,
+				F2D6C95C2CAD0DED000E1713 /* FirebaseAppCheck in Frameworks */,
+				F2D6C95A2CAD0DD1000E1713 /* FirebaseDatabase in Frameworks */,
+				F2D6C9662CAD0F97000E1713 /* GoogleMaps in Frameworks */,
+				F2D6C95F2CAD0E1C000E1713 /* Lottie in Frameworks */,
+				F2D6C9632CAD0E6F000E1713 /* FirebaseFirestore in Frameworks */,
+				F2D6C9612CAD0E48000E1713 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,8 +62,8 @@
 		4E14CFB72C9E2FE400103405 = {
 			isa = PBXGroup;
 			children = (
-				4E6AD3192C9E3C920090CC9D /* Tatawei Student */,
-				4E5C2C332C9FB526005C9342 /* Frameworks */,
+				4E14CFC22C9E2FE400103405 /* Tatawei Student */,
+				F2D6C9582CAD0DD1000E1713 /* Frameworks */,
 				4E14CFC12C9E2FE400103405 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -134,159 +76,11 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4E4714472CA8F9EF00BBAA73 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				4E4714482CA8FA2600BBAA73 /* InterestsCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		4E5C2C332C9FB526005C9342 /* Frameworks */ = {
+		F2D6C9582CAD0DD1000E1713 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		4E6813642CAB5944001C6E07 /* Lottie */ = {
-			isa = PBXGroup;
-			children = (
-				4E6813692CACD10E001C6E07 /* loading.json */,
-				4E6813672CAB5F71001C6E07 /* warning.json */,
-				4E6813652CAB5963001C6E07 /* correct.json */,
-			);
-			path = Lottie;
-			sourceTree = "<group>";
-		};
-		4E6AD2742C9E34DB0090CC9D /* Products */ = {
-			isa = PBXGroup;
-			name = Products;
-			sourceTree = "<group>";
-		};
-		4E6AD30D2C9E3C920090CC9D /* App */ = {
-			isa = PBXGroup;
-			children = (
-				4E6AD30B2C9E3C920090CC9D /* AppDelegate.swift */,
-				4E6AD30C2C9E3C920090CC9D /* SceneDelegate.swift */,
-			);
-			path = App;
-			sourceTree = "<group>";
-		};
-		4E6AD30F2C9E3C920090CC9D /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				4E6AD32A2C9E3CF30090CC9D /* ContainerVC.swift */,
-				4E6AD32E2C9E3D1A0090CC9D /* NavigationVC.swift */,
-				4EE1DB612CA63271005F0BA8 /* LoginVC.swift */,
-				4E68136B2CACDEDA001C6E07 /* ForgetPasswordVC.swift */,
-				4EE1DB632CA632A1005F0BA8 /* RegisterVC.swift */,
-				4E68135D2CAA3E1E001C6E07 /* MapVC.swift */,
-				4E6AD3352C9E6C6C0090CC9D /* HomeVC.swift */,
-				4E6AD3372C9E6C800090CC9D /* ExploreVC.swift */,
-				4E6AD3392C9E6CDE0090CC9D /* EducationVC.swift */,
-				4E6AD33B2C9E6CFC0090CC9D /* ProfileVC.swift */,
-				4E4714472CA8F9EF00BBAA73 /* Cells */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		4E6AD3102C9E3C920090CC9D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				4EE1DB532CA5195F005F0BA8 /* InterestCategories.swift */,
-				4EE1DB512CA515BD005F0BA8 /* Student.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		4E6AD3152C9E3C920090CC9D /* View */ = {
-			isa = PBXGroup;
-			children = (
-				4E6AD3122C9E3C920090CC9D /* LaunchScreen.storyboard */,
-				4E6AD3142C9E3C920090CC9D /* Main.storyboard */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		4E6AD3162C9E3C920090CC9D /* MVC */ = {
-			isa = PBXGroup;
-			children = (
-				4E6AD3102C9E3C920090CC9D /* Model */,
-				4E6AD3152C9E3C920090CC9D /* View */,
-				4E6AD30F2C9E3C920090CC9D /* Controller */,
-			);
-			path = MVC;
-			sourceTree = "<group>";
-		};
-		4E6AD3192C9E3C920090CC9D /* Tatawei Student */ = {
-			isa = PBXGroup;
-			children = (
-				4E47144E2CA92A1F00BBAA73 /* Tatawei Student.entitlements */,
-				4E6AD30D2C9E3C920090CC9D /* App */,
-				4E6AD3162C9E3C920090CC9D /* MVC */,
-				4E6AD3252C9E3CC40090CC9D /* Coordinator */,
-				4EE1DB552CA51C2A005F0BA8 /* Services */,
-				4EE1DB672CA63451005F0BA8 /*  Extensions */,
-				4EE1DB582CA52084005F0BA8 /* Helpers */,
-				4EE1DB692CA66192005F0BA8 /* Font */,
-				4E6AD3172C9E3C920090CC9D /* Assets.xcassets */,
-				4E6813642CAB5944001C6E07 /* Lottie */,
-				4E6AD3182C9E3C920090CC9D /* Info.plist */,
-				4E03DD602C9FB3020029D915 /* GoogleService-Info.plist */,
-			);
-			path = "Tatawei Student";
-			sourceTree = "<group>";
-		};
-		4E6AD3252C9E3CC40090CC9D /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				4E6AD3212C9E3CC40090CC9D /* Coordinator.swift */,
-				4E6AD3242C9E3CC40090CC9D /* Storyboarded.swift */,
-				4E6AD3232C9E3CC40090CC9D /* MainCoordinator.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		4EE1DB552CA51C2A005F0BA8 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				4EE1DB562CA51C52005F0BA8 /* AuthService.swift */,
-				4EE1DB5B2CA524CA005F0BA8 /* DataServices.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		4EE1DB582CA52084005F0BA8 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				4E47144C2CA9256900BBAA73 /* AppCheckProviderFactory.swift */,
-				4EE1DB5F2CA53305005F0BA8 /* MessageView.swift */,
-				4EE1DB592CA5209D005F0BA8 /* Constants.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		4EE1DB672CA63451005F0BA8 /*  Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				4EE1DB652CA6343D005F0BA8 /* MainExtensions.swift */,
-				4E68135F2CAB4EBE001C6E07 /* StringExtensions.swift */,
-			);
-			path = " Extensions";
-			sourceTree = "<group>";
-		};
-		4EE1DB692CA66192005F0BA8 /* Font */ = {
-			isa = PBXGroup;
-			children = (
-				4E68136F2CACEB21001C6E07 /* Cairo-Black.ttf */,
-				4E6813702CACEB21001C6E07 /* Cairo-Bold.ttf */,
-				4E6813732CACEB21001C6E07 /* Cairo-Light.ttf */,
-				4E6813742CACEB21001C6E07 /* Cairo-Medium.ttf */,
-				4E6813752CACEB21001C6E07 /* Cairo.ttf */,
-				4E6813762CACEB21001C6E07 /* Cairo-SemiBold.ttf */,
-			);
-			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,15 +98,18 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				4E14CFC22C9E2FE400103405 /* Tatawei Student */,
+			);
 			name = "Tatawei Student";
 			packageProductDependencies = (
-				4E5C2C3A2C9FB613005C9342 /* FirebaseAppCheck */,
-				4E5C2C3C2C9FB614005C9342 /* FirebaseAuth */,
-				4E5C2C3E2C9FB614005C9342 /* FirebaseDatabase */,
-				4E5C2C402C9FB614005C9342 /* FirebaseFirestore */,
-				4E4714452CA8CBC900BBAA73 /* IQKeyboardManagerSwift */,
-				4E68135B2CAA3310001C6E07 /* GoogleMaps */,
-				4E6813622CAB5913001C6E07 /* Lottie */,
+				F2D6C9592CAD0DD1000E1713 /* FirebaseDatabase */,
+				F2D6C95B2CAD0DED000E1713 /* FirebaseAppCheck */,
+				F2D6C95E2CAD0E1C000E1713 /* Lottie */,
+				F2D6C9602CAD0E48000E1713 /* FirebaseAuth */,
+				F2D6C9622CAD0E6F000E1713 /* FirebaseFirestore */,
+				F2D6C9652CAD0F97000E1713 /* GoogleMaps */,
+				F2D6C9682CAD1035000E1713 /* IQKeyboardManagerSwift */,
 			);
 			productName = "Tatawei Student";
 			productReference = 4E14CFC02C9E2FE400103405 /* Tatawei Student.app */;
@@ -343,20 +140,14 @@
 			mainGroup = 4E14CFB72C9E2FE400103405;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				4E03DD622C9FB3820029D915 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				4E4714442CA8CBC900BBAA73 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
-				4E68135A2CAA3310001C6E07 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
-				4E6813612CAB5913001C6E07 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				F2D6C9572CAD0D52000E1713 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				F2D6C95D2CAD0E1C000E1713 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				F2D6C9642CAD0F97000E1713 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
+				F2D6C9672CAD1035000E1713 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4E14CFC12C9E2FE400103405 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 4E6AD2742C9E34DB0090CC9D /* Products */;
-					ProjectRef = 4E6AD26D2C9E34DB0090CC9D /* omar.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				4E14CFBF2C9E2FE400103405 /* Tatawei Student */,
@@ -369,19 +160,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E6AD31A2C9E3C920090CC9D /* LaunchScreen.storyboard in Resources */,
-				4E68136A2CACD10E001C6E07 /* loading.json in Resources */,
-				4E03DD612C9FB3020029D915 /* GoogleService-Info.plist in Resources */,
-				4E6AD31B2C9E3C920090CC9D /* Main.storyboard in Resources */,
-				4E6813662CAB5963001C6E07 /* correct.json in Resources */,
-				4E6AD31C2C9E3C920090CC9D /* Assets.xcassets in Resources */,
-				4E6813682CAB5F71001C6E07 /* warning.json in Resources */,
-				4E6813772CACEB21001C6E07 /* Cairo.ttf in Resources */,
-				4E6813782CACEB21001C6E07 /* Cairo-Light.ttf in Resources */,
-				4E6813792CACEB21001C6E07 /* Cairo-Medium.ttf in Resources */,
-				4E68137A2CACEB21001C6E07 /* Cairo-Bold.ttf in Resources */,
-				4E68137D2CACEB21001C6E07 /* Cairo-Black.ttf in Resources */,
-				4E68137E2CACEB21001C6E07 /* Cairo-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,54 +170,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E6813602CAB4ECD001C6E07 /* StringExtensions.swift in Sources */,
-				4EE1DB572CA51C5D005F0BA8 /* AuthService.swift in Sources */,
-				4E6AD33C2C9E6CFC0090CC9D /* ProfileVC.swift in Sources */,
-				4EE1DB522CA515BD005F0BA8 /* Student.swift in Sources */,
-				4EE1DB622CA63271005F0BA8 /* LoginVC.swift in Sources */,
-				4EE1DB602CA53311005F0BA8 /* MessageView.swift in Sources */,
-				4E6AD31E2C9E3C920090CC9D /* AppDelegate.swift in Sources */,
-				4EE1DB542CA51986005F0BA8 /* InterestCategories.swift in Sources */,
-				4E68136C2CACDEDA001C6E07 /* ForgetPasswordVC.swift in Sources */,
-				4E6AD31F2C9E3C920090CC9D /* SceneDelegate.swift in Sources */,
-				4E68135E2CAA3E1E001C6E07 /* MapVC.swift in Sources */,
-				4EE1DB5C2CA524D4005F0BA8 /* DataServices.swift in Sources */,
-				4E47144D2CA9256900BBAA73 /* AppCheckProviderFactory.swift in Sources */,
-				4EE1DB642CA632A1005F0BA8 /* RegisterVC.swift in Sources */,
-				4E4714492CA8FA2600BBAA73 /* InterestsCell.swift in Sources */,
-				4EE1DB662CA6343F005F0BA8 /* MainExtensions.swift in Sources */,
-				4E6AD3382C9E6C800090CC9D /* ExploreVC.swift in Sources */,
-				4EE1DB5A2CA520A1005F0BA8 /* Constants.swift in Sources */,
-				4E6AD33A2C9E6CDE0090CC9D /* EducationVC.swift in Sources */,
-				4E6AD3262C9E3CC40090CC9D /* Storyboarded.swift in Sources */,
-				4E6AD3362C9E6C6C0090CC9D /* HomeVC.swift in Sources */,
-				4E6AD32F2C9E3D1D0090CC9D /* NavigationVC.swift in Sources */,
-				4E6AD3272C9E3CC40090CC9D /* MainCoordinator.swift in Sources */,
-				4E6AD3282C9E3CC40090CC9D /* Coordinator.swift in Sources */,
-				4E6AD32D2C9E3CF30090CC9D /* ContainerVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		4E6AD3122C9E3C920090CC9D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4E6AD3112C9E3C920090CC9D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		4E6AD3142C9E3C920090CC9D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4E6AD3132C9E3C920090CC9D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4E14CFD42C9E2FE600103405 /* Debug */ = {
@@ -447,7 +181,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Tatawei Student/Tatawei Student.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 95R6F629SF;
@@ -458,7 +191,6 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -477,7 +209,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Tatawei Student/Tatawei Student.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 95R6F629SF;
@@ -488,7 +219,6 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -645,75 +375,75 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4E03DD622C9FB3820029D915 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		F2D6C9572CAD0D52000E1713 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 11.2.0;
+				minimumVersion = 11.3.0;
 			};
 		};
-		4E4714442CA8CBC900BBAA73 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+		F2D6C95D2CAD0E1C000E1713 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.1.1;
-			};
-		};
-		4E68135A2CAA3310001C6E07 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/googlemaps/ios-maps-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.1.1;
-			};
-		};
-		4E6813612CAB5913001C6E07 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 4.5.0;
 			};
 		};
+		F2D6C9642CAD0F97000E1713 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/ios-maps-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.1;
+			};
+		};
+		F2D6C9672CAD1035000E1713 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4E4714452CA8CBC900BBAA73 /* IQKeyboardManagerSwift */ = {
+		F2D6C9592CAD0DD1000E1713 /* FirebaseDatabase */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4E4714442CA8CBC900BBAA73 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
-			productName = IQKeyboardManagerSwift;
-		};
-		4E5C2C3A2C9FB613005C9342 /* FirebaseAppCheck */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4E03DD622C9FB3820029D915 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAppCheck;
-		};
-		4E5C2C3C2C9FB614005C9342 /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4E03DD622C9FB3820029D915 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		4E5C2C3E2C9FB614005C9342 /* FirebaseDatabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4E03DD622C9FB3820029D915 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = F2D6C9572CAD0D52000E1713 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;
 		};
-		4E5C2C402C9FB614005C9342 /* FirebaseFirestore */ = {
+		F2D6C95B2CAD0DED000E1713 /* FirebaseAppCheck */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4E03DD622C9FB3820029D915 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = F2D6C9572CAD0D52000E1713 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		F2D6C95E2CAD0E1C000E1713 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2D6C95D2CAD0E1C000E1713 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		F2D6C9602CAD0E48000E1713 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2D6C9572CAD0D52000E1713 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		F2D6C9622CAD0E6F000E1713 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2D6C9572CAD0D52000E1713 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
 		};
-		4E68135B2CAA3310001C6E07 /* GoogleMaps */ = {
+		F2D6C9652CAD0F97000E1713 /* GoogleMaps */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4E68135A2CAA3310001C6E07 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			package = F2D6C9642CAD0F97000E1713 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
 			productName = GoogleMaps;
 		};
-		4E6813622CAB5913001C6E07 /* Lottie */ = {
+		F2D6C9682CAD1035000E1713 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4E6813612CAB5913001C6E07 /* XCRemoteSwiftPackageReference "lottie-ios" */;
-			productName = Lottie;
+			package = F2D6C9672CAD1035000E1713 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
