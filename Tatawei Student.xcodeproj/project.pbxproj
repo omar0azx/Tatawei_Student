@@ -14,32 +14,89 @@
 		F2D6C9632CAD0E6F000E1713 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F2D6C9622CAD0E6F000E1713 /* FirebaseFirestore */; };
 		F2D6C9662CAD0F97000E1713 /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = F2D6C9652CAD0F97000E1713 /* GoogleMaps */; };
 		F2D6C9692CAD1035000E1713 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F2D6C9682CAD1035000E1713 /* IQKeyboardManagerSwift */; };
+		F2D6C9A12CAD19F5000E1713 /* MainExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C96A2CAD19F5000E1713 /* MainExtensions.swift */; };
+		F2D6C9A22CAD19F5000E1713 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C96B2CAD19F5000E1713 /* StringExtensions.swift */; };
+		F2D6C9A32CAD19F5000E1713 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C96D2CAD19F5000E1713 /* AppDelegate.swift */; };
+		F2D6C9A42CAD19F5000E1713 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C96E2CAD19F5000E1713 /* SceneDelegate.swift */; };
+		F2D6C9A52CAD19F5000E1713 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C9702CAD19F5000E1713 /* Coordinator.swift */; };
+		F2D6C9A62CAD19F5000E1713 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C9712CAD19F5000E1713 /* MainCoordinator.swift */; };
+		F2D6C9A72CAD19F5000E1713 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C9722CAD19F5000E1713 /* Storyboarded.swift */; };
+		F2D6C9A82CAD19F5000E1713 /* AppCheckProviderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C97B2CAD19F5000E1713 /* AppCheckProviderFactory.swift */; };
+		F2D6C9A92CAD19F5000E1713 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C97C2CAD19F5000E1713 /* Constants.swift */; };
+		F2D6C9AA2CAD19F5000E1713 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C97D2CAD19F5000E1713 /* MessageView.swift */; };
+		F2D6C9AB2CAD19F5000E1713 /* InterestsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C9832CAD19F5000E1713 /* InterestsCell.swift */; };
+		F2D6C9AC2CAD19F5000E1713 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C9852CAD19F5000E1713 /* ContainerVC.swift */; };
+		F2D6C9AD2CAD19F5000E1713 /* EducationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C9862CAD19F5000E1713 /* EducationVC.swift */; };
+		F2D6C9AE2CAD19F5000E1713 /* ExploreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C9872CAD19F5000E1713 /* ExploreVC.swift */; };
+		F2D6C9AF2CAD19F5000E1713 /* ForgetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C9882CAD19F5000E1713 /* ForgetPasswordVC.swift */; };
+		F2D6C9B02CAD19F5000E1713 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C9892CAD19F5000E1713 /* HomeVC.swift */; };
+		F2D6C9B12CAD19F5000E1713 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C98A2CAD19F5000E1713 /* LoginVC.swift */; };
+		F2D6C9B22CAD19F5000E1713 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C98B2CAD19F5000E1713 /* MapVC.swift */; };
+		F2D6C9B32CAD19F5000E1713 /* NavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C98C2CAD19F5000E1713 /* NavigationVC.swift */; };
+		F2D6C9B42CAD19F5000E1713 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C98D2CAD19F5000E1713 /* ProfileVC.swift */; };
+		F2D6C9B52CAD19F5000E1713 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C98E2CAD19F5000E1713 /* RegisterVC.swift */; };
+		F2D6C9B62CAD19F5000E1713 /* InterestCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C9902CAD19F5000E1713 /* InterestCategories.swift */; };
+		F2D6C9B72CAD19F5000E1713 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C9912CAD19F5000E1713 /* Student.swift */; };
+		F2D6C9B82CAD19F5000E1713 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C9992CAD19F5000E1713 /* AuthService.swift */; };
+		F2D6C9B92CAD19F5000E1713 /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C99A2CAD19F5000E1713 /* DataServices.swift */; };
+		F2D6C9BA2CAD19F5000E1713 /* Cairo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9742CAD19F5000E1713 /* Cairo.ttf */; };
+		F2D6C9BB2CAD19F5000E1713 /* Cairo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9752CAD19F5000E1713 /* Cairo-Black.ttf */; };
+		F2D6C9BC2CAD19F5000E1713 /* Cairo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9762CAD19F5000E1713 /* Cairo-Bold.ttf */; };
+		F2D6C9BD2CAD19F5000E1713 /* Cairo-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9772CAD19F5000E1713 /* Cairo-Light.ttf */; };
+		F2D6C9BE2CAD19F5000E1713 /* Cairo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9782CAD19F5000E1713 /* Cairo-Medium.ttf */; };
+		F2D6C9BF2CAD19F5000E1713 /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9792CAD19F5000E1713 /* Cairo-SemiBold.ttf */; };
+		F2D6C9C02CAD19F5000E1713 /* correct.json in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C97F2CAD19F5000E1713 /* correct.json */; };
+		F2D6C9C12CAD19F5000E1713 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9802CAD19F5000E1713 /* loading.json */; };
+		F2D6C9C22CAD19F5000E1713 /* warning.json in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9812CAD19F5000E1713 /* warning.json */; };
+		F2D6C9C32CAD19F5000E1713 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9942CAD19F5000E1713 /* LaunchScreen.storyboard */; };
+		F2D6C9C42CAD19F5000E1713 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9962CAD19F5000E1713 /* Main.storyboard */; };
+		F2D6C9C52CAD19F5000E1713 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C99C2CAD19F5000E1713 /* Assets.xcassets */; };
+		F2D6C9C62CAD19F5000E1713 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C99D2CAD19F5000E1713 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4E14CFC02C9E2FE400103405 /* Tatawei Student.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tatawei Student.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2D6C96A2CAD19F5000E1713 /* MainExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainExtensions.swift; sourceTree = "<group>"; };
+		F2D6C96B2CAD19F5000E1713 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		F2D6C96D2CAD19F5000E1713 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F2D6C96E2CAD19F5000E1713 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F2D6C9702CAD19F5000E1713 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F2D6C9712CAD19F5000E1713 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		F2D6C9722CAD19F5000E1713 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		F2D6C9742CAD19F5000E1713 /* Cairo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cairo.ttf; sourceTree = "<group>"; };
+		F2D6C9752CAD19F5000E1713 /* Cairo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Black.ttf"; sourceTree = "<group>"; };
+		F2D6C9762CAD19F5000E1713 /* Cairo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Bold.ttf"; sourceTree = "<group>"; };
+		F2D6C9772CAD19F5000E1713 /* Cairo-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Light.ttf"; sourceTree = "<group>"; };
+		F2D6C9782CAD19F5000E1713 /* Cairo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Medium.ttf"; sourceTree = "<group>"; };
+		F2D6C9792CAD19F5000E1713 /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
+		F2D6C97B2CAD19F5000E1713 /* AppCheckProviderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCheckProviderFactory.swift; sourceTree = "<group>"; };
+		F2D6C97C2CAD19F5000E1713 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F2D6C97D2CAD19F5000E1713 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		F2D6C97F2CAD19F5000E1713 /* correct.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = correct.json; sourceTree = "<group>"; };
+		F2D6C9802CAD19F5000E1713 /* loading.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		F2D6C9812CAD19F5000E1713 /* warning.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = warning.json; sourceTree = "<group>"; };
+		F2D6C9832CAD19F5000E1713 /* InterestsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsCell.swift; sourceTree = "<group>"; };
+		F2D6C9852CAD19F5000E1713 /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
+		F2D6C9862CAD19F5000E1713 /* EducationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationVC.swift; sourceTree = "<group>"; };
+		F2D6C9872CAD19F5000E1713 /* ExploreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreVC.swift; sourceTree = "<group>"; };
+		F2D6C9882CAD19F5000E1713 /* ForgetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordVC.swift; sourceTree = "<group>"; };
+		F2D6C9892CAD19F5000E1713 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		F2D6C98A2CAD19F5000E1713 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		F2D6C98B2CAD19F5000E1713 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		F2D6C98C2CAD19F5000E1713 /* NavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationVC.swift; sourceTree = "<group>"; };
+		F2D6C98D2CAD19F5000E1713 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		F2D6C98E2CAD19F5000E1713 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		F2D6C9902CAD19F5000E1713 /* InterestCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestCategories.swift; sourceTree = "<group>"; };
+		F2D6C9912CAD19F5000E1713 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		F2D6C9932CAD19F5000E1713 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F2D6C9952CAD19F5000E1713 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F2D6C9992CAD19F5000E1713 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		F2D6C99A2CAD19F5000E1713 /* DataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
+		F2D6C99C2CAD19F5000E1713 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F2D6C99D2CAD19F5000E1713 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F2D6C99E2CAD19F5000E1713 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2D6C99F2CAD19F5000E1713 /* Tatawei Student.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Tatawei Student.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		4E14CFD22C9E2FE600103405 /* Exceptions for "Tatawei Student" folder in "Tatawei Student" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 4E14CFBF2C9E2FE400103405 /* Tatawei Student */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		4E14CFC22C9E2FE400103405 /* Tatawei Student */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				4E14CFD22C9E2FE600103405 /* Exceptions for "Tatawei Student" folder in "Tatawei Student" target */,
-			);
-			path = "Tatawei Student";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4E14CFBD2C9E2FE400103405 /* Frameworks */ = {
@@ -62,7 +119,7 @@
 		4E14CFB72C9E2FE400103405 = {
 			isa = PBXGroup;
 			children = (
-				4E14CFC22C9E2FE400103405 /* Tatawei Student */,
+				F2D6C9A02CAD19F5000E1713 /* Tatawei Student */,
 				F2D6C9582CAD0DD1000E1713 /* Frameworks */,
 				4E14CFC12C9E2FE400103405 /* Products */,
 			);
@@ -83,6 +140,149 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F2D6C96C2CAD19F5000E1713 /*  Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F2D6C96A2CAD19F5000E1713 /* MainExtensions.swift */,
+				F2D6C96B2CAD19F5000E1713 /* StringExtensions.swift */,
+			);
+			path = " Extensions";
+			sourceTree = "<group>";
+		};
+		F2D6C96F2CAD19F5000E1713 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F2D6C96D2CAD19F5000E1713 /* AppDelegate.swift */,
+				F2D6C96E2CAD19F5000E1713 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F2D6C9732CAD19F5000E1713 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F2D6C9702CAD19F5000E1713 /* Coordinator.swift */,
+				F2D6C9712CAD19F5000E1713 /* MainCoordinator.swift */,
+				F2D6C9722CAD19F5000E1713 /* Storyboarded.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		F2D6C97A2CAD19F5000E1713 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				F2D6C9742CAD19F5000E1713 /* Cairo.ttf */,
+				F2D6C9752CAD19F5000E1713 /* Cairo-Black.ttf */,
+				F2D6C9762CAD19F5000E1713 /* Cairo-Bold.ttf */,
+				F2D6C9772CAD19F5000E1713 /* Cairo-Light.ttf */,
+				F2D6C9782CAD19F5000E1713 /* Cairo-Medium.ttf */,
+				F2D6C9792CAD19F5000E1713 /* Cairo-SemiBold.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		F2D6C97E2CAD19F5000E1713 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F2D6C97B2CAD19F5000E1713 /* AppCheckProviderFactory.swift */,
+				F2D6C97C2CAD19F5000E1713 /* Constants.swift */,
+				F2D6C97D2CAD19F5000E1713 /* MessageView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F2D6C9822CAD19F5000E1713 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				F2D6C97F2CAD19F5000E1713 /* correct.json */,
+				F2D6C9802CAD19F5000E1713 /* loading.json */,
+				F2D6C9812CAD19F5000E1713 /* warning.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		F2D6C9842CAD19F5000E1713 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F2D6C9832CAD19F5000E1713 /* InterestsCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F2D6C98F2CAD19F5000E1713 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F2D6C9842CAD19F5000E1713 /* Cells */,
+				F2D6C9852CAD19F5000E1713 /* ContainerVC.swift */,
+				F2D6C9862CAD19F5000E1713 /* EducationVC.swift */,
+				F2D6C9872CAD19F5000E1713 /* ExploreVC.swift */,
+				F2D6C9882CAD19F5000E1713 /* ForgetPasswordVC.swift */,
+				F2D6C9892CAD19F5000E1713 /* HomeVC.swift */,
+				F2D6C98A2CAD19F5000E1713 /* LoginVC.swift */,
+				F2D6C98B2CAD19F5000E1713 /* MapVC.swift */,
+				F2D6C98C2CAD19F5000E1713 /* NavigationVC.swift */,
+				F2D6C98D2CAD19F5000E1713 /* ProfileVC.swift */,
+				F2D6C98E2CAD19F5000E1713 /* RegisterVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F2D6C9922CAD19F5000E1713 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2D6C9902CAD19F5000E1713 /* InterestCategories.swift */,
+				F2D6C9912CAD19F5000E1713 /* Student.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F2D6C9972CAD19F5000E1713 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F2D6C9942CAD19F5000E1713 /* LaunchScreen.storyboard */,
+				F2D6C9962CAD19F5000E1713 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F2D6C9982CAD19F5000E1713 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				F2D6C98F2CAD19F5000E1713 /* Controller */,
+				F2D6C9922CAD19F5000E1713 /* Model */,
+				F2D6C9972CAD19F5000E1713 /* View */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		F2D6C99B2CAD19F5000E1713 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F2D6C9992CAD19F5000E1713 /* AuthService.swift */,
+				F2D6C99A2CAD19F5000E1713 /* DataServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F2D6C9A02CAD19F5000E1713 /* Tatawei Student */ = {
+			isa = PBXGroup;
+			children = (
+				F2D6C96F2CAD19F5000E1713 /* App */,
+				F2D6C9982CAD19F5000E1713 /* MVC */,
+				F2D6C96C2CAD19F5000E1713 /*  Extensions */,
+				F2D6C9732CAD19F5000E1713 /* Coordinator */,
+				F2D6C97A2CAD19F5000E1713 /* Font */,
+				F2D6C97E2CAD19F5000E1713 /* Helpers */,
+				F2D6C9822CAD19F5000E1713 /* Lottie */,
+				F2D6C99B2CAD19F5000E1713 /* Services */,
+				F2D6C99C2CAD19F5000E1713 /* Assets.xcassets */,
+				F2D6C99D2CAD19F5000E1713 /* GoogleService-Info.plist */,
+				F2D6C99E2CAD19F5000E1713 /* Info.plist */,
+				F2D6C99F2CAD19F5000E1713 /* Tatawei Student.entitlements */,
+			);
+			path = "Tatawei Student";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -97,9 +297,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				4E14CFC22C9E2FE400103405 /* Tatawei Student */,
 			);
 			name = "Tatawei Student";
 			packageProductDependencies = (
@@ -160,6 +357,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2D6C9BA2CAD19F5000E1713 /* Cairo.ttf in Resources */,
+				F2D6C9BB2CAD19F5000E1713 /* Cairo-Black.ttf in Resources */,
+				F2D6C9BC2CAD19F5000E1713 /* Cairo-Bold.ttf in Resources */,
+				F2D6C9BD2CAD19F5000E1713 /* Cairo-Light.ttf in Resources */,
+				F2D6C9BE2CAD19F5000E1713 /* Cairo-Medium.ttf in Resources */,
+				F2D6C9BF2CAD19F5000E1713 /* Cairo-SemiBold.ttf in Resources */,
+				F2D6C9C02CAD19F5000E1713 /* correct.json in Resources */,
+				F2D6C9C12CAD19F5000E1713 /* loading.json in Resources */,
+				F2D6C9C22CAD19F5000E1713 /* warning.json in Resources */,
+				F2D6C9C32CAD19F5000E1713 /* LaunchScreen.storyboard in Resources */,
+				F2D6C9C42CAD19F5000E1713 /* Main.storyboard in Resources */,
+				F2D6C9C52CAD19F5000E1713 /* Assets.xcassets in Resources */,
+				F2D6C9C62CAD19F5000E1713 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,10 +380,54 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2D6C9A12CAD19F5000E1713 /* MainExtensions.swift in Sources */,
+				F2D6C9A22CAD19F5000E1713 /* StringExtensions.swift in Sources */,
+				F2D6C9A32CAD19F5000E1713 /* AppDelegate.swift in Sources */,
+				F2D6C9A42CAD19F5000E1713 /* SceneDelegate.swift in Sources */,
+				F2D6C9A52CAD19F5000E1713 /* Coordinator.swift in Sources */,
+				F2D6C9A62CAD19F5000E1713 /* MainCoordinator.swift in Sources */,
+				F2D6C9A72CAD19F5000E1713 /* Storyboarded.swift in Sources */,
+				F2D6C9A82CAD19F5000E1713 /* AppCheckProviderFactory.swift in Sources */,
+				F2D6C9A92CAD19F5000E1713 /* Constants.swift in Sources */,
+				F2D6C9AA2CAD19F5000E1713 /* MessageView.swift in Sources */,
+				F2D6C9AB2CAD19F5000E1713 /* InterestsCell.swift in Sources */,
+				F2D6C9AC2CAD19F5000E1713 /* ContainerVC.swift in Sources */,
+				F2D6C9AD2CAD19F5000E1713 /* EducationVC.swift in Sources */,
+				F2D6C9AE2CAD19F5000E1713 /* ExploreVC.swift in Sources */,
+				F2D6C9AF2CAD19F5000E1713 /* ForgetPasswordVC.swift in Sources */,
+				F2D6C9B02CAD19F5000E1713 /* HomeVC.swift in Sources */,
+				F2D6C9B12CAD19F5000E1713 /* LoginVC.swift in Sources */,
+				F2D6C9B22CAD19F5000E1713 /* MapVC.swift in Sources */,
+				F2D6C9B32CAD19F5000E1713 /* NavigationVC.swift in Sources */,
+				F2D6C9B42CAD19F5000E1713 /* ProfileVC.swift in Sources */,
+				F2D6C9B52CAD19F5000E1713 /* RegisterVC.swift in Sources */,
+				F2D6C9B62CAD19F5000E1713 /* InterestCategories.swift in Sources */,
+				F2D6C9B72CAD19F5000E1713 /* Student.swift in Sources */,
+				F2D6C9B82CAD19F5000E1713 /* AuthService.swift in Sources */,
+				F2D6C9B92CAD19F5000E1713 /* DataServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F2D6C9942CAD19F5000E1713 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2D6C9932CAD19F5000E1713 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F2D6C9962CAD19F5000E1713 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2D6C9952CAD19F5000E1713 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4E14CFD42C9E2FE600103405 /* Debug */ = {
