@@ -72,6 +72,7 @@ class DesignableTableView: UITableView {
             gradientLayer.removeFromSuperlayer()
         }
     }
+    
 }
 
 @IBDesignable
