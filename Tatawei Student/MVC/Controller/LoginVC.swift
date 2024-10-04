@@ -32,8 +32,8 @@ class LoginVC: UIViewController, Storyboarded {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.navigationItem.hidesBackButton = true
     }
     
     
@@ -102,7 +102,7 @@ class LoginVC: UIViewController, Storyboarded {
     private func signIn() {
         let loadView = MessageView(message: "يرجى الإنتظار", animationName: "loading")
         loadView.show(in: self.view)
-        AuthService.shared.loginUser(withEmail: emailTF.text!, andPassword: passwordTF.text!) { status, error in
+        AuthService.shared.loginUserWith(withEmail: emailTF.text!, andPassword: passwordTF.text!) { status, error in
             if status {
                 let successView = MessageView(message: "تم تسجيلك بنجاح، سيتم نقلك للصفحة الرئيسية بعد لحظات", animationName: "correct")
                 successView.show(in: self.view)

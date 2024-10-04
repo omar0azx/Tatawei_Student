@@ -136,7 +136,6 @@ class RegisterVC: UIViewController, Storyboarded, DataSelectionDelegate {
             let loadView = MessageView(message: "يرجى الإنتظار", animationName: "loading")
             loadView.show(in: self.view)
             nextBTN.isEnabled = false
-            registerUser()
         }
     }
     

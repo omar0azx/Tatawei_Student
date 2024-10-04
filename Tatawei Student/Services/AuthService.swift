@@ -36,18 +36,6 @@ class AuthService {
         }
     }
     
-    func loginUser(withEmail email: String , andPassword password: String , loginCompleat: @escaping (_ status: Bool , _ error: Error?) -> ()) {
-        
-        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-            if error != nil {
-                loginCompleat(false, error)
-                return
-            }
-            loginCompleat(true, nil)
-            
-        }
-    }
-    
     //MARK:- Login
     
     func loginUserWith(withEmail email: String , andPassword password: String , loginCompleat: @escaping (_ status: Bool , _ error: Error?) -> ()) {
@@ -99,6 +87,14 @@ class AuthService {
             completion(error)
         }
         
+    }
+    
+    func checkCurrentUserStatus() -> Bool {
+        if Auth.auth().currentUser == nil {
+            return false
+        } else {
+            return true
+        }
     }
     
 }

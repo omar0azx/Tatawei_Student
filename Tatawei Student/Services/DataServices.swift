@@ -29,7 +29,7 @@ class DataServices {
     func saveUserToFirestore(_ user: Student) {
         do {
             
-            try FirestoreReference(.schools).document(user.school).collection("Students").document(user.id).setData(from: user)
+            try FirestoreReference(.schools).document(user.school).collection("students").document(user.id).setData(from: user)
         } catch {
             print(error.localizedDescription)
         }
@@ -137,13 +137,8 @@ class DataServices {
                     users.append(user)
                 }
             }
-            
             completion(users)
-            
         }
-        
-        
-        
     }
     
 }
