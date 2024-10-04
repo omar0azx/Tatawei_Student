@@ -46,6 +46,8 @@
 		4E1466782CAED140000178C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E14664F2CAED140000178C9 /* Assets.xcassets */; };
 		4E1466792CAED140000178C9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E1466502CAED140000178C9 /* GoogleService-Info.plist */; };
 		4E14667C2CAEE393000178C9 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E14667B2CAEE393000178C9 /* SettingsCell.swift */; };
+		4E1468522CB00981000178C9 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1468512CB00980000178C9 /* MenuItem.swift */; };
+		4E1468542CB00EF4000178C9 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1468532CB00EEE000178C9 /* CustomAlertView.swift */; };
 		F2D6C95A2CAD0DD1000E1713 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = F2D6C9592CAD0DD1000E1713 /* FirebaseDatabase */; };
 		F2D6C95C2CAD0DED000E1713 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = F2D6C95B2CAD0DED000E1713 /* FirebaseAppCheck */; };
 		F2D6C95F2CAD0E1C000E1713 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = F2D6C95E2CAD0E1C000E1713 /* Lottie */; };
@@ -135,6 +137,8 @@
 		4E1466512CAED140000178C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E1466522CAED140000178C9 /* Tatawei Student.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Tatawei Student.entitlements"; sourceTree = "<group>"; };
 		4E14667B2CAEE393000178C9 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		4E1468512CB00980000178C9 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		4E1468532CB00EEE000178C9 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 		4E14CFC02C9E2FE400103405 /* Tatawei Student.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tatawei Student.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2D6C96A2CAD19F5000E1713 /* MainExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainExtensions.swift; sourceTree = "<group>"; };
 		F2D6C96B2CAD19F5000E1713 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
@@ -242,6 +246,7 @@
 			children = (
 				4E14662E2CAED140000178C9 /* AppCheckProviderFactory.swift */,
 				4E14662F2CAED140000178C9 /* Constants.swift */,
+				4E1468532CB00EEE000178C9 /* CustomAlertView.swift */,
 				4E1466302CAED140000178C9 /* MessageView.swift */,
 			);
 			path = Helpers;
@@ -287,6 +292,7 @@
 		4E1466452CAED140000178C9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4E1468512CB00980000178C9 /* MenuItem.swift */,
 				4E1466432CAED140000178C9 /* InterestCategories.swift */,
 				4E1466442CAED140000178C9 /* Student.swift */,
 			);
@@ -627,8 +633,10 @@
 				4E1466662CAED140000178C9 /* NavigationVC.swift in Sources */,
 				4E1466672CAED140000178C9 /* ProfileVC.swift in Sources */,
 				4E1466682CAED140000178C9 /* RegisterVC.swift in Sources */,
+				4E1468542CB00EF4000178C9 /* CustomAlertView.swift in Sources */,
 				4E1466692CAED140000178C9 /* InterestCategories.swift in Sources */,
 				4E14666A2CAED140000178C9 /* Student.swift in Sources */,
+				4E1468522CB00981000178C9 /* MenuItem.swift in Sources */,
 				4E14666B2CAED140000178C9 /* AuthService.swift in Sources */,
 				4E14666C2CAED140000178C9 /* DataServices.swift in Sources */,
 
