@@ -32,8 +32,8 @@ class LoginVC: UIViewController, Storyboarded {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.navigationItem.hidesBackButton = true
     }
     
     
@@ -53,7 +53,7 @@ class LoginVC: UIViewController, Storyboarded {
         
         if loginBTN.titleLabel?.text == "إرسال" {
             if !emailTF.text!.isValidEmail() {
-                let errorView = MessageView(message: "البريد الإلكتروني غير صحيح", animationName: "warning")
+                let errorView = MessageView(message: "البريد الإلكتروني غير صحيح", animationName: "warning", animationTime: 1)
                 errorView.show(in: self.view)
                 return
             }
@@ -62,18 +62,17 @@ class LoginVC: UIViewController, Storyboarded {
                     self.coordinator?.viewforgetPasswordVC(animation: true)
                     self.updateUI(title: "تسجيل الدخول", passwordHidden: false, forgetPasswordTitle: "نسيت كلمة المرور ؟", loginButtonTitle: "دخول", createAccountHidden: false)
                 } else {
-                    print("لم يتم إرسال رابط إرسال تغيير كلمة المرور، تحقق من بريدك")
-                    let errorView = MessageView(message: "لم يتم إرسال رابط إرسال تغيير كلمة المرور، تحقق من بريدك", animationName: "warning")
+                    let errorView = MessageView(message: "لم يتم إرسال رابط لبريدك لتغيير كلمة المرور، تحقق من صحة بريدك", animationName: "warning", animationTime: 1)
                     errorView.show(in: self.view)
                 }
             }
         } else {
             if !emailTF.text!.isValidEmail() {
-                let errorView = MessageView(message: "البريد الإلكتروني غير صحيح", animationName: "warning")
+                let errorView = MessageView(message: "البريد الإلكتروني غير صحيح", animationName: "warning", animationTime: 1)
                 errorView.show(in: self.view)
                 return
             } else if passwordTF.text!.count < 6 {
-                let errorView = MessageView(message: "كلمة المرور غير صحيحة، يجب ان تحتوي على 6 او أكثر", animationName: "warning")
+                let errorView = MessageView(message: "كلمة المرور غير صحيحة، يجب ان تحتوي على 6 او أكثر", animationName: "warning", animationTime: 1)
                 errorView.show(in: self.view)
                 return
             }
@@ -81,6 +80,7 @@ class LoginVC: UIViewController, Storyboarded {
         }
         
     }
+    
     
     @IBAction func createAccount(_ sender: UIButton) {
         coordinator?.viewRegisterVC()
@@ -100,18 +100,18 @@ class LoginVC: UIViewController, Storyboarded {
     //MARK:- Login User
     
     private func signIn() {
-        let loadView = MessageView(message: "يرجى الإنتظار", animationName: "loading")
+        let loadView = MessageView(message: "يرجى الإنتظار", animationName: "loading", animationTime: 1)
         loadView.show(in: self.view)
-        AuthService.shared.loginUser(withEmail: emailTF.text!, andPassword: passwordTF.text!) { status, error in
+        AuthService.shared.loginUserWith(withEmail: emailTF.text!, andPassword: passwordTF.text!) { status, error in
             if status {
-                let successView = MessageView(message: "تم تسجيلك بنجاح، سيتم نقلك للصفحة الرئيسية بعد لحظات", animationName: "correct")
+                let successView = MessageView(message: "تم تسجيلك بنجاح، سيتم نقلك للصفحة الرئيسية بعد لحظات", animationName: "correct", animationTime: 1)
                 successView.show(in: self.view)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.3) {
                     self.coordinator?.viewNavigationVC()
                     self.dismiss(animated: true)
                 }
             } else {
-                let errorView = MessageView(message: "فشل عملية تسجيل الدخول، تحقق من بريدك وكلمة المرور", animationName: "warning")
+                let errorView = MessageView(message: "فشل عملية تسجيل الدخول، تحقق من بريدك وكلمة المرور", animationName: "warning", animationTime: 1)
                 errorView.show(in: self.view)
             }
         }

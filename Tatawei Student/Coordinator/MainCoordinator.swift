@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 final class MainCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
@@ -17,28 +19,49 @@ final class MainCoordinator: Coordinator {
     
     //MARK: Initial View Controller
     func start() {
-        viewNavigationVC()
+        autoLogin()
+    }
+    
+    func autoLogin() {
+        
+        if AuthService.shared.checkCurrentUserStatus() ||
+        userDefaults.object(forKey: kCURRENTUSER) != nil {
+            viewNavigationVC()
+        } else {
+            viewLoginVC()
+        }
     }
     
     func viewRegisterVC() {
-        let vc = RegisterVC.instantiate()
+        let vc = StudentsAccountVC.instantiate()
         vc.coordinator = self
+        vc.mode = .register
         vc.modalPresentationStyle = .fullScreen
         navigationController.present(vc, animated: true)
     }
     
+    func viewEditProfileVC() {
+        let vc = StudentsAccountVC.instantiate()
+        vc.coordinator = self
+        vc.mode = .editProfile
+        vc.modalPresentationStyle = .fullScreen
+        navigationController.present(vc, animated: true)
+    }
+    
+    func viewLoginVC() {
+        let vc = LoginVC.instantiate()
+        vc.coordinator = self
+        self.navigationController.pushViewController(vc, animated: false)
+    }
+    
     func viewNavigationVC() {
-        let navigationVC = NavigationVC.instantiate()
         
-        let registerVC = RegisterVC.instantiate()
-        let loginVC = LoginVC.instantiate()
+        let navigationVC = NavigationVC.instantiate()
         let homeVC = HomeVC.instantiate()
         let exploreVC = ExploreVC.instantiate()
         let educationVC = EducationVC.instantiate()
         let profileVC = ProfileVC.instantiate()
         
-        registerVC.coordinator = self
-        loginVC.coordinator = self
         homeVC.coordinator = self
         exploreVC.coordinator = self
         educationVC.coordinator = self
@@ -69,3 +92,4 @@ final class MainCoordinator: Coordinator {
     }
 
 }
+
