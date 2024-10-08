@@ -31,7 +31,7 @@ class ProfileVC: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         getStudentInformation()
         
     }
@@ -39,8 +39,7 @@ class ProfileVC: UIViewController, Storyboarded {
     override func viewIsAppearing(_ animated: Bool) {
         getStudentInformation()
     }
-    
-    
+
     
     //MARK: - IBAcitions
     
@@ -81,6 +80,7 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
             // Change Language
         case .changeLanguage:
             print("")
+
             // About Us
         case .about:
             print("")
@@ -125,5 +125,3 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
     }
     
 }
-
-

@@ -96,7 +96,7 @@ class StudentsAccountVC: UIViewController, Storyboarded, DataSelectionDelegate {
     }
     
     
-    //MARK: - IBOutleats
+    //MARK: - IBAction
     
     @IBAction func didPressedCancel(_ sender: UIButton) {
         dismiss(animated: true)
