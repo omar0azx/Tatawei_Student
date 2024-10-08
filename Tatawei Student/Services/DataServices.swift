@@ -29,7 +29,7 @@ class DataServices {
     func saveUserToFirestore(_ user: Student) {
         do {
             
-            try FirestoreReference(.schools).document(user.school).collection("Students").document(user.id).setData(from: user)
+            try FirestoreReference(.schools).document(user.school).collection("students").document(user.id).setData(from: user)
         } catch {
             print(error.localizedDescription)
         }
@@ -85,6 +85,34 @@ class DataServices {
         }
     }
     
+    // MARK: - Update Student Account Information
+    func updateStudentAccount(updatedData: Student, completion: @escaping (_ error: Error?) ->Void) {
+        let updateGroup = DispatchGroup()
+
+        // Update Firestore with the new Student object
+        updateGroup.enter()
+        do {
+            try FirestoreReference(.schools).document(Student.currentStudent!.school)
+                .collection("students").document(Student.currentID)
+                .setData(from: updatedData) { error in
+                    if let error = error {
+                        print("Error updating student data: \(error.localizedDescription)")
+                        completion(error)
+                    } else {
+                        saveUserLocally(updatedData)
+                        print("Student data successfully updated.")
+                        completion(nil)
+                    }
+                    updateGroup.leave()
+                }
+        } catch {
+            print("Error encoding student data: \(error.localizedDescription)")
+            completion(error)
+            updateGroup.leave()
+        }
+    }
+
+    
     //MARK:- Download users using IDs
     
     func downloadUsersFromFirestore(withIds: [String], schoolID: String, completion: @escaping(_ allUsers: [Student])->Void) {
@@ -137,13 +165,8 @@ class DataServices {
                     users.append(user)
                 }
             }
-            
             completion(users)
-            
         }
-        
-        
-        
     }
     
 }

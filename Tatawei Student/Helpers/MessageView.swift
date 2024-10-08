@@ -11,6 +11,8 @@ class MessageView: UIView {
         return animation
     }()
     
+    private var animationTime: Double
+    
     // Message label
     private let messageLabel: UILabel = {
         let label = UILabel()
@@ -22,8 +24,19 @@ class MessageView: UIView {
         return label
     }()
     
+    // Blur effect view
+        private let blurEffectView: UIVisualEffectView = {
+            let blurEffect = UIBlurEffect(style: .dark)
+            let blurEffectView = UIVisualEffectView(effect: blurEffect)
+            blurEffectView.translatesAutoresizingMaskIntoConstraints = false
+            return blurEffectView
+        }()
+    
     // Initializer
-    init(message: String, animationName: String) {
+    init(message: String, animationName: String, animationTime: Double) {
+        
+        self.animationTime = animationTime
+        
         super.init(frame: .zero)
         self.layer.cornerRadius = 16
         self.backgroundColor = UIColor.systemGray4
@@ -35,6 +48,7 @@ class MessageView: UIView {
         // Add the Lottie animation and message label to the view
         addSubview(animationView)
         addSubview(messageLabel)
+        addSubview(blurEffectView)
         
         // Set the message
         messageLabel.text = message
@@ -57,6 +71,13 @@ class MessageView: UIView {
         
         // Start Lottie animation
         animationView.play()
+        
+        // Set up the blur effect view
+        setupBlurEffect()
+        
+        // Add tap gesture recognizer to dismiss the alert
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleOutsideTap(_:)))
+                blurEffectView.addGestureRecognizer(tapGesture)
     }
     
     required init?(coder: NSCoder) {
@@ -65,6 +86,7 @@ class MessageView: UIView {
     
     // Show the message view with animation
     func show(in view: UIView) {
+        view.addSubview(blurEffectView)
         view.addSubview(self)
         
         // Constraints to center the message view in the screen
@@ -72,7 +94,13 @@ class MessageView: UIView {
             self.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             self.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             self.widthAnchor.constraint(equalToConstant: 250),
-            self.heightAnchor.constraint(equalToConstant: 200)
+            self.heightAnchor.constraint(equalToConstant: 200),
+            
+            // Constraints for blur effect view to fill the screen
+            blurEffectView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            blurEffectView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            blurEffectView.topAnchor.constraint(equalTo: view.topAnchor),
+            blurEffectView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
         
         // Initial state (hidden)
@@ -85,7 +113,7 @@ class MessageView: UIView {
             self.transform = CGAffineTransform.identity
         }) { _ in
             // Hide the view after 2 seconds
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.3) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + self.animationTime) {
                 self.hide()
             }
         }
@@ -98,6 +126,17 @@ class MessageView: UIView {
             self.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
         }) { _ in
             self.removeFromSuperview()
+            self.blurEffectView.removeFromSuperview()
         }
+    }
+    
+    // Set up the blur effect view
+    private func setupBlurEffect() {
+        blurEffectView.alpha = 0.5 // Adjust the blur effect's alpha as needed
+    }
+    
+    // Method to handle the tap outside of the alert
+    @objc private func handleOutsideTap(_ sender: UITapGestureRecognizer) {
+        hide() // Simply call hide to remove the message and blur effect
     }
 }

@@ -7,10 +7,16 @@
 
 import UIKit
 
-class RegisterVC: UIViewController, Storyboarded, DataSelectionDelegate {
+class StudentAccountVC: UIViewController, Storyboarded, DataSelectionDelegate {
     
+    enum Mode {
+            case register
+            case editProfile
+        }
     
     //MARK: - Varibales
+    
+    var mode: Mode = .register
     
     var coordinator: MainCoordinator?
     
@@ -22,6 +28,8 @@ class RegisterVC: UIViewController, Storyboarded, DataSelectionDelegate {
     
     
     //MARK: - IBOutleats
+    
+    @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var backBTN: UIButton!
     
@@ -38,6 +46,7 @@ class RegisterVC: UIViewController, Storyboarded, DataSelectionDelegate {
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
+    @IBOutlet weak var passwordStackView: UIStackView!
     
     //View Two
     
@@ -47,7 +56,6 @@ class RegisterVC: UIViewController, Storyboarded, DataSelectionDelegate {
     @IBOutlet weak var levelTF: UITextField!
     @IBOutlet weak var mapInformation: UILabel!
     
-    
     //View Three
     
     @IBOutlet weak var interestsCollectionView: UICollectionView!
@@ -56,11 +64,32 @@ class RegisterVC: UIViewController, Storyboarded, DataSelectionDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        definePageType()
         genderTF.convertToPicker(options: ["", "ذكر", "أنثى"])
         cityTF.convertToPicker(options: ["", "جدة", "الرياض", "الدمام", "المدينة", "ينبع"])
         schoolTF.convertToPicker(options: ["", "شباب الفهد", "الأقصى", "الأندلس", "الحمدانية", "سعدية معاذ"])
         levelTF.convertToPicker(options: ["", "أولى ثانوي", "ثاني ثانوي", "ثالث ثانوي"])
         self.hideKeyboardWhenTappedAround()
+    }
+    
+    func definePageType() {
+        guard let student = Student.currentStudent else {return}
+        if mode == .editProfile {
+            titleLabel.text = "تعديل الحساب"
+            nameTF.text = student.name
+            genderTF.text = student.gender
+            phoneNumberTF.text = student.phoneNumber
+            emailTF.text = student.email
+            passwordStackView.isHidden = true
+            cityTF.text = student.city
+            schoolTF.text = student.school
+            levelTF.text = student.level
+            mapInformation.text = student.location
+            
+            
+        } else {
+            titleLabel.text = "إنشاء الحساب"
+        }
     }
     
     
@@ -129,14 +158,17 @@ class RegisterVC: UIViewController, Storyboarded, DataSelectionDelegate {
             
         case 2:
             configureContainers(widthConstant: 0, alphaOne: 0, alphaTwo: 0, alphaThree: 1)
-            nextBTN.setTitle("إنشاء", for: .normal)
+            if mode == .register {
+                nextBTN.setTitle("إنشاء", for: .normal)
+            } else {
+                nextBTN.setTitle("تعديل", for: .normal)
+            }
             nextBTN.isEnabled = true
             
         default:
             let loadView = MessageView(message: "يرجى الإنتظار", animationName: "loading")
             loadView.show(in: self.view)
             nextBTN.isEnabled = false
-            registerUser()
         }
     }
     
@@ -163,7 +195,7 @@ class RegisterVC: UIViewController, Storyboarded, DataSelectionDelegate {
                 let errorView = MessageView(message: "البريد الإلكتروني غير صحيح", animationName: "warning")
                 errorView.show(in: self.view)
                 allValid = false
-            } else if passwordTF.text!.count < 6 {
+            } else if passwordTF.text!.count < 6 && mode == .register {
                 let errorView = MessageView(message: "كلمة المرور غير صحيحة، يجب ان تحتوي على 6 او أكثر", animationName: "warning")
                 errorView.show(in: self.view)
                 allValid = false
@@ -211,7 +243,11 @@ class RegisterVC: UIViewController, Storyboarded, DataSelectionDelegate {
                 errorView.show(in: self.view)
                 return // Do not increment
             } else {
-                registerUser()
+                if mode == .register {
+                    registerUser()
+                } else {
+                    self.dismiss(animated: true)
+                }
             }
             stepNumber += 1
             updateStepsUI()
@@ -241,9 +277,17 @@ class RegisterVC: UIViewController, Storyboarded, DataSelectionDelegate {
         
     }
     
+    //MARK:- Update User
+    
+    private func updateUser() {
+        
+//        DataServices.shared.updateStudentAccount(studentID: Student.currentID, updatedData: <#T##[String : Any]#>)
+        
+    }
+    
 }
 
-extension RegisterVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension StudentAccountVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return interestsType.count
@@ -286,3 +330,230 @@ extension RegisterVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
 }
 
 
+//private func updateUser() {
+//    // Ensure that we have the currently saved student
+//    guard let currentStudent = Student.currentStudent else {
+//        print("No local student found.")
+//        return
+//    }
+//
+//    // Gather current form input values
+//    let updatedName = nameTF.text ?? ""
+//    let updatedGender = genderTF.text ?? ""
+//    let updatedPhoneNumber = phoneNumberTF.text ?? ""
+//    let updatedEmail = emailTF.text ?? ""
+//    let updatedCity = cityTF.text ?? ""
+//    let updatedSchool = schoolTF.text ?? ""
+//    let updatedLevel = levelTF.text ?? ""
+//    let updatedLocation = mapInformation.text ?? ""
+//
+//    // Check if any of the fields have changed
+//    var updatedData: [String: Any] = [:]
+//
+//    if updatedName != currentStudent.name {
+//        updatedData["name"] = updatedName
+//    }
+//
+//    if updatedGender != currentStudent.gender {
+//        updatedData["gender"] = updatedGender
+//    }
+//
+//    if updatedPhoneNumber != currentStudent.phoneNumber {
+//        updatedData["phoneNumber"] = updatedPhoneNumber
+//    }
+//
+//    if updatedEmail != currentStudent.email {
+//        updatedData["email"] = updatedEmail
+//    }
+//
+//    if updatedCity != currentStudent.city {
+//        updatedData["city"] = updatedCity
+//    }
+//
+//    if updatedSchool != currentStudent.school {
+//        updatedData["school"] = updatedSchool
+//    }
+//
+//    if updatedLevel != currentStudent.level {
+//        updatedData["level"] = updatedLevel
+//    }
+//
+//    if updatedLocation != currentStudent.location {
+//        updatedData["location"] = updatedLocation
+//    }
+//
+//    // If there is no change, show a message and return
+//    if updatedData.isEmpty {
+//        print("No changes detected.")
+//        let messageView = MessageView(message: "لا توجد تغييرات لتحديثها", animationName: "info")
+//        messageView.show(in: self.view)
+//        return
+//    }
+//
+//    // Proceed to update only if changes are detected
+//    guard let currentUser = Auth.auth().currentUser else {
+//        print("No user logged in.")
+//        return
+//    }
+//
+//    // 1. Update Email in Firebase Authentication, if changed
+//    let updateGroup = DispatchGroup()
+//
+//    if let newEmail = updatedData["email"] as? String, newEmail != currentStudent.email {
+//        updateGroup.enter()
+//        currentUser.updateEmail(to: newEmail) { error in
+//            if let error = error {
+//                print("Error updating email: \(error.localizedDescription)")
+//            } else {
+//                print("Email updated successfully.")
+//            }
+//            updateGroup.leave()
+//        }
+//    }
+//
+//    // 2. Update Firestore with other profile fields (except email)
+//    updateGroup.enter()
+//    FirestoreReference(.schools).document(currentStudent.school)
+//        .collection("students").document(currentUser.uid)
+//        .updateData(updatedData) { error in
+//            if let error = error {
+//                print("Error updating student data: \(error.localizedDescription)")
+//            } else {
+//                print("Student data successfully updated.")
+//            }
+//            updateGroup.leave()
+//        }
+//
+//    // 3. Show Success/Failure Message After All Updates
+//    updateGroup.notify(queue: .main) {
+//        let successView = MessageView(message: "تم تحديث بياناتك بنجاح", animationName: "correct")
+//        successView.show(in: self.view)
+//        
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2.3) {
+//            self.coordinator?.viewNavigationVC()
+//            self.dismiss(animated: true)
+//        }
+//    }
+//}
+//
+
+//private func updateUser() {
+//    // Ensure that we have the currently saved student
+//    guard let currentStudent = Student.currentStudent else {
+//        print("No local student found.")
+//        return
+//    }
+//
+//    // Gather current form input values
+//    let updatedName = nameTF.text ?? ""
+//    let updatedGender = genderTF.text ?? ""
+//    let updatedPhoneNumber = phoneNumberTF.text ?? ""
+//    let updatedEmail = emailTF.text ?? ""
+//    let updatedCity = cityTF.text ?? ""
+//    let updatedSchool = schoolTF.text ?? ""
+//    let updatedLevel = levelTF.text ?? ""
+//    let updatedLocation = mapInformation.text ?? ""
+//
+//    // Create a new Student object with the updated values
+//    var updatedStudent = currentStudent
+//
+//    var hasChanges = false
+//
+//    if updatedName != currentStudent.name {
+//        updatedStudent.name = updatedName
+//        hasChanges = true
+//    }
+//
+//    if updatedGender != currentStudent.gender {
+//        updatedStudent.gender = updatedGender
+//        hasChanges = true
+//    }
+//
+//    if updatedPhoneNumber != currentStudent.phoneNumber {
+//        updatedStudent.phoneNumber = updatedPhoneNumber
+//        hasChanges = true
+//    }
+//
+//    if updatedEmail != currentStudent.email {
+//        updatedStudent.email = updatedEmail
+//        hasChanges = true
+//    }
+//
+//    if updatedCity != currentStudent.city {
+//        updatedStudent.city = updatedCity
+//        hasChanges = true
+//    }
+//
+//    if updatedSchool != currentStudent.school {
+//        updatedStudent.school = updatedSchool
+//        hasChanges = true
+//    }
+//
+//    if updatedLevel != currentStudent.level {
+//        updatedStudent.level = updatedLevel
+//        hasChanges = true
+//    }
+//
+//    if updatedLocation != currentStudent.location {
+//        updatedStudent.location = updatedLocation
+//        hasChanges = true
+//    }
+//
+//    // If there is no change, show a message and return
+//    if !hasChanges {
+//        print("No changes detected.")
+//        let messageView = MessageView(message: "لا توجد تغييرات لتحديثها", animationName: "info")
+//        messageView.show(in: self.view)
+//        return
+//    }
+//
+//    // Proceed to update only if changes are detected
+//    guard let currentUser = Auth.auth().currentUser else {
+//        print("No user logged in.")
+//        return
+//    }
+//
+//    // 1. Update Email in Firebase Authentication, if changed
+//    let updateGroup = DispatchGroup()
+//
+//    if updatedStudent.email != currentStudent.email {
+//        updateGroup.enter()
+//        currentUser.updateEmail(to: updatedStudent.email) { error in
+//            if let error = error {
+//                print("Error updating email: \(error.localizedDescription)")
+//            } else {
+//                print("Email updated successfully.")
+//            }
+//            updateGroup.leave()
+//        }
+//    }
+//
+//    // 2. Update Firestore with the new Student object
+//    updateGroup.enter()
+//    do {
+//        try FirestoreReference(.schools).document(updatedStudent.school)
+//            .collection("students").document(currentUser.uid)
+//            .setData(from: updatedStudent) { error in
+//                if let error = error {
+//                    print("Error updating student data: \(error.localizedDescription)")
+//                } else {
+//                    print("Student data successfully updated.")
+//                }
+//                updateGroup.leave()
+//            }
+//    } catch {
+//        print("Error encoding student data: \(error.localizedDescription)")
+//        updateGroup.leave()
+//    }
+//
+//    // 3. Show Success/Failure Message After All Updates
+//    updateGroup.notify(queue: .main) {
+//        let successView = MessageView(message: "تم تحديث بياناتك بنجاح", animationName: "correct")
+//        successView.show(in: self.view)
+//        
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2.3) {
+//            self.coordinator?.viewNavigationVC()
+//            self.dismiss(animated: true)
+//        }
+//    }
+//}
