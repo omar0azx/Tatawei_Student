@@ -55,8 +55,8 @@ final class MainCoordinator: Coordinator {
     }
     
     func viewNavigationVC() {
+        
         let navigationVC = NavigationVC.instantiate()
-                
         let homeVC = HomeVC.instantiate()
         let exploreVC = ExploreVC.instantiate()
         let educationVC = EducationVC.instantiate()

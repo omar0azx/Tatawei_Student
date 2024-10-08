@@ -102,6 +102,7 @@ class DataServices {
                     } else {
                         saveUserLocally(updatedData)
                         print("Student data successfully updated.")
+                    
                         completion(nil)
                     }
                     updateGroup.leave()

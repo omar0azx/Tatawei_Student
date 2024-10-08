@@ -48,6 +48,7 @@
 		4E14667C2CAEE393000178C9 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E14667B2CAEE393000178C9 /* SettingsCell.swift */; };
 		4E1468522CB00981000178C9 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1468512CB00980000178C9 /* MenuItem.swift */; };
 		4E1468542CB00EF4000178C9 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1468532CB00EEE000178C9 /* CustomAlertView.swift */; };
+		4E6DDC682CB5825E007B8E04 /* gitignore.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4E6DDC672CB5825E007B8E04 /* gitignore.txt */; };
 		F2D6C95A2CAD0DD1000E1713 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = F2D6C9592CAD0DD1000E1713 /* FirebaseDatabase */; };
 		F2D6C95C2CAD0DED000E1713 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = F2D6C95B2CAD0DED000E1713 /* FirebaseAppCheck */; };
 		F2D6C95F2CAD0E1C000E1713 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = F2D6C95E2CAD0E1C000E1713 /* Lottie */; };
@@ -102,6 +103,7 @@
 		4E1468512CB00980000178C9 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		4E1468532CB00EEE000178C9 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 		4E14CFC02C9E2FE400103405 /* Tatawei Student.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tatawei Student.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E6DDC672CB5825E007B8E04 /* gitignore.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = gitignore.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +276,7 @@
 				4E1466532CAED140000178C9 /* Tatawei Student */,
 				F2D6C9582CAD0DD1000E1713 /* Frameworks */,
 				4E14CFC12C9E2FE400103405 /* Products */,
+				4E6DDC672CB5825E007B8E04 /* gitignore.txt */,
 			);
 			sourceTree = "<group>";
 		};
@@ -369,6 +372,7 @@
 				4E14666D2CAED140000178C9 /* Cairo.ttf in Resources */,
 				4E14666E2CAED140000178C9 /* Cairo-Black.ttf in Resources */,
 				4E14666F2CAED140000178C9 /* Cairo-Bold.ttf in Resources */,
+				4E6DDC682CB5825E007B8E04 /* gitignore.txt in Resources */,
 				4E1466702CAED140000178C9 /* Cairo-Light.ttf in Resources */,
 				4E1466712CAED140000178C9 /* Cairo-Medium.ttf in Resources */,
 				4E1466722CAED140000178C9 /* Cairo-SemiBold.ttf in Resources */,
