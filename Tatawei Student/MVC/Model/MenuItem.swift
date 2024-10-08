@@ -23,3 +23,4 @@ struct MenuItem {
         self.label = label
     }
 }
+

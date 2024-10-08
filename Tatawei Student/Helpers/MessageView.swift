@@ -140,3 +140,4 @@ class MessageView: UIView {
         hide() // Simply call hide to remove the message and blur effect
     }
 }
+

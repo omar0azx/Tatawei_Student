@@ -52,6 +52,7 @@ class AuthService {
     }
     
     
+    
     //MARK:- Logout
     
     func logoutCurrentUser(completion: @escaping (_ error: Error?)-> Void) {

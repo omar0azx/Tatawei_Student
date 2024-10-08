@@ -37,3 +37,4 @@ class SettingsCell: UITableViewCell {
         }
 
 }
+
