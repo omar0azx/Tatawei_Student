@@ -16,8 +16,15 @@ class HomeVC: UIViewController, Storyboarded {
     let shapeLayer = CAShapeLayer()
     // The student object that contains the student's data.
     var student: Student?
+<<<<<<< HEAD
     
     var coordinator: MainCoordinator?
+=======
+    
+    var coordinator: MainCoordinator?
+    
+    var arrOppt = [opportunities]()
+>>>>>>> edit_collictionView
     
     //MARK: - IBOutleats
     
@@ -29,10 +36,33 @@ class HomeVC: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
                 
         setupUI()
         setUpProgressAnimat()
         handleAnimation()
+=======
+        
+        
+        setupUI()
+        setUpProgressAnimat()
+        handleAnimation()
+        
+
+        
+        arrOppt.append(opportunities(name: "تنظيم الحجاج المصاريه", date: "09/11/2009", organizationIcon: UIImage(named: "ummQura")!, opportunityHours: 4, accecptanceStatus: false, opportunityIcon: UIImage(named: "kaaba")!, BGColor: .standr4, time: "6:00 PM - 10:00 PM"))
+        arrOppt.append(opportunities(name: "إفطار غير الصائمين", date: "09/11/2009", organizationIcon: UIImage(named: "جامعة الملك عبدالعزيز 1")!, opportunityHours: 4, accecptanceStatus: true, opportunityIcon: UIImage(named: "iftar 1")!, BGColor: .standr2, time: "6:00 PM - 10:00 PM"))
+        arrOppt.append(opportunities(name: "تنظيف الشاطئ", date: "09/11/2009",  organizationIcon: UIImage(named: "logo 4")!, opportunityHours: 4, accecptanceStatus: false, opportunityIcon: UIImage(named: "beach 1")!, BGColor: .standr3, time: "6:00 PM - 10:00 PM"))
+        arrOppt.append(opportunities(name: "تنظيم الحجاج المصاريه", date: "09/11/2009", organizationIcon: UIImage(named: "ummQura")!, opportunityHours: 4, accecptanceStatus: false, opportunityIcon: UIImage(named: "kaaba")!, BGColor: .standr4, time: "6:00 PM - 10:00 PM"))
+        arrOppt.append(opportunities(name: "إفطار غير الصائمين", date: "غداً", organizationIcon: UIImage(named: "جامعة الملك عبدالعزيز 1")!, opportunityHours: 4, accecptanceStatus: true, opportunityIcon: UIImage(named: "iftar 1")!, BGColor: .standr2, time: "6:00 PM - 10:00 PM"))
+        arrOppt.append(opportunities(name: "تنظيف الشاطئ", date: "اليوم",  organizationIcon: UIImage(named: "logo 4")!, opportunityHours: 4, accecptanceStatus: false, opportunityIcon: UIImage(named: "beach 1")!, BGColor: .standr3, time: "6:00 PM - 10:00 PM"))
+
+
+
+
+        
+
+>>>>>>> edit_collictionView
     }
 
     
@@ -64,7 +94,11 @@ class HomeVC: UIViewController, Storyboarded {
             // Set up the shape layer.
             shapeLayer.path = circularPath.cgPath
             progressView.layer.addSublayer(shapeLayer)
+<<<<<<< HEAD
             shapeLayer.strokeColor = UIColor(red: 1, green: 169, blue: 158, alpha: 0.5).cgColor
+=======
+            shapeLayer.strokeColor = UIColor.black.cgColor;
+>>>>>>> edit_collictionView
             shapeLayer.strokeEnd = 0
             shapeLayer.lineWidth = 9.5
             shapeLayer.fillColor = UIColor.clear.cgColor
@@ -87,4 +121,27 @@ class HomeVC: UIViewController, Storyboarded {
             basicAnimation.isRemovedOnCompletion = false
             shapeLayer.add(basicAnimation, forKey: "urBasic")
         }
+<<<<<<< HEAD
+=======
+}
+
+
+extension HomeVC: UICollisionBehaviorDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return arrOppt.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OpportunitiesCell", for: indexPath) as! OpportunitiesCell
+        let oppt = arrOppt[indexPath.row]
+        cell.configOppt(orgaIcon: oppt.organizationIcon , oppIcon: oppt.opportunityIcon, opptName: oppt.name, opptTime: oppt.time, opptHours: oppt.opportunityHours, opptDate: oppt.date, backgroundColor: oppt.BGColor, status: oppt.accecptanceStatus)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0.2
+    }
+    
+>>>>>>> edit_collictionView
 }
