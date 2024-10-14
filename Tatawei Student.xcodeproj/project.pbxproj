@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E5B43742CBCAAF200F7E850 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B43732CBCAAF200F7E850 /* SettingsCell.swift */; };
+		4E5B43762CBCAB2C00F7E850 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B43752CBCAB2C00F7E850 /* MenuItem.swift */; };
+		4E5B43782CBCAB7500F7E850 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B43772CBCAB7500F7E850 /* CustomAlertView.swift */; };
 		F269FB092CB5914400058592 /* CustomBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F269FB082CB5914400058592 /* CustomBackgroundView.swift */; };
 		F269FB0B2CB5D4A300058592 /* DashedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F269FB0A2CB5D4A300058592 /* DashedView.swift */; };
 		F26CDBF52CB1B09400AAFFB6 /* OpportunitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26CDBF42CB1B09400AAFFB6 /* OpportunitiesCell.swift */; };
@@ -37,7 +40,7 @@
 		F2D6C9B22CAD19F5000E1713 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C98B2CAD19F5000E1713 /* MapVC.swift */; };
 		F2D6C9B32CAD19F5000E1713 /* NavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C98C2CAD19F5000E1713 /* NavigationVC.swift */; };
 		F2D6C9B42CAD19F5000E1713 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C98D2CAD19F5000E1713 /* ProfileVC.swift */; };
-		F2D6C9B52CAD19F5000E1713 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C98E2CAD19F5000E1713 /* RegisterVC.swift */; };
+		F2D6C9B52CAD19F5000E1713 /* StudentsAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C98E2CAD19F5000E1713 /* StudentsAccountVC.swift */; };
 		F2D6C9B62CAD19F5000E1713 /* InterestCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C9902CAD19F5000E1713 /* InterestCategories.swift */; };
 		F2D6C9B72CAD19F5000E1713 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C9912CAD19F5000E1713 /* Student.swift */; };
 		F2D6C9B82CAD19F5000E1713 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C9992CAD19F5000E1713 /* AuthService.swift */; };
@@ -58,50 +61,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4E14661D2CAED140000178C9 /* MainExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainExtensions.swift; sourceTree = "<group>"; };
-		4E14661E2CAED140000178C9 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
-		4E1466202CAED140000178C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4E1466212CAED140000178C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4E1466232CAED140000178C9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		4E1466242CAED140000178C9 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-		4E1466252CAED140000178C9 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
-		4E1466272CAED140000178C9 /* Cairo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cairo.ttf; sourceTree = "<group>"; };
-		4E1466282CAED140000178C9 /* Cairo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Black.ttf"; sourceTree = "<group>"; };
-		4E1466292CAED140000178C9 /* Cairo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Bold.ttf"; sourceTree = "<group>"; };
-		4E14662A2CAED140000178C9 /* Cairo-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Light.ttf"; sourceTree = "<group>"; };
-		4E14662B2CAED140000178C9 /* Cairo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Medium.ttf"; sourceTree = "<group>"; };
-		4E14662C2CAED140000178C9 /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
-		4E14662E2CAED140000178C9 /* AppCheckProviderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCheckProviderFactory.swift; sourceTree = "<group>"; };
-		4E14662F2CAED140000178C9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		4E1466302CAED140000178C9 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
-		4E1466322CAED140000178C9 /* correct.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = correct.json; sourceTree = "<group>"; };
-		4E1466332CAED140000178C9 /* loading.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
-		4E1466342CAED140000178C9 /* warning.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = warning.json; sourceTree = "<group>"; };
-		4E1466362CAED140000178C9 /* InterestsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsCell.swift; sourceTree = "<group>"; };
-		4E1466382CAED140000178C9 /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
-		4E1466392CAED140000178C9 /* EducationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationVC.swift; sourceTree = "<group>"; };
-		4E14663A2CAED140000178C9 /* ExploreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreVC.swift; sourceTree = "<group>"; };
-		4E14663B2CAED140000178C9 /* ForgetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordVC.swift; sourceTree = "<group>"; };
-		4E14663C2CAED140000178C9 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		4E14663D2CAED140000178C9 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		4E14663E2CAED140000178C9 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
-		4E14663F2CAED140000178C9 /* NavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationVC.swift; sourceTree = "<group>"; };
-		4E1466402CAED140000178C9 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
-		4E1466412CAED140000178C9 /* StudentsAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsAccountVC.swift; sourceTree = "<group>"; };
-		4E1466432CAED140000178C9 /* InterestCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestCategories.swift; sourceTree = "<group>"; };
-		4E1466442CAED140000178C9 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
-		4E1466462CAED140000178C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4E1466482CAED140000178C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4E14664C2CAED140000178C9 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		4E14664D2CAED140000178C9 /* DataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
-		4E14664F2CAED140000178C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4E1466502CAED140000178C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		4E1466512CAED140000178C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E1466522CAED140000178C9 /* Tatawei Student.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Tatawei Student.entitlements"; sourceTree = "<group>"; };
-		4E14667B2CAEE393000178C9 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
-		4E1468512CB00980000178C9 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
-		4E1468532CB00EEE000178C9 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 		4E14CFC02C9E2FE400103405 /* Tatawei Student.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tatawei Student.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E5B43732CBCAAF200F7E850 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		4E5B43752CBCAB2C00F7E850 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		4E5B43772CBCAB7500F7E850 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 		F269FB082CB5914400058592 /* CustomBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackgroundView.swift; sourceTree = "<group>"; };
 		F269FB0A2CB5D4A300058592 /* DashedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedView.swift; sourceTree = "<group>"; };
 		F26CDBF42CB1B09400AAFFB6 /* OpportunitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportunitiesCell.swift; sourceTree = "<group>"; };
@@ -134,7 +97,7 @@
 		F2D6C98B2CAD19F5000E1713 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		F2D6C98C2CAD19F5000E1713 /* NavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationVC.swift; sourceTree = "<group>"; };
 		F2D6C98D2CAD19F5000E1713 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
-		F2D6C98E2CAD19F5000E1713 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		F2D6C98E2CAD19F5000E1713 /* StudentsAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsAccountVC.swift; sourceTree = "<group>"; };
 		F2D6C9902CAD19F5000E1713 /* InterestCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestCategories.swift; sourceTree = "<group>"; };
 		F2D6C9912CAD19F5000E1713 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		F2D6C9932CAD19F5000E1713 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -165,152 +128,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4E14661F2CAED140000178C9 /*  Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				4E14661D2CAED140000178C9 /* MainExtensions.swift */,
-				4E14661E2CAED140000178C9 /* StringExtensions.swift */,
-			);
-			path = " Extensions";
-			sourceTree = "<group>";
-		};
-		4E1466222CAED140000178C9 /* App */ = {
-			isa = PBXGroup;
-			children = (
-				4E1466202CAED140000178C9 /* AppDelegate.swift */,
-				4E1466212CAED140000178C9 /* SceneDelegate.swift */,
-			);
-			path = App;
-			sourceTree = "<group>";
-		};
-		4E1466262CAED140000178C9 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				4E1466232CAED140000178C9 /* Coordinator.swift */,
-				4E1466252CAED140000178C9 /* Storyboarded.swift */,
-				4E1466242CAED140000178C9 /* MainCoordinator.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		4E14662D2CAED140000178C9 /* Font */ = {
-			isa = PBXGroup;
-			children = (
-				4E1466272CAED140000178C9 /* Cairo.ttf */,
-				4E1466282CAED140000178C9 /* Cairo-Black.ttf */,
-				4E1466292CAED140000178C9 /* Cairo-Bold.ttf */,
-				4E14662A2CAED140000178C9 /* Cairo-Light.ttf */,
-				4E14662B2CAED140000178C9 /* Cairo-Medium.ttf */,
-				4E14662C2CAED140000178C9 /* Cairo-SemiBold.ttf */,
-			);
-			path = Font;
-			sourceTree = "<group>";
-		};
-		4E1466312CAED140000178C9 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				4E14662E2CAED140000178C9 /* AppCheckProviderFactory.swift */,
-				4E14662F2CAED140000178C9 /* Constants.swift */,
-				4E1468532CB00EEE000178C9 /* CustomAlertView.swift */,
-				4E1466302CAED140000178C9 /* MessageView.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		4E1466352CAED140000178C9 /* Lottie */ = {
-			isa = PBXGroup;
-			children = (
-				4E1466322CAED140000178C9 /* correct.json */,
-				4E1466332CAED140000178C9 /* loading.json */,
-				4E1466342CAED140000178C9 /* warning.json */,
-			);
-			path = Lottie;
-			sourceTree = "<group>";
-		};
-		4E1466372CAED140000178C9 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				4E1466362CAED140000178C9 /* InterestsCell.swift */,
-				4E14667B2CAEE393000178C9 /* SettingsCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		4E1466422CAED140000178C9 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				4E1466372CAED140000178C9 /* Cells */,
-				4E1466382CAED140000178C9 /* ContainerVC.swift */,
-				4E14663F2CAED140000178C9 /* NavigationVC.swift */,
-				4E1466412CAED140000178C9 /* StudentsAccountVC.swift */,
-				4E14663E2CAED140000178C9 /* MapVC.swift */,
-				4E14663D2CAED140000178C9 /* LoginVC.swift */,
-				4E14663B2CAED140000178C9 /* ForgetPasswordVC.swift */,
-				4E14663C2CAED140000178C9 /* HomeVC.swift */,
-				4E14663A2CAED140000178C9 /* ExploreVC.swift */,
-				4E1466392CAED140000178C9 /* EducationVC.swift */,
-				4E1466402CAED140000178C9 /* ProfileVC.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		4E1466452CAED140000178C9 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				4E1468512CB00980000178C9 /* MenuItem.swift */,
-				4E1466432CAED140000178C9 /* InterestCategories.swift */,
-				4E1466442CAED140000178C9 /* Student.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		4E14664A2CAED140000178C9 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				4E1466472CAED140000178C9 /* LaunchScreen.storyboard */,
-				4E1466492CAED140000178C9 /* Main.storyboard */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		4E14664B2CAED140000178C9 /* MVC */ = {
-			isa = PBXGroup;
-			children = (
-				4E1466452CAED140000178C9 /* Model */,
-				4E14664A2CAED140000178C9 /* View */,
-				4E1466422CAED140000178C9 /* Controller */,
-			);
-			path = MVC;
-			sourceTree = "<group>";
-		};
-		4E14664E2CAED140000178C9 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				4E14664C2CAED140000178C9 /* AuthService.swift */,
-				4E14664D2CAED140000178C9 /* DataServices.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		4E1466532CAED140000178C9 /* Tatawei Student */ = {
-			isa = PBXGroup;
-			children = (
-				4E1466522CAED140000178C9 /* Tatawei Student.entitlements */,
-				4E1466222CAED140000178C9 /* App */,
-				4E14664B2CAED140000178C9 /* MVC */,
-				4E1466262CAED140000178C9 /* Coordinator */,
-				4E14664E2CAED140000178C9 /* Services */,
-				4E1466312CAED140000178C9 /* Helpers */,
-				4E14661F2CAED140000178C9 /*  Extensions */,
-				4E14662D2CAED140000178C9 /* Font */,
-				4E1466352CAED140000178C9 /* Lottie */,
-				4E14664F2CAED140000178C9 /* Assets.xcassets */,
-				4E1466502CAED140000178C9 /* GoogleService-Info.plist */,
-				4E1466512CAED140000178C9 /* Info.plist */,
-			);
-			path = "Tatawei Student";
-			sourceTree = "<group>";
-		};
 		4E14CFB72C9E2FE400103405 = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +199,7 @@
 				F2D6C97B2CAD19F5000E1713 /* AppCheckProviderFactory.swift */,
 				F2D6C97C2CAD19F5000E1713 /* Constants.swift */,
 				F2D6C97D2CAD19F5000E1713 /* MessageView.swift */,
+				4E5B43772CBCAB7500F7E850 /* CustomAlertView.swift */,
 				F269FB082CB5914400058592 /* CustomBackgroundView.swift */,
 				F269FB0A2CB5D4A300058592 /* DashedView.swift */,
 			);
@@ -402,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				F2D6C9832CAD19F5000E1713 /* InterestsCell.swift */,
+				4E5B43732CBCAAF200F7E850 /* SettingsCell.swift */,
 				F26CDBF42CB1B09400AAFFB6 /* OpportunitiesCell.swift */,
 			);
 			path = Cells;
@@ -412,15 +231,15 @@
 			children = (
 				F2D6C9842CAD19F5000E1713 /* Cells */,
 				F2D6C9852CAD19F5000E1713 /* ContainerVC.swift */,
-				F2D6C9862CAD19F5000E1713 /* EducationVC.swift */,
-				F2D6C9872CAD19F5000E1713 /* ExploreVC.swift */,
+				F2D6C98C2CAD19F5000E1713 /* NavigationVC.swift */,
+				F2D6C98E2CAD19F5000E1713 /* StudentsAccountVC.swift */,
+				F2D6C98B2CAD19F5000E1713 /* MapVC.swift */,
+				F2D6C98A2CAD19F5000E1713 /* LoginVC.swift */,
 				F2D6C9882CAD19F5000E1713 /* ForgetPasswordVC.swift */,
 				F2D6C9892CAD19F5000E1713 /* HomeVC.swift */,
-				F2D6C98A2CAD19F5000E1713 /* LoginVC.swift */,
-				F2D6C98B2CAD19F5000E1713 /* MapVC.swift */,
-				F2D6C98C2CAD19F5000E1713 /* NavigationVC.swift */,
+				F2D6C9872CAD19F5000E1713 /* ExploreVC.swift */,
+				F2D6C9862CAD19F5000E1713 /* EducationVC.swift */,
 				F2D6C98D2CAD19F5000E1713 /* ProfileVC.swift */,
-				F2D6C98E2CAD19F5000E1713 /* RegisterVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -429,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				F2D6C9902CAD19F5000E1713 /* InterestCategories.swift */,
+				4E5B43752CBCAB2C00F7E850 /* MenuItem.swift */,
 				F2D6C9912CAD19F5000E1713 /* Student.swift */,
 			);
 			path = Model;
@@ -446,9 +266,9 @@
 		F2D6C9982CAD19F5000E1713 /* MVC */ = {
 			isa = PBXGroup;
 			children = (
-				F2D6C98F2CAD19F5000E1713 /* Controller */,
 				F2D6C9922CAD19F5000E1713 /* Model */,
 				F2D6C9972CAD19F5000E1713 /* View */,
+				F2D6C98F2CAD19F5000E1713 /* Controller */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -468,12 +288,12 @@
 				F2D6C99F2CAD19F5000E1713 /* Tatawei Student.entitlements */,
 				F2D6C96F2CAD19F5000E1713 /* App */,
 				F2D6C9982CAD19F5000E1713 /* MVC */,
-				F2D6C96C2CAD19F5000E1713 /*  Extensions */,
 				F2D6C9732CAD19F5000E1713 /* Coordinator */,
-				F2D6C97A2CAD19F5000E1713 /* Font */,
-				F2D6C97E2CAD19F5000E1713 /* Helpers */,
-				F2D6C9822CAD19F5000E1713 /* Lottie */,
 				F2D6C99B2CAD19F5000E1713 /* Services */,
+				F2D6C97E2CAD19F5000E1713 /* Helpers */,
+				F2D6C96C2CAD19F5000E1713 /*  Extensions */,
+				F2D6C97A2CAD19F5000E1713 /* Font */,
+				F2D6C9822CAD19F5000E1713 /* Lottie */,
 				F2D6C99C2CAD19F5000E1713 /* Assets.xcassets */,
 				F2D6C99D2CAD19F5000E1713 /* GoogleService-Info.plist */,
 				F2D6C99E2CAD19F5000E1713 /* Info.plist */,
@@ -582,11 +402,13 @@
 				F2D6C9A22CAD19F5000E1713 /* StringExtensions.swift in Sources */,
 				F2D6C9A32CAD19F5000E1713 /* AppDelegate.swift in Sources */,
 				F2D6C9A42CAD19F5000E1713 /* SceneDelegate.swift in Sources */,
+				4E5B43782CBCAB7500F7E850 /* CustomAlertView.swift in Sources */,
 				F2D6C9A52CAD19F5000E1713 /* Coordinator.swift in Sources */,
 				F2D6C9A62CAD19F5000E1713 /* MainCoordinator.swift in Sources */,
 				F2D6C9A72CAD19F5000E1713 /* Storyboarded.swift in Sources */,
 				F2D6C9A82CAD19F5000E1713 /* AppCheckProviderFactory.swift in Sources */,
 				F2D6C9A92CAD19F5000E1713 /* Constants.swift in Sources */,
+				4E5B43762CBCAB2C00F7E850 /* MenuItem.swift in Sources */,
 				F26CDBF52CB1B09400AAFFB6 /* OpportunitiesCell.swift in Sources */,
 				F2D6C9AA2CAD19F5000E1713 /* MessageView.swift in Sources */,
 				F2D6C9AB2CAD19F5000E1713 /* InterestsCell.swift in Sources */,
@@ -595,12 +417,13 @@
 				F2D6C9AE2CAD19F5000E1713 /* ExploreVC.swift in Sources */,
 				F269FB0B2CB5D4A300058592 /* DashedView.swift in Sources */,
 				F2D6C9AF2CAD19F5000E1713 /* ForgetPasswordVC.swift in Sources */,
+				4E5B43742CBCAAF200F7E850 /* SettingsCell.swift in Sources */,
 				F2D6C9B02CAD19F5000E1713 /* HomeVC.swift in Sources */,
 				F2D6C9B12CAD19F5000E1713 /* LoginVC.swift in Sources */,
 				F2D6C9B22CAD19F5000E1713 /* MapVC.swift in Sources */,
 				F2D6C9B32CAD19F5000E1713 /* NavigationVC.swift in Sources */,
 				F2D6C9B42CAD19F5000E1713 /* ProfileVC.swift in Sources */,
-				F2D6C9B52CAD19F5000E1713 /* RegisterVC.swift in Sources */,
+				F2D6C9B52CAD19F5000E1713 /* StudentsAccountVC.swift in Sources */,
 				F2D6C9B62CAD19F5000E1713 /* InterestCategories.swift in Sources */,
 				F2D6C9B72CAD19F5000E1713 /* Student.swift in Sources */,
 				F269FB092CB5914400058592 /* CustomBackgroundView.swift in Sources */,

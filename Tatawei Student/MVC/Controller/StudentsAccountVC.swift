@@ -95,10 +95,6 @@ class StudentsAccountVC: UIViewController, Storyboarded, DataSelectionDelegate {
         }
     }
     
-<<<<<<< HEAD:Tatawei Student/MVC/Controller/StudentsAccountVC.swift
-    
-=======
->>>>>>> edit_collictionView:Tatawei Student/MVC/Controller/RegisterVC.swift
     //MARK: - IBAction
     
     @IBAction func didPressedCancel(_ sender: UIButton) {
