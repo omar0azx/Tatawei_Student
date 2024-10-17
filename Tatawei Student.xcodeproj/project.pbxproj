@@ -10,6 +10,7 @@
 		4E5B43742CBCAAF200F7E850 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B43732CBCAAF200F7E850 /* SettingsCell.swift */; };
 		4E5B43762CBCAB2C00F7E850 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B43752CBCAB2C00F7E850 /* MenuItem.swift */; };
 		4E5B43782CBCAB7500F7E850 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B43772CBCAB7500F7E850 /* CustomAlertView.swift */; };
+		BE8594C22CC070C300EC84F6 /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8594C12CC070C300EC84F6 /* WebVC.swift */; };
 		4EF2A9F22CC074AA002E1956 /* ExploreOpportunitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2A9F12CC074AA002E1956 /* ExploreOpportunitiesCell.swift */; };
 		F269FB092CB5914400058592 /* CustomBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F269FB082CB5914400058592 /* CustomBackgroundView.swift */; };
 		F269FB0B2CB5D4A300058592 /* DashedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F269FB0A2CB5D4A300058592 /* DashedView.swift */; };
@@ -66,6 +67,7 @@
 		4E5B43732CBCAAF200F7E850 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		4E5B43752CBCAB2C00F7E850 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		4E5B43772CBCAB7500F7E850 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
+		BE8594C12CC070C300EC84F6 /* WebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 		4EF2A9F12CC074AA002E1956 /* ExploreOpportunitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreOpportunitiesCell.swift; sourceTree = "<group>"; };
 		F269FB082CB5914400058592 /* CustomBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackgroundView.swift; sourceTree = "<group>"; };
 		F269FB0A2CB5D4A300058592 /* DashedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedView.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				F2D6C9872CAD19F5000E1713 /* ExploreVC.swift */,
 				F2D6C9862CAD19F5000E1713 /* EducationVC.swift */,
 				F2D6C98D2CAD19F5000E1713 /* ProfileVC.swift */,
+				BE8594C12CC070C300EC84F6 /* WebVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				F2D6C9B62CAD19F5000E1713 /* InterestCategories.swift in Sources */,
 				F2D6C9B72CAD19F5000E1713 /* Student.swift in Sources */,
 				F269FB092CB5914400058592 /* CustomBackgroundView.swift in Sources */,
+				BE8594C22CC070C300EC84F6 /* WebVC.swift in Sources */,
 				4EF2A9F22CC074AA002E1956 /* ExploreOpportunitiesCell.swift in Sources */,
 				F2D6C9B82CAD19F5000E1713 /* AuthService.swift in Sources */,
 				F2D6C9B92CAD19F5000E1713 /* DataServices.swift in Sources */,

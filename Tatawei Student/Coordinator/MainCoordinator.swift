@@ -54,6 +54,14 @@ final class MainCoordinator: Coordinator {
         self.navigationController.pushViewController(vc, animated: false)
     }
     
+    func viewWebVC(url: String) {
+        let vc = WebVC.instantiate()
+        vc.coordinator = self
+        vc.webUrl = url
+        vc.modalPresentationStyle = .fullScreen
+        navigationController.present(vc, animated: true)
+    }
+    
     func viewNavigationVC() {
         let navigationVC = NavigationVC.instantiate()
 
