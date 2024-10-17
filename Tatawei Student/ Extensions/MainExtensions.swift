@@ -217,15 +217,6 @@ extension UIView {
     }
     
     
-    @IBInspectable
-    var cornerRadius: CGFloat {
-        get {
-            return layer.cornerRadius
-        }
-        set {
-            layer.cornerRadius = newValue
-        }
-    }
     
     @IBInspectable
     var rotation: Int {
@@ -335,6 +326,7 @@ class EdgeInsetLabel: UILabel {
 
 private var __maxLengths = [UITextField: Int]()
 extension UITextField {
+    
     @IBInspectable var maxLength: Int {
         get {
             guard let l = __maxLengths[self] else {
