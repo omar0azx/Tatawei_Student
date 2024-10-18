@@ -34,6 +34,7 @@ class LoginVC: UIViewController, Storyboarded {
         super.viewDidLoad()
         
         self.navigationItem.hidesBackButton = true
+        self.hideKeyboardWhenTappedAround()
     }
     
     
