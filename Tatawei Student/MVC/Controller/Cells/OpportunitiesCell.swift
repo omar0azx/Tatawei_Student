@@ -11,35 +11,34 @@ import SwiftUICore
 class OpportunitiesCell: UICollectionViewCell {
     
     
-    @IBOutlet weak var BGView: CustomBackgroundView!
+    @IBOutlet weak var opportunityView: CustomBackgroundView!
     @IBOutlet weak var pointView: DesignableView!
     @IBOutlet weak var organizationIcon: UIImageView!
-    @IBOutlet weak var opptIcon: UIImageView!
-    @IBOutlet weak var opptNameLbl: UILabel!
-    @IBOutlet weak var opptHoursLBL: UILabel!
-    @IBOutlet weak var opptTimeLbl: UILabel!
-    @IBOutlet weak var colorOfStatus: UIView!
-    @IBOutlet weak var accecptanceStatusLbl: UILabel!
-    @IBOutlet weak var oppDate: UILabel!
-    
+    @IBOutlet weak var opportunityImage: UIImageView!
+    @IBOutlet weak var opportunityName: UILabel!
+    @IBOutlet weak var opportunityDate: UILabel!
+    @IBOutlet weak var opportunityTime: UILabel!
+    @IBOutlet weak var opportunityHour: UILabel!
+    @IBOutlet weak var accecptanceMessage: UILabel!
+    @IBOutlet weak var statusView: UIView!
 
-    func configOppt(orgaIcon: UIImage, oppIcon: UIImage, opptName: String, opptTime: String, opptHours: Int, opptDate: String , backgroundColor: UIColor, status: Bool){
+    func configOpportunity(backgroundColor: UIColor, opportunityImage: UIImage, opportunityName: String, opportunityTime: String, opportunityHour: Int, opportunityDate: String, organizationImage: UIImage, status: Bool) {
         
-        BGView.fillColor = backgroundColor
-        organizationIcon.image = orgaIcon
-        opptIcon.image = oppIcon
-        opptNameLbl.text = opptName
-        opptHoursLBL.text = "\(opptHours) Hours"
-        opptTimeLbl.text = opptTime
-        oppDate.text = opptDate
+        opportunityView.fillColor = backgroundColor
+        self.opportunityImage.image = opportunityImage
+        self.opportunityName.text = opportunityName
+        self.opportunityTime.text = opportunityTime
+        self.opportunityHour.text = "\(opportunityHour) Hours"
+        self.opportunityDate.text = opportunityDate
+        organizationIcon.image = organizationImage
         
         // Verify student acceptance into the opportunity
         if (status == true){
-            colorOfStatus.backgroundColor = .green
-            accecptanceStatusLbl.text = "مقبول"
+            statusView.backgroundColor = .green
+            accecptanceMessage.text = "مقبول"
         } else {
-            colorOfStatus.backgroundColor = .orange
-            accecptanceStatusLbl.text = "معلق"
+            statusView.backgroundColor = .orange
+            accecptanceMessage.text = "معلق"
 
         }
         

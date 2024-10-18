@@ -43,6 +43,7 @@ extension ExploreVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ExploreOpportunitiesCell", for: indexPath) as! ExploreOpportunitiesCell
+//        cell.configOpportunity(backgroundColor: <#T##UIColor#>, opportunityImage: <#T##UIImage#>, opportunityName: <#T##String#>, opportunityTime: <#T##String#>, opportunityHours: <#T##Int#>, opportunityCity: <#T##String#>, organizationImage: <#T##UIImage#>)
         return cell
     }
     

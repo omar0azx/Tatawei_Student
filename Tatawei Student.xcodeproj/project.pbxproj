@@ -11,6 +11,9 @@
 		4E5B43762CBCAB2C00F7E850 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B43752CBCAB2C00F7E850 /* MenuItem.swift */; };
 		4E5B43782CBCAB7500F7E850 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B43772CBCAB7500F7E850 /* CustomAlertView.swift */; };
 		4EF2A9F22CC074AA002E1956 /* ExploreOpportunitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2A9F12CC074AA002E1956 /* ExploreOpportunitiesCell.swift */; };
+		4EF2A9F62CC1F49C002E1956 /* Opportunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2A9F52CC1F49C002E1956 /* Opportunity.swift */; };
+		4EF2A9F82CC206D8002E1956 /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2A9F72CC206CE002E1956 /* Cities.swift */; };
+		4EF2A9FA2CC2E988002E1956 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2A9F92CC2E984002E1956 /* Organization.swift */; };
 		BE8594C22CC070C300EC84F6 /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8594C12CC070C300EC84F6 /* WebVC.swift */; };
 		F269FB092CB5914400058592 /* CustomBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F269FB082CB5914400058592 /* CustomBackgroundView.swift */; };
 		F269FB0B2CB5D4A300058592 /* DashedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F269FB0A2CB5D4A300058592 /* DashedView.swift */; };
@@ -68,6 +71,9 @@
 		4E5B43752CBCAB2C00F7E850 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		4E5B43772CBCAB7500F7E850 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 		4EF2A9F12CC074AA002E1956 /* ExploreOpportunitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreOpportunitiesCell.swift; sourceTree = "<group>"; };
+		4EF2A9F52CC1F49C002E1956 /* Opportunity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opportunity.swift; sourceTree = "<group>"; };
+		4EF2A9F72CC206CE002E1956 /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
+		4EF2A9F92CC2E984002E1956 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		BE8594C12CC070C300EC84F6 /* WebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 		F269FB082CB5914400058592 /* CustomBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackgroundView.swift; sourceTree = "<group>"; };
 		F269FB0A2CB5D4A300058592 /* DashedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedView.swift; sourceTree = "<group>"; };
@@ -253,6 +259,9 @@
 		F2D6C9922CAD19F5000E1713 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4EF2A9F92CC2E984002E1956 /* Organization.swift */,
+				4EF2A9F72CC206CE002E1956 /* Cities.swift */,
+				4EF2A9F52CC1F49C002E1956 /* Opportunity.swift */,
 				F2D6C9902CAD19F5000E1713 /* InterestCategories.swift */,
 				4E5B43752CBCAB2C00F7E850 /* MenuItem.swift */,
 				F2D6C9912CAD19F5000E1713 /* Student.swift */,
@@ -415,6 +424,7 @@
 				F2D6C9A82CAD19F5000E1713 /* AppCheckProviderFactory.swift in Sources */,
 				F2D6C9A92CAD19F5000E1713 /* Constants.swift in Sources */,
 				4E5B43762CBCAB2C00F7E850 /* MenuItem.swift in Sources */,
+				4EF2A9F82CC206D8002E1956 /* Cities.swift in Sources */,
 				F26CDBF52CB1B09400AAFFB6 /* OpportunitiesCell.swift in Sources */,
 				F2D6C9AA2CAD19F5000E1713 /* MessageView.swift in Sources */,
 				F2D6C9AB2CAD19F5000E1713 /* InterestsCell.swift in Sources */,
@@ -423,7 +433,9 @@
 				F2D6C9AE2CAD19F5000E1713 /* ExploreVC.swift in Sources */,
 				F269FB0B2CB5D4A300058592 /* DashedView.swift in Sources */,
 				F2D6C9AF2CAD19F5000E1713 /* ForgetPasswordVC.swift in Sources */,
+				4EF2A9F62CC1F49C002E1956 /* Opportunity.swift in Sources */,
 				4E5B43742CBCAAF200F7E850 /* SettingsCell.swift in Sources */,
+				4EF2A9FA2CC2E988002E1956 /* Organization.swift in Sources */,
 				F2D6C9B02CAD19F5000E1713 /* HomeVC.swift in Sources */,
 				F2D6C9B12CAD19F5000E1713 /* LoginVC.swift in Sources */,
 				F2D6C9B22CAD19F5000E1713 /* MapVC.swift in Sources */,

@@ -9,31 +9,29 @@ import UIKit
 
 class ExploreOpportunitiesCell: UICollectionViewCell {
     
-    @IBOutlet weak var oppView: UIView!
+    @IBOutlet weak var opportunityView: UIView!
+    @IBOutlet weak var opportunityImage: UIImageView!
+    @IBOutlet weak var opportunityName: UILabel!
+    @IBOutlet weak var opportunityTime: UILabel!
+    @IBOutlet weak var opportunityHours: UILabel!
+    @IBOutlet weak var opportunityCity: UILabel!
     
-    @IBOutlet weak var oppImage: UIImageView!
-    
-    @IBOutlet weak var oppName: UILabel!
-    
-    @IBOutlet weak var oppTime: UILabel!
-    
-    @IBOutlet weak var oppHours: UILabel!
-    
-    @IBOutlet weak var organizationIcon: UIImageView!
+    @IBOutlet weak var organizationImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    func configOppt(backgroundColor: UIColor, orgaImage: UIImage, oppImage: UIImage, opptName: String, opptTime: String, opptHours: Int){
+    func configOpportunity(backgroundColor: UIColor, opportunityImage: UIImage, opportunityName: String, opportunityTime: String, opportunityHours: Int, opportunityCity: String, organizationImage: UIImage){
         
-        oppView.backgroundColor = backgroundColor
-        organizationIcon.image = orgaImage
-        self.oppImage.image = oppImage
-        oppName.text = opptName
-        oppHours.text = "\(opptHours) Hours"
-        oppTime.text = opptTime
+        opportunityView.backgroundColor = backgroundColor
+        self.opportunityImage.image = opportunityImage
+        self.opportunityName.text = opportunityName
+        self.opportunityHours.text = "\(opportunityHours) Hours"
+        self.opportunityTime.text = opportunityTime
+        self.opportunityCity.text = opportunityCity
+        self.organizationImage.image = organizationImage
         
     }
 

@@ -7,6 +7,18 @@
 
 import UIKit
 
+struct opportunities {
+    var name: String
+    var date: String
+    var organizationIcon: UIImage
+    var opportunityHours: Int
+    var accecptanceStatus: Bool
+    var opportunityIcon: UIImage
+    var BGColor: UIColor
+    var time: String
+    
+}
+
 class HomeVC: UIViewController, Storyboarded {
     
     
@@ -36,7 +48,6 @@ class HomeVC: UIViewController, Storyboarded {
         setupUI()
         setUpProgressAnimat()
         handleAnimation()
-        
         
         
         arrOppt.append(opportunities(name: "تنظيم الحجاج المصاريه", date: "09/11/2009", organizationIcon: UIImage(named: "ummQura")!, opportunityHours: 4, accecptanceStatus: false, opportunityIcon: UIImage(named: "kaaba")!, BGColor: .standr4, time: "6:00 PM - 10:00 PM"))
@@ -113,7 +124,7 @@ extension HomeVC: UICollisionBehaviorDelegate, UICollectionViewDataSource, UICol
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OpportunitiesCell", for: indexPath) as! OpportunitiesCell
         let oppt = arrOppt[indexPath.row]
-        cell.configOppt(orgaIcon: oppt.organizationIcon , oppIcon: oppt.opportunityIcon, opptName: oppt.name, opptTime: oppt.time, opptHours: oppt.opportunityHours, opptDate: oppt.date, backgroundColor: oppt.BGColor, status: oppt.accecptanceStatus)
+        cell.configOpportunity(backgroundColor: oppt.BGColor, opportunityImage: oppt.opportunityIcon, opportunityName: oppt.name, opportunityTime: oppt.time, opportunityHour: oppt.opportunityHours, opportunityDate: oppt.date, organizationImage: oppt.organizationIcon, status: oppt.accecptanceStatus)
         return cell
     }
     
