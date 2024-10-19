@@ -29,6 +29,9 @@ class ExploreVC: UIViewController, Storyboarded {
     
     //MARK: - IBAcitions
     
+    @IBAction func openFilter(_ sender: UIButton) {
+        coordinator?.viewFiltrationVC()
+    }
     
     //MARK: - Functions
     

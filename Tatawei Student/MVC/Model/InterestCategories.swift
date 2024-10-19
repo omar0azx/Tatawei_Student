@@ -6,10 +6,14 @@
 //
 
 enum InterestCategories: String, Codable {
+    case All = "الجميع" 
     case Sports = "رياضة"
     case Technical = "تقنية"
     case Cultural = "ثقافة"
     case Financial = "مالية"
     case Tourism = "سياحة"
     case Social = "اجتماعية"
+    case Environmental = "بيئة"
+    case Healthy = "صحة"
+    case Arts = "فني"
 }

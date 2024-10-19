@@ -99,5 +99,12 @@ final class MainCoordinator: Coordinator {
         navigationController.present(vc, animated: true)
     }
 
+    func viewFiltrationVC() {
+        let vc = FiltrationVC.instantiate()
+        vc.coordinator = self
+        vc.modalPresentationStyle = .fullScreen
+        navigationController.present(vc, animated: true)
+    }
+    
 }
 

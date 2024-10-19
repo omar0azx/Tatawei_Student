@@ -6,10 +6,15 @@
 //
 
 enum Cities: String, Codable {
+    case MyLocation = "موقعي"
+    case All = "الجميع"
     case Jeddah = "جدة"
     case Macca = "مكة"
     case Madenah = "المدينة"
     case Taif = "الطائف"
     case Riyadh = "الرياض"
     case Dammam = "الدمام"
+    case Abha = "أبها"
+    
 }
+
