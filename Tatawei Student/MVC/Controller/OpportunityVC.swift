@@ -47,8 +47,12 @@ class OpportunityVC: UIViewController, Storyboarded {
     }
     
     @IBAction func didPressedApply(_ sender: UIButton) {
+        coordinator?.viewAcceptanceApplyVC()
     }
     
+    @IBAction func openTheOrganisationInformation(_ sender: UIButton) {
+        coordinator?.viewOrganizationVC()
+    }
     
     //MARK: - Functions
 
