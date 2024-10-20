@@ -113,5 +113,12 @@ final class MainCoordinator: Coordinator {
         navigationController.present(vc, animated: true)
     }
     
+    func viewOrganizationVC() {
+        let vc = OrganizationVC.instantiate()
+        vc.coordinator = self
+        vc.modalPresentationStyle = .fullScreen
+        navigationController.present(vc, animated: true)
+    }
+    
 }
 

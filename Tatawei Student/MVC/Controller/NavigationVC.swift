@@ -75,8 +75,8 @@ class NavigationVC: ContainerVC, Storyboarded {
         }
     }
     
-    @IBAction func addNewInvite(_ sender: UIButton) {
-        
+    @IBAction func openTheChatIntro(_ sender: UIButton) {
+    
     }
     
     
