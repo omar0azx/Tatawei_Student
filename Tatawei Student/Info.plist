@@ -2,18 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>السماح للتطبيق بإستخدام موقعك</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>السماح بإستخدام الموقع</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Cairo-SemiBold.ttf</string>
-		<string>Cairo.ttf</string>
-		<string>Cairo-Medium.ttf</string>
-		<string>Cairo-Light.ttf</string>
-		<string>Cairo-Black.ttf</string>
-		<string>Cairo-Bold.ttf</string>
+		<string>CairoSemiBold</string>
+		<string>CairoSemiBold.ttf</string>
+		<string>CairoRegular.ttf</string>
+		<string>CairoMedium.ttf</string>
+		<string>CairoLight.ttf</string>
+		<string>CairoBlack.ttf</string>
+		<string>CairoBold.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
