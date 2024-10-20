@@ -106,5 +106,12 @@ final class MainCoordinator: Coordinator {
         navigationController.present(vc, animated: true)
     }
     
+    func viewOpportunityVC() {
+        let vc = OpportunityVC.instantiate()
+        vc.coordinator = self
+        vc.modalPresentationStyle = .fullScreen
+        navigationController.present(vc, animated: true)
+    }
+    
 }
 

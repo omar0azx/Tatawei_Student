@@ -2146,6 +2146,302 @@ secondary</string>
             </objects>
             <point key="canvasLocation" x="3989.5522388059699" y="-212.12814645308922"/>
         </scene>
+        <!--OpportunityVC-->
+        <scene sceneID="h01-ir-Sjd">
+            <objects>
+                <viewController storyboardIdentifier="OpportunityVC" id="29c-rP-SNE" customClass="OpportunityVC" customModule="Tatawei_Student" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N35-AG-RGN">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kaaba" translatesAutoresizingMaskIntoConstraints="NO" id="X0z-SY-yBb" customClass="DesignableImage" customModule="Tatawei_Student" customModuleProvider="target">
+                                <rect key="frame" x="100" y="80" width="202" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="PWB-YH-lSx"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تنظيم حجاج" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmv-md-JmK">
+                                <rect key="frame" x="50" y="230" width="302" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="B9M-TP-nYo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fTp-DW-uWq">
+                                <rect key="frame" x="141.33333333333334" y="280" width="119.33333333333334" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="جامعة جدة" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVN-3C-59q">
+                                        <rect key="frame" x="0.0" y="17.666666666666686" width="74.333333333333329" height="30"/>
+                                        <fontDescription key="fontDescription" name="Cairo-Medium" family="Cairo" pointSize="16"/>
+                                        <color key="textColor" name="404040"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XaY-TD-ES8">
+                                        <rect key="frame" x="79.333333333333314" y="12.666666666666686" width="40" height="40"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ysa-ws-4Yr">
+                                                <rect key="frame" x="5" y="5" width="30" height="30"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="ysa-ws-4Yr" firstAttribute="leading" secondItem="XaY-TD-ES8" secondAttribute="leading" constant="5" id="4nm-0R-f30"/>
+                                            <constraint firstAttribute="height" constant="40" id="9XG-UV-6Un"/>
+                                            <constraint firstAttribute="bottom" secondItem="ysa-ws-4Yr" secondAttribute="bottom" constant="5" id="KD3-UH-Mu1"/>
+                                            <constraint firstAttribute="width" constant="40" id="NsU-Ij-Rbi"/>
+                                            <constraint firstAttribute="trailing" secondItem="ysa-ws-4Yr" secondAttribute="trailing" constant="5" id="nLN-FA-45s"/>
+                                            <constraint firstItem="ysa-ws-4Yr" firstAttribute="top" secondItem="XaY-TD-ES8" secondAttribute="top" constant="5" id="owm-MT-O7d"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="SZr-4I-zNE"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KlR-1K-dSn">
+                                <rect key="frame" x="0.0" y="365" width="402" height="509"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="عن الفرصة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geE-bw-xK5">
+                                        <rect key="frame" x="279.33333333333331" y="20" width="102.66666666666669" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="UHc-mp-Fja"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الطلاب" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bi-v7-51c">
+                                        <rect key="frame" x="307" y="276.33333333333337" width="65" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="zzI-mk-9WL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oni-Mx-Rqo">
+                                        <rect key="frame" x="30" y="65.000000000000014" width="342" height="131.33333333333337"/>
+                                        <string key="text">انضم إلينا في المهمة النبيلة لتسهيل الرحلة الروحية للحجاج إلى المدن المقدسة مكة والمدينة من خلال التطوع لتنظيم الحج. الحج هو حج عميق يحمل أهمية كبيرة في حياة المسلمين، حيث يمثل أحد أركان الإسلام الخمسة وواجب ديني أساسي للمسلمين القادرين على تحمل تكاليفه.</string>
+                                        <fontDescription key="fontDescription" name="Cairo-Medium" family="Cairo" pointSize="14"/>
+                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-3" translatesAutoresizingMaskIntoConstraints="NO" id="moM-7J-bGb">
+                                        <rect key="frame" x="326.66666666666669" y="206.33333333333337" width="45.333333333333314" height="70"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4vG-4N-r3M">
+                                                <rect key="frame" x="0.0" y="0.0" width="45.333333333333336" height="24.666666666666668"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Klz-IX-roN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="25.333333333333332" height="24.666666666666668"/>
+                                                        <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="13"/>
+                                                        <color key="textColor" name="757677"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="fitness.timer.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4Ar-bP-xaP">
+                                                        <rect key="frame" x="30.333333333333314" y="0.66666666666666607" width="15" height="23.333333333333336"/>
+                                                        <color key="tintColor" name="757677"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="15" id="XKb-o3-qvb"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ex9-lI-VCk">
+                                                <rect key="frame" x="0.0" y="21.666666666666629" width="45.333333333333336" height="24.666666666666671"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="city" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUp-C6-DBk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="25.333333333333332" height="24.666666666666668"/>
+                                                        <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="13"/>
+                                                        <color key="textColor" name="757677"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="mappin.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="z0H-Up-Cwt">
+                                                        <rect key="frame" x="30.333333333333314" y="0.66666666666666607" width="15" height="23.333333333333336"/>
+                                                        <color key="tintColor" name="757677"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="15" id="c6N-tv-j6d"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="YTq-rB-7ok">
+                                                <rect key="frame" x="0.0" y="43.333333333333258" width="45.333333333333336" height="26.666666666666671"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="hour" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHl-dd-MRY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="25.333333333333332" height="26.666666666666668"/>
+                                                        <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="13"/>
+                                                        <color key="textColor" name="757677"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="calendar.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4s2-fM-sRd">
+                                                        <rect key="frame" x="30.333333333333314" y="0.66666666666666607" width="15" height="25.333333333333336"/>
+                                                        <color key="tintColor" name="757677"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="15" id="w9M-j9-lLN"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="D16-y2-miD"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="W55-HU-oFX">
+                                        <rect key="frame" x="224" y="321.33333333333337" width="148" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="عدد الطلاب المطلوبين 50 " textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8I-ln-Dz1">
+                                                <rect key="frame" x="0.0" y="0.0" width="148" height="26.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="Cairo-Medium" family="Cairo" pointSize="14"/>
+                                                <color key="textColor" systemColor="systemGrayColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="23 طالب مسجل" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQB-q3-yyY">
+                                                <rect key="frame" x="56.333333333333321" y="26.333333333333258" width="91.666666666666686" height="23.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="Cairo-Medium" family="Cairo" pointSize="14"/>
+                                                <color key="textColor" name="standr"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="LJa-1F-saR"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wea-iD-5yY" customClass="DesignableButton" customModule="Tatawei_Student" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="404" width="322" height="55"/>
+                                        <color key="backgroundColor" name="standr"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="5eS-95-FTz"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="تقديم الآن">
+                                            <fontDescription key="titleFontDescription" name="Cairo-Regular" family="Cairo" pointSize="18"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="27"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didPressedApply:" destination="29c-rP-SNE" eventType="touchUpInside" id="74k-g4-VbU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstItem="oni-Mx-Rqo" firstAttribute="top" secondItem="geE-bw-xK5" secondAttribute="bottom" constant="5" id="4Fl-e8-1uk"/>
+                                    <constraint firstItem="7bi-v7-51c" firstAttribute="top" secondItem="moM-7J-bGb" secondAttribute="bottom" id="4Ut-5L-R8M"/>
+                                    <constraint firstAttribute="trailing" secondItem="7bi-v7-51c" secondAttribute="trailing" constant="30" id="BFf-1f-c8T"/>
+                                    <constraint firstAttribute="trailing" secondItem="oni-Mx-Rqo" secondAttribute="trailing" constant="30" id="KHR-xC-6mR"/>
+                                    <constraint firstAttribute="trailing" secondItem="geE-bw-xK5" secondAttribute="trailing" constant="20" id="MJP-kZ-cPy"/>
+                                    <constraint firstItem="wea-iD-5yY" firstAttribute="leading" secondItem="KlR-1K-dSn" secondAttribute="leading" constant="40" id="Mjj-fx-WGV"/>
+                                    <constraint firstItem="geE-bw-xK5" firstAttribute="top" secondItem="KlR-1K-dSn" secondAttribute="top" constant="20" id="QFt-c3-CbO"/>
+                                    <constraint firstItem="moM-7J-bGb" firstAttribute="top" secondItem="oni-Mx-Rqo" secondAttribute="bottom" constant="10" id="Unb-ot-Qei"/>
+                                    <constraint firstAttribute="trailing" secondItem="W55-HU-oFX" secondAttribute="trailing" constant="30" id="WGm-no-mwh"/>
+                                    <constraint firstAttribute="bottom" secondItem="wea-iD-5yY" secondAttribute="bottom" constant="50" id="adt-NT-H4B"/>
+                                    <constraint firstItem="oni-Mx-Rqo" firstAttribute="leading" secondItem="KlR-1K-dSn" secondAttribute="leading" constant="30" id="bA5-YK-yf2"/>
+                                    <constraint firstAttribute="trailing" secondItem="moM-7J-bGb" secondAttribute="trailing" constant="30" id="oFw-T5-2W9"/>
+                                    <constraint firstItem="W55-HU-oFX" firstAttribute="top" secondItem="7bi-v7-51c" secondAttribute="bottom" id="qLg-ad-6ro"/>
+                                    <constraint firstAttribute="trailing" secondItem="wea-iD-5yY" secondAttribute="trailing" constant="40" id="qT6-Oe-tAg"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpC-Sa-5zB" customClass="DesignableButton" customModule="Tatawei_Student" customModuleProvider="target">
+                                <rect key="frame" x="325.33333333333331" y="60" width="56.666666666666686" height="40.333333333333343"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="clear"/>
+                                <buttonConfiguration key="configuration" style="plain" image="xmark.circle.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="22"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="27"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didPressedCancel:" destination="oC8-v8-9Af" eventType="touchUpInside" id="TDr-7b-Zbl"/>
+                                    <action selector="didPressedCancel:" destination="29c-rP-SNE" eventType="touchUpInside" id="nnr-qp-isk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zPX-TM-9H8"/>
+                        <color key="backgroundColor" red="0.62273563594007419" green="0.62485469045298681" blue="0.74063026905059814" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vpC-Sa-5zB" secondAttribute="trailing" constant="20" id="7ny-aU-1F5"/>
+                            <constraint firstAttribute="bottom" secondItem="KlR-1K-dSn" secondAttribute="bottom" id="CSM-74-y3j"/>
+                            <constraint firstAttribute="trailing" secondItem="KlR-1K-dSn" secondAttribute="trailing" id="Ckf-Bx-HSv"/>
+                            <constraint firstItem="vpC-Sa-5zB" firstAttribute="top" secondItem="N35-AG-RGN" secondAttribute="top" constant="60" id="FFE-I5-hdf"/>
+                            <constraint firstItem="fTp-DW-uWq" firstAttribute="centerX" secondItem="N35-AG-RGN" secondAttribute="centerX" id="Iqo-Mi-fxI"/>
+                            <constraint firstItem="bmv-md-JmK" firstAttribute="centerX" secondItem="X0z-SY-yBb" secondAttribute="centerX" id="Pgd-4c-yck"/>
+                            <constraint firstItem="zPX-TM-9H8" firstAttribute="trailing" secondItem="X0z-SY-yBb" secondAttribute="trailing" constant="100" id="Rca-o7-xb9"/>
+                            <constraint firstItem="fTp-DW-uWq" firstAttribute="top" secondItem="bmv-md-JmK" secondAttribute="bottom" id="V50-Ss-he5"/>
+                            <constraint firstItem="X0z-SY-yBb" firstAttribute="leading" secondItem="N35-AG-RGN" secondAttribute="leading" constant="100" id="adB-wf-cfL"/>
+                            <constraint firstItem="bmv-md-JmK" firstAttribute="top" secondItem="X0z-SY-yBb" secondAttribute="bottom" id="dro-Ar-kpM"/>
+                            <constraint firstItem="X0z-SY-yBb" firstAttribute="top" secondItem="N35-AG-RGN" secondAttribute="top" constant="80" id="fWa-4w-5Wl"/>
+                            <constraint firstItem="KlR-1K-dSn" firstAttribute="top" secondItem="fTp-DW-uWq" secondAttribute="bottom" constant="20" id="heH-Nx-Ch1"/>
+                            <constraint firstAttribute="trailing" secondItem="bmv-md-JmK" secondAttribute="trailing" constant="50" id="mdS-2y-HrM"/>
+                            <constraint firstItem="KlR-1K-dSn" firstAttribute="leading" secondItem="N35-AG-RGN" secondAttribute="leading" id="sMX-Rh-act"/>
+                            <constraint firstItem="bmv-md-JmK" firstAttribute="leading" secondItem="N35-AG-RGN" secondAttribute="leading" constant="50" id="z1p-Uh-5Dg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="applyBTN" destination="wea-iD-5yY" id="a7X-c0-7VC"/>
+                        <outlet property="opportunityDescription" destination="oni-Mx-Rqo" id="CiY-HQ-DjC"/>
+                        <outlet property="opportunityHour" destination="UHl-dd-MRY" id="rL1-zx-wFn"/>
+                        <outlet property="opportunityImage" destination="X0z-SY-yBb" id="jOF-Eq-Vhe"/>
+                        <outlet property="opportunityLocation" destination="TUp-C6-DBk" id="ODX-4S-Xub"/>
+                        <outlet property="opportunityName" destination="bmv-md-JmK" id="ixi-ep-s34"/>
+                        <outlet property="opportunityStudentsNumber" destination="W8I-ln-Dz1" id="cUB-G6-oFR"/>
+                        <outlet property="opportunityStudentsRegisted" destination="bQB-q3-yyY" id="0Go-i1-QAg"/>
+                        <outlet property="opportunityTime" destination="Klz-IX-roN" id="qAb-TZ-glX"/>
+                        <outlet property="organisationImage" destination="ysa-ws-4Yr" id="wmA-3N-kmU"/>
+                        <outlet property="organisationName" destination="aVN-3C-59q" id="KLw-q7-WXf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cFE-9N-Tcn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3450.7462686567164" y="1164.9885583524026"/>
+        </scene>
         <!--FiltrationVC-->
         <scene sceneID="SCb-4k-Too">
             <objects>
@@ -2155,7 +2451,7 @@ secondary</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="التصنيف حسب" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SwX-DU-wPp">
-                                <rect key="frame" x="203.33333333333337" y="90" width="178.66666666666663" height="50"/>
+                                <rect key="frame" x="203" y="90" width="179" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="oY0-Sp-Fy3"/>
                                 </constraints>
@@ -2182,7 +2478,7 @@ secondary</string>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZG5-57-Nf4">
                                                     <rect key="frame" x="0.0" y="0.0" width="116" height="54"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -2211,17 +2507,17 @@ secondary</string>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIn-7I-7jh">
-                                            <rect key="frame" x="20" y="0.0" width="302" height="50"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <rect key="frame" x="10" y="0.0" width="322" height="50"/>
+                                            <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="yIn-7I-7jh" firstAttribute="leading" secondItem="WrA-6z-ROW" secondAttribute="leading" constant="20" id="4cS-6j-lKo"/>
+                                        <constraint firstItem="yIn-7I-7jh" firstAttribute="leading" secondItem="WrA-6z-ROW" secondAttribute="leading" constant="10" id="4cS-6j-lKo"/>
                                         <constraint firstItem="yIn-7I-7jh" firstAttribute="top" secondItem="WrA-6z-ROW" secondAttribute="top" id="70s-bF-FCc"/>
                                         <constraint firstAttribute="bottom" secondItem="yIn-7I-7jh" secondAttribute="bottom" id="FPT-aB-xru"/>
-                                        <constraint firstAttribute="trailing" secondItem="yIn-7I-7jh" secondAttribute="trailing" constant="20" id="YSF-ON-OQw"/>
+                                        <constraint firstAttribute="trailing" secondItem="yIn-7I-7jh" secondAttribute="trailing" constant="10" id="YSF-ON-OQw"/>
                                     </constraints>
                                     <connections>
                                         <outlet property="titleLabel" destination="yIn-7I-7jh" id="mcY-wW-l2K"/>
@@ -2233,7 +2529,7 @@ secondary</string>
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBg-lm-uVw" customClass="DesignableButton" customModule="Tatawei_Student" customModuleProvider="target">
-                                <rect key="frame" x="40" y="734" width="322" height="55"/>
+                                <rect key="frame" x="40" y="739" width="322" height="55"/>
                                 <color key="backgroundColor" name="standr"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="HWI-Hu-mfF"/>
@@ -2241,7 +2537,7 @@ secondary</string>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="تصفية">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                    <fontDescription key="titleFontDescription" name="Cairo-Regular" family="Cairo" pointSize="18"/>
                                 </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2253,7 +2549,7 @@ secondary</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipe-na-tMN" customClass="DesignableButton" customModule="Tatawei_Student" customModuleProvider="target">
-                                <rect key="frame" x="30" y="95" width="52.666666666666657" height="40.333333333333343"/>
+                                <rect key="frame" x="30" y="95" width="53" height="40"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button" image="clear"/>
@@ -2273,11 +2569,11 @@ secondary</string>
                         <viewLayoutGuide key="safeArea" id="XCs-Ck-War"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="HBg-lm-uVw" firstAttribute="top" secondItem="Zw0-iE-fuk" secondAttribute="bottom" constant="60" id="17s-Fk-Qa6"/>
                             <constraint firstItem="ipe-na-tMN" firstAttribute="centerY" secondItem="SwX-DU-wPp" secondAttribute="centerY" id="1kp-3z-IPa"/>
                             <constraint firstItem="HBg-lm-uVw" firstAttribute="leading" secondItem="XCs-Ck-War" secondAttribute="leading" constant="40" id="GYH-sq-ygr"/>
                             <constraint firstItem="SwX-DU-wPp" firstAttribute="top" secondItem="wTZ-B2-Rso" secondAttribute="top" constant="90" id="LTo-RM-uOg"/>
                             <constraint firstItem="Zw0-iE-fuk" firstAttribute="top" secondItem="SwX-DU-wPp" secondAttribute="bottom" constant="20" id="Sei-tJ-j6k"/>
+                            <constraint firstAttribute="bottom" secondItem="HBg-lm-uVw" secondAttribute="bottom" constant="80" id="Ssa-Sm-8NG"/>
                             <constraint firstAttribute="trailing" secondItem="SwX-DU-wPp" secondAttribute="trailing" constant="20" id="WNC-51-USB"/>
                             <constraint firstItem="Zw0-iE-fuk" firstAttribute="leading" secondItem="wTZ-B2-Rso" secondAttribute="leading" constant="30" id="egy-h6-DKa"/>
                             <constraint firstItem="XCs-Ck-War" firstAttribute="trailing" secondItem="HBg-lm-uVw" secondAttribute="trailing" constant="40" id="gyB-bF-YF3"/>
@@ -2677,6 +2973,7 @@ secondary</string>
         <image name="bell.fill" catalog="system" width="123" height="128"/>
         <image name="book.fill" catalog="system" width="128" height="95"/>
         <image name="bookmark.fill" catalog="system" width="110" height="128"/>
+        <image name="calendar.circle.fill" catalog="system" width="128" height="123"/>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="clear" width="512" height="512"/>
         <image name="filter" width="18" height="17"/>
@@ -2686,6 +2983,7 @@ secondary</string>
         <image name="globe" catalog="system" width="128" height="123"/>
         <image name="googleMap" width="1596" height="637"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="kaaba" width="81" height="84"/>
         <image name="line.horizontal.3.decrease" catalog="system" width="128" height="73"/>
         <image name="list.bullet.rectangle.fill" catalog="system" width="128" height="93"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
@@ -2698,10 +2996,14 @@ secondary</string>
         <image name="search" width="157" height="156"/>
         <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="123"/>
         <namedColor>
             <string key="name">
 secondary</string>
             <color red="0.2627450980392157" green="0.80784313725490198" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="404040">
+            <color red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="535353">
             <color red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

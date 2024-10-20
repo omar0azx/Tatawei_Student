@@ -55,7 +55,7 @@ extension FiltrationVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
        }
        
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 70, height: 50)
+        return CGSize(width: 75, height: 50)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
