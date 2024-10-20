@@ -2198,13 +2198,25 @@ secondary</string>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ysa-ws-4Yr">
                                                 <rect key="frame" x="5" y="5" width="30" height="30"/>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I84-uK-YYl">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="openTheOrganisationInformation:" destination="29c-rP-SNE" eventType="touchUpInside" id="Sw0-bG-Yag"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="ysa-ws-4Yr" firstAttribute="leading" secondItem="XaY-TD-ES8" secondAttribute="leading" constant="5" id="4nm-0R-f30"/>
                                             <constraint firstAttribute="height" constant="40" id="9XG-UV-6Un"/>
+                                            <constraint firstItem="I84-uK-YYl" firstAttribute="top" secondItem="XaY-TD-ES8" secondAttribute="top" id="DnA-Kg-Cel"/>
+                                            <constraint firstItem="I84-uK-YYl" firstAttribute="leading" secondItem="XaY-TD-ES8" secondAttribute="leading" id="JWR-Mf-Bol"/>
                                             <constraint firstAttribute="bottom" secondItem="ysa-ws-4Yr" secondAttribute="bottom" constant="5" id="KD3-UH-Mu1"/>
                                             <constraint firstAttribute="width" constant="40" id="NsU-Ij-Rbi"/>
+                                            <constraint firstAttribute="bottom" secondItem="I84-uK-YYl" secondAttribute="bottom" id="fEo-pl-uvs"/>
+                                            <constraint firstAttribute="trailing" secondItem="I84-uK-YYl" secondAttribute="trailing" id="k8u-WT-gv4"/>
                                             <constraint firstAttribute="trailing" secondItem="ysa-ws-4Yr" secondAttribute="trailing" constant="5" id="nLN-FA-45s"/>
                                             <constraint firstItem="ysa-ws-4Yr" firstAttribute="top" secondItem="XaY-TD-ES8" secondAttribute="top" constant="5" id="owm-MT-O7d"/>
                                         </constraints>
@@ -2313,13 +2325,13 @@ secondary</string>
                                         <rect key="frame" x="224" y="321.33333333333337" width="148" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="عدد الطلاب المطلوبين 50 " textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8I-ln-Dz1">
-                                                <rect key="frame" x="0.0" y="0.0" width="148" height="23.666666666666668"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="148" height="26.333333333333332"/>
                                                 <fontDescription key="fontDescription" name="Cairo-Medium" family="Cairo" pointSize="14"/>
                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="23 طالب مسجل" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQB-q3-yyY">
-                                                <rect key="frame" x="56.333333333333321" y="23.666666666666629" width="91.666666666666686" height="26.333333333333329"/>
+                                                <rect key="frame" x="56.333333333333321" y="26.333333333333258" width="91.666666666666686" height="23.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="Cairo-Medium" family="Cairo" pointSize="14"/>
                                                 <color key="textColor" name="standr"/>
                                                 <nil key="highlightedColor"/>
@@ -2399,7 +2411,6 @@ secondary</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="didPressedCancel:" destination="oC8-v8-9Af" eventType="touchUpInside" id="TDr-7b-Zbl"/>
                                     <action selector="didPressedCancel:" destination="29c-rP-SNE" eventType="touchUpInside" id="nnr-qp-isk"/>
                                 </connections>
                             </button>
@@ -3238,7 +3249,6 @@ secondary</string>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="didPressedCancel:" destination="4oP-uB-UDu" eventType="touchUpInside" id="Wvc-tP-qhZ"/>
-                                    <action selector="didPressedCancel:" destination="oC8-v8-9Af" eventType="touchUpInside" id="ird-Jf-QgN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -3274,11 +3284,172 @@ secondary</string>
             </objects>
             <point key="canvasLocation" x="2617.9104477611941" y="1164.9885583524026"/>
         </scene>
+        <!--Standard AcceptanceVC-->
+        <scene sceneID="I3B-rh-ix9">
+            <objects>
+                <viewController storyboardIdentifier="StandardAcceptanceVC" id="if9-0t-wOq" customClass="StandardAcceptanceVC" customModule="Tatawei_Student" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K3J-dP-Kx8">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frame3" translatesAutoresizingMaskIntoConstraints="NO" id="3GY-PW-jAS">
+                                <rect key="frame" x="0.0" y="225.33333333333337" width="392" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="HTJ-2M-Auk"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9M-TG-lKm" customClass="DesignableButton" customModule="Tatawei_Student" customModuleProvider="target">
+                                <rect key="frame" x="325.33333333333331" y="60" width="56.666666666666686" height="40.333333333333343"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="clear"/>
+                                <buttonConfiguration key="configuration" style="plain" image="xmark.circle.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="22"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="27"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didPressedCancel:" destination="if9-0t-wOq" eventType="touchUpInside" id="sGA-hz-MwH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شرح بسيط لمعايير القبول" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7h-Tf-L6r">
+                                <rect key="frame" x="20" y="150.33333333333334" width="362" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="rLJ-b6-CFe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تأكد من تمكين الإشعارات لتلقي التحديثات عند قبولك لهذه الفرصة." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uE-KT-LSx">
+                                <rect key="frame" x="50" y="705.33333333333337" width="302" height="67.666666666666629"/>
+                                <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="18"/>
+                                <color key="textColor" name="535353"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pUf-aE-fJX"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="pUf-aE-fJX" firstAttribute="trailing" secondItem="K7h-Tf-L6r" secondAttribute="trailing" constant="20" id="5kW-On-o3n"/>
+                            <constraint firstItem="7uE-KT-LSx" firstAttribute="top" secondItem="3GY-PW-jAS" secondAttribute="bottom" constant="80" id="95J-qQ-NC5"/>
+                            <constraint firstItem="7uE-KT-LSx" firstAttribute="leading" secondItem="K3J-dP-Kx8" secondAttribute="leading" constant="50" id="EVT-BZ-agd"/>
+                            <constraint firstAttribute="trailing" secondItem="3GY-PW-jAS" secondAttribute="trailing" constant="10" id="HgW-iM-XuQ"/>
+                            <constraint firstItem="v9M-TG-lKm" firstAttribute="top" secondItem="K3J-dP-Kx8" secondAttribute="top" constant="60" id="UAJ-Q3-ovn"/>
+                            <constraint firstAttribute="trailing" secondItem="v9M-TG-lKm" secondAttribute="trailing" constant="20" id="bD6-9L-F9P"/>
+                            <constraint firstItem="3GY-PW-jAS" firstAttribute="leading" secondItem="K3J-dP-Kx8" secondAttribute="leading" id="bMp-TJ-fkm"/>
+                            <constraint firstItem="3GY-PW-jAS" firstAttribute="top" secondItem="K7h-Tf-L6r" secondAttribute="bottom" constant="30" id="f0W-nV-SLL"/>
+                            <constraint firstItem="K7h-Tf-L6r" firstAttribute="leading" secondItem="pUf-aE-fJX" secondAttribute="leading" constant="20" id="qbs-cD-v6c"/>
+                            <constraint firstItem="K7h-Tf-L6r" firstAttribute="top" secondItem="v9M-TG-lKm" secondAttribute="bottom" constant="50" id="uef-d8-eCg"/>
+                            <constraint firstAttribute="trailing" secondItem="7uE-KT-LSx" secondAttribute="trailing" constant="50" id="wUG-Ty-ga7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="njE-Gh-MRj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3450.7462686567164" y="2531.807780320366"/>
+        </scene>
+        <!--Acceptance ApplyVC-->
+        <scene sceneID="fNo-cM-TlP">
+            <objects>
+                <viewController storyboardIdentifier="AcceptanceApplyVC" id="Bf5-77-Oqd" customClass="AcceptanceApplyVC" customModule="Tatawei_Student" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="46A-yZ-8nf">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="accepted_message" translatesAutoresizingMaskIntoConstraints="NO" id="mBs-TP-pJt">
+                                <rect key="frame" x="30" y="150" width="342" height="289"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تأكد من تمكين الإشعارات لتلقي التحديثات عند قبولك لهذه الفرصة." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aku-8p-PBU">
+                                <rect key="frame" x="50" y="542.33333333333337" width="302" height="67.666666666666629"/>
+                                <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="18"/>
+                                <color key="textColor" name="535353"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لقد تم تقديم طلبك إلى المنظمة." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4r-rT-6vE">
+                                <rect key="frame" x="30" y="459" width="342" height="43.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBn-uq-UKu" customClass="DesignableButton" customModule="Tatawei_Student" customModuleProvider="target">
+                                <rect key="frame" x="40" y="739" width="322" height="55"/>
+                                <color key="backgroundColor" name="standr"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="O9l-5r-nOG"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="إنهاء">
+                                    <fontDescription key="titleFontDescription" name="Cairo-Regular" family="Cairo" pointSize="18"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="27"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didPressedCancel:" destination="Bf5-77-Oqd" eventType="touchUpInside" id="TUZ-x3-WXq"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="-5" translatesAutoresizingMaskIntoConstraints="NO" id="FEn-W9-ocK">
+                                <rect key="frame" x="85" y="794" width="232" height="38.666666666666629"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ses-wu-i8a">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="38.666666666666664"/>
+                                        <color key="tintColor" name="standr"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="أرِنِي">
+                                            <fontDescription key="titleFontDescription" name="Cairo-Regular" family="Cairo" pointSize="13"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didPressedViewStanderd:" destination="Bf5-77-Oqd" eventType="touchUpInside" id="hfp-E2-Xaf"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="كيف يمكنني معرفة كيف تم قبولي؟" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8U-nZ-Vnx">
+                                        <rect key="frame" x="41" y="0.0" width="191" height="38.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="13"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0Fc-sr-R6S"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cBn-uq-UKu" secondAttribute="trailing" constant="40" id="663-mn-X9j"/>
+                            <constraint firstItem="FEn-W9-ocK" firstAttribute="centerX" secondItem="cBn-uq-UKu" secondAttribute="centerX" id="7v3-hD-7cN"/>
+                            <constraint firstItem="mBs-TP-pJt" firstAttribute="top" secondItem="46A-yZ-8nf" secondAttribute="top" constant="150" id="9rU-1U-Z5m"/>
+                            <constraint firstAttribute="trailing" secondItem="M4r-rT-6vE" secondAttribute="trailing" constant="30" id="ECQ-9g-0un"/>
+                            <constraint firstItem="mBs-TP-pJt" firstAttribute="leading" secondItem="46A-yZ-8nf" secondAttribute="leading" constant="30" id="EKw-7q-FPb"/>
+                            <constraint firstAttribute="trailing" secondItem="aku-8p-PBU" secondAttribute="trailing" constant="50" id="HJ9-wl-Mq7"/>
+                            <constraint firstItem="aku-8p-PBU" firstAttribute="top" secondItem="M4r-rT-6vE" secondAttribute="bottom" constant="40" id="HTX-im-hHO"/>
+                            <constraint firstAttribute="bottom" secondItem="cBn-uq-UKu" secondAttribute="bottom" constant="80" id="KFI-Ay-PKX"/>
+                            <constraint firstItem="cBn-uq-UKu" firstAttribute="top" secondItem="mBs-TP-pJt" secondAttribute="bottom" constant="300" id="O5Z-Nl-StM"/>
+                            <constraint firstItem="M4r-rT-6vE" firstAttribute="top" secondItem="mBs-TP-pJt" secondAttribute="bottom" constant="20" id="S0K-zc-Bxv"/>
+                            <constraint firstItem="aku-8p-PBU" firstAttribute="leading" secondItem="46A-yZ-8nf" secondAttribute="leading" constant="50" id="YL8-xn-uGr"/>
+                            <constraint firstItem="FEn-W9-ocK" firstAttribute="top" secondItem="cBn-uq-UKu" secondAttribute="bottom" id="ivc-In-vV5"/>
+                            <constraint firstItem="M4r-rT-6vE" firstAttribute="leading" secondItem="46A-yZ-8nf" secondAttribute="leading" constant="30" id="rvB-zw-4SO"/>
+                            <constraint firstAttribute="trailing" secondItem="mBs-TP-pJt" secondAttribute="trailing" constant="30" id="yBq-ub-Hhq"/>
+                            <constraint firstItem="cBn-uq-UKu" firstAttribute="leading" secondItem="46A-yZ-8nf" secondAttribute="leading" constant="40" id="zBJ-CN-dRI"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aMa-yH-Lb1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3452" y="1851"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Arrow" width="21" height="23"/>
+        <image name="Frame3" width="334" height="425"/>
         <image name="P2" width="399" height="386"/>
         <image name="Youteube" width="800" height="412.66665649414062"/>
+        <image name="accepted_message" width="268" height="267"/>
         <image name="arrow.turn.left.down" catalog="system" width="120" height="128"/>
         <image name="bell.fill" catalog="system" width="123" height="128"/>
         <image name="book.fill" catalog="system" width="128" height="95"/>

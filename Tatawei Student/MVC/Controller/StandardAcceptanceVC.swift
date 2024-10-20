@@ -1,14 +1,13 @@
 //
-//  ForgetPasswordVC.swift
+//  StandardAcceptanceVC.swift
 //  Tatawei Student
 //
-//  Created by omar alzhrani on 29/03/1446 AH.
+//  Created by omar alzhrani on 17/04/1446 AH.
 //
 
 import UIKit
 
-class ForgetPasswordVC: UIViewController, Storyboarded {
-    
+class StandardAcceptanceVC: UIViewController, Storyboarded {
     
     //MARK: - Varibales
     
@@ -17,18 +16,19 @@ class ForgetPasswordVC: UIViewController, Storyboarded {
     
     //MARK: - IBOutleats
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.dismiss(animated: true)
-        }
-        
     }
     
+
     //MARK: - IBAcitions
+    
+    @IBAction func didPressedCancel(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
     
     
     //MARK: - Functions
