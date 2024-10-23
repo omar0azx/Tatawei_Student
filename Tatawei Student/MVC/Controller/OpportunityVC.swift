@@ -13,9 +13,12 @@ class OpportunityVC: UIViewController, Storyboarded {
     
     var coordinator: MainCoordinator?
     
+    var opportunity: Opportunity?
+    
     
     //MARK: - IBOutleats
     
+    @IBOutlet var opportunityView: UIView!
     @IBOutlet weak var opportunityImage: DesignableImage!
     @IBOutlet weak var opportunityName: UILabel!
     
@@ -37,6 +40,7 @@ class OpportunityVC: UIViewController, Storyboarded {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        getOpportunituInformaion()
     }
     
 
@@ -51,9 +55,30 @@ class OpportunityVC: UIViewController, Storyboarded {
     }
     
     @IBAction func openTheOrganisationInformation(_ sender: UIButton) {
-        coordinator?.viewOrganizationVC()
+        if let opportunity = opportunity {
+            coordinator?.viewOrganizationVC(organizationID: opportunity.organizationID)
+        }
     }
     
     //MARK: - Functions
+    
+    func getOpportunituInformaion() {
+        if let opportunity = opportunity {
+            var organizationImag: UIImage?
+            StorageService.shared.downloadImage(from: opportunity.organizationImageLink) { imag, error in
+                guard let image = imag else {return}
+                organizationImag = image
+            }
+            opportunityImage.image = Icon(index: opportunity.iconNumber, categories: opportunity.category).icons.0
+            opportunityView.backgroundColor = Icon(index: opportunity.iconNumber, categories: opportunity.category).icons.1
+            opportunityName.text = opportunity.name
+            opportunityDescription.text = opportunity.description
+            opportunityTime.text = opportunity.time
+            opportunityHour.text = "ساعات \(opportunity.hour)"
+            opportunityLocation.text = opportunity.location
+            organisationName.text = opportunity.organizationName
+            organisationImage.image = organizationImag
+        }
+    }
 
 }

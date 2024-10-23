@@ -106,16 +106,18 @@ final class MainCoordinator: Coordinator {
         navigationController.present(vc, animated: true)
     }
     
-    func viewOpportunityVC() {
+    func viewOpportunityVC(opportunity: Opportunity) {
         let vc = OpportunityVC.instantiate()
         vc.coordinator = self
+        vc.opportunity = opportunity
         vc.modalPresentationStyle = .fullScreen
         navigationController.present(vc, animated: true)
     }
     
-    func viewOrganizationVC() {
+    func viewOrganizationVC(organizationID: String) {
         let vc = OrganizationVC.instantiate()
         vc.coordinator = self
+        vc.organizationID = organizationID
         vc.modalPresentationStyle = .fullScreen
         // Present the MapVC modally from the currently presented view controller
         if let topViewController = navigationController.presentedViewController {

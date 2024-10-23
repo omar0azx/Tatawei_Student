@@ -367,7 +367,7 @@ class StudentsAccountVC: UIViewController, Storyboarded, DataSelectionDelegate {
             return
         }
         
-        DataServices.shared.updateStudentAccount(updatedData: updatedStudent) { error in
+        StudentDataServices.shared.updateStudentAccount(updatedData: updatedStudent) { error in
             //Show Success/Failure Message After All Updates
                 let successView = MessageView(message: "تم تحديث بياناتك بنجاح", animationName: "correct", animationTime: 1)
                 successView.show(in: self.view)
