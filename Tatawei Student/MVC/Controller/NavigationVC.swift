@@ -76,6 +76,7 @@ class NavigationVC: ContainerVC, Storyboarded {
     }
     
     @IBAction func openTheChatIntro(_ sender: UIButton) {
+        
     }
     
     
@@ -86,7 +87,7 @@ class NavigationVC: ContainerVC, Storyboarded {
         let selectedView = views.remove(at: selectedIndex)
         for unselectedView in views { unselectedView?.isHidden = true }
         selectedView?.isHidden = false
-        
+
     }
     
     let shapeLayer = CAShapeLayer()
