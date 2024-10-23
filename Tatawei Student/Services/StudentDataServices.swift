@@ -93,7 +93,7 @@ class StudentDataServices {
         // Fetch the existing `hoursCompleted` from Firestore
         studentRef.getDocument { (document, error) in
             if let document = document, document.exists {
-                if let data = document.data(), let hoursCompleted = data["hoursCompleted"] as? Int {
+                if let data = document.data(), let hoursCompleted = data["hoursCompleted"] as? Float {
                     // Set the `hoursCompleted` in the updatedData object
                     var updatedStudent = updatedData
                     updatedStudent.hoursCompleted = hoursCompleted
@@ -107,7 +107,8 @@ class StudentDataServices {
                         "city": updatedStudent.city,
                         "school": updatedStudent.school,
                         "level": updatedStudent.level,
-                        "location": updatedStudent.location
+                        "location": updatedStudent.location,
+                        "interests": updatedStudent.interests
                     ]
                     
                     // Update Firestore with the new values (excluding hoursCompleted)
