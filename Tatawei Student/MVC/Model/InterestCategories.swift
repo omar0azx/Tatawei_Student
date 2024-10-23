@@ -16,4 +16,5 @@ enum InterestCategories: String, Codable {
     case Environmental = "بيئة"
     case Healthy = "صحة"
     case Arts = "فني"
+    case religious = "ديني"
 }
