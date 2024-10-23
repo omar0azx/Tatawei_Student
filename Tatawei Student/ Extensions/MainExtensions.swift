@@ -114,6 +114,35 @@ class DesignableLabel: UILabel {
 
 @IBDesignable
 class DesignableImage: UIImageView {
+    @IBInspectable
+    override var shadowRadius: CGFloat {
+        get {
+            return layer.shadowRadius
+        }
+        set {
+            layer.shadowRadius = newValue
+        }
+    }
+    
+    @IBInspectable
+    override var shadowOpacity: Float {
+        get {
+            return layer.shadowOpacity
+        }
+        set {
+            layer.shadowOpacity = newValue
+        }
+    }
+    
+    @IBInspectable
+    override var shadowOffset: CGSize {
+        get {
+            return layer.shadowOffset
+        }
+        set {
+            layer.shadowOffset = newValue
+        }
+    }
 }
 
 @IBDesignable
@@ -198,6 +227,7 @@ class DesignableTextField: UITextField {
 }
 
 extension UIView {
+    
     func bindToKeyBoard() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(_:)) , name: UIResponder.keyboardWillChangeFrameNotification , object: nil)
         
@@ -217,6 +247,15 @@ extension UIView {
     }
     
     
+    @IBInspectable
+        var cornerRadius: CGFloat {
+            get {
+                return layer.cornerRadius
+            }
+            set {
+                layer.cornerRadius = newValue
+            }
+        }
     
     @IBInspectable
     var rotation: Int {
@@ -528,4 +567,16 @@ extension UITextField: UIPickerViewDelegate, UIPickerViewDataSource {
         }
         
         private static var pickerOptionsKey: UInt8 = 0
+}
+
+extension UICollectionView {
+    @IBInspectable
+    override var cornerRadius: CGFloat {
+            get {
+                return layer.cornerRadius
+            }
+            set {
+                layer.cornerRadius = newValue
+            }
+        }
 }

@@ -1,5 +1,5 @@
 //
-//  DataServices.swift
+//  StudentDataServices.swift
 //  Tatawei Student
 //
 //  Created by omar alzhrani on 23/03/1446 AH.
@@ -12,6 +12,7 @@ enum FCollectionReference: String {
     case schools
     case students
     case organisations
+    case opportunities
 }
 
 
@@ -21,11 +22,9 @@ func FirestoreReference(_ collectionReference: FCollectionReference) -> Collecti
     return Firestore.firestore().collection(collectionReference.rawValue)
 }
 
-class DataServices {
+class StudentDataServices {
     
-    static let shared = DataServices()
-    
-    private init () {}
+    static let shared = StudentDataServices()
     
     func saveUserToFirestore(_ user: Student) {
         do {
@@ -39,7 +38,7 @@ class DataServices {
     
     
     // MARK: - Download User from Firestore
-    func downloadUserFromFirestore(studentID: String) {
+    func downloadStudentFromFirestore(studentID: String) {
         
         let db = Firestore.firestore()
         
@@ -86,38 +85,60 @@ class DataServices {
         }
     }
     
-    // MARK: - Update Student Account Information
-    func updateStudentAccount(updatedData: Student, completion: @escaping (_ error: Error?) ->Void) {
-        let updateGroup = DispatchGroup()
-
-        // Update Firestore with the new Student object
-        updateGroup.enter()
-        do {
-            try FirestoreReference(.schools).document(Student.currentStudent!.school)
-                .collection("students").document(Student.currentID)
-                .setData(from: updatedData) { error in
-                    if let error = error {
-                        print("Error updating student data: \(error.localizedDescription)")
-                        completion(error)
-                    } else {
-                        saveUserLocally(updatedData)
-                        print("Student data successfully updated.")
+    func updateStudentAccount(updatedData: Student, completion: @escaping (_ error: Error?) -> Void) {
+        // Get reference to the student's document in Firestore
+        let studentRef = FirestoreReference(.schools).document(Student.currentStudent!.school)
+            .collection("students").document(Student.currentID)
+        
+        // Fetch the existing `hoursCompleted` from Firestore
+        studentRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                if let data = document.data(), let hoursCompleted = data["hoursCompleted"] as? Int {
+                    // Set the `hoursCompleted` in the updatedData object
+                    var updatedStudent = updatedData
+                    updatedStudent.hoursCompleted = hoursCompleted
                     
-                        completion(nil)
+                    // Proceed to update the rest of the fields, excluding `hoursCompleted`
+                    let updatedFields: [String: Any] = [
+                        "name": updatedStudent.name,
+                        "phoneNumber": updatedStudent.phoneNumber,
+                        "email": updatedStudent.email,
+                        "gender": updatedStudent.gender,
+                        "city": updatedStudent.city,
+                        "school": updatedStudent.school,
+                        "level": updatedStudent.level,
+                        "location": updatedStudent.location
+                    ]
+                    
+                    // Update Firestore with the new values (excluding hoursCompleted)
+                    studentRef.updateData(updatedFields) { error in
+                        if let error = error {
+                            print("Error updating student data: \(error.localizedDescription)")
+                            completion(error)
+                        } else {
+                            // Now that `hoursCompleted` is set, save the updated student locally
+                            saveUserLocally(updatedStudent)
+                            print("Student data successfully updated.")
+                            completion(nil)
+                        }
                     }
-                    updateGroup.leave()
+                } else {
+                    print("Error fetching hoursCompleted value: \(error?.localizedDescription ?? "Unknown error")")
+                    completion(error)
                 }
-        } catch {
-            print("Error encoding student data: \(error.localizedDescription)")
-            completion(error)
-            updateGroup.leave()
+            } else {
+                print("Document does not exist or error fetching document: \(error?.localizedDescription ?? "Unknown error")")
+                completion(error)
+            }
         }
     }
+
+
 
     
     //MARK:- Download users using IDs
     
-    func downloadUsersFromFirestore(withIds: [String], schoolID: String, completion: @escaping(_ allUsers: [Student])->Void) {
+    func downloadStudentFromFirestore(withIds: [String], schoolID: String, completion: @escaping(_ allUsers: [Student])->Void) {
         
         var count = 0
         var usersArray: [Student] = []
@@ -148,7 +169,7 @@ class DataServices {
     
     
     //MARK:- Download all users
-    func downloadAllUsersFromFirestore(schoolID: String, completion: @escaping (_ allUsers: [Student])->Void) {
+    func downloadAllStudentsFromFirestore(schoolID: String, completion: @escaping (_ allUsers: [Student])->Void) {
         
         var users: [Student] = []
         

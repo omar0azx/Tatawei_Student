@@ -69,7 +69,7 @@ class StudentsAccountVC: UIViewController, Storyboarded, DataSelectionDelegate {
         definePageType()
         genderTF.convertToPicker(options: ["", "ذكر", "أنثى"])
         cityTF.convertToPicker(options: ["", "جدة", "الرياض", "الدمام", "المدينة", "ينبع"])
-        schoolTF.convertToPicker(options: ["", "شباب الفهد", "الأقصى", "الأندلس", "الحمدانية", "سعدية معاذ"])
+        schoolTF.convertToPicker(options: ["", "شباب الفهد", "الأقصى", "الأندلس", "الحمدانية"])
         levelTF.convertToPicker(options: ["", "أولى ثانوي", "ثاني ثانوي", "ثالث ثانوي"])
         self.hideKeyboardWhenTappedAround()
     }
@@ -81,7 +81,7 @@ class StudentsAccountVC: UIViewController, Storyboarded, DataSelectionDelegate {
             nameTF.text = student.name
             genderTF.text = student.gender
             phoneNumberTF.text = student.phoneNumber
-            emailTF.text = "لا يمكنك تغيير البريد الالكتروني، راجع المشرف"
+            emailTF.text = "لا يمكنك تغيير البريد الالكتروني، راجع مشرفك"
             emailTF.isEnabled = false
             passwordStackView.isHidden = true
             cityTF.text = student.city
@@ -202,7 +202,7 @@ class StudentsAccountVC: UIViewController, Storyboarded, DataSelectionDelegate {
                 errorView.show(in: self.view)
                 allValid = false
             } else if passwordTF.text!.count < 6 && mode == .register {
-                let errorView = MessageView(message: "كلمة المرور غير صحيحة، يجب ان تحتوي على 6 او أكثر", animationName: "warning", animationTime: 1)
+                let errorView = MessageView(message: "كلمة المرور غير صحيحة، يجب ان تحتوي على 6 عناصر او أكثر", animationName: "warning", animationTime: 1)
                 errorView.show(in: self.view)
                 allValid = false
             }
@@ -367,7 +367,7 @@ class StudentsAccountVC: UIViewController, Storyboarded, DataSelectionDelegate {
             return
         }
         
-        DataServices.shared.updateStudentAccount(updatedData: updatedStudent) { error in
+        StudentDataServices.shared.updateStudentAccount(updatedData: updatedStudent) { error in
             //Show Success/Failure Message After All Updates
                 let successView = MessageView(message: "تم تحديث بياناتك بنجاح", animationName: "correct", animationTime: 1)
                 successView.show(in: self.view)

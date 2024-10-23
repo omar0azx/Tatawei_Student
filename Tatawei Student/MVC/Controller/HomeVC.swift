@@ -48,13 +48,6 @@ class HomeVC: UIViewController, Storyboarded {
         handleAnimation()
         
         
-        arrOppt.append(opportunities(name: "تنظيم الحجاج المصاريه", date: "09/11/2009", organizationIcon: UIImage(named: "ummQura")!, opportunityHours: 4, accecptanceStatus: false, opportunityIcon: UIImage(named: "kaaba")!, BGColor: .standr4, time: "6:00 PM - 10:00 PM"))
-        arrOppt.append(opportunities(name: "إفطار غير الصائمين", date: "09/11/2009", organizationIcon: UIImage(named: "جامعة الملك عبدالعزيز 1")!, opportunityHours: 4, accecptanceStatus: true, opportunityIcon: UIImage(named: "iftar 1")!, BGColor: .standr2, time: "6:00 PM - 10:00 PM"))
-        arrOppt.append(opportunities(name: "تنظيف الشاطئ", date: "09/11/2009",  organizationIcon: UIImage(named: "logo 4")!, opportunityHours: 4, accecptanceStatus: false, opportunityIcon: UIImage(named: "beach 1")!, BGColor: .standr3, time: "6:00 PM - 10:00 PM"))
-        arrOppt.append(opportunities(name: "تنظيم الحجاج المصاريه", date: "09/11/2009", organizationIcon: UIImage(named: "ummQura")!, opportunityHours: 4, accecptanceStatus: false, opportunityIcon: UIImage(named: "kaaba")!, BGColor: .standr4, time: "6:00 PM - 10:00 PM"))
-        arrOppt.append(opportunities(name: "إفطار غير الصائمين", date: "غداً", organizationIcon: UIImage(named: "جامعة الملك عبدالعزيز 1")!, opportunityHours: 4, accecptanceStatus: true, opportunityIcon: UIImage(named: "iftar 1")!, BGColor: .standr2, time: "6:00 PM - 10:00 PM"))
-        arrOppt.append(opportunities(name: "تنظيف الشاطئ", date: "اليوم",  organizationIcon: UIImage(named: "logo 4")!, opportunityHours: 4, accecptanceStatus: false, opportunityIcon: UIImage(named: "beach 1")!, BGColor: .standr3, time: "6:00 PM - 10:00 PM"))
-        
     }
     
     override func viewIsAppearing(_ animated: Bool) {

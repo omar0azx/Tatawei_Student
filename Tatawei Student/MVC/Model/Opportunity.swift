@@ -20,10 +20,16 @@ struct Opportunity: Codable {
     var category: InterestCategories
     var iconNumber: Int
     var location: String
+    var locationLink: String
     var studentsNumber: Int
     var registeredSudents: Int
     var organizationImageLink: String
     var organizationID: String
+    var organizationName: String
+    var studentRegisted: [String]
+    var studentAccepted: [String]
 
 }
+
+
 

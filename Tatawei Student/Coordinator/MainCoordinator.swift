@@ -99,5 +99,57 @@ final class MainCoordinator: Coordinator {
         navigationController.present(vc, animated: true)
     }
 
+    func viewFiltrationVC() {
+        let vc = FiltrationVC.instantiate()
+        vc.coordinator = self
+        vc.modalPresentationStyle = .fullScreen
+        navigationController.present(vc, animated: true)
+    }
+    
+    func viewOpportunityVC(opportunity: Opportunity) {
+        let vc = OpportunityVC.instantiate()
+        vc.coordinator = self
+        vc.opportunity = opportunity
+        vc.modalPresentationStyle = .fullScreen
+        navigationController.present(vc, animated: true)
+    }
+    
+    func viewOrganizationVC(organizationID: String) {
+        let vc = OrganizationVC.instantiate()
+        vc.coordinator = self
+        vc.organizationID = organizationID
+        vc.modalPresentationStyle = .fullScreen
+        // Present the MapVC modally from the currently presented view controller
+        if let topViewController = navigationController.presentedViewController {
+            topViewController.present(vc, animated: true, completion: nil)
+        } else {
+            navigationController.present(vc, animated: true, completion: nil)
+        }
+    }
+    
+    func viewAcceptanceApplyVC() {
+        let vc = AcceptanceApplyVC.instantiate()
+        vc.coordinator = self
+        vc.modalPresentationStyle = .fullScreen
+        // Present the MapVC modally from the currently presented view controller
+        if let topViewController = navigationController.presentedViewController {
+            topViewController.present(vc, animated: true, completion: nil)
+        } else {
+            navigationController.present(vc, animated: true, completion: nil)
+        }
+    }
+    
+    func viewStandardAcceptanceVC() {
+        let vc = StandardAcceptanceVC.instantiate()
+        vc.coordinator = self
+        vc.modalPresentationStyle = .fullScreen
+        // Present the MapVC modally from the currently presented view controller
+        if let topViewController = navigationController.presentedViewController?.presentedViewController {
+            topViewController.present(vc, animated: true, completion: nil)
+        } else {
+            navigationController.present(vc, animated: true, completion: nil)
+        }
+    }
+    
 }
 
