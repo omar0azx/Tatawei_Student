@@ -26,9 +26,7 @@ class HomeVC: UIViewController, Storyboarded {
     
     // The shape layer used to display the progress.
     let shapeLayer = CAShapeLayer()
-    // The student object that contains the student's data.
-    var student: Student?
-    
+
     var coordinator: MainCoordinator?
     
     var arrOppt = [opportunities]()
@@ -52,6 +50,10 @@ class HomeVC: UIViewController, Storyboarded {
         
     }
     
+    override func viewIsAppearing(_ animated: Bool) {
+        setupUI()
+    }
+    
     
     //MARK: - IBAcitions
     
@@ -59,11 +61,17 @@ class HomeVC: UIViewController, Storyboarded {
     //MARK: - Functions
     
     private func setupUI() {
-        welcomeLBL.text = "🖐🏼 أهلاً \(student?.name ?? "وسام"), "
-        descriptionHoursLBL.text = "لقد اتممت \(student?.hoursCompleted ?? 0)  من 40 ساعة"
         
-        progressView.addSubview(hoursAchievedLBL)
-        progressView.addSubview(textHoursLBL)
+        if let student = Student.currentStudent {
+            
+            if let firstName = student.name.split(separator: " ").first {
+                welcomeLBL.text = "🖐🏼 أهلاً \(firstName)"
+            }
+            descriptionHoursLBL.text = "لقد اتممت \(Int(student.hoursCompleted)) من 40 ساعة"
+            hoursAchievedLBL.text = "\(Int(student.hoursCompleted))"
+            progressView.addSubview(hoursAchievedLBL)
+            progressView.addSubview(textHoursLBL)
+        }
     }
     
     private func setUpProgressAnimat() {
@@ -98,8 +106,7 @@ class HomeVC: UIViewController, Storyboarded {
         // Create a basic animation for the stroke end.
         let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
         basicAnimation.fromValue = 0
-        //            basicAnimation.toValue =  (self.student?.hoursCompleted ?? 0) * 0.02
-        basicAnimation.toValue =  20 * 0.02
+        basicAnimation.toValue =  (Student.currentStudent?.hoursCompleted ?? 5) * 0.02
         basicAnimation.duration = 4.5
         basicAnimation.fillMode = .forwards
         basicAnimation.isRemovedOnCompletion = false
@@ -125,4 +132,7 @@ extension HomeVC: UICollisionBehaviorDelegate, UICollectionViewDataSource, UICol
         return 0.2
     }
 
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.bounds.width * 0.39, height: collectionView.bounds.height * 1 )
+    }
 }

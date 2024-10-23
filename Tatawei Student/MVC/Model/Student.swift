@@ -18,7 +18,7 @@ struct Student: Codable {
     var city: String
     var school: String
     var level: String
-    var hoursCompleted: Int
+    var hoursCompleted: Float
     var location: String
     var interests: [InterestCategories]
     var opportunities: [String]

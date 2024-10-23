@@ -533,7 +533,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 95R6F629SF;
+				DEVELOPMENT_TEAM = F53DC2HZ5G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Tatawei Student/Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "السماح للتطبيق بإستخدام موقعك";
@@ -565,7 +565,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 95R6F629SF;
+				DEVELOPMENT_TEAM = F53DC2HZ5G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Tatawei Student/Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "السماح للتطبيق بإستخدام موقعك";
