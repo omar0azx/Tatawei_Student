@@ -83,8 +83,7 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
 
             // About Us
         case .about:
-            print("")
-            
+        self.coordinator?.viewAboutVC()
             // Reset Password
         case .resetPassword:
             showCustomAlert(message: "هل أنت متأكد من انك تريد إعادة تعيين كلمة المرور؟", onConfirm: {
