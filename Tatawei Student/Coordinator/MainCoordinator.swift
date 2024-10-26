@@ -151,5 +151,18 @@ final class MainCoordinator: Coordinator {
         }
     }
     
+    func viewPreviousOpportunitiesVC() {
+        let vc = PreviousOpportunitiesVC.instantiate()
+        vc.coordinator = self
+        vc.modalPresentationStyle = .fullScreen
+        // Present the MapVC modally from the currently presented view controller
+        if let topViewController = navigationController.presentedViewController?.presentedViewController {
+            topViewController.present(vc, animated: true, completion: nil)
+        } else {
+            navigationController.present(vc, animated: true, completion: nil)
+        }
+    }
+
+    
 }
 
