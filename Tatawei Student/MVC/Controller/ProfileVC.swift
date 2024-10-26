@@ -15,7 +15,7 @@ class ProfileVC: UIViewController, Storyboarded {
     var coordinator: MainCoordinator?
     
     var settings: [MenuItem] = [
-        MenuItem(image: UIImage(systemName: "globe")!, label: .changeLanguage),
+        MenuItem(image: UIImage(systemName: "globe")!, label: .termsAndConditions),
         MenuItem(image: UIImage(systemName: "info.circle.fill")!, label: .about),
         MenuItem(image: UIImage(systemName: "lock.open.rotation")!, label: .resetPassword),
         MenuItem(image: UIImage(systemName: "trash.fill")!, label: .deleteAccount),
@@ -78,9 +78,9 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
         
         switch settings[indexPath.row].label {
             // Change Language
-        case .changeLanguage:
-            print("")
-
+        case .termsAndConditions:
+            
+            coordinator?.viewWebVC(url: "https://publuu.com/flip-book/698725/1553903")
             // About Us
         case .about:
         self.coordinator?.viewAboutVC()
