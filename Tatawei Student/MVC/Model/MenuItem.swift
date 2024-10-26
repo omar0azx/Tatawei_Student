@@ -8,7 +8,7 @@
 import UIKit
 
 enum MenuItemType: String {
-    case changeLanguage = "تغيير اللغة"
+    case termsAndConditions = "الشروط والأحكام"
     case about = "عن تطوعي"
     case resetPassword = "تغيير كلمة المرور"
     case deleteAccount = "خذف الحساب"
