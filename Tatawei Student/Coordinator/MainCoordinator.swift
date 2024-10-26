@@ -163,6 +163,11 @@ final class MainCoordinator: Coordinator {
         }
     }
 
+    func viewAboutVC() {
+        let vc = AboutVC.instantiate()
+        vc.coordinator = self
+        self.navigationController.present(vc, animated: true)
+    }
     
 }
 
