@@ -7,6 +7,11 @@
 
 import Foundation
 import FirebaseAuth
+
+enum Gender: String, Codable {
+    case male = "ذكر"
+    case female = "انثى"
+}
  
 struct Student: Codable {
     
@@ -14,7 +19,7 @@ struct Student: Codable {
     var name: String
     var phoneNumber: String
     var email: String
-    var gender: String
+    var gender: Gender
     var city: String
     var school: String
     var level: String

@@ -15,7 +15,7 @@ struct Opportunity: Codable {
     var date: String
     var time: String
     var hour: Int
-    var city: String
+    var city: Cities
     var status: String
     var category: InterestCategories
     var iconNumber: Int

@@ -18,7 +18,7 @@ class AuthService {
     
     //MARK:- Register
     
-    func registerUserWith(email: String, password: String, name: String, phoneNumber: String, gender: String, city: String, school: String, level: String, hoursCompleted: Float, location: String, interests: [InterestCategories], opportunities: [String], completion: @escaping (_ error: Error?) ->Void) {
+    func registerUserWith(email: String, password: String, name: String, phoneNumber: String, gender: Gender, city: String, school: String, level: String, hoursCompleted: Float, location: String, interests: [InterestCategories], opportunities: [String], completion: @escaping (_ error: Error?) ->Void) {
         
         
         Auth.auth().createUser(withEmail: email, password: password) { (authResults, error) in

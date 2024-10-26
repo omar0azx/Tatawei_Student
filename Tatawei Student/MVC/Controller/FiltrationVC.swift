@@ -7,13 +7,19 @@
 
 import UIKit
 
+protocol DataFiltrationDelegate: AnyObject {
+    func didSelectData(interest: InterestCategories, location: Cities)
+}
+
 class FiltrationVC: UIViewController, Storyboarded {
     
     //MARK: - Varibales
     
     var coordinator: MainCoordinator?
     
-    var interestsType: [InterestCategories] = [.All, .Tourism, .Technical, .Sports, .Social, .Healthy, .Financial, .Environmental, .Cultural, .Arts]
+    weak var delegate: DataFiltrationDelegate?
+    
+    var interestsType: [InterestCategories] = [.All, .Tourism, .Technical, .Sports, .Social, .Healthy, .Financial, .Environmental, .Cultural, .Arts, .religious]
     let cities: [Cities] = [.MyLocation, .All, .Riyadh, .Jeddah, .Macca, .Madenah, .Taif, .Dammam, .Abha]
     
     var selectedInterestsTypeIndexPath: IndexPath?
@@ -32,11 +38,12 @@ class FiltrationVC: UIViewController, Storyboarded {
 
     //MARK: - IBAcitions
     @IBAction func didPressedCancel(_ sender: UIButton) {
-        self.dismiss(animated: true)
+        dismiss(animated: true)
     }
     
     @IBAction func didPressedFilter(_ sender: UIButton) {
-        
+        self.delegate?.didSelectData(interest: interestsType[selectedInterestsTypeIndexPath?.row ?? 0], location: cities[selectedCityIndexPath?.row ?? 1])
+        dismiss(animated: true)
     }
     
     
@@ -98,7 +105,7 @@ extension FiltrationVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
             }
             collectionView.reloadItems(at: [indexPath])
             
-        // Handle selection in "المدينة" (City) section
+            // Handle selection in "المدينة" (City) section
         } else if indexPath.section == 1 {
             if let selectedIndex = selectedCityIndexPath, selectedIndex == indexPath {
                 // Deselect if the same cell is clicked
