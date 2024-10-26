@@ -55,7 +55,7 @@ class MapVC: UIViewController, Storyboarded, CLLocationManagerDelegate, GMSMapVi
                let geocoder = CLGeocoder() // Create an instance of CLGeocoder
                
                // Perform reverse geocoding
-               geocoder.reverseGeocodeLocation(lastKnownLocation) { [weak self] (placemarks, error) in
+               geocoder.reverseGeocodeLocation(lastKnownLocation) { (placemarks, error) in
                    if let error = error {
                        print("Geocoding error: \(error.localizedDescription)")
                        return
@@ -68,8 +68,8 @@ class MapVC: UIViewController, Storyboarded, CLLocationManagerDelegate, GMSMapVi
                        let address = "\(neighborhood), \(city)"
                        
                        // Pass the address information to the coordinator
-                       self?.delegate?.didSelectData(address)
-                       self?.dismiss(animated: true)
+                       self.delegate?.didSelectData(address)
+                       self.dismiss(animated: true)
                    } else {
                        print("No placemarks found.")
                    }

@@ -1,6 +1,6 @@
 //
 //  MainCoordinator.swift
-//  AZAIM
+//  Tatawei Student
 //
 //  Created by omar on 19/03/1445 AH.
 //
@@ -99,9 +99,10 @@ final class MainCoordinator: Coordinator {
         navigationController.present(vc, animated: true)
     }
 
-    func viewFiltrationVC() {
+    func viewFiltrationVC(data: DataFiltrationDelegate) {
         let vc = FiltrationVC.instantiate()
         vc.coordinator = self
+        vc.delegate = data
         vc.modalPresentationStyle = .fullScreen
         navigationController.present(vc, animated: true)
     }

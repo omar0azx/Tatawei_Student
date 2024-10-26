@@ -24,7 +24,10 @@ class StudentsAccountVC: UIViewController, Storyboarded, DataSelectionDelegate {
     
     var stepNumber = 0
     
-    var interestsType: [InterestCategories] = [.Cultural, .Financial, .Social, .Sports, .Technical, .Tourism, .Cultural, .Financial, .Social, .Sports, .Technical, .Tourism, .Cultural, .Financial, .Social, .Sports, .Technical, .Tourism]
+    var cities: [String] = ["", Cities.Jeddah.rawValue, Cities.Riyadh.rawValue, Cities.Macca.rawValue, Cities.Madenah.rawValue, Cities.Taif.rawValue, Cities.Dammam.rawValue, Cities.Abha.rawValue]
+    var gender: [String] = ["", Gender.male.rawValue, Gender.female.rawValue]
+    
+    var interestsType: [InterestCategories] = [.Cultural, .Financial, .Social, .Sports, .Technical, .Tourism, .Cultural, .Financial, .Social, .Sports, .Technical, .Tourism, .Cultural, .Financial, .Social, .Sports, .Technical, .Tourism, .religious]
     var selectedInterestsType: [InterestCategories] = [InterestCategories]()
     var selectedIndexPaths = [IndexPath]()
     
@@ -62,13 +65,13 @@ class StudentsAccountVC: UIViewController, Storyboarded, DataSelectionDelegate {
     
     @IBOutlet weak var interestsCollectionView: UICollectionView!
     @IBOutlet weak var interestsTitle: UILabel!
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         definePageType()
-        genderTF.convertToPicker(options: ["", "ذكر", "أنثى"])
-        cityTF.convertToPicker(options: ["", "جدة", "الرياض", "الدمام", "المدينة", "ينبع"])
+        genderTF.convertToPicker(options: gender)
+        cityTF.convertToPicker(options: cities)
         schoolTF.convertToPicker(options: ["", "شباب الفهد", "الأقصى", "الأندلس", "الحمدانية"])
         levelTF.convertToPicker(options: ["", "أولى ثانوي", "ثاني ثانوي", "ثالث ثانوي"])
         self.hideKeyboardWhenTappedAround()
@@ -79,7 +82,7 @@ class StudentsAccountVC: UIViewController, Storyboarded, DataSelectionDelegate {
         if mode == .editProfile {
             titleLabel.text = "تعديل الحساب"
             nameTF.text = student.name
-            genderTF.text = student.gender
+            genderTF.text = student.gender.rawValue
             phoneNumberTF.text = student.phoneNumber
             emailTF.text = "لا يمكنك تغيير البريد الالكتروني، راجع مشرفك"
             emailTF.isEnabled = false
@@ -267,7 +270,7 @@ class StudentsAccountVC: UIViewController, Storyboarded, DataSelectionDelegate {
     //MARK:- Register User
     
     private func registerUser() {
-        AuthService.shared.registerUserWith(email: emailTF.text!, password: passwordTF.text!, name: nameTF.text!, phoneNumber: phoneNumberTF.text!, gender: genderTF.text!, city: cityTF.text!, school: schoolTF.text!, level: levelTF.text!, hoursCompleted: 0, location: mapInformation.text!, interests: selectedInterestsType, opportunities: []) { error in
+        AuthService.shared.registerUserWith(email: emailTF.text!, password: passwordTF.text!, name: nameTF.text!, phoneNumber: phoneNumberTF.text!, gender: Gender(rawValue: genderTF.text!)!, city: cityTF.text!, school: schoolTF.text!, level: levelTF.text!, hoursCompleted: 0, location: mapInformation.text!, interests: selectedInterestsType, opportunities: []) { error in
             if error == nil {
                 let successView = MessageView(message: "تم تسجيلك بنجاح، سيتم نقلك للصفحة الرئيسية بعد لحظات", animationName: "correct", animationTime: 1)
                 successView.show(in: self.view)
@@ -313,8 +316,8 @@ class StudentsAccountVC: UIViewController, Storyboarded, DataSelectionDelegate {
             hasChanges = true
         }
 
-        if updatedGender != currentStudent.gender {
-            updatedStudent.gender = updatedGender
+        if updatedGender != currentStudent.gender.rawValue {
+            updatedStudent.gender = Gender(rawValue: updatedGender)!
             hasChanges = true
         }
 
