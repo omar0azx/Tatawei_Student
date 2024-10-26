@@ -47,6 +47,11 @@ class HomeVC: UIViewController, Storyboarded {
         setUpProgressAnimat()
         handleAnimation()
         
+        arrOppt.append(opportunities(name: "تنظيم", date: "اليوم", organizationIcon: UIImage.iftar , opportunityHours: 5, accecptanceStatus: true, opportunityIcon: UIImage.robot, BGColor: .standr3, time: "5:00 PM"))
+        arrOppt.append(opportunities(name: "تنظيم", date: "اليوم", organizationIcon: UIImage.iftar , opportunityHours: 5, accecptanceStatus: true, opportunityIcon: UIImage.robot, BGColor: .standr3, time: "5:00 PM"))
+        arrOppt.append(opportunities(name: "تنظيم", date: "اليوم", organizationIcon: UIImage.iftar , opportunityHours: 5, accecptanceStatus: true, opportunityIcon: UIImage.robot, BGColor: .standr3, time: "5:00 PM"))
+        arrOppt.append(opportunities(name: "تنظيم", date: "اليوم", organizationIcon: UIImage.iftar , opportunityHours: 5, accecptanceStatus: true, opportunityIcon: UIImage.robot, BGColor: .standr3, time: "5:00 PM"))
+
         
     }
     
@@ -56,6 +61,9 @@ class HomeVC: UIViewController, Storyboarded {
     
     
     //MARK: - IBAcitions
+    @IBAction func historyBTN(_ sender: Any) {
+        coordinator?.viewPreviousOpportunitiesVC()
+    }
     
     
     //MARK: - Functions
