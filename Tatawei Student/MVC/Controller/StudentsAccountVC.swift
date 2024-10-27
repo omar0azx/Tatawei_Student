@@ -27,7 +27,7 @@ class StudentsAccountVC: UIViewController, Storyboarded, DataSelectionDelegate {
     var cities: [String] = ["", Cities.Jeddah.rawValue, Cities.Riyadh.rawValue, Cities.Macca.rawValue, Cities.Madenah.rawValue, Cities.Taif.rawValue, Cities.Dammam.rawValue, Cities.Abha.rawValue]
     var gender: [String] = ["", Gender.male.rawValue, Gender.female.rawValue]
     
-    var interestsType: [InterestCategories] = [.Cultural, .Financial, .Social, .Sports, .Technical, .Tourism, .Cultural, .Financial, .Social, .Sports, .Technical, .Tourism, .Cultural, .Financial, .Social, .Sports, .Technical, .Tourism, .religious]
+    var interestsType: [InterestCategories] = [.Cultural, .Financial, .Social, .Sports, .Technical, .Tourism, .Healthy, .Arts, .Environmental, .religious]
     var selectedInterestsType: [InterestCategories] = [InterestCategories]()
     var selectedIndexPaths = [IndexPath]()
     
@@ -392,6 +392,7 @@ extension StudentsAccountVC: UICollectionViewDelegate, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        collectionView.semanticContentAttribute = .forceRightToLeft
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InterestsCell", for: indexPath) as! InterestsCell
         let interestType = interestsType[indexPath.row]
         cell.config(type: interestType.rawValue, color: selectedIndexPaths.contains(indexPath) ? UIColor(named: "standr")! : .systemGray5)

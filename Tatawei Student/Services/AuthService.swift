@@ -25,7 +25,7 @@ class AuthService {
             completion(error)
             
             if authResults?.user != nil {
-                let student = Student(id: authResults!.user.uid, name: name, phoneNumber: phoneNumber, email: email, gender: gender, city: city, school: school, level: level, hoursCompleted: hoursCompleted, location: location, interests: interests, opportunities: opportunities)
+                let student = Student(id: authResults!.user.uid, name: name, phoneNumber: phoneNumber, email: email, gender: gender, city: city, school: school, level: level, isStudentRegisteredScool: false, hoursCompleted: hoursCompleted, location: location, interests: interests, opportunities: opportunities)
                 StudentDataServices.shared.saveUserToFirestore(student)
                 saveUserLocally(student)
                 
