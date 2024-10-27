@@ -43,6 +43,16 @@ class OpportunityVC: UIViewController, Storyboarded {
         getOpportunituInformaion()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if let student = Student.currentStudent {
+            if student.isStudentRegisteredScool {
+                applyBTN.backgroundColor = .standr
+            } else {
+                applyBTN.backgroundColor = .systemGray3
+            }
+        }
+    }
+    
 
     //MARK: - IBAcitions
     
@@ -51,7 +61,11 @@ class OpportunityVC: UIViewController, Storyboarded {
     }
     
     @IBAction func didPressedApply(_ sender: UIButton) {
-        coordinator?.viewAcceptanceApplyVC()
+        if applyBTN.backgroundColor == .standr {
+            coordinator?.viewAcceptanceApplyVC()
+        } else {
+            displayAlertMessage()
+        }
     }
     
     @IBAction func openTheOrganisationInformation(_ sender: UIButton) {
@@ -79,6 +93,13 @@ class OpportunityVC: UIViewController, Storyboarded {
             organisationName.text = opportunity.organizationName
             organisationImage.image = organizationImag
         }
+    }
+    
+    func displayAlertMessage() {
+        let alertController = UIAlertController(title: "إنتظار قبول المدرسة", message: "لن تستطيع التقديم على الفرص التطوعية حتى يتم قبولك من قبل مشرف الطوع في مدرستك", preferredStyle: .actionSheet)
+        let OKAction = UIAlertAction(title: "حسنا", style: .default)
+        alertController.addAction(OKAction)
+        self.present(alertController, animated: true, completion: nil)
     }
 
 }

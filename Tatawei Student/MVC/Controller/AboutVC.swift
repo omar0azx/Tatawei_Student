@@ -50,7 +50,7 @@ class AboutVC: UIViewController, Storyboarded {
             
             titleLabel.text = "فوائد العمل التطوعي"
             descriptionLabel.text = "النمو الشخصي، تطوير المهارات، والشعور بالإنجاز. يربطك بمجتمعك، يوسع شبكة علاقاتك، ويوفر فرصًا لإحداث تأثير ذي معنى."
-            aboutImage.image = UIImage(named:"accepted-message")
+            aboutImage.image = UIImage(named:"benefits-tatawei")
             
             updateViewSizes(forPage: 1)
             
@@ -67,12 +67,6 @@ class AboutVC: UIViewController, Storyboarded {
                 self.centerXConstaint.constant = 0
                 self.view.layoutIfNeeded()
             }
-          
-            for view in views {
-                view.isHidden = true
-            }
-            
-            arrowImage.isHidden = true
             
             isFinalState = true
             updateViewSizes(forPage: 2)
@@ -89,7 +83,7 @@ class AboutVC: UIViewController, Storyboarded {
     func updateViewSizes(forPage page: Int) {
         for (index, view) in views.enumerated() {
             if index == page {
-                view.backgroundColor = UIColor(red: 0/255, green: 150/255, blue: 140/255, alpha: 0.5)
+                view.backgroundColor = .standr
                 view.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
             } else {
                 view.backgroundColor = UIColor.lightGray.withAlphaComponent(0.5)

@@ -23,6 +23,7 @@ struct Student: Codable {
     var city: String
     var school: String
     var level: String
+    var isStudentRegisteredScool: Bool
     var hoursCompleted: Float
     var location: String
     var interests: [InterestCategories]
