@@ -27,7 +27,7 @@ class PreviousOpportunitiesCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configOpportunity(opportunityName: String, opportunityTime: String, opportunityHours: Int, opportunityDate: String, organizationImage: UIImage, isFirstCell: Bool, isLastCell: Bool) {
+    func configOpportunity(opportunityName: String, opportunityTime: String, opportunityDate: String, organizationImage: UIImage, isFirstCell: Bool, isLastCell: Bool) {
         
         self.opportunityName.text = opportunityName
         self.opportunityTime.text = opportunityTime
