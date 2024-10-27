@@ -170,5 +170,12 @@ final class MainCoordinator: Coordinator {
         self.navigationController.present(vc, animated: true)
     }
     
+    func viewQRCodeVC() {
+        let vc = QRCodeVC.instantiate()
+        vc.coordinator = self
+        vc.modalPresentationStyle = .overFullScreen // Change to overFullScreen
+        self.navigationController.present(vc, animated: true)
+    }
+
 }
 

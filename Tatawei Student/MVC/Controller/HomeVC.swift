@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import CoreImage.CIFilterBuiltins
+
 
 struct opportunities {
     var name: String
@@ -65,6 +67,10 @@ class HomeVC: UIViewController, Storyboarded {
         coordinator?.viewPreviousOpportunitiesVC()
     }
     
+    @IBAction func showQRCodeBTN(_ sender: Any) {
+        coordinator?.viewQRCodeVC()
+    }
+    
     
     //MARK: - Functions
     
@@ -120,6 +126,9 @@ class HomeVC: UIViewController, Storyboarded {
         basicAnimation.isRemovedOnCompletion = false
         shapeLayer.add(basicAnimation, forKey: "urBasic")
     }
+    
+
+
 }
 
 

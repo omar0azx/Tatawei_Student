@@ -55,7 +55,7 @@ extension PreviousOpportunitiesVC: UITableViewDelegate , UITableViewDataSource {
         let isLastCell = indexPath.row == arrOppt.count - 1
 
         let oppt = arrOppt[indexPath.row]
-        cell.configOpportunity(opportunityName: oppt.name, opportunityTime: oppt.time, opportunityHours: oppt.opportunityHours, opportunityDate: oppt.date, organizationImage: oppt.organizationIcon, isFirstCell: isFirstCell, isLastCell: isLastCell)
+        cell.configOpportunity(opportunityName: oppt.name, opportunityTime: oppt.time, opportunityDate: oppt.date, organizationImage: oppt.organizationIcon, isFirstCell: isFirstCell, isLastCell: isLastCell)
         return cell
     }
     
