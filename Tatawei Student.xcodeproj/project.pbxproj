@@ -26,6 +26,7 @@
 		4EF2AA0F2CC5D962002E1956 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4EF2AA0E2CC5D962002E1956 /* FirebaseStorage */; };
 		4EF2AA132CC7352F002E1956 /* OpportunityDataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2AA122CC7352F002E1956 /* OpportunityDataServices.swift */; };
 		4EF2AA152CC7649E002E1956 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2AA142CC7649B002E1956 /* Icon.swift */; };
+		BE7C796A2CCE4FC60057A08F /* IntroChatBotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7C79692CCE4FC60057A08F /* IntroChatBotVC.swift */; };
 		BE8594C22CC070C300EC84F6 /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8594C12CC070C300EC84F6 /* WebVC.swift */; };
 		BEFB5E502CCBA3E000538D19 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB5E4F2CCBA3E000538D19 /* AboutVC.swift */; };
 		F2197A342CCE668F00D2607E /* QRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2197A332CCE668F00D2607E /* QRCodeVC.swift */; };
@@ -101,6 +102,7 @@
 		4EF2AA0C2CC5D938002E1956 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		4EF2AA122CC7352F002E1956 /* OpportunityDataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportunityDataServices.swift; sourceTree = "<group>"; };
 		4EF2AA142CC7649B002E1956 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		BE7C79692CCE4FC60057A08F /* IntroChatBotVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroChatBotVC.swift; sourceTree = "<group>"; };
 		BE8594C12CC070C300EC84F6 /* WebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 		BEFB5E4F2CCBA3E000538D19 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		F2197A332CCE668F00D2607E /* QRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeVC.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 				F2D6C98D2CAD19F5000E1713 /* ProfileVC.swift */,
 				BE8594C12CC070C300EC84F6 /* WebVC.swift */,
 				BEFB5E4F2CCBA3E000538D19 /* AboutVC.swift */,
+				BE7C79692CCE4FC60057A08F /* IntroChatBotVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 				4EF2AA0D2CC5D93B002E1956 /* StorageService.swift in Sources */,
 				F2D6C9A82CAD19F5000E1713 /* AppCheckProviderFactory.swift in Sources */,
 				4EF2AA132CC7352F002E1956 /* OpportunityDataServices.swift in Sources */,
+				BE7C796A2CCE4FC60057A08F /* IntroChatBotVC.swift in Sources */,
 				F2D6C9A92CAD19F5000E1713 /* Constants.swift in Sources */,
 				4E5B43762CBCAB2C00F7E850 /* MenuItem.swift in Sources */,
 				4EF2AA092CC4CB97002E1956 /* AcceptanceApplyVC.swift in Sources */,

@@ -77,6 +77,8 @@ class NavigationVC: ContainerVC, Storyboarded {
     
     @IBAction func openTheChatIntro(_ sender: UIButton) {
         
+        self.coordinator?.viewIntroChatBotVC()
+        
     }
     
     

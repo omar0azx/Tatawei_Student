@@ -1933,6 +1933,96 @@ secondary</string>
             </objects>
             <point key="canvasLocation" x="2900" y="-211.44164759725399"/>
         </scene>
+        <!--Intro Chat BotVC-->
+        <scene sceneID="xwR-Rb-gfT">
+            <objects>
+                <viewController storyboardIdentifier="IntroChatBotVC" id="MBk-33-iiN" customClass="IntroChatBotVC" customModule="Tatawei_Student" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ajz-v1-a8J">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="designChatBot" translatesAutoresizingMaskIntoConstraints="NO" id="h0t-8F-fWl">
+                                <rect key="frame" x="55" y="-20" width="367" height="608"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2N0-HC-UDD" customClass="DesignableButton" customModule="Tatawei_Student" customModuleProvider="target">
+                                <rect key="frame" x="40" y="769" width="322" height="55"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="2fY-qA-vvV"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="ابدأ">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="27"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatBotAi" translatesAutoresizingMaskIntoConstraints="NO" id="YWs-gd-UBH">
+                                <rect key="frame" x="46" y="100" width="365" height="369"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="المساعد الذكي" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3X-WQ-Oam">
+                                <rect key="frame" x="106" y="551.33333333333337" width="190" height="57"/>
+                                <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ifl-Ov-bt7">
+                                <rect key="frame" x="46" y="616.33333333333337" width="310" height="97.666666666666629"/>
+                                <string key="text">مرحبًا بك في AI Assistant، مصدرك المفضل للاستشارات والاقتراحات والشكاوى. سواء كنت بحاجة إلى نصيحة، أو ترغب في مشاركة أفكارك، أو لديك مخاوف، فأنا هنا لمساعدتك. لنبدأ المحادثة!</string>
+                                <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1Z-Id-rOg">
+                                <rect key="frame" x="326" y="50" width="56" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="RzK-Na-xUR"/>
+                                    <constraint firstAttribute="width" constant="56" id="nRA-Hv-bWf"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="xmark.circle.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="22"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="exit:" destination="MBk-33-iiN" eventType="touchUpInside" id="dkY-6g-aBY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2Fy-1r-iaH"/>
+                        <color key="backgroundColor" red="0.0039215686274509803" green="0.66274509803921566" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="s1Z-Id-rOg" firstAttribute="top" secondItem="Ajz-v1-a8J" secondAttribute="top" constant="50" id="0Pf-nd-krg"/>
+                            <constraint firstItem="Ifl-Ov-bt7" firstAttribute="top" secondItem="x3X-WQ-Oam" secondAttribute="bottom" constant="8" id="4s6-dT-Mw5"/>
+                            <constraint firstItem="Ifl-Ov-bt7" firstAttribute="leading" secondItem="Ajz-v1-a8J" secondAttribute="leadingMargin" constant="30" id="BFH-iY-Gz5"/>
+                            <constraint firstItem="YWs-gd-UBH" firstAttribute="leading" secondItem="Ajz-v1-a8J" secondAttribute="leadingMargin" constant="30" id="BdK-Dg-Tlm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="x3X-WQ-Oam" secondAttribute="trailing" constant="90" id="KOu-st-lvD"/>
+                            <constraint firstAttribute="trailing" secondItem="2N0-HC-UDD" secondAttribute="trailing" constant="40" id="Lva-lV-tKf"/>
+                            <constraint firstItem="h0t-8F-fWl" firstAttribute="leading" secondItem="Ajz-v1-a8J" secondAttribute="leading" constant="55" id="O0Z-FW-nVk"/>
+                            <constraint firstAttribute="trailing" secondItem="s1Z-Id-rOg" secondAttribute="trailing" constant="20" id="Qzj-3K-IPx"/>
+                            <constraint firstAttribute="trailing" secondItem="h0t-8F-fWl" secondAttribute="trailing" constant="-20" id="Z8a-mg-2Vu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ifl-Ov-bt7" secondAttribute="trailing" constant="30" id="a4X-3X-edl"/>
+                            <constraint firstItem="h0t-8F-fWl" firstAttribute="top" secondItem="Ajz-v1-a8J" secondAttribute="top" constant="-20" id="bXv-R0-sa0"/>
+                            <constraint firstItem="2N0-HC-UDD" firstAttribute="leading" secondItem="Ajz-v1-a8J" secondAttribute="leading" constant="40" id="dGe-Hp-px0"/>
+                            <constraint firstItem="2N0-HC-UDD" firstAttribute="top" secondItem="h0t-8F-fWl" secondAttribute="bottom" constant="181" id="dVN-8l-fQh"/>
+                            <constraint firstItem="YWs-gd-UBH" firstAttribute="top" secondItem="Ajz-v1-a8J" secondAttribute="top" constant="100" id="hED-ji-gXK"/>
+                            <constraint firstItem="2N0-HC-UDD" firstAttribute="top" secondItem="Ifl-Ov-bt7" secondAttribute="bottom" constant="55" id="iT1-Nt-5PJ"/>
+                            <constraint firstItem="x3X-WQ-Oam" firstAttribute="leading" secondItem="Ajz-v1-a8J" secondAttribute="leadingMargin" constant="90" id="rbV-TJ-cve"/>
+                            <constraint firstAttribute="bottom" secondItem="2N0-HC-UDD" secondAttribute="bottom" constant="50" id="tFd-MH-8LJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YWs-gd-UBH" secondAttribute="trailing" constant="-25" id="uzK-vE-e4r"/>
+                            <constraint firstItem="2N0-HC-UDD" firstAttribute="top" secondItem="YWs-gd-UBH" secondAttribute="bottom" constant="300" id="yyS-je-t3w"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NUF-E3-NcP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3910.4477611940297" y="-208.00915331807778"/>
+        </scene>
         <!--EducationVC-->
         <scene sceneID="FuR-d1-TOR">
             <objects>
@@ -2233,7 +2323,7 @@ secondary</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sm8-mP-Tic" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3989.5522388059699" y="-212.12814645308922"/>
+            <point key="canvasLocation" x="4981" y="-211"/>
         </scene>
         <!--OpportunityVC-->
         <scene sceneID="h01-ir-Sjd">
@@ -2413,13 +2503,13 @@ secondary</string>
                                         <rect key="frame" x="242.66666666666663" y="190" width="129.33333333333337" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="عدد الطلاب المطلوبين " textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8I-ln-Dz1">
-                                                <rect key="frame" x="0.0" y="0.0" width="129.33333333333334" height="23.666666666666668"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="129.33333333333334" height="26.333333333333332"/>
                                                 <fontDescription key="fontDescription" name="Cairo-Medium" family="Cairo" pointSize="14"/>
                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="طالب مسجل" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQB-q3-yyY">
-                                                <rect key="frame" x="56.333333333333343" y="23.666666666666629" width="73" height="26.333333333333329"/>
+                                                <rect key="frame" x="56.333333333333343" y="26.333333333333371" width="73" height="23.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="Cairo-Medium" family="Cairo" pointSize="14"/>
                                                 <color key="textColor" name="standr"/>
                                                 <nil key="highlightedColor"/>
@@ -2965,7 +3055,7 @@ secondary</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4JE-gT-Uh4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4000.7633587786258" y="457.74647887323948"/>
+            <point key="canvasLocation" x="4981" y="458"/>
         </scene>
         <!--AboutVC-->
         <scene sceneID="thG-u4-PVP">
@@ -3119,7 +3209,7 @@ secondary</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qlF-3M-I9b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5220.8955223880594" y="456.52173913043475"/>
+            <point key="canvasLocation" x="6160" y="458"/>
         </scene>
         <!--ProfileVC-->
         <scene sceneID="PAc-CT-NC6">
@@ -3430,7 +3520,7 @@ secondary</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ba4-ws-Qhw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5221" y="-211"/>
+            <point key="canvasLocation" x="6161" y="-211"/>
         </scene>
         <!--OrganizationVC-->
         <scene sceneID="9Ck-Vj-hfk">
@@ -3912,8 +4002,10 @@ secondary</string>
         <image name="book.fill" catalog="system" width="128" height="95"/>
         <image name="bookmark.fill" catalog="system" width="110" height="128"/>
         <image name="calendar.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="chatBotAi" width="338" height="371"/>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="clear" width="512" height="512"/>
+        <image name="designChatBot" width="338" height="588"/>
         <image name="doubtful" width="170.66667175292969" height="170.66667175292969"/>
         <image name="filter" width="18" height="17"/>
         <image name="fitness.timer.fill" catalog="system" width="128" height="123"/>
