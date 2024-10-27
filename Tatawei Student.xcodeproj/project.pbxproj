@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E11EBFC2CCDEB0500D68045 /* tatawei.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E11EBFB2CCDEB0500D68045 /* tatawei.json */; };
 		4E5B43742CBCAAF200F7E850 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B43732CBCAAF200F7E850 /* SettingsCell.swift */; };
 		4E5B43762CBCAB2C00F7E850 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B43752CBCAB2C00F7E850 /* MenuItem.swift */; };
 		4E5B43782CBCAB7500F7E850 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B43772CBCAB7500F7E850 /* CustomAlertView.swift */; };
@@ -28,6 +29,7 @@
 		BE7C796A2CCE4FC60057A08F /* IntroChatBotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7C79692CCE4FC60057A08F /* IntroChatBotVC.swift */; };
 		BE8594C22CC070C300EC84F6 /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8594C12CC070C300EC84F6 /* WebVC.swift */; };
 		BEFB5E502CCBA3E000538D19 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB5E4F2CCBA3E000538D19 /* AboutVC.swift */; };
+		F2197A342CCE668F00D2607E /* QRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2197A332CCE668F00D2607E /* QRCodeVC.swift */; };
 		F257C4982CCB672B00C0B0C1 /* PreviousOpportunitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F257C4972CCB672B00C0B0C1 /* PreviousOpportunitiesCell.swift */; };
 		F269FB092CB5914400058592 /* CustomBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F269FB082CB5914400058592 /* CustomBackgroundView.swift */; };
 		F269FB0B2CB5D4A300058592 /* DashedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F269FB0A2CB5D4A300058592 /* DashedView.swift */; };
@@ -81,6 +83,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E11EBFB2CCDEB0500D68045 /* tatawei.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = tatawei.json; sourceTree = "<group>"; };
 		4E14CFC02C9E2FE400103405 /* Tatawei Student.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tatawei Student.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E5B43732CBCAAF200F7E850 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		4E5B43752CBCAB2C00F7E850 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
@@ -102,6 +105,7 @@
 		BE7C79692CCE4FC60057A08F /* IntroChatBotVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroChatBotVC.swift; sourceTree = "<group>"; };
 		BE8594C12CC070C300EC84F6 /* WebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 		BEFB5E4F2CCBA3E000538D19 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		F2197A332CCE668F00D2607E /* QRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeVC.swift; sourceTree = "<group>"; };
 		F257C4972CCB672B00C0B0C1 /* PreviousOpportunitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousOpportunitiesCell.swift; sourceTree = "<group>"; };
 		F269FB082CB5914400058592 /* CustomBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackgroundView.swift; sourceTree = "<group>"; };
 		F269FB0A2CB5D4A300058592 /* DashedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedView.swift; sourceTree = "<group>"; };
@@ -257,6 +261,7 @@
 		F2D6C9822CAD19F5000E1713 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				4E11EBFB2CCDEB0500D68045 /* tatawei.json */,
 				F2D6C97F2CAD19F5000E1713 /* correct.json */,
 				F2D6C9802CAD19F5000E1713 /* loading.json */,
 				F2D6C9812CAD19F5000E1713 /* warning.json */,
@@ -289,6 +294,7 @@
 				F2D6C98A2CAD19F5000E1713 /* LoginVC.swift */,
 				F2D6C9882CAD19F5000E1713 /* ForgetPasswordVC.swift */,
 				F2D6C9892CAD19F5000E1713 /* HomeVC.swift */,
+				F2197A332CCE668F00D2607E /* QRCodeVC.swift */,
 				F29A802B2CCA927900FDA7EC /* PreviousOpportunitiesVC.swift */,
 				F2D6C9872CAD19F5000E1713 /* ExploreVC.swift */,
 				4EF2AA042CC331C3002E1956 /* OpportunityVC.swift */,
@@ -446,6 +452,7 @@
 				F2D6C9BA2CAD19F5000E1713 /* CairoRegular.ttf in Resources */,
 				F2D6C9BB2CAD19F5000E1713 /* CairoBlack.ttf in Resources */,
 				F2D6C9BC2CAD19F5000E1713 /* CairoBold.ttf in Resources */,
+				4E11EBFC2CCDEB0500D68045 /* tatawei.json in Resources */,
 				F2D6C9BD2CAD19F5000E1713 /* CairoLight.ttf in Resources */,
 				F2D6C9BE2CAD19F5000E1713 /* CairoMedium.ttf in Resources */,
 				F2D6C9BF2CAD19F5000E1713 /* CairoSemiBold.ttf in Resources */,
@@ -509,6 +516,7 @@
 				F2D6C9B42CAD19F5000E1713 /* ProfileVC.swift in Sources */,
 				F2D6C9B52CAD19F5000E1713 /* StudentsAccountVC.swift in Sources */,
 				F2D6C9B62CAD19F5000E1713 /* InterestCategories.swift in Sources */,
+				F2197A342CCE668F00D2607E /* QRCodeVC.swift in Sources */,
 				F2D6C9B72CAD19F5000E1713 /* Student.swift in Sources */,
 				F269FB092CB5914400058592 /* CustomBackgroundView.swift in Sources */,
 				BE8594C22CC070C300EC84F6 /* WebVC.swift in Sources */,
@@ -549,7 +557,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = F53DC2HZ5G;
+				DEVELOPMENT_TEAM = 95R6F629SF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Tatawei Student/Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "السماح للتطبيق بإستخدام موقعك";
@@ -557,7 +565,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -581,7 +589,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = F53DC2HZ5G;
+				DEVELOPMENT_TEAM = 95R6F629SF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Tatawei Student/Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "السماح للتطبيق بإستخدام موقعك";
@@ -589,7 +597,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (

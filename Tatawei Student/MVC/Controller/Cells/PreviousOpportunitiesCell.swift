@@ -12,7 +12,6 @@ class PreviousOpportunitiesCell: UITableViewCell {
     @IBOutlet weak var firstDashedView: DashedView!
     @IBOutlet weak var seconedDashedView: DashedView!
     @IBOutlet weak var organizationIcon: UIImageView!
-    @IBOutlet weak var opportunityHours: UILabel!
     @IBOutlet weak var opportunityDate: UILabel!
     @IBOutlet weak var opportunityTime: UILabel!
     @IBOutlet weak var opportunityName: UILabel!
@@ -28,11 +27,10 @@ class PreviousOpportunitiesCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configOpportunity(opportunityName: String, opportunityTime: String, opportunityHours: Int, opportunityDate: String, organizationImage: UIImage, isFirstCell: Bool, isLastCell: Bool) {
+    func configOpportunity(opportunityName: String, opportunityTime: String, opportunityDate: String, organizationImage: UIImage, isFirstCell: Bool, isLastCell: Bool) {
         
         self.opportunityName.text = opportunityName
         self.opportunityTime.text = opportunityTime
-        self.opportunityHours.text = "\(opportunityHours)"
         self.opportunityDate.text = opportunityDate
         organizationIcon.image = organizationImage
         
