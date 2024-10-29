@@ -38,7 +38,7 @@ class StudentDataServices {
     
     
     // MARK: - Download User from Firestore
-    func downloadStudentFromFirestore(studentID: String) {
+    func getStudentByCollectionGroup(studentID: String) {
         
         let db = Firestore.firestore()
         
@@ -85,6 +85,41 @@ class StudentDataServices {
         }
     }
     
+    func getStudentData(schoolID: String, studentID: String, completion: @escaping (_ status: Bool?, _ error: Error?) -> Void) {
+        // Reference to the Firestore collection where students are stored
+        let studentRef = FirestoreReference(.schools).document(schoolID).collection("students").document(studentID)
+        
+        studentRef.getDocument { (document, error) in
+            if let error = error {
+                completion(false, error)
+                return
+            }
+            
+            guard let document = document, document.exists else {
+                completion(false, nil) // No document found
+                return
+            }
+            
+            // Try to decode the document data into a Student struct
+            do {
+                
+                let student = try document.data(as: Student.self)
+                
+                saveUserLocally(student)
+                print("Student found and saved locally: \(student)")
+                
+                completion(true, nil)
+                
+            } catch {
+                
+                print("Error decoding student data: \(error.localizedDescription)")
+                
+                completion(false, error)
+            }
+        }
+    }
+
+    
     func updateStudentAccount(updatedData: Student, completion: @escaping (_ error: Error?) -> Void) {
         // Get reference to the student's document in Firestore
         let studentRef = FirestoreReference(.schools).document(Student.currentStudent!.school)
@@ -92,11 +127,12 @@ class StudentDataServices {
 
         studentRef.getDocument { (document, error) in
             if let document = document, document.exists {
-                if let data = document.data(), let hoursCompleted = data["hoursCompleted"] as? Float, let isStudentRegisteredScool = data["isStudentRegisteredScool"] as? Bool {
+                if let data = document.data(), let hoursCompleted = data["hoursCompleted"] as? Float, let isStudentRegisteredScool = data["isStudentRegisteredScool"] as? Bool, let studrntOpportunity = data["opportunities"] as? [String]  {
                     
                     var updatedStudent = updatedData
                     updatedStudent.hoursCompleted = hoursCompleted
                     updatedStudent.isStudentRegisteredScool = isStudentRegisteredScool
+                    updatedStudent.opportunities = studrntOpportunity
                     
                     // Convert updatedStudent to a dictionary using JSONEncoder
                     do {

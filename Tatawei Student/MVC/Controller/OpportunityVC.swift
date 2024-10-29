@@ -62,9 +62,23 @@ class OpportunityVC: UIViewController, Storyboarded {
     
     @IBAction func didPressedApply(_ sender: UIButton) {
         if applyBTN.backgroundColor == .standr {
-            coordinator?.viewAcceptanceApplyVC()
-        } else {
-            displayAlertMessage()
+            let loadView = MessageView(message: "يرجى الإنتظار", animationName: "loading", animationTime: 1)
+            loadView.show(in: self.view)
+            if let student = Student.currentStudent, let opportunity = opportunity {
+                OpportunityDataServices.shared.applyToOpportunity(studentID: student.id, opportunity: opportunity) { status, error in
+                    if status {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                            self.coordinator?.viewAcceptanceApplyVC()
+                        }
+                    } else {
+                        let errorView = MessageView(message: "أنت مسجل بالفعل !", animationName: "warning", animationTime: 1)
+                        errorView.show(in: self.view)
+                    }
+                    
+                }
+            } else {
+                displayAlertMessage()
+            }
         }
     }
     

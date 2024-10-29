@@ -55,7 +55,7 @@ class ProfileVC: UIViewController, Storyboarded {
             studentName.text = student.name
             studentEmail.text = student.email
             studentOpportunities.text = student.opportunities.count == 0 ? "0": String(student.opportunities.count)
-            studentHoursCompleted.text = String(student.hoursCompleted)
+            studentHoursCompleted.text = String(Int(student.hoursCompleted))
         }
         
     }

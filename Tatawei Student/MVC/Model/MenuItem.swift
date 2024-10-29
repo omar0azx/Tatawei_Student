@@ -11,7 +11,7 @@ enum MenuItemType: String {
     case termsAndConditions = "الشروط والأحكام"
     case about = "عن تطوعي"
     case resetPassword = "تغيير كلمة المرور"
-    case deleteAccount = "خذف الحساب"
+    case deleteAccount = "حذف الحساب"
     case logout = "تسجيل الخروج"
 }
 

@@ -34,10 +34,10 @@ class OpportunitiesCell: UICollectionViewCell {
         
         // Verify student acceptance into the opportunity
         if (status == true){
-            statusView.backgroundColor = .green
+            statusView.backgroundColor = #colorLiteral(red: 0.01960784314, green: 0.8274509804, blue: 0.09803921569, alpha: 1)
             accecptanceMessage.text = "مقبول"
         } else {
-            statusView.backgroundColor = .orange
+            statusView.backgroundColor = #colorLiteral(red: 1, green: 0.9019607843, blue: 0.01960784314, alpha: 1)
             accecptanceMessage.text = "معلق"
 
         }

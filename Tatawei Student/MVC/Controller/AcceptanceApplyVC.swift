@@ -21,6 +21,8 @@ class AcceptanceApplyVC: UIViewController, Storyboarded {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        updateStudentData()
+        
     }
     
 
@@ -35,5 +37,17 @@ class AcceptanceApplyVC: UIViewController, Storyboarded {
     }
     
     //MARK: - Functions
-
+    
+    func updateStudentData() {
+        if let schoolID = Student.currentStudent?.school {
+            StudentDataServices.shared.getStudentData(schoolID: schoolID, studentID: Student.currentID) { status, error in
+                if status! {
+                    print("Success to update locally storage")
+                } else {
+                    print("Have problem when update locally storage")
+                }
+            }
+        }
+    }
+    
 }

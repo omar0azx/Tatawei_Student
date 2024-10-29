@@ -12,6 +12,10 @@ enum Gender: String, Codable {
     case male = "ذكر"
     case female = "انثى"
 }
+
+struct StudentOpportunity: Codable {
+    var isAccepted: Bool
+}
  
 struct Student: Codable {
     

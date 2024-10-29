@@ -7,18 +7,6 @@
 
 import UIKit
 
-struct opportunities {
-    var name: String
-    var date: String
-    var organizationIcon: UIImage
-    var opportunityHours: Int
-    var accecptanceStatus: Bool
-    var opportunityIcon: UIImage
-    var BGColor: UIColor
-    var time: String
-    
-}
-
 class HomeVC: UIViewController, Storyboarded {
     
     
@@ -29,9 +17,11 @@ class HomeVC: UIViewController, Storyboarded {
 
     var coordinator: MainCoordinator?
     
-    var arrOppt = [opportunities]()
+    var arrOppt = [Opportunity]()
     
     //MARK: - IBOutleats
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var textHoursLBL: UILabel!
     @IBOutlet weak var progressView: UIView!
@@ -39,23 +29,21 @@ class HomeVC: UIViewController, Storyboarded {
     @IBOutlet weak var hoursAchievedLBL: UILabel!
     @IBOutlet weak var descriptionHoursLBL: UILabel!
     
+    @IBOutlet weak var emtyMessage: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        collectionView.semanticContentAttribute = .forceRightToLeft
         setupUI()
         setUpProgressAnimat()
         handleAnimation()
-        
-        arrOppt.append(opportunities(name: "تنظيم", date: "اليوم", organizationIcon: UIImage.iftar , opportunityHours: 5, accecptanceStatus: true, opportunityIcon: UIImage.robot, BGColor: .standr3, time: "5:00 PM"))
-        arrOppt.append(opportunities(name: "تنظيم", date: "اليوم", organizationIcon: UIImage.iftar , opportunityHours: 5, accecptanceStatus: true, opportunityIcon: UIImage.robot, BGColor: .standr3, time: "5:00 PM"))
-        arrOppt.append(opportunities(name: "تنظيم", date: "اليوم", organizationIcon: UIImage.iftar , opportunityHours: 5, accecptanceStatus: true, opportunityIcon: UIImage.robot, BGColor: .standr3, time: "5:00 PM"))
-        arrOppt.append(opportunities(name: "تنظيم", date: "اليوم", organizationIcon: UIImage.iftar , opportunityHours: 5, accecptanceStatus: true, opportunityIcon: UIImage.robot, BGColor: .standr3, time: "5:00 PM"))
+        loadStudentOpportunities()
 
-        
     }
     
     override func viewIsAppearing(_ animated: Bool) {
+        setUpProgressAnimat()
+        loadStudentOpportunities()
         setupUI()
     }
     
@@ -79,8 +67,33 @@ class HomeVC: UIViewController, Storyboarded {
             hoursAchievedLBL.text = "\(Int(student.hoursCompleted))"
             progressView.addSubview(hoursAchievedLBL)
             progressView.addSubview(textHoursLBL)
+            print(student.opportunities)
         }
     }
+    
+    func loadStudentOpportunities() {
+        // Check if the current student has any opportunities
+        if let studentOpportunities = Student.currentStudent?.opportunities, !studentOpportunities.isEmpty {
+            
+            // Proceed only if studentOpportunities is non-empty
+            OpportunityDataServices.shared.getStudentOpportunities(opportunityIDs: studentOpportunities) { opportunities, error in
+                
+                if let error = error {
+                    print("Error fetching student opportunities: \(error.localizedDescription)")
+                    return
+                }
+                DispatchQueue.main.async {
+                    self.arrOppt = opportunities
+                    self.collectionView.reloadData()
+                }
+            }
+        } else {
+            // Handle the case where the opportunities array is empty
+            print("No opportunities available for the current student.")
+            
+        }
+    }
+
     
     private func setUpProgressAnimat() {
         // Create a circular path for the progress view.
@@ -97,7 +110,7 @@ class HomeVC: UIViewController, Storyboarded {
         // Set up the shape layer.
         shapeLayer.path = circularPath.cgPath
         progressView.layer.addSublayer(shapeLayer)
-        shapeLayer.strokeColor = UIColor(red: 1, green: 169, blue: 158, alpha: 0.5).cgColor
+        shapeLayer.strokeColor = UIColor(#colorLiteral(red: 0.1647058824, green: 0.1647058824, blue: 0.1647058824, alpha: 1)).cgColor
         
         shapeLayer.strokeEnd = 0
         shapeLayer.lineWidth = 9.5
@@ -126,13 +139,25 @@ class HomeVC: UIViewController, Storyboarded {
 extension HomeVC: UICollisionBehaviorDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if arrOppt.count == 0 {
+            emtyMessage.isHidden = false
+            emtyMessage.alpha = 1
+        } else {
+            emtyMessage.isHidden = true
+            emtyMessage.alpha = 0
+        }
         return arrOppt.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cellColorAndIcon = Icon(index: arrOppt[indexPath.row].iconNumber, categories: arrOppt[indexPath.row].category).icons
+        var organizationImag: UIImage?
+        StorageService.shared.downloadImage(from: arrOppt[indexPath.row].organizationImageLink) { imag, error in
+            guard let image = imag else {return}
+            organizationImag = image
+        }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OpportunitiesCell", for: indexPath) as! OpportunitiesCell
-        let oppt = arrOppt[indexPath.row]
-        cell.configOpportunity(backgroundColor: oppt.BGColor, opportunityImage: oppt.opportunityIcon, opportunityName: oppt.name, opportunityTime: oppt.time, opportunityHour: oppt.opportunityHours, opportunityDate: oppt.date, organizationImage: oppt.organizationIcon, status: oppt.accecptanceStatus)
+        cell.configOpportunity(backgroundColor: cellColorAndIcon.1, opportunityImage: cellColorAndIcon.0, opportunityName: arrOppt[indexPath.row].name, opportunityTime: arrOppt[indexPath.row].time, opportunityHour: arrOppt[indexPath.row].hour, opportunityDate: arrOppt[indexPath.row].date, organizationImage: organizationImag ?? #imageLiteral(resourceName: "P2.svg"), status: arrOppt[indexPath.row].isAccepted!)
         return cell
     }
     
@@ -141,6 +166,7 @@ extension HomeVC: UICollisionBehaviorDelegate, UICollectionViewDataSource, UICol
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width * 0.39, height: collectionView.bounds.height * 1 )
+        return CGSize(width: collectionView.bounds.width * 0.4, height: collectionView.bounds.height * 1 )
     }
+    
 }

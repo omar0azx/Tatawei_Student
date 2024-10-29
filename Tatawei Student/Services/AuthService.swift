@@ -45,7 +45,7 @@ class AuthService {
                 loginCompleat(false, error)
                 return
             }
-            StudentDataServices.shared.downloadStudentFromFirestore(studentID: authResults!.user.uid)
+            StudentDataServices.shared.getStudentByCollectionGroup(studentID: authResults!.user.uid)
             loginCompleat(true, nil)
             
         }
