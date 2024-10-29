@@ -81,6 +81,13 @@ final class MainCoordinator: Coordinator {
         self.navigationController.pushViewController(navigationVC, animated: false)
     }
     
+    func viewIntroChatBotVC() {
+        let vc = IntroChatBotVC.instantiate()
+        vc.coordinator = self
+        vc.modalPresentationStyle = .fullScreen
+        self.navigationController.present(vc, animated: true)
+    }
+    
     func viewMapVC(animation: Bool) {
         let vc = MapVC.instantiate()
         vc.coordinator = self
@@ -165,5 +172,12 @@ final class MainCoordinator: Coordinator {
         self.navigationController.present(vc, animated: true)
     }
     
+    func viewQRCodeVC() {
+        let vc = QRCodeVC.instantiate()
+        vc.coordinator = self
+        vc.modalPresentationStyle = .overFullScreen // Change to overFullScreen
+        self.navigationController.present(vc, animated: true)
+    }
+
 }
 
