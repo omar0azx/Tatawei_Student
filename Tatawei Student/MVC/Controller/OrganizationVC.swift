@@ -44,7 +44,7 @@ class OrganizationVC: UIViewController, Storyboarded {
     
     func getOpportunituInformaion() {
         if let organizationID = organizationID {
-            OpportunityDataServices.shared.fetchOrganisationData(organisationId: organizationID, completion: { organisation in
+            OpportunityDataServices.shared.getOrganisationData(organisationId: organizationID, completion: { organisation in
                 if let organisation = organisation {
                     var organizationImag: UIImage?
                     StorageService.shared.downloadImage(from: organisation.organizationImageLink) { imag, error in

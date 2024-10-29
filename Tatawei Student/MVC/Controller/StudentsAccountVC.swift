@@ -31,6 +31,8 @@ class StudentsAccountVC: UIViewController, Storyboarded, DataSelectionDelegate {
     var selectedInterestsType: [InterestCategories] = [InterestCategories]()
     var selectedIndexPaths = [IndexPath]()
     
+    var locationCoordinates: String?
+    
     
     //MARK: - IBOutleats
     
@@ -124,8 +126,9 @@ class StudentsAccountVC: UIViewController, Storyboarded, DataSelectionDelegate {
     
     //MARK: - Functions
     
-    func didSelectData(_ data: String) {
-        mapInformation.text = data
+    func didSelectData(address: String, coordinates: String) {
+        mapInformation.text = address
+        locationCoordinates = String(coordinates)
     }
     
     
@@ -270,7 +273,7 @@ class StudentsAccountVC: UIViewController, Storyboarded, DataSelectionDelegate {
     //MARK:- Register User
     
     private func registerUser() {
-        AuthService.shared.registerUserWith(email: emailTF.text!, password: passwordTF.text!, name: nameTF.text!, phoneNumber: phoneNumberTF.text!, gender: Gender(rawValue: genderTF.text!)!, city: cityTF.text!, school: schoolTF.text!, level: levelTF.text!, hoursCompleted: 0, location: mapInformation.text!, interests: selectedInterestsType, opportunities: []) { error in
+        AuthService.shared.registerUserWith(email: emailTF.text!, password: passwordTF.text!, name: nameTF.text!, phoneNumber: phoneNumberTF.text!, gender: Gender(rawValue: genderTF.text!)!, city: cityTF.text!, school: schoolTF.text!, level: levelTF.text!, hoursCompleted: 0, location: locationCoordinates ?? "(0, 0)", interests: selectedInterestsType, opportunities: []) { error in
             if error == nil {
                 let successView = MessageView(message: "تم تسجيلك بنجاح، سيتم نقلك للصفحة الرئيسية بعد لحظات", animationName: "correct", animationTime: 1)
                 successView.show(in: self.view)
@@ -302,7 +305,7 @@ class StudentsAccountVC: UIViewController, Storyboarded, DataSelectionDelegate {
         let updatedCity = cityTF.text ?? ""
         let updatedSchool = schoolTF.text ?? ""
         let updatedLevel = levelTF.text ?? ""
-        let updatedLocation = mapInformation.text ?? ""
+        let updatedLocation = locationCoordinates ?? ""
         let updatedInterests = selectedInterestsType
 
         // Create a new Student object with the updated values

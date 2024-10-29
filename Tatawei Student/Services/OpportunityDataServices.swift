@@ -42,9 +42,129 @@ class OpportunityDataServices {
                }
                completion(opportunities, nil)
            }
-       }
+    }
+    
+    func applyToOpportunity(studentID: String, opportunity: Opportunity, completion: @escaping (_ status: Bool, _ error: Error?) -> Void) {
+        let studentRef = FirestoreReference(.schools).document(Student.currentStudent!.school)
+            .collection("students").document(Student.currentID)
+        let opportunityRef = FirestoreReference(.organisations).document(opportunity.organizationID)
+            .collection("opportunities").document(opportunity.id)
+            .collection("studentOpportunity").document(studentID) // Now it's a DocumentReference
 
-    func fetchOrganisationData(organisationId: String, completion: @escaping(_ organisation: Organization?) -> Void) {
+        updateOpportunityRegistration(opportunityRef: opportunityRef, studentID: studentID) { status, error in
+            if let error = error {
+                completion(false, error)
+                return
+            }
+            if status {
+                self.updateStudentOpportunities(studentRef: studentRef, opportunityID: opportunity.id) { status, error in
+                    completion(status, error)
+                }
+            } else {
+                completion(false, nil)
+            }
+        }
+    }
+
+    private func updateOpportunityRegistration(opportunityRef: DocumentReference, studentID: String, completion: @escaping (_ status: Bool, _ error: Error?) -> Void) {
+
+        opportunityRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                print("Student ID already registered in opportunity.")
+                completion(false, nil)
+            } else {
+                // Set the 'isAccepted' field only for this student
+                opportunityRef.setData(["isAccepted": false]) { error in
+                    if let error = error {
+                        print("Error registering student in opportunity: \(error)")
+                        completion(false, error)
+                    } else {
+                        print("Student successfully registered in opportunity!")
+                        completion(true, nil)
+                    }
+                }
+            }
+        }
+    }
+
+
+    private func updateStudentOpportunities(studentRef: DocumentReference, opportunityID: String, completion: @escaping (_ status: Bool, _ error: Error?) -> Void) {
+        studentRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                var opportunities = document.get("opportunities") as? [String] ?? []
+                
+                if !opportunities.contains(opportunityID) {
+                    opportunities.append(opportunityID)
+                    studentRef.updateData(["opportunities": opportunities]) { error in
+                        if let error = error {
+                            print("Error updating student opportunities: \(error)")
+                            completion(false, error)
+                        } else {
+                            print("Opportunity successfully added to student record!")
+                            completion(true, nil)
+                        }
+                    }
+                } else {
+                    print("Opportunity ID already added.")
+                    completion(false, nil)
+                }
+            } else {
+                print("Error fetching student document: \(String(describing: error))")
+                completion(false, error)
+            }
+        }
+    }
+    
+    func getStudentOpportunities(opportunityIDs: [String], completion: @escaping (_ opportunities: [Opportunity], _ error: Error?) -> Void) {
+        guard !opportunityIDs.isEmpty else {
+            completion([], nil)
+            return
+        }
+        
+        let db = Firestore.firestore()
+        var opportunities: [Opportunity] = []
+        let dispatchGroup = DispatchGroup()
+
+        for opportunityID in opportunityIDs {
+            dispatchGroup.enter()
+            db.collectionGroup("opportunities")
+                .whereField("id", isEqualTo: opportunityID)
+                .getDocuments { (snapshot, error) in
+                    if let error = error {
+                        dispatchGroup.leave()
+                        completion([], error)
+                        return
+                    }
+                    
+                    for document in snapshot?.documents ?? [] {
+                        do {
+                            var opportunity = try Firestore.Decoder().decode(Opportunity.self, from: document.data())
+                            
+                            // Fetching acceptance status from the sub-collection
+                            document.reference.collection("studentOpportunity").document(Student.currentID).getDocument { (studentDoc, error) in
+                                if error == nil {
+                                    opportunity.isAccepted = studentDoc?.data()?["isAccepted"] as? Bool ?? false
+                                } else {
+                                    opportunity.isAccepted = false // Default if not registered
+                                }
+                                opportunities.append(opportunity)
+                                dispatchGroup.leave()
+                            }
+                        } catch {
+                            print("Error decoding opportunity: \(error)")
+                            dispatchGroup.leave()
+                        }
+                    }
+                }
+        }
+
+        dispatchGroup.notify(queue: .main) {
+            completion(opportunities, nil)
+        }
+    }
+
+
+    func getOrganisationData(organisationId: String, completion: @escaping(_ organisation: Organization?) -> Void) {
         
         // Reference to Firestore collection
         FirestoreReference(.organisations).document(organisationId).getDocument { (document, error) in

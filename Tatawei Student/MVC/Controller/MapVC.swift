@@ -10,7 +10,7 @@ import GoogleMaps
 import CoreLocation
 
 protocol DataSelectionDelegate: AnyObject {
-    func didSelectData(_ data: String)
+    func didSelectData(address: String, coordinates: String)
 }
 
 class MapVC: UIViewController, Storyboarded, CLLocationManagerDelegate, GMSMapViewDelegate {
@@ -33,70 +33,89 @@ class MapVC: UIViewController, Storyboarded, CLLocationManagerDelegate, GMSMapVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Initialize Location Manager
+        setupLocationManager()
+        setupMapView()
+        if let location = lastKnownLocation {
+            addCircleToMap(at: location, radius: 10)
+        }
+    }
+    
+    // MARK: - Setup Functions
+    private func setupLocationManager() {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         locationManager.distanceFilter = kCLDistanceFilterNone
-        
-        let camera = GMSCameraPosition.camera(withLatitude: 37.7749, longitude: -122.4194, zoom: 10.0)
-        mapView.camera = camera // Set the camera to the map view
-        mapView.isMyLocationEnabled = true
-        
     }
     
+    private func setupMapView() {
+        let defaultCameraPosition = GMSCameraPosition.camera(withLatitude: 37.7749, longitude: -122.4194, zoom: 10.0)
+        mapView.camera = defaultCameraPosition
+        mapView.isMyLocationEnabled = true
+    }
     
-    //MARK: - IBAcitions
+    // MARK: - IBActions
     
     @IBAction func pressLocate(_ sender: UIButton) {
-        if let lastKnownLocation = locationManager.location {
-               let geocoder = CLGeocoder() // Create an instance of CLGeocoder
-               
-               // Perform reverse geocoding
-               geocoder.reverseGeocodeLocation(lastKnownLocation) { (placemarks, error) in
-                   if let error = error {
-                       print("Geocoding error: \(error.localizedDescription)")
-                       return
-                   }
-                   
-                   if let placemark = placemarks?.first {
-                       // Extract relevant information from the placemark
-                       let neighborhood = placemark.subLocality ?? "Unknown neighborhood"
-                       let city = placemark.locality ?? "Unknown city"
-                       let address = "\(neighborhood), \(city)"
-                       
-                       // Pass the address information to the coordinator
-                       self.delegate?.didSelectData(address)
-                       self.dismiss(animated: true)
-                   } else {
-                       print("No placemarks found.")
-                   }
-               }
-           } else {
-               print("Current location is not available.")
-           }
+        guard let location = locationManager.location else {
+            print("Current location is not available.")
+            return
+        }
+        reverseGeocodeLocation(location)
     }
     
-    
-    //MARK: - Functions
-    
-    // Handle Location Updates
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.first {
-            lastKnownLocation = location // Store the last known location
-            let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: 15.0)
-            mapView?.animate(to: camera)
+    // MARK: - Location Handling
+    private func reverseGeocodeLocation(_ location: CLLocation) {
+        CLGeocoder().reverseGeocodeLocation(location) { [weak self] placemarks, error in
+            if let error = error {
+                print("Geocoding error: \(error.localizedDescription)")
+                return
+            }
+            guard let placemark = placemarks?.first else {
+                print("No placemarks found.")
+                return
+            }
+            let address = self?.formattedAddress(from: placemark)
+            let coordinates = location.coordinate // Get the coordinates from the location
+            
+            // Pass both address and coordinates to the delegate
+            self?.delegate?.didSelectData(address: address ?? "Unknown location", coordinates: "(\(coordinates.latitude), \(coordinates.longitude)")
+            self?.dismiss(animated: true)
         }
     }
     
-    // Handle Location Access Denied
+    private func formattedAddress(from placemark: CLPlacemark) -> String {
+        let neighborhood = placemark.subLocality ?? "Unknown neighborhood"
+        let city = placemark.locality ?? "Unknown city"
+        return "\(neighborhood), \(city)"
+    }
+    
+    private func addCircleToMap(at location: CLLocation, radius: Double) {
+        mapView.clear() // Clear the map to prevent overlapping circles
+        let circle = GMSCircle(position: location.coordinate, radius: radius) // radius in meters
+        circle.fillColor = .standr.withAlphaComponent(0.3)
+        circle.strokeColor = .standr
+        circle.strokeWidth = 2.0
+        circle.map = mapView
+    }
+    
+    // MARK: - CLLocationManagerDelegate
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.first else { return }
+        lastKnownLocation = location
+        
+        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: 15.0)
+        mapView.animate(to: camera)
+        
+        // Draw an initial circle with a default radius
+        addCircleToMap(at: location, radius: 1000) // Default to 5 km
+    }
+    
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse {
             mapView.isMyLocationEnabled = true
             mapView.settings.myLocationButton = true
         }
     }
-
 }

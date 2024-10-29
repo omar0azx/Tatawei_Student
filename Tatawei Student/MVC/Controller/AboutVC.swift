@@ -68,6 +68,8 @@ class AboutVC: UIViewController, Storyboarded {
                 self.view.layoutIfNeeded()
             }
             
+            arrowImage.isHidden = true
+            
             isFinalState = true
             updateViewSizes(forPage: 2)
         }

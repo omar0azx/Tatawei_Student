@@ -12,20 +12,16 @@ class PreviousOpportunitiesVC: UIViewController, Storyboarded {
     //MARK: - Varibales
     
     var coordinator: MainCoordinator?
-    var arrOppt = [opportunities]()
+    var arrOppt = [Opportunity]()
 
     
     //MARK: - IBOutleats
     
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        arrOppt.append(opportunities(name: "تنظيم", date: "اليوم", organizationIcon: UIImage.iftar , opportunityHours: 5, accecptanceStatus: true, opportunityIcon: UIImage.robot, BGColor: .standr3, time: "5:00 PM"))
-        arrOppt.append(opportunities(name: "تنظيم", date: "اليوم", organizationIcon: UIImage.iftar , opportunityHours: 5, accecptanceStatus: true, opportunityIcon: UIImage.robot, BGColor: .standr3, time: "5:00 PM"))
-        arrOppt.append(opportunities(name: "تنظيم", date: "اليوم", organizationIcon: UIImage.iftar , opportunityHours: 5, accecptanceStatus: true, opportunityIcon: UIImage.robot, BGColor: .standr3, time: "5:00 PM"))
-        arrOppt.append(opportunities(name: "تنظيم", date: "اليوم", organizationIcon: UIImage.iftar , opportunityHours: 5, accecptanceStatus: true, opportunityIcon: UIImage.robot, BGColor: .standr3, time: "5:00 PM"))
-
+        loadStudentOpportunities()
     }
     
     
@@ -38,6 +34,29 @@ class PreviousOpportunitiesVC: UIViewController, Storyboarded {
     
     //MARK: - Functions
     
+    func loadStudentOpportunities() {
+        // Check if the current student has any opportunities
+        if let studentOpportunities = Student.currentStudent?.opportunities, !studentOpportunities.isEmpty {
+            
+            // Proceed only if studentOpportunities is non-empty
+            OpportunityDataServices.shared.getStudentOpportunities(opportunityIDs: studentOpportunities) { opportunities, error in
+                
+                if let error = error {
+                    print("Error fetching student opportunities: \(error.localizedDescription)")
+                    return
+                }
+                
+                DispatchQueue.main.async {
+                    self.arrOppt = opportunities
+                    self.tableView.reloadData()
+                }
+            }
+        } else {
+            // Handle the case where the opportunities array is empty
+            print("No opportunities available for the current student.")
+            
+        }
+    }
     
     
 }
@@ -50,12 +69,12 @@ extension PreviousOpportunitiesVC: UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PreviousOpportunitiesCell") as! PreviousOpportunitiesCell
+        let cellColorAndIcon = Icon(index: arrOppt[indexPath.row].iconNumber, categories: arrOppt[indexPath.row].category).icons
         
         let isFirstCell = indexPath.row == 0
         let isLastCell = indexPath.row == arrOppt.count - 1
 
-        let oppt = arrOppt[indexPath.row]
-        cell.configOpportunity(opportunityName: oppt.name, opportunityTime: oppt.time, opportunityDate: oppt.date, organizationImage: oppt.organizationIcon, isFirstCell: isFirstCell, isLastCell: isLastCell)
+        cell.configOpportunity(opportunityName: arrOppt[indexPath.row].name, opportunityTime: arrOppt[indexPath.row].time, opportunityHours: arrOppt[indexPath.row].hour, opportunityDate: arrOppt[indexPath.row].date, organizationImage: cellColorAndIcon.0, isFirstCell: isFirstCell, isLastCell: isLastCell)
         return cell
     }
     

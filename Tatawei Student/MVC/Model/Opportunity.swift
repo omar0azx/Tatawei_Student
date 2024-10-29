@@ -26,9 +26,7 @@ struct Opportunity: Codable {
     var organizationImageLink: String
     var organizationID: String
     var organizationName: String
-    var studentRegisted: [String]
-    var studentAccepted: [String]
-
+    var isAccepted: Bool?
 }
 
 
