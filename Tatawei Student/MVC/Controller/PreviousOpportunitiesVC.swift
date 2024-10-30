@@ -70,11 +70,10 @@ extension PreviousOpportunitiesVC: UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PreviousOpportunitiesCell") as! PreviousOpportunitiesCell
         let cellColorAndIcon = Icon(index: arrOppt[indexPath.row].iconNumber, categories: arrOppt[indexPath.row].category).icons
-        
         let isFirstCell = indexPath.row == 0
         let isLastCell = indexPath.row == arrOppt.count - 1
 
-        cell.configOpportunity(opportunityName: arrOppt[indexPath.row].name, opportunityTime: arrOppt[indexPath.row].time, opportunityHours: arrOppt[indexPath.row].hour, opportunityDate: arrOppt[indexPath.row].date, organizationImage: cellColorAndIcon.0, isFirstCell: isFirstCell, isLastCell: isLastCell)
+        cell.configOpportunity(opportunityName: arrOppt[indexPath.row].name, opportunityTime: arrOppt[indexPath.row].time, opportunityDate: arrOppt[indexPath.row].date, organizationImage: cellColorAndIcon.0, isFirstCell: isFirstCell, isLastCell: isLastCell)
         return cell
     }
     

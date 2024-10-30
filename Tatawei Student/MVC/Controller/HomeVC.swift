@@ -20,7 +20,7 @@ class HomeVC: UIViewController, Storyboarded {
     var coordinator: MainCoordinator?
     
     var arrOppt = [Opportunity]()
-    
+        
     //MARK: - IBOutleats
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -44,8 +44,8 @@ class HomeVC: UIViewController, Storyboarded {
     }
     
     override func viewIsAppearing(_ animated: Bool) {
-        setUpProgressAnimat()
         loadStudentOpportunities()
+        setUpProgressAnimat()
         setupUI()
     }
     
@@ -78,7 +78,6 @@ class HomeVC: UIViewController, Storyboarded {
     }
     
     func loadStudentOpportunities() {
-        // Check if the current student has any opportunities
         if let studentOpportunities = Student.currentStudent?.opportunities, !studentOpportunities.isEmpty {
             
             // Proceed only if studentOpportunities is non-empty
@@ -158,6 +157,7 @@ extension HomeVC: UICollisionBehaviorDelegate, UICollectionViewDataSource, UICol
         return arrOppt.count
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cellColorAndIcon = Icon(index: arrOppt[indexPath.row].iconNumber, categories: arrOppt[indexPath.row].category).icons
         var organizationImag: UIImage?
@@ -168,6 +168,10 @@ extension HomeVC: UICollisionBehaviorDelegate, UICollectionViewDataSource, UICol
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OpportunitiesCell", for: indexPath) as! OpportunitiesCell
         cell.configOpportunity(backgroundColor: cellColorAndIcon.1, opportunityImage: cellColorAndIcon.0, opportunityName: arrOppt[indexPath.row].name, opportunityTime: arrOppt[indexPath.row].time, opportunityHour: arrOppt[indexPath.row].hour, opportunityDate: arrOppt[indexPath.row].date, organizationImage: organizationImag ?? #imageLiteral(resourceName: "P2.svg"), status: arrOppt[indexPath.row].isAccepted!)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        coordinator?.viewOpportunityVC(opportunity: arrOppt[indexPath.row])
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
