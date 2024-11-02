@@ -2532,23 +2532,14 @@ secondary</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الطلاب" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bi-v7-51c">
-                                        <rect key="frame" x="307" y="145" width="65" height="45"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="zzI-mk-9WL"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="23"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oni-Mx-Rqo">
-                                        <rect key="frame" x="30" y="65" width="342" height="0.0"/>
+                                        <rect key="frame" x="30" y="65" width="342" height="149"/>
                                         <fontDescription key="fontDescription" name="Cairo-Medium" family="Cairo" pointSize="14"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-3" translatesAutoresizingMaskIntoConstraints="NO" id="moM-7J-bGb">
-                                        <rect key="frame" x="326.66666666666669" y="75" width="45.333333333333314" height="70"/>
+                                        <rect key="frame" x="326.66666666666669" y="214" width="45.333333333333314" height="70"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4vG-4N-r3M">
                                                 <rect key="frame" x="0.0" y="0.0" width="45.333333333333336" height="24.666666666666668"/>
@@ -2569,7 +2560,7 @@ secondary</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ex9-lI-VCk">
-                                                <rect key="frame" x="0.0" y="21.666666666666686" width="45.333333333333336" height="24.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="21.666666666666629" width="45.333333333333336" height="24.666666666666671"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="city" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUp-C6-DBk">
                                                         <rect key="frame" x="0.0" y="0.0" width="25.333333333333332" height="24.666666666666668"/>
@@ -2587,7 +2578,7 @@ secondary</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="YTq-rB-7ok">
-                                                <rect key="frame" x="0.0" y="43.333333333333314" width="45.333333333333336" height="26.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="43.333333333333371" width="45.333333333333336" height="26.666666666666671"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="hour" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHl-dd-MRY">
                                                         <rect key="frame" x="0.0" y="0.0" width="25.333333333333332" height="26.666666666666668"/>
@@ -2609,8 +2600,17 @@ secondary</string>
                                             <constraint firstAttribute="height" constant="70" id="D16-y2-miD"/>
                                         </constraints>
                                     </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الطلاب" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bi-v7-51c">
+                                        <rect key="frame" x="307" y="284" width="65" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="zzI-mk-9WL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="W55-HU-oFX">
-                                        <rect key="frame" x="242.66666666666663" y="190" width="129.33333333333337" height="50"/>
+                                        <rect key="frame" x="242.66666666666663" y="329" width="129.33333333333337" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="عدد الطلاب المطلوبين " textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8I-ln-Dz1">
                                                 <rect key="frame" x="0.0" y="0.0" width="129.33333333333334" height="26.333333333333332"/>
@@ -2656,10 +2656,11 @@ secondary</string>
                                     <constraint firstItem="7bi-v7-51c" firstAttribute="top" secondItem="moM-7J-bGb" secondAttribute="bottom" id="4Ut-5L-R8M"/>
                                     <constraint firstAttribute="trailing" secondItem="7bi-v7-51c" secondAttribute="trailing" constant="30" id="BFf-1f-c8T"/>
                                     <constraint firstAttribute="trailing" secondItem="oni-Mx-Rqo" secondAttribute="trailing" constant="30" id="KHR-xC-6mR"/>
+                                    <constraint firstItem="wea-iD-5yY" firstAttribute="top" secondItem="oni-Mx-Rqo" secondAttribute="bottom" constant="190" id="LPP-Sg-nxi"/>
                                     <constraint firstAttribute="trailing" secondItem="geE-bw-xK5" secondAttribute="trailing" constant="20" id="MJP-kZ-cPy"/>
                                     <constraint firstItem="wea-iD-5yY" firstAttribute="leading" secondItem="KlR-1K-dSn" secondAttribute="leading" constant="40" id="Mjj-fx-WGV"/>
                                     <constraint firstItem="geE-bw-xK5" firstAttribute="top" secondItem="KlR-1K-dSn" secondAttribute="top" constant="20" id="QFt-c3-CbO"/>
-                                    <constraint firstItem="moM-7J-bGb" firstAttribute="top" secondItem="oni-Mx-Rqo" secondAttribute="bottom" constant="10" id="Unb-ot-Qei"/>
+                                    <constraint firstItem="moM-7J-bGb" firstAttribute="top" secondItem="oni-Mx-Rqo" secondAttribute="bottom" id="Unb-ot-Qei"/>
                                     <constraint firstAttribute="trailing" secondItem="W55-HU-oFX" secondAttribute="trailing" constant="30" id="WGm-no-mwh"/>
                                     <constraint firstAttribute="bottom" secondItem="wea-iD-5yY" secondAttribute="bottom" constant="50" id="adt-NT-H4B"/>
                                     <constraint firstItem="oni-Mx-Rqo" firstAttribute="leading" secondItem="KlR-1K-dSn" secondAttribute="leading" constant="30" id="bA5-YK-yf2"/>

@@ -65,6 +65,39 @@ class OpportunityDataServices {
             }
         }
     }
+    
+    func cancelOpportunityRegistration(studentID: String, opportunity: Opportunity, completion: @escaping (_ status: Bool, _ error: Error?) -> Void) {
+        // Reference to the specific student document within the studentOpportunity collection
+        let opportunityRef = FirestoreReference(.organisations).document(opportunity.organizationID)
+            .collection("opportunities").document(opportunity.id)
+            .collection("studentOpportunity").document(studentID)
+        
+        let studentRef = FirestoreReference(.schools).document(Student.currentStudent!.school)
+            .collection("students").document(Student.currentID)
+        
+        studentRef.updateData([
+            "opportunities": FieldValue.arrayRemove([opportunity.id])
+            ]) { error in
+                if let error = error {
+                    // An error occurred during the update
+                    completion(false, error)
+                } else {
+                    // Successfully removed the opportunity ID
+                    completion(true, nil)
+                }
+            }
+        
+        // Delete the student's document from studentOpportunity
+        opportunityRef.delete { error in
+            if let error = error {
+                // An error occurred while deleting
+                completion(false, error)
+                return
+            }
+            // Successfully deleted
+            completion(true, nil)
+        }
+    }
 
     private func updateOpportunityRegistration(opportunityRef: DocumentReference, studentID: String, completion: @escaping (_ status: Bool, _ error: Error?) -> Void) {
 
