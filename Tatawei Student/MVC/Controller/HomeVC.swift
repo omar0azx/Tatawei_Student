@@ -91,6 +91,8 @@ class HomeVC: UIViewController, Storyboarded {
             }
         } else {
             // Handle the case where the opportunities array is empty
+            arrOppt = []
+            collectionView.reloadData()
             print("No opportunities available for the current student.")
             
         }
@@ -136,7 +138,17 @@ class HomeVC: UIViewController, Storyboarded {
         shapeLayer.add(basicAnimation, forKey: "urBasic")
     }
     
-
+    func updateStudentData() {
+        if let schoolID = Student.currentStudent?.school {
+            StudentDataServices.shared.getStudentData(schoolID: schoolID, studentID: Student.currentID) { status, error in
+                if status! {
+                    print("Success to update locally storage")
+                } else {
+                    print("Have problem when update locally storage")
+                }
+            }
+        }
+    }
 
 }
 
