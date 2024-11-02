@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_3" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -10,16 +10,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="CairoBold.ttf">
+        <array key="Cairo-Bold.ttf">
             <string>Cairo-Bold</string>
         </array>
-        <array key="CairoMedium.ttf">
+        <array key="Cairo-Medium.ttf">
             <string>Cairo-Medium</string>
         </array>
-        <array key="CairoRegular.ttf">
+        <array key="Cairo-Regular.ttf">
             <string>Cairo-Regular</string>
         </array>
-        <array key="CairoSemiBold.ttf">
+        <array key="Cairo-SemiBold.ttf">
             <string>Cairo-SemiBold</string>
         </array>
     </customFonts>
@@ -601,7 +601,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="O4m-AA-O9N">
                                                         <rect key="frame" x="0.0" y="318" width="322" height="189"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الموقع" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTu-HG-Ui0">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  الموقع (يمكنك تغييره لاحقا)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTu-HG-Ui0">
                                                                 <rect key="frame" x="0.0" y="0.0" width="322" height="34"/>
                                                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="18"/>
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1282,7 +1282,8 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor">
-                                    <string key="name">secondary</string>
+                                    <string key="name">
+secondary</string>
                                 </color>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="auf-pp-Nvo" secondAttribute="bottom" constant="25" id="B6q-f6-Xb8"/>
@@ -1309,7 +1310,7 @@
                                     <fragment content="🖐🏼">
                                         <attributes>
                                             <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" size="30" name=".AppleColorEmojiUI"/>
+                                            <font key="NSFont" metaFont="system" size="30"/>
                                             <font key="NSOriginalFont" size="30" name="Cairo-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -2075,7 +2076,7 @@ secondary</string>
                                 <rect key="frame" x="46" y="100" width="365" height="369"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="المساعد الذكي" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3X-WQ-Oam">
-                                <rect key="frame" x="106" y="551.33333333333337" width="190" height="57"/>
+                                <rect key="frame" x="106" y="552" width="190" height="56.333333333333371"/>
                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -2847,23 +2848,22 @@ secondary</string>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اسم الفرصة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3U-MH-76m">
                                                             <rect key="frame" x="73" y="17" width="191" height="12"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
-                                                            <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تاريخ الفرصة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sb4-i5-TvQ">
                                                             <rect key="frame" x="73" y="49" width="191" height="12"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="وقت الفرصة " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Md2-Uf-mB9">
                                                             <rect key="frame" x="73" y="35.666666666666664" width="191" height="12"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="textColor"/>
                                                             <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                                    <color key="backgroundColor" systemColor="systemGray2Color"/>
                                                     <constraints>
                                                         <constraint firstItem="qYL-uQ-XF3" firstAttribute="centerY" secondItem="Q1c-y0-ab8" secondAttribute="centerY" id="3zu-OL-cnL"/>
                                                         <constraint firstItem="Sb4-i5-TvQ" firstAttribute="top" secondItem="Md2-Uf-mB9" secondAttribute="bottom" constant="1.3333333333333357" id="4g9-Gm-VHj"/>
@@ -2976,7 +2976,7 @@ secondary</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zw0-iE-fuk">
-                                <rect key="frame" x="30" y="160" width="342" height="514"/>
+                                <rect key="frame" x="30" y="160" width="342" height="519"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3WR-sb-VA3">
                                     <size key="itemSize" width="128" height="128"/>
@@ -3081,6 +3081,12 @@ secondary</string>
                                     <action selector="didPressedCancel:" destination="oC8-v8-9Af" eventType="touchUpInside" id="Zwf-60-g3N"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="سيكون مدى الفرص لموقعك 15 كيلو متر " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGE-vE-FK9">
+                                <rect key="frame" x="40" y="700.66666666666663" width="322" height="28.333333333333371"/>
+                                <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XCs-Ck-War"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -3090,14 +3096,21 @@ secondary</string>
                             <constraint firstItem="SwX-DU-wPp" firstAttribute="top" secondItem="wTZ-B2-Rso" secondAttribute="top" constant="90" id="LTo-RM-uOg"/>
                             <constraint firstItem="Zw0-iE-fuk" firstAttribute="top" secondItem="SwX-DU-wPp" secondAttribute="bottom" constant="20" id="Sei-tJ-j6k"/>
                             <constraint firstAttribute="bottom" secondItem="HBg-lm-uVw" secondAttribute="bottom" constant="80" id="Ssa-Sm-8NG"/>
+                            <constraint firstItem="OGE-vE-FK9" firstAttribute="leading" secondItem="HBg-lm-uVw" secondAttribute="leading" id="T38-vH-tLH"/>
                             <constraint firstAttribute="trailing" secondItem="SwX-DU-wPp" secondAttribute="trailing" constant="20" id="WNC-51-USB"/>
+                            <constraint firstItem="HBg-lm-uVw" firstAttribute="top" secondItem="Zw0-iE-fuk" secondAttribute="bottom" constant="60" id="cxU-CN-2Da"/>
                             <constraint firstItem="Zw0-iE-fuk" firstAttribute="leading" secondItem="wTZ-B2-Rso" secondAttribute="leading" constant="30" id="egy-h6-DKa"/>
                             <constraint firstItem="XCs-Ck-War" firstAttribute="trailing" secondItem="HBg-lm-uVw" secondAttribute="trailing" constant="40" id="gyB-bF-YF3"/>
                             <constraint firstAttribute="trailing" secondItem="Zw0-iE-fuk" secondAttribute="trailing" constant="30" id="mCO-13-cye"/>
-                            <constraint firstAttribute="bottom" secondItem="Zw0-iE-fuk" secondAttribute="bottom" constant="200" id="qih-if-zb2"/>
+                            <constraint firstItem="OGE-vE-FK9" firstAttribute="trailing" secondItem="HBg-lm-uVw" secondAttribute="trailing" id="rPd-oG-9kh"/>
                             <constraint firstItem="ipe-na-tMN" firstAttribute="leading" secondItem="wTZ-B2-Rso" secondAttribute="leading" constant="30" id="ryS-H7-D6K"/>
+                            <constraint firstItem="HBg-lm-uVw" firstAttribute="top" secondItem="OGE-vE-FK9" secondAttribute="bottom" constant="10" id="vqA-hl-MZw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Zw0-iE-fuk" id="EIL-n9-bA1"/>
+                        <outlet property="locationMessage" destination="OGE-vE-FK9" id="TWt-we-zz6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RKB-TP-l9G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3345,7 +3358,7 @@ secondary</string>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fiU-Dh-UKl" customClass="DesignableView" customModule="Tatawei_Student" customModuleProvider="target">
                                         <rect key="frame" x="5" y="5" width="140" height="140"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="man" translatesAutoresizingMaskIntoConstraints="NO" id="plg-4T-Lf1">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="plg-4T-Lf1">
                                                 <rect key="frame" x="15" y="15" width="110" height="110"/>
                                             </imageView>
                                         </subviews>
@@ -3617,6 +3630,7 @@ secondary</string>
                     <connections>
                         <outlet property="studentEmail" destination="cQL-Vu-0kG" id="9Lf-52-G9w"/>
                         <outlet property="studentHoursCompleted" destination="Zr7-9p-kaE" id="OZC-P0-0Kp"/>
+                        <outlet property="studentImage" destination="plg-4T-Lf1" id="DA9-Pc-3fr"/>
                         <outlet property="studentName" destination="LNU-d0-3cm" id="s7f-qb-IQr"/>
                         <outlet property="studentOpportunities" destination="Ru6-fA-mpp" id="Myu-SE-Omz"/>
                     </connections>
@@ -4119,7 +4133,6 @@ secondary</string>
         <image name="history" width="23" height="23"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
-        <image name="man" width="105" height="105"/>
         <image name="mappin.circle.fill" catalog="system" width="128" height="123"/>
         <image name="mdi-volunteer" width="32" height="32"/>
         <image name="mobile" width="89" height="170"/>
@@ -4137,10 +4150,6 @@ secondary</string>
             <string key="name">
 secondary</string>
             <color red="0.2627450980392157" green="0.80784313725490198" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor>
-            <string key="name">secondary</string>
-            <color red="0.2630000114440918" green="0.80800002813339233" blue="0.76899999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="3C3C43">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -17,6 +17,5 @@ struct Organization: Codable {
     var rate: Int
     var volunteersNumber: Int
     var organizationImageLink: String
-//    var opportunities: [Opportunity]
 
 }

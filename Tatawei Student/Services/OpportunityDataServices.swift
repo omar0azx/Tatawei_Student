@@ -122,7 +122,7 @@ class OpportunityDataServices {
         }
         
         let db = Firestore.firestore()
-        var opportunities: [Opportunity] = []
+        var opportunityDict: [String: Opportunity] = [:] // Dictionary to store opportunities by ID
         let dispatchGroup = DispatchGroup()
 
         for opportunityID in opportunityIDs {
@@ -147,7 +147,8 @@ class OpportunityDataServices {
                                 } else {
                                     opportunity.isAccepted = false // Default if not registered
                                 }
-                                opportunities.append(opportunity)
+                                // Add to dictionary using opportunity ID as the key
+                                opportunityDict[opportunityID] = opportunity
                                 dispatchGroup.leave()
                             }
                         } catch {
@@ -159,9 +160,12 @@ class OpportunityDataServices {
         }
 
         dispatchGroup.notify(queue: .main) {
-            completion(opportunities, nil)
+            // Map the dictionary back to an array in the original order of opportunityIDs
+            let orderedOpportunities = opportunityIDs.compactMap { opportunityDict[$0] }
+            completion(orderedOpportunities, nil)
         }
     }
+
 
 
     func getOrganisationData(organisationId: String, completion: @escaping(_ organisation: Organization?) -> Void) {

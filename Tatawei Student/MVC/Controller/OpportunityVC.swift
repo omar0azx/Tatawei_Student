@@ -35,10 +35,10 @@ class OpportunityVC: UIViewController, Storyboarded {
     
     @IBOutlet weak var applyBTN: DesignableButton!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         getOpportunituInformaion()
     }
@@ -46,14 +46,20 @@ class OpportunityVC: UIViewController, Storyboarded {
     override func viewWillAppear(_ animated: Bool) {
         if let student = Student.currentStudent {
             if student.isStudentRegisteredScool {
-                applyBTN.backgroundColor = .standr
+                if student.opportunities.contains(opportunity!.id) {
+                    applyBTN.setTitle("إلغاء التسجيل", for: .normal)
+                    applyBTN.backgroundColor = #colorLiteral(red: 0.9843137255, green: 0.3529411765, blue: 0.3529411765, alpha: 1)
+                } else {
+                    applyBTN.backgroundColor = .standr
+                }
             } else {
                 applyBTN.backgroundColor = .systemGray3
             }
+            
         }
     }
     
-
+    
     //MARK: - IBAcitions
     
     @IBAction func didPressedCancel(_ sender: UIButton) {
@@ -61,6 +67,7 @@ class OpportunityVC: UIViewController, Storyboarded {
     }
     
     @IBAction func didPressedApply(_ sender: UIButton) {
+        var redColor = #colorLiteral(red: 0.9843137255, green: 0.3529411765, blue: 0.3529411765, alpha: 1)
         if applyBTN.backgroundColor == .standr {
             let loadView = MessageView(message: "يرجى الإنتظار", animationName: "loading", animationTime: 1)
             loadView.show(in: self.view)
@@ -77,8 +84,13 @@ class OpportunityVC: UIViewController, Storyboarded {
                     
                 }
             } else {
-                displayAlertMessage()
+                let errorView = MessageView(message: "تاكد من معلوماتك", animationName: "warning", animationTime: 1)
+                errorView.show(in: self.view)
             }
+        } else if applyBTN.backgroundColor == redColor {
+            
+        } else {
+            displayAlertMessage()
         }
     }
     
@@ -97,8 +109,8 @@ class OpportunityVC: UIViewController, Storyboarded {
                 guard let image = imag else {return}
                 organizationImag = image
             }
-            opportunityImage.image = Icon(index: opportunity.iconNumber, categories: opportunity.category).icons.0
-            opportunityView.backgroundColor = Icon(index: opportunity.iconNumber, categories: opportunity.category).icons.1
+            opportunityImage.image = Icon(index: opportunity.iconNumber, categories: opportunity.category).opportunityIcon.0
+            opportunityView.backgroundColor = Icon(index: opportunity.iconNumber, categories: opportunity.category).opportunityIcon.1
             opportunityName.text = opportunity.name
             opportunityDescription.text = opportunity.description
             opportunityTime.text = opportunity.time
@@ -115,5 +127,5 @@ class OpportunityVC: UIViewController, Storyboarded {
         alertController.addAction(OKAction)
         self.present(alertController, animated: true, completion: nil)
     }
-
+    
 }

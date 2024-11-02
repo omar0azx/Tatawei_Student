@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ExploreVC: UIViewController, Storyboarded, DataFiltrationDelegate {
     
@@ -19,6 +20,9 @@ class ExploreVC: UIViewController, Storyboarded, DataFiltrationDelegate {
     
     var interestFiltration: InterestCategories = .All
     var locationFiltration: Cities = .All
+    
+    var userLatitude: Double = 24.7136
+    var userLongitude: Double = 46.6753
     
     var isLoading = false // To prevent multiple calls while loading
     var hasMoreData = true // To detect if all data has been loaded
@@ -51,7 +55,7 @@ class ExploreVC: UIViewController, Storyboarded, DataFiltrationDelegate {
     //MARK: - IBAcitions
     
     @IBAction func openFilter(_ sender: UIButton) {
-        coordinator?.viewFiltrationVC(data: self)
+        coordinator?.viewFiltrationVC(data: self, interest: interestFiltration, city: locationFiltration)
     }
     
     func didSelectData(interest: InterestCategories, location: Cities) {
@@ -66,18 +70,35 @@ class ExploreVC: UIViewController, Storyboarded, DataFiltrationDelegate {
                 // No filters applied, show all opportunities
                 self.searchedOpportunities = self.opportunities
             } else {
-                // Apply both filters
-                self.searchedOpportunities = self.opportunities.filter { opportunity in
-                    let matchesInterest = (self.interestFiltration == .All) || (opportunity.category.rawValue == self.interestFiltration.rawValue)
-                    let matchesLocation = (self.locationFiltration == .All) || (opportunity.city.rawValue == self.locationFiltration.rawValue)
+                // Apply interest, location, and distance filters
+                if let student = Student.currentStudent {
+                    self.userLatitude = student.latitude
+                    self.userLongitude = student.longitude
+                    let userLocation = CLLocation(latitude: self.userLatitude, longitude: self.userLongitude)
                     
-                    // Return true if both filters match
-                    return matchesInterest && matchesLocation
+                    self.searchedOpportunities = self.opportunities.filter { opportunity in
+                        let matchesInterest = (self.interestFiltration == .All) || (opportunity.category == self.interestFiltration)
+                        
+                        let matchesLocation: Bool
+                        if self.locationFiltration == .MyLocation {
+                            // Calculate distance to user location
+                            let opportunityLocation = CLLocation(latitude: opportunity.latitude, longitude: opportunity.longitude)
+                            let distance = userLocation.distance(from: opportunityLocation) // Distance in meters
+                            matchesLocation = distance <= 16000 //16000 m -> 16 km
+                        } else {
+                            // Use the city filter for specified city matches
+                            matchesLocation = (self.locationFiltration == .All) || (opportunity.city == self.locationFiltration)
+                        }
+                        
+                        // Return true if both filters match
+                        return matchesInterest && matchesLocation
+                    }
                 }
             }
             self.collectionView.reloadData()
         }
     }
+
     
     
     
@@ -118,7 +139,7 @@ extension ExploreVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cellColorAndIcon = Icon(index: searchedOpportunities[indexPath.row].iconNumber, categories: searchedOpportunities[indexPath.row].category).icons
+        let cellColorAndIcon = Icon(index: searchedOpportunities[indexPath.row].iconNumber, categories: searchedOpportunities[indexPath.row].category).opportunityIcon
         var organizationImag: UIImage?
         StorageService.shared.downloadImage(from: searchedOpportunities[indexPath.row].organizationImageLink) { imag, error in
             guard let image = imag else {return}
@@ -156,7 +177,9 @@ extension ExploreVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
         
         if offsetY > contentHeight - frameHeight {
             // User has scrolled to the bottom, load more opportunities
-            loadMoreOpportunities()
+            if interestFiltration == .All && locationFiltration == .All {
+                loadMoreOpportunities()
+            }
         }
     }
     
