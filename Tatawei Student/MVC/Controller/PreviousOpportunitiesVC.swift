@@ -69,7 +69,7 @@ extension PreviousOpportunitiesVC: UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PreviousOpportunitiesCell") as! PreviousOpportunitiesCell
-        let cellColorAndIcon = Icon(index: arrOppt[indexPath.row].iconNumber, categories: arrOppt[indexPath.row].category).icons
+        let cellColorAndIcon = Icon(index: arrOppt[indexPath.row].iconNumber, categories: arrOppt[indexPath.row].category).opportunityIcon
         let isFirstCell = indexPath.row == 0
         let isLastCell = indexPath.row == arrOppt.count - 1
 

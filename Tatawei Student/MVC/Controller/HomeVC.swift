@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import CoreImage.CIFilterBuiltins
-
 
 class HomeVC: UIViewController, Storyboarded {
     
@@ -73,7 +71,6 @@ class HomeVC: UIViewController, Storyboarded {
             hoursAchievedLBL.text = "\(Int(student.hoursCompleted))"
             progressView.addSubview(hoursAchievedLBL)
             progressView.addSubview(textHoursLBL)
-            print(student.opportunities)
         }
     }
     
@@ -159,7 +156,7 @@ extension HomeVC: UICollisionBehaviorDelegate, UICollectionViewDataSource, UICol
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cellColorAndIcon = Icon(index: arrOppt[indexPath.row].iconNumber, categories: arrOppt[indexPath.row].category).icons
+        let cellColorAndIcon = Icon(index: arrOppt[indexPath.row].iconNumber, categories: arrOppt[indexPath.row].category).opportunityIcon
         var organizationImag: UIImage?
         StorageService.shared.downloadImage(from: arrOppt[indexPath.row].organizationImageLink) { imag, error in
             guard let image = imag else {return}

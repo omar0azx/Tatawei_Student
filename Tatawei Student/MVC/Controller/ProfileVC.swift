@@ -24,6 +24,7 @@ class ProfileVC: UIViewController, Storyboarded {
     
     //MARK: - IBOutleats
     
+    @IBOutlet weak var studentImage: UIImageView!
     @IBOutlet weak var studentName: UILabel!
     @IBOutlet weak var studentEmail: UILabel!
     @IBOutlet weak var studentOpportunities: UILabel!
@@ -51,7 +52,7 @@ class ProfileVC: UIViewController, Storyboarded {
     
     func getStudentInformation() {
         if let student = Student.currentStudent {
-            
+            studentImage.image = student.gender == .male ? #imageLiteral(resourceName: "man.svg") : #imageLiteral(resourceName: "women.svg")
             studentName.text = student.name
             studentEmail.text = student.email
             studentOpportunities.text = student.opportunities.count == 0 ? "0": String(student.opportunities.count)

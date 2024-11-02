@@ -6,7 +6,8 @@
 //
 
 enum InterestCategories: String, Codable {
-    case All = "الجميع" 
+    case myInterests = "إهتماماتي"
+    case All = "الجميع"
     case Sports = "رياضة"
     case Technical = "تقنية"
     case Cultural = "ثقافة"

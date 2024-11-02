@@ -106,10 +106,12 @@ final class MainCoordinator: Coordinator {
         navigationController.present(vc, animated: true)
     }
 
-    func viewFiltrationVC(data: DataFiltrationDelegate) {
+    func viewFiltrationVC(data: DataFiltrationDelegate, interest: InterestCategories, city: Cities) {
         let vc = FiltrationVC.instantiate()
         vc.coordinator = self
         vc.delegate = data
+        vc.interest = interest
+        vc.city = city
         vc.modalPresentationStyle = .fullScreen
         navigationController.present(vc, animated: true)
     }
