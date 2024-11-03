@@ -9,5 +9,5 @@ import Foundation
 
 
 public let kCURRENTUSER = "currentStudent"
+public let kCURRENTOPPORTUNITY = "currentOpportunity"
 public let userDefaults = UserDefaults.standard
-

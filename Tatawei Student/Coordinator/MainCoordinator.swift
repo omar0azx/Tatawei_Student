@@ -161,9 +161,10 @@ final class MainCoordinator: Coordinator {
         }
     }
     
-    func viewPreviousOpportunitiesVC() {
+    func viewPreviousOpportunitiesVC(opportunities: [Opportunity]) {
         let vc = PreviousOpportunitiesVC.instantiate()
         vc.coordinator = self
+        vc.arrOppt = opportunities
         vc.modalPresentationStyle = .fullScreen
         self.navigationController.present(vc, animated: true)
     }
@@ -177,9 +178,16 @@ final class MainCoordinator: Coordinator {
     func viewQRCodeVC() {
         let vc = QRCodeVC.instantiate()
         vc.coordinator = self
-        vc.modalPresentationStyle = .overFullScreen // Change to overFullScreen
+        vc.modalPresentationStyle = .overFullScreen
         self.navigationController.present(vc, animated: true)
     }
 
+    func viewRatingVC(opportunity: Opportunity) {
+        let vc = RatingVC.instantiate()
+        vc.coordinator = self
+        vc.opportunity = opportunity
+        vc.modalPresentationStyle = .overFullScreen
+        self.navigationController.present(vc, animated: true)
+    }
 }
 

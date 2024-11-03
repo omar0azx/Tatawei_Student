@@ -26,7 +26,7 @@ class NavigationVC: ContainerVC, Storyboarded {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupCurvedView()
-        
+        rateTheOrganisation()
         self.navigate(to: 0)
         for (index, button) in navButton.enumerated() {
             button.tag = index
@@ -38,19 +38,17 @@ class NavigationVC: ContainerVC, Storyboarded {
     //MARK: - IBAcitions
     
     @IBAction func didPressNavButton(_ sender: UIButton) {
-        
+        rateTheOrganisation()
         if sender.tag < viewControllers.count {
             switch sender.tag {
                 
             case 0:
-                print(0)
                 navigate(to: 0, animated: true)
                 UIView.animate(withDuration: 0.1) {
                     self.changeImageColor(index: 0)
                     self.view.layoutIfNeeded()
                 }
             case 1:
-                print(1)
                 navigate(to: 1, animated: true)
                 UIView.animate(withDuration: 0.1) {
                     self.changeImageColor(index: 1)
@@ -76,9 +74,7 @@ class NavigationVC: ContainerVC, Storyboarded {
     }
     
     @IBAction func openTheChatIntro(_ sender: UIButton) {
-        
         self.coordinator?.viewIntroChatBotVC()
-        
     }
     
     
@@ -149,6 +145,18 @@ class NavigationVC: ContainerVC, Storyboarded {
                 self.navImages[num].tintColor = UIColor.systemGray
             }
         }
+    }
+    
+    func rateTheOrganisation() {
+        let hasRated = UserDefaults.standard.bool(forKey: "hasRatedOpportunityKey")
+        if hasRated == false {
+            if let opportunity = Opportunity.currentOpportunity {
+                coordinator?.viewRatingVC(opportunity: opportunity)
+            }
+        } else {
+            print("Can't rated opportunity")
+        }
+
     }
 }
     
