@@ -16,7 +16,7 @@ class OpportunityDataServices {
         private var lastDocumentSnapshot: DocumentSnapshot?
 
     func downloadOpportunitiesFromFirestore(limit: Int, completion: @escaping ([Opportunity]?, Error?) -> Void) {
-           var query: Query = db.collectionGroup("opportunities").limit(to: limit)
+        var query: Query = db.collectionGroup("opportunities").whereField("status", isEqualTo: OpportunityStatus.open.rawValue).limit(to: limit)
            if let lastSnapshot = lastDocumentSnapshot {
                query = query.start(afterDocument: lastSnapshot)
            }
@@ -168,7 +168,7 @@ class OpportunityDataServices {
                         completion([], error)
                         return
                     }
-                    
+
                     for document in snapshot?.documents ?? [] {
                         do {
                             var opportunity = try Firestore.Decoder().decode(Opportunity.self, from: document.data())
@@ -200,11 +200,10 @@ class OpportunityDataServices {
     }
 
 
-
-    func getOrganisationData(organisationId: String, completion: @escaping(_ organisation: Organization?) -> Void) {
+    func getOrganisationData(organisationID: String, completion: @escaping(_ organisation: Organization?) -> Void) {
         
         // Reference to Firestore collection
-        FirestoreReference(.organisations).document(organisationId).getDocument { (document, error) in
+        FirestoreReference(.organisations).document(organisationID).getDocument { (document, error) in
             
             // Check if the document exists
             if let document = document, document.exists {
@@ -230,6 +229,41 @@ class OpportunityDataServices {
         }
     }
 
+    func updateOrganizationRating(organisationID: String, newRate: Int, completion: @escaping (_ status: Bool, _ error: Error?) -> Void) {
+        let organizationRef = FirestoreReference(.organisations).document(organisationID)
+        
+        // Step 1: Fetch current rate and numberOfReviewers
+        organizationRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let currentRate = document.get("rate") as? Double ?? 0
+                let currentNumberOfReviewers = document.get("numberOfReviewers") as? Int ?? 0
+                
+                // Step 2: Increment numberOfReviewers by 1
+                let updatedNumberOfReviewers = currentNumberOfReviewers + 1
+                
+                // Step 3: Calculate new average rate
+                let updatedRate = (currentRate * Double(currentNumberOfReviewers) + Double(newRate)) / Double(updatedNumberOfReviewers)
+                
+                // Step 4: Update Firestore with new rate and incremented numberOfReviewers
+                organizationRef.updateData([
+                    "rate": updatedRate,
+                    "numberOfReviewers": FieldValue.increment(Int64(1))
+                ]) { error in
+                    if let error = error {
+                        completion(false, error)
+                        print("Error updating document: \(error)")
+                    } else {
+                        completion(true, nil)
+                        print("Document successfully updated with new rate: \(updatedRate) and numberOfReviewers: \(updatedNumberOfReviewers)")
+                    }
+                }
+                
+            } else {
+                completion(false, error)
+                print("Document does not exist or there was an error fetching it: \(error?.localizedDescription ?? "Unknown error")")
+            }
+        }
+    }
 
 
 }

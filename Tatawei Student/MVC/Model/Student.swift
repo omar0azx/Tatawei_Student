@@ -42,7 +42,7 @@ struct Student: Codable {
     static var currentStudent: Student? {
         
         if Auth.auth().currentUser != nil {
-            if let data = UserDefaults.standard.data(forKey: "currentStudent") {
+            if let data = UserDefaults.standard.data(forKey: kCURRENTUSER) {
                 let decoder = JSONDecoder()
                 do {
                     let userObject = try decoder.decode(Student.self, from: data)
@@ -61,7 +61,7 @@ func saveUserLocally(_ user: Student) {
     let encoder = JSONEncoder()
     do {
         let data = try encoder.encode(user)
-        UserDefaults.standard.set(data, forKey: "currentStudent")
+        UserDefaults.standard.set(data, forKey: kCURRENTUSER)
     } catch {
         print(error.localizedDescription)
     }
