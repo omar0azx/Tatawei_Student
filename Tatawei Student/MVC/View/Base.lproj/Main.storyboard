@@ -3650,17 +3650,6 @@ secondary</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5Y-aQ-OSr">
-                                <rect key="frame" x="20.000000000000004" y="75.666666666666671" width="60.333333333333343" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="4hT-EM-iND"/>
-                                </constraints>
-                                <color key="tintColor" name="standr"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="bell.fill" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25"/>
-                                </buttonConfiguration>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IPY-xd-lzZ" customClass="DesignableView" customModule="Tatawei_Student" customModuleProvider="target">
                                 <rect key="frame" x="126" y="141.33333333333334" width="150" height="150.00000000000003"/>
                                 <subviews>
@@ -3920,13 +3909,11 @@ secondary</string>
                         <viewLayoutGuide key="safeArea" id="9gb-YR-Zar"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
-                            <constraint firstItem="E5Y-aQ-OSr" firstAttribute="leading" secondItem="9gb-YR-Zar" secondAttribute="leading" constant="20" id="1R1-rZ-QNF"/>
                             <constraint firstItem="Aqu-pb-HL4" firstAttribute="centerX" secondItem="9gb-YR-Zar" secondAttribute="centerX" id="1X5-Kk-dTN"/>
                             <constraint firstItem="48e-R0-PwP" firstAttribute="leading" secondItem="9gb-YR-Zar" secondAttribute="leading" id="1qE-yo-flt"/>
                             <constraint firstAttribute="bottom" secondItem="48e-R0-PwP" secondAttribute="bottom" id="8VT-xf-hMF"/>
                             <constraint firstItem="9gb-YR-Zar" firstAttribute="trailing" secondItem="J4S-sM-sgw" secondAttribute="trailing" constant="20" id="DDe-fG-Inp"/>
                             <constraint firstItem="9gb-YR-Zar" firstAttribute="trailing" secondItem="Aqu-pb-HL4" secondAttribute="trailing" constant="30" id="GUn-4N-gGD"/>
-                            <constraint firstItem="E5Y-aQ-OSr" firstAttribute="centerY" secondItem="J4S-sM-sgw" secondAttribute="centerY" id="M8X-EA-eHL"/>
                             <constraint firstItem="Aqu-pb-HL4" firstAttribute="leading" secondItem="9gb-YR-Zar" secondAttribute="leading" constant="30" id="UxH-0O-QgP"/>
                             <constraint firstItem="9gb-YR-Zar" firstAttribute="trailing" secondItem="48e-R0-PwP" secondAttribute="trailing" id="dph-9r-4sP"/>
                             <constraint firstItem="Aqu-pb-HL4" firstAttribute="top" secondItem="IPY-xd-lzZ" secondAttribute="bottom" id="fgl-Do-Pif"/>
@@ -4424,7 +4411,6 @@ secondary</string>
         <image name="about-tatawei" width="361" height="241"/>
         <image name="accepted-message" width="268" height="267"/>
         <image name="arrow.left" catalog="system" width="128" height="95"/>
-        <image name="bell.fill" catalog="system" width="123" height="128"/>
         <image name="book.fill" catalog="system" width="128" height="95"/>
         <image name="bookmark.fill" catalog="system" width="110" height="128"/>
         <image name="calendar.circle.fill" catalog="system" width="128" height="123"/>

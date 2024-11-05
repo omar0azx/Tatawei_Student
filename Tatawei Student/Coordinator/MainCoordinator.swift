@@ -124,6 +124,19 @@ final class MainCoordinator: Coordinator {
         navigationController.present(vc, animated: true)
     }
     
+    func viewReportVC(opportunity: Opportunity) {
+        let vc = OpportunityVC.instantiate()
+        vc.coordinator = self
+        vc.opportunity = opportunity
+        vc.mode = .shareReport
+        vc.modalPresentationStyle = .fullScreen
+        if let topViewController = navigationController.presentedViewController {
+            topViewController.present(vc, animated: true, completion: nil)
+        } else {
+            navigationController.present(vc, animated: true, completion: nil)
+        }
+    }
+    
     func viewOrganizationVC(organizationID: String) {
         let vc = OrganizationVC.instantiate()
         vc.coordinator = self
@@ -189,5 +202,6 @@ final class MainCoordinator: Coordinator {
         vc.modalPresentationStyle = .overFullScreen
         self.navigationController.present(vc, animated: true)
     }
+    
 }
 

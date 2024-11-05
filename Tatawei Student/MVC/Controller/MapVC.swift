@@ -105,7 +105,7 @@ class MapVC: UIViewController, Storyboarded, CLLocationManagerDelegate, GMSMapVi
         guard let location = locations.first else { return }
         lastKnownLocation = location
         
-        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: 15.0)
+        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: 13.0)
         mapView.animate(to: camera)
         
         // Draw an initial circle with a default radius
