@@ -274,7 +274,7 @@ class StudentsAccountVC: UIViewController, Storyboarded, DataSelectionDelegate {
     //MARK:- Register User
     
     private func registerUser() {
-        AuthService.shared.registerUserWith(email: emailTF.text!, password: passwordTF.text!, name: nameTF.text!, phoneNumber: phoneNumberTF.text!, gender: Gender(rawValue: genderTF.text!)!, city: cityTF.text!, school: schoolTF.text!, level: levelTF.text!, hoursCompleted: 0, location: mapInformation.text!, latitude: locationLatitude ?? 0, longitude: locationLongitude ?? 0, interests: selectedInterestsType, opportunities: []) { error in
+        AuthService.shared.registerUserWith(email: emailTF.text!, password: passwordTF.text!, name: nameTF.text!, phoneNumber: phoneNumberTF.text!, gender: Gender(rawValue: genderTF.text!)!, city: cityTF.text!, school: "00001", level: levelTF.text!, hoursCompleted: 0, location: mapInformation.text!, latitude: locationLatitude ?? 0, longitude: locationLongitude ?? 0, interests: selectedInterestsType, opportunities: []) { error in
             if error == nil {
                 let successView = MessageView(message: "تم تسجيلك بنجاح، سيتم نقلك للصفحة الرئيسية بعد لحظات", animationName: "correct", animationTime: 1)
                 successView.show(in: self.view)

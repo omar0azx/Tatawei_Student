@@ -21,7 +21,7 @@ class PreviousOpportunitiesVC: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
     
@@ -33,11 +33,11 @@ class PreviousOpportunitiesVC: UIViewController, Storyboarded {
     
     
     //MARK: - Functions
-
+    
     
     
 }
-    
+
 extension PreviousOpportunitiesVC: UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,7 +49,7 @@ extension PreviousOpportunitiesVC: UITableViewDelegate , UITableViewDataSource {
         let cellColorAndIcon = Icon(index: arrOppt[indexPath.row].iconNumber, categories: arrOppt[indexPath.row].category).opportunityIcon
         let isFirstCell = indexPath.row == 0
         let isLastCell = indexPath.row == arrOppt.count - 1
-
+        
         cell.configOpportunity(opportunityName: arrOppt[indexPath.row].name, opportunityTime: arrOppt[indexPath.row].time, opportunityDate: arrOppt[indexPath.row].date, organizationImage: cellColorAndIcon.0, isFirstCell: isFirstCell, isLastCell: isLastCell)
         return cell
     }
@@ -57,11 +57,14 @@ extension PreviousOpportunitiesVC: UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 95
     }
-
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        coordinator?.viewReportVC(opportunity: arrOppt[indexPath.row])
     }
     
-    
-    
+}
+
+
+
 
 

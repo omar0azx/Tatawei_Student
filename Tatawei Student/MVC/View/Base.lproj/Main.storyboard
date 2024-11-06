@@ -2372,7 +2372,7 @@ secondary</string>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="ابدأ">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                    <fontDescription key="titleFontDescription" name="Cairo-Regular" family="Cairo" pointSize="18"/>
                                 </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2384,8 +2384,8 @@ secondary</string>
                                 <rect key="frame" x="46" y="100" width="365" height="369"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="المساعد الذكي" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3X-WQ-Oam">
-                                <rect key="frame" x="106" y="552" width="190" height="56.333333333333371"/>
-                                <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="30"/>
+                                <rect key="frame" x="66" y="552" width="270" height="56.333333333333371"/>
+                                <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2419,7 +2419,7 @@ secondary</string>
                             <constraint firstItem="Ifl-Ov-bt7" firstAttribute="top" secondItem="x3X-WQ-Oam" secondAttribute="bottom" constant="8" id="4s6-dT-Mw5"/>
                             <constraint firstItem="Ifl-Ov-bt7" firstAttribute="leading" secondItem="Ajz-v1-a8J" secondAttribute="leadingMargin" constant="30" id="BFH-iY-Gz5"/>
                             <constraint firstItem="YWs-gd-UBH" firstAttribute="leading" secondItem="Ajz-v1-a8J" secondAttribute="leadingMargin" constant="30" id="BdK-Dg-Tlm"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="x3X-WQ-Oam" secondAttribute="trailing" constant="90" id="KOu-st-lvD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="x3X-WQ-Oam" secondAttribute="trailing" constant="50" id="KOu-st-lvD"/>
                             <constraint firstAttribute="trailing" secondItem="2N0-HC-UDD" secondAttribute="trailing" constant="40" id="Lva-lV-tKf"/>
                             <constraint firstItem="h0t-8F-fWl" firstAttribute="leading" secondItem="Ajz-v1-a8J" secondAttribute="leading" constant="55" id="O0Z-FW-nVk"/>
                             <constraint firstAttribute="trailing" secondItem="s1Z-Id-rOg" secondAttribute="trailing" constant="20" id="Qzj-3K-IPx"/>
@@ -2430,7 +2430,7 @@ secondary</string>
                             <constraint firstItem="2N0-HC-UDD" firstAttribute="top" secondItem="h0t-8F-fWl" secondAttribute="bottom" constant="181" id="dVN-8l-fQh"/>
                             <constraint firstItem="YWs-gd-UBH" firstAttribute="top" secondItem="Ajz-v1-a8J" secondAttribute="top" constant="100" id="hED-ji-gXK"/>
                             <constraint firstItem="2N0-HC-UDD" firstAttribute="top" secondItem="Ifl-Ov-bt7" secondAttribute="bottom" constant="55" id="iT1-Nt-5PJ"/>
-                            <constraint firstItem="x3X-WQ-Oam" firstAttribute="leading" secondItem="Ajz-v1-a8J" secondAttribute="leadingMargin" constant="90" id="rbV-TJ-cve"/>
+                            <constraint firstItem="x3X-WQ-Oam" firstAttribute="leading" secondItem="Ajz-v1-a8J" secondAttribute="leadingMargin" constant="50" id="rbV-TJ-cve"/>
                             <constraint firstAttribute="bottom" secondItem="2N0-HC-UDD" secondAttribute="bottom" constant="50" id="tFd-MH-8LJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YWs-gd-UBH" secondAttribute="trailing" constant="-25" id="uzK-vE-e4r"/>
                             <constraint firstItem="2N0-HC-UDD" firstAttribute="top" secondItem="YWs-gd-UBH" secondAttribute="bottom" constant="300" id="yyS-je-t3w"/>
@@ -2450,7 +2450,7 @@ secondary</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="المواد التعليمية" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyj-xH-n3x">
-                                <rect key="frame" x="187.33333333333337" y="83" width="198.66666666666663" height="50"/>
+                                <rect key="frame" x="187.33333333333337" y="70" width="198.66666666666663" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="FVR-c2-zOR"/>
                                 </constraints>
@@ -2459,7 +2459,7 @@ secondary</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="أنظمه وقواعد البيانات" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Xq-BS-eKa">
-                                <rect key="frame" x="222" y="152" width="164" height="35"/>
+                                <rect key="frame" x="222" y="139" width="164" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="eof-IH-fpk"/>
                                 </constraints>
@@ -2468,7 +2468,7 @@ secondary</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="YCX-Xa-vqP">
-                                <rect key="frame" x="20" y="207" width="362" height="300"/>
+                                <rect key="frame" x="20" y="194" width="362" height="300"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ih0-fJ-dFs">
                                         <rect key="frame" x="0.0" y="0.0" width="218.66666666666666" height="300"/>
@@ -2654,7 +2654,7 @@ secondary</string>
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مراجع  من اليوتيوب" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awO-r4-YlZ">
-                                <rect key="frame" x="242.66666666666663" y="527" width="143.33333333333337" height="40"/>
+                                <rect key="frame" x="242.66666666666663" y="514" width="143.33333333333337" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="rgB-gg-DQY"/>
                                 </constraints>
@@ -2663,7 +2663,7 @@ secondary</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rhv-ds-x2G" customClass="DesignableView" customModule="Tatawei_Student" customModuleProvider="target">
-                                <rect key="frame" x="28" y="573" width="358" height="85"/>
+                                <rect key="frame" x="28" y="560" width="358" height="85"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vs8-a5-KRV">
                                         <rect key="frame" x="0.0" y="0.0" width="358" height="85"/>
@@ -2727,6 +2727,7 @@ secondary</string>
                             <constraint firstItem="ppW-lS-Zn5" firstAttribute="trailing" secondItem="Zyj-xH-n3x" secondAttribute="trailing" constant="16" id="0ev-ma-N9z"/>
                             <constraint firstItem="Rhv-ds-x2G" firstAttribute="leading" secondItem="ppW-lS-Zn5" secondAttribute="leading" constant="28" id="2gz-Cc-Dnh"/>
                             <constraint firstItem="awO-r4-YlZ" firstAttribute="top" secondItem="YCX-Xa-vqP" secondAttribute="bottom" constant="20" id="3HP-Nt-iUM"/>
+                            <constraint firstItem="Zyj-xH-n3x" firstAttribute="top" secondItem="kxd-6T-OVD" secondAttribute="top" constant="70" id="4xI-ET-0PK"/>
                             <constraint firstItem="ppW-lS-Zn5" firstAttribute="trailing" secondItem="Rhv-ds-x2G" secondAttribute="trailing" constant="16" id="7eM-Ye-EqA"/>
                             <constraint firstItem="ppW-lS-Zn5" firstAttribute="trailing" secondItem="YCX-Xa-vqP" secondAttribute="trailing" constant="20" id="Ige-Tz-4rq"/>
                             <constraint firstItem="ppW-lS-Zn5" firstAttribute="trailing" secondItem="awO-r4-YlZ" secondAttribute="trailing" constant="16" id="Lku-Eh-RjY"/>
@@ -2734,7 +2735,6 @@ secondary</string>
                             <constraint firstItem="YCX-Xa-vqP" firstAttribute="top" secondItem="4Xq-BS-eKa" secondAttribute="bottom" constant="20" id="Ypl-7w-Y6H"/>
                             <constraint firstItem="YCX-Xa-vqP" firstAttribute="leading" secondItem="ppW-lS-Zn5" secondAttribute="leading" constant="20" id="cGe-qY-qwc"/>
                             <constraint firstItem="4Xq-BS-eKa" firstAttribute="top" secondItem="Zyj-xH-n3x" secondAttribute="bottom" constant="19" id="tr9-tQ-X7Q"/>
-                            <constraint firstItem="Zyj-xH-n3x" firstAttribute="top" secondItem="ppW-lS-Zn5" secondAttribute="top" constant="21" id="z1m-yB-FGE"/>
                             <constraint firstItem="ppW-lS-Zn5" firstAttribute="trailing" secondItem="4Xq-BS-eKa" secondAttribute="trailing" constant="16" id="zR8-YA-5nh"/>
                         </constraints>
                     </view>
@@ -3115,7 +3115,7 @@ secondary</string>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PreviousOpportunitiesCell" rowHeight="95" id="Nex-oy-4EO" customClass="PreviousOpportunitiesCell" customModule="Tatawei_Student" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PreviousOpportunitiesCell" rowHeight="95" id="Nex-oy-4EO" customClass="PreviousOpportunitiesCell" customModule="Tatawei_Student" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="382" height="95"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nex-oy-4EO" id="mTs-8n-Usc">
@@ -3842,17 +3842,6 @@ secondary</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5Y-aQ-OSr">
-                                <rect key="frame" x="20.000000000000004" y="75.666666666666671" width="60.333333333333343" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="4hT-EM-iND"/>
-                                </constraints>
-                                <color key="tintColor" name="standr"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="bell.fill" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25"/>
-                                </buttonConfiguration>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IPY-xd-lzZ" customClass="DesignableView" customModule="Tatawei_Student" customModuleProvider="target">
                                 <rect key="frame" x="126" y="141.33333333333334" width="150" height="150.00000000000003"/>
                                 <subviews>
@@ -4112,13 +4101,11 @@ secondary</string>
                         <viewLayoutGuide key="safeArea" id="9gb-YR-Zar"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
-                            <constraint firstItem="E5Y-aQ-OSr" firstAttribute="leading" secondItem="9gb-YR-Zar" secondAttribute="leading" constant="20" id="1R1-rZ-QNF"/>
                             <constraint firstItem="Aqu-pb-HL4" firstAttribute="centerX" secondItem="9gb-YR-Zar" secondAttribute="centerX" id="1X5-Kk-dTN"/>
                             <constraint firstItem="48e-R0-PwP" firstAttribute="leading" secondItem="9gb-YR-Zar" secondAttribute="leading" id="1qE-yo-flt"/>
                             <constraint firstAttribute="bottom" secondItem="48e-R0-PwP" secondAttribute="bottom" id="8VT-xf-hMF"/>
                             <constraint firstItem="9gb-YR-Zar" firstAttribute="trailing" secondItem="J4S-sM-sgw" secondAttribute="trailing" constant="20" id="DDe-fG-Inp"/>
                             <constraint firstItem="9gb-YR-Zar" firstAttribute="trailing" secondItem="Aqu-pb-HL4" secondAttribute="trailing" constant="30" id="GUn-4N-gGD"/>
-                            <constraint firstItem="E5Y-aQ-OSr" firstAttribute="centerY" secondItem="J4S-sM-sgw" secondAttribute="centerY" id="M8X-EA-eHL"/>
                             <constraint firstItem="Aqu-pb-HL4" firstAttribute="leading" secondItem="9gb-YR-Zar" secondAttribute="leading" constant="30" id="UxH-0O-QgP"/>
                             <constraint firstItem="9gb-YR-Zar" firstAttribute="trailing" secondItem="48e-R0-PwP" secondAttribute="trailing" id="dph-9r-4sP"/>
                             <constraint firstItem="Aqu-pb-HL4" firstAttribute="top" secondItem="IPY-xd-lzZ" secondAttribute="bottom" id="fgl-Do-Pif"/>
@@ -4616,7 +4603,6 @@ secondary</string>
         <image name="about-tatawei" width="361" height="241"/>
         <image name="accepted-message" width="268" height="267"/>
         <image name="arrow.left" catalog="system" width="128" height="95"/>
-        <image name="bell.fill" catalog="system" width="123" height="128"/>
         <image name="book.fill" catalog="system" width="128" height="95"/>
         <image name="bookmark.fill" catalog="system" width="110" height="128"/>
         <image name="calendar.circle.fill" catalog="system" width="128" height="123"/>

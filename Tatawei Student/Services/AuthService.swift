@@ -83,10 +83,15 @@ class AuthService {
         
         let user = Auth.auth().currentUser
         user?.delete { error in
+        if let error = error {
+            completion(error)
+        } else {
+            // Remove user info from UserDefaults if delete successful
             userDefaults.removeObject(forKey: kCURRENTUSER)
             userDefaults.synchronize()
-            completion(error)
+            completion(nil)
         }
+    }
         
     }
     
