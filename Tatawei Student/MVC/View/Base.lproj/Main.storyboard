@@ -1619,14 +1619,14 @@ secondary</string>
                                         <attributes>
                                             <color key="NSColor" systemColor="labelColor"/>
                                             <font key="NSFont" metaFont="system" size="30"/>
-                                            <font key="NSOriginalFont" size="30" name="Cairo-Regular"/>
+                                            <font key="NSOriginalFont" metaFont="system" size="30"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="اهلا">
                                         <attributes>
                                             <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" size="30" name="Cairo-Regular"/>
+                                            <font key="NSFont" metaFont="system" size="30"/>
                                             <font key="NSOriginalFont" size="30" name="BodoniSvtyTwoOSITCTT-Book"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -1656,7 +1656,7 @@ secondary</string>
                                     <fragment content="من">
                                         <attributes>
                                             <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" size="16" name="Cairo-Regular"/>
+                                            <font key="NSFont" metaFont="system" size="16"/>
                                             <font key="NSOriginalFont" metaFont="system" size="16"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -1664,14 +1664,14 @@ secondary</string>
                                     <fragment content=" ">
                                         <attributes>
                                             <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" size="16" name="Cairo-Regular"/>
+                                            <font key="NSFont" metaFont="system" size="16"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="الرائع">
                                         <attributes>
                                             <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" size="16" name="Cairo-Regular"/>
+                                            <font key="NSFont" metaFont="system" size="16"/>
                                             <font key="NSOriginalFont" metaFont="system" size="16"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -1679,14 +1679,14 @@ secondary</string>
                                     <fragment content=" ">
                                         <attributes>
                                             <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" size="16" name="Cairo-Regular"/>
+                                            <font key="NSFont" metaFont="system" size="16"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="رؤيتك">
                                         <attributes>
                                             <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" size="16" name="Cairo-Regular"/>
+                                            <font key="NSFont" metaFont="system" size="16"/>
                                             <font key="NSOriginalFont" metaFont="system" size="16"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -1694,14 +1694,14 @@ secondary</string>
                                     <fragment content=" ">
                                         <attributes>
                                             <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" size="16" name="Cairo-Regular"/>
+                                            <font key="NSFont" metaFont="system" size="16"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="مرة">
                                         <attributes>
                                             <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" size="16" name="Cairo-Regular"/>
+                                            <font key="NSFont" metaFont="system" size="16"/>
                                             <font key="NSOriginalFont" metaFont="system" size="16"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -1709,14 +1709,14 @@ secondary</string>
                                     <fragment content=" ">
                                         <attributes>
                                             <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" size="16" name="Cairo-Regular"/>
+                                            <font key="NSFont" metaFont="system" size="16"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="أخرى">
                                         <attributes>
                                             <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" size="16" name="Cairo-Regular"/>
+                                            <font key="NSFont" metaFont="system" size="16"/>
                                             <font key="NSOriginalFont" metaFont="system" size="16"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -1724,7 +1724,7 @@ secondary</string>
                                     <fragment content="!">
                                         <attributes>
                                             <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" size="16" name="Cairo-Regular"/>
+                                            <font key="NSFont" metaFont="system" size="16"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -2921,13 +2921,13 @@ secondary</string>
                                         <rect key="frame" x="242.66666666666663" y="329" width="129.33333333333337" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="عدد الطلاب المطلوبين " textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8I-ln-Dz1">
-                                                <rect key="frame" x="0.0" y="0.0" width="129.33333333333334" height="23.666666666666668"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="129.33333333333334" height="26.333333333333332"/>
                                                 <fontDescription key="fontDescription" name="Cairo-Medium" family="Cairo" pointSize="14"/>
                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="طالب مسجل" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQB-q3-yyY">
-                                                <rect key="frame" x="56.333333333333343" y="23.666666666666629" width="73" height="26.333333333333329"/>
+                                                <rect key="frame" x="56.333333333333343" y="26.333333333333371" width="73" height="23.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="Cairo-Medium" family="Cairo" pointSize="14"/>
                                                 <color key="textColor" name="standr"/>
                                                 <nil key="highlightedColor"/>
@@ -3635,6 +3635,198 @@ secondary</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qlF-3M-I9b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6160" y="458"/>
+        </scene>
+        <!--QuestionsVC-->
+        <scene sceneID="Y4k-RY-hNM">
+            <objects>
+                <viewController storyboardIdentifier="QuestionsVC" id="83T-zE-WkL" customClass="QuestionsVC" customModule="Tatawei_Student" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="14e-ts-GQr">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الاسئله المتداوله" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEr-B2-66p">
+                                <rect key="frame" x="91" y="102" width="220" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BZV-pE-fgh"/>
+                                    <constraint firstAttribute="width" constant="220" id="d5b-dU-ZZp"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="z3E-aS-31t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sTk-fb-s86">
+                                <rect key="frame" x="0.0" y="182" width="402" height="712"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PyS-bh-83G">
+                                        <rect key="frame" x="0.0" y="20" width="402" height="692"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionCell" rowHeight="70" id="HNE-NU-tDg" userLabel="QuestionCell" customClass="QuestionCell" customModule="Tatawei_Student" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50" width="402" height="70"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HNE-NU-tDg" id="qH2-qw-OTV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="402" height="70"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqs-c7-4ja">
+                                                            <rect key="frame" x="5" y="5" width="392" height="60"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9r5-CZ-Xa3">
+                                                                    <rect key="frame" x="0.0" y="20" width="382" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="15"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Jet-Ys-Ibi">
+                                                                    <rect key="frame" x="10" y="25.333333333333332" width="22" height="9.9999999999999964"/>
+                                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" name="standr"/>
+                                                            <constraints>
+                                                                <constraint firstItem="Jet-Ys-Ibi" firstAttribute="top" secondItem="cqs-c7-4ja" secondAttribute="top" constant="20" id="4gK-y3-YIE"/>
+                                                                <constraint firstAttribute="bottom" secondItem="Jet-Ys-Ibi" secondAttribute="bottom" constant="20" id="9UE-H0-n1S"/>
+                                                                <constraint firstAttribute="trailing" secondItem="9r5-CZ-Xa3" secondAttribute="trailing" constant="10" id="DkG-CT-hre"/>
+                                                                <constraint firstItem="Jet-Ys-Ibi" firstAttribute="leading" secondItem="cqs-c7-4ja" secondAttribute="leading" constant="10" id="FdJ-J7-aek"/>
+                                                                <constraint firstAttribute="bottom" secondItem="9r5-CZ-Xa3" secondAttribute="bottom" constant="20" id="Qli-FF-fLu"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Jet-Ys-Ibi" secondAttribute="trailing" constant="360" id="UYT-sj-pot"/>
+                                                                <constraint firstItem="9r5-CZ-Xa3" firstAttribute="leading" secondItem="cqs-c7-4ja" secondAttribute="leading" id="dWC-BJ-dpM"/>
+                                                                <constraint firstItem="9r5-CZ-Xa3" firstAttribute="top" secondItem="cqs-c7-4ja" secondAttribute="top" constant="20" id="ohy-nI-oIh"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="15"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                    <real key="value" value="0.0"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="cqs-c7-4ja" firstAttribute="top" secondItem="qH2-qw-OTV" secondAttribute="top" constant="5" id="5zp-Cj-LVN"/>
+                                                        <constraint firstAttribute="trailing" secondItem="cqs-c7-4ja" secondAttribute="trailing" constant="5" id="Aes-vZ-ftT"/>
+                                                        <constraint firstAttribute="bottom" secondItem="cqs-c7-4ja" secondAttribute="bottom" constant="5" id="Kbx-d4-C0p"/>
+                                                        <constraint firstItem="cqs-c7-4ja" firstAttribute="leading" secondItem="qH2-qw-OTV" secondAttribute="leading" constant="5" id="WfI-dh-Y8b"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="chervronImage" destination="Jet-Ys-Ibi" id="6Hg-x8-CE3"/>
+                                                    <outlet property="titleCell" destination="9r5-CZ-Xa3" id="gp0-8A-tMx"/>
+                                                </connections>
+                                            </tableViewCell>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnswerCell" rowHeight="100" id="QD4-hJ-hFX" userLabel="AnswerCell" customClass="QuestionCell" customModule="Tatawei_Student" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="120" width="402" height="100"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QD4-hJ-hFX" id="GyB-pe-x1q">
+                                                    <rect key="frame" x="0.0" y="0.0" width="402" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kwo-Rl-Pya">
+                                                            <rect key="frame" x="5" y="5" width="392" height="90"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MdZ-4j-ttt">
+                                                                    <rect key="frame" x="0.0" y="20" width="382" height="50"/>
+                                                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                            <constraints>
+                                                                <constraint firstItem="MdZ-4j-ttt" firstAttribute="leading" secondItem="kwo-Rl-Pya" secondAttribute="leading" id="9vr-97-kgR"/>
+                                                                <constraint firstAttribute="bottom" secondItem="MdZ-4j-ttt" secondAttribute="bottom" constant="20" id="NcM-Qd-F2w"/>
+                                                                <constraint firstAttribute="trailing" secondItem="MdZ-4j-ttt" secondAttribute="trailing" constant="10" id="fPV-Yd-bJE"/>
+                                                                <constraint firstItem="MdZ-4j-ttt" firstAttribute="top" secondItem="kwo-Rl-Pya" secondAttribute="top" constant="20" id="kGA-A5-QDe"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="15"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                    <real key="value" value="0.0"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="kwo-Rl-Pya" firstAttribute="leading" secondItem="GyB-pe-x1q" secondAttribute="leading" constant="5" id="4es-l7-9kh"/>
+                                                        <constraint firstAttribute="bottom" secondItem="kwo-Rl-Pya" secondAttribute="bottom" constant="5" id="bKv-2a-gpB"/>
+                                                        <constraint firstAttribute="trailing" secondItem="kwo-Rl-Pya" secondAttribute="trailing" constant="5" id="uSN-Ad-zFP"/>
+                                                        <constraint firstItem="kwo-Rl-Pya" firstAttribute="top" secondItem="GyB-pe-x1q" secondAttribute="top" constant="5" id="w4j-lr-uuW"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="contentCell" destination="MdZ-4j-ttt" id="Dry-zg-F37"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="83T-zE-WkL" id="ngh-x6-cd2"/>
+                                            <outlet property="delegate" destination="83T-zE-WkL" id="dpp-6s-0fl"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="PyS-bh-83G" firstAttribute="leading" secondItem="sTk-fb-s86" secondAttribute="leading" id="DFp-Oh-1yp"/>
+                                    <constraint firstItem="PyS-bh-83G" firstAttribute="top" secondItem="sTk-fb-s86" secondAttribute="top" constant="20" id="K8i-dN-JU0"/>
+                                    <constraint firstAttribute="bottom" secondItem="PyS-bh-83G" secondAttribute="bottom" id="cqR-yn-Y0U"/>
+                                    <constraint firstAttribute="trailing" secondItem="PyS-bh-83G" secondAttribute="trailing" id="ozG-hk-1QN"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rotation">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZu-UG-rW4">
+                                <rect key="frame" x="326" y="45" width="56" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8nD-Uf-paf"/>
+                                    <constraint firstAttribute="width" constant="56" id="FJA-pr-vf2"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="xmark.circle.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="22"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="exit:" destination="83T-zE-WkL" eventType="touchUpInside" id="xk0-bL-IFP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iOg-le-Q1B"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="fEr-B2-66p" firstAttribute="centerX" secondItem="14e-ts-GQr" secondAttribute="centerX" id="CU5-Ra-rYz"/>
+                            <constraint firstItem="sTk-fb-s86" firstAttribute="top" secondItem="fEr-B2-66p" secondAttribute="bottom" constant="30" id="IVs-zw-6Pk"/>
+                            <constraint firstItem="BZu-UG-rW4" firstAttribute="top" secondItem="14e-ts-GQr" secondAttribute="top" constant="45" id="TA8-9q-G5d"/>
+                            <constraint firstItem="fEr-B2-66p" firstAttribute="top" secondItem="iOg-le-Q1B" secondAttribute="top" constant="40" id="eFV-cR-2qD"/>
+                            <constraint firstAttribute="trailing" secondItem="BZu-UG-rW4" secondAttribute="trailing" constant="20" id="eXe-bb-iuz"/>
+                            <constraint firstItem="sTk-fb-s86" firstAttribute="leading" secondItem="14e-ts-GQr" secondAttribute="leading" id="fGN-Re-b67"/>
+                            <constraint firstAttribute="trailing" secondItem="sTk-fb-s86" secondAttribute="trailing" id="jWz-O7-wqZ"/>
+                            <constraint firstAttribute="bottom" secondItem="sTk-fb-s86" secondAttribute="bottom" constant="-20" id="mzv-HY-lgB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableViewQuestions" destination="PyS-bh-83G" id="WD7-mJ-UAR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="be9-yd-0Xh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6159.7014925373132" y="1152.6315789473683"/>
         </scene>
         <!--ProfileVC-->
         <scene sceneID="PAc-CT-NC6">
@@ -4430,6 +4622,7 @@ secondary</string>
         <image name="calendar.circle.fill" catalog="system" width="128" height="123"/>
         <image name="chatBotAi" width="338" height="371"/>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <image name="chevron.down" catalog="system" width="128" height="70"/>
         <image name="clear" width="512" height="512"/>
         <image name="designChatBot" width="338" height="588"/>
         <image name="doubtful" width="170.66667175292969" height="170.66667175292969"/>
@@ -4497,34 +4690,34 @@ secondary</string>
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="scrollViewTexturedBackgroundColor">
             <color red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="viewFlipsideBackgroundColor">
             <color red="0.12156862745098039" green="0.12941176470588237" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

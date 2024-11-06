@@ -48,6 +48,12 @@ final class MainCoordinator: Coordinator {
         navigationController.present(vc, animated: true)
     }
     
+    func viewQuestionsVC() {
+        let vc = QuestionsVC.instantiate()
+        vc.coordinator = self
+        navigationController.present(vc, animated: true)
+    }
+    
     func viewLoginVC() {
         let vc = LoginVC.instantiate()
         vc.coordinator = self
