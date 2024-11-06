@@ -16,6 +16,7 @@ class ProfileVC: UIViewController, Storyboarded {
     
     var settings: [MenuItem] = [
         MenuItem(image: UIImage(systemName: "globe")!, label: .termsAndConditions),
+        MenuItem(image: UIImage(systemName: "globe")!, label: .FrequentlyAskedQuestions),
         MenuItem(image: UIImage(systemName: "info.circle.fill")!, label: .about),
         MenuItem(image: UIImage(systemName: "lock.open.rotation")!, label: .resetPassword),
         MenuItem(image: UIImage(systemName: "trash.fill")!, label: .deleteAccount),
@@ -82,6 +83,10 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
         case .termsAndConditions:
             
             coordinator?.viewWebVC(url: "https://publuu.com/flip-book/698725/1553903")
+            
+        case .FrequentlyAskedQuestions:
+        self.coordinator?.viewQuestionsVC()
+            
             // About Us
         case .about:
         self.coordinator?.viewAboutVC()
