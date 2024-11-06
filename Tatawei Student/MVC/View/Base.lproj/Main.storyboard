@@ -1493,8 +1493,8 @@
                                         <fontDescription key="fontDescription" name="Cairo-Medium" family="Cairo" pointSize="16"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="افطار غير صائم" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsY-qJ-DZ6">
-                                        <rect key="frame" x="256.66666666666669" y="142" width="70.333333333333314" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsY-qJ-DZ6">
+                                        <rect key="frame" x="327" y="142" width="0.0" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="18" id="dYB-KB-c5G"/>
                                         </constraints>
@@ -1504,7 +1504,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wem-I3-kk3" customClass="DesignableButton" customModule="Tatawei_Student" customModuleProvider="target">
                                         <rect key="frame" x="177" y="174" width="134" height="39"/>
-                                        <color key="backgroundColor" red="0.0039215686269999999" green="0.66274509800000003" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
                                         <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="12"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="إظهار QR كود">
@@ -1974,7 +1974,9 @@ secondary</string>
                         <outlet property="descriptionHoursLBL" destination="auf-pp-Nvo" id="Mu6-Yr-Mc5"/>
                         <outlet property="emtyMessage" destination="pon-ez-L50" id="gTA-vM-3xC"/>
                         <outlet property="hoursAchievedLBL" destination="JsJ-Bm-OGg" id="xi8-Q6-OrN"/>
+                        <outlet property="opportunityName" destination="dsY-qJ-DZ6" id="SJv-DZ-HUL"/>
                         <outlet property="progressView" destination="8BC-hi-sM7" id="ENb-NG-X9K"/>
+                        <outlet property="showQRCodeBTN" destination="wem-I3-kk3" id="KaH-FV-Cwe"/>
                         <outlet property="textHoursLBL" destination="sVZ-mD-HBB" id="1QL-vY-9Xz"/>
                         <outlet property="welcomeLBL" destination="rcD-Wf-NwQ" id="Trr-Ay-3Bl"/>
                     </connections>
@@ -2921,13 +2923,13 @@ secondary</string>
                                         <rect key="frame" x="242.66666666666663" y="329" width="129.33333333333337" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="عدد الطلاب المطلوبين " textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8I-ln-Dz1">
-                                                <rect key="frame" x="0.0" y="0.0" width="129.33333333333334" height="26.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="129.33333333333334" height="23.666666666666668"/>
                                                 <fontDescription key="fontDescription" name="Cairo-Medium" family="Cairo" pointSize="14"/>
                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="طالب مسجل" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQB-q3-yyY">
-                                                <rect key="frame" x="56.333333333333343" y="26.333333333333371" width="73" height="23.666666666666671"/>
+                                                <rect key="frame" x="56.333333333333343" y="23.666666666666629" width="73" height="26.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="Cairo-Medium" family="Cairo" pointSize="14"/>
                                                 <color key="textColor" name="standr"/>
                                                 <nil key="highlightedColor"/>
