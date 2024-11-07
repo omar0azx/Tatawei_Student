@@ -38,7 +38,14 @@
 		F269FB092CB5914400058592 /* CustomBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F269FB082CB5914400058592 /* CustomBackgroundView.swift */; };
 		F269FB0B2CB5D4A300058592 /* DashedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F269FB0A2CB5D4A300058592 /* DashedView.swift */; };
 		F26CDBF52CB1B09400AAFFB6 /* OpportunitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26CDBF42CB1B09400AAFFB6 /* OpportunitiesCell.swift */; };
+		F29988802CDB2C5E00150CFD /* StudentProgressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F299887F2CDB2C5E00150CFD /* StudentProgressVC.swift */; };
+		F29988822CDB53E700150CFD /* LeaderBoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29988812CDB53E700150CFD /* LeaderBoardVC.swift */; };
+		F29988842CDB549800150CFD /* LeaderBoardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29988832CDB549800150CFD /* LeaderBoardCell.swift */; };
 		F29A802C2CCA927900FDA7EC /* PreviousOpportunitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A802B2CCA927900FDA7EC /* PreviousOpportunitiesVC.swift */; };
+		F2B78F072CD9EA1000F850B8 /* Badges.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B78F062CD9EA1000F850B8 /* Badges.swift */; };
+		F2B78F0B2CD9F0D200F850B8 /* BadgesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B78F0A2CD9F0D200F850B8 /* BadgesVC.swift */; };
+		F2B78F0D2CD9F15600F850B8 /* BadgesContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B78F0C2CD9F15600F850B8 /* BadgesContentCell.swift */; };
+		F2B78F0F2CD9F17500F850B8 /* BadgesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B78F0E2CD9F17500F850B8 /* BadgesCell.swift */; };
 		F2D6C95A2CAD0DD1000E1713 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = F2D6C9592CAD0DD1000E1713 /* FirebaseDatabase */; };
 		F2D6C95C2CAD0DED000E1713 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = F2D6C95B2CAD0DED000E1713 /* FirebaseAppCheck */; };
 		F2D6C95F2CAD0E1C000E1713 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = F2D6C95E2CAD0E1C000E1713 /* Lottie */; };
@@ -118,7 +125,14 @@
 		F269FB082CB5914400058592 /* CustomBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackgroundView.swift; sourceTree = "<group>"; };
 		F269FB0A2CB5D4A300058592 /* DashedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedView.swift; sourceTree = "<group>"; };
 		F26CDBF42CB1B09400AAFFB6 /* OpportunitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportunitiesCell.swift; sourceTree = "<group>"; };
+		F299887F2CDB2C5E00150CFD /* StudentProgressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProgressVC.swift; sourceTree = "<group>"; };
+		F29988812CDB53E700150CFD /* LeaderBoardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardVC.swift; sourceTree = "<group>"; };
+		F29988832CDB549800150CFD /* LeaderBoardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardCell.swift; sourceTree = "<group>"; };
 		F29A802B2CCA927900FDA7EC /* PreviousOpportunitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousOpportunitiesVC.swift; sourceTree = "<group>"; };
+		F2B78F062CD9EA1000F850B8 /* Badges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badges.swift; sourceTree = "<group>"; };
+		F2B78F0A2CD9F0D200F850B8 /* BadgesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesVC.swift; sourceTree = "<group>"; };
+		F2B78F0C2CD9F15600F850B8 /* BadgesContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesContentCell.swift; sourceTree = "<group>"; };
+		F2B78F0E2CD9F17500F850B8 /* BadgesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesCell.swift; sourceTree = "<group>"; };
 		F2D6C96A2CAD19F5000E1713 /* MainExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainExtensions.swift; sourceTree = "<group>"; };
 		F2D6C96B2CAD19F5000E1713 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		F2D6C96D2CAD19F5000E1713 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -286,6 +300,9 @@
 				4EF2A9F12CC074AA002E1956 /* ExploreOpportunitiesCell.swift */,
 				4EF2A9FD2CC3134E002E1956 /* FiltrationCell.swift */,
 				F257C4972CCB672B00C0B0C1 /* PreviousOpportunitiesCell.swift */,
+				F2B78F0C2CD9F15600F850B8 /* BadgesContentCell.swift */,
+				F2B78F0E2CD9F17500F850B8 /* BadgesCell.swift */,
+				F29988832CDB549800150CFD /* LeaderBoardCell.swift */,
 				BE92CCB42CDA58FA00DF146F /* QuestionCell.swift */,
 			);
 			path = Cells;
@@ -304,6 +321,7 @@
 				F2D6C98A2CAD19F5000E1713 /* LoginVC.swift */,
 				F2D6C9882CAD19F5000E1713 /* ForgetPasswordVC.swift */,
 				F2D6C9892CAD19F5000E1713 /* HomeVC.swift */,
+				F2B78F0A2CD9F0D200F850B8 /* BadgesVC.swift */,
 				F2197A332CCE668F00D2607E /* QRCodeVC.swift */,
 				F29A802B2CCA927900FDA7EC /* PreviousOpportunitiesVC.swift */,
 				F2D6C9872CAD19F5000E1713 /* ExploreVC.swift */,
@@ -317,6 +335,8 @@
 				BE8594C12CC070C300EC84F6 /* WebVC.swift */,
 				BEFB5E4F2CCBA3E000538D19 /* AboutVC.swift */,
 				BE7C79692CCE4FC60057A08F /* IntroChatBotVC.swift */,
+				F299887F2CDB2C5E00150CFD /* StudentProgressVC.swift */,
+				F29988812CDB53E700150CFD /* LeaderBoardVC.swift */,
 				BE92CCB02CDA527D00DF146F /* QuestionsVC.swift */,
 			);
 			path = Controller;
@@ -332,6 +352,7 @@
 				F2D6C9902CAD19F5000E1713 /* InterestCategories.swift */,
 				4E5B43752CBCAB2C00F7E850 /* MenuItem.swift */,
 				F2D6C9912CAD19F5000E1713 /* Student.swift */,
+				F2B78F062CD9EA1000F850B8 /* Badges.swift */,
 				BE92CCB62CDA5E3200DF146F /* Quations.swift */,
 			);
 			path = Model;
@@ -486,19 +507,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2D6C9A12CAD19F5000E1713 /* MainExtensions.swift in Sources */,
+				F2B78F072CD9EA1000F850B8 /* Badges.swift in Sources */,
 				F2D6C9A22CAD19F5000E1713 /* StringExtensions.swift in Sources */,
 				F2D6C9A32CAD19F5000E1713 /* AppDelegate.swift in Sources */,
 				F2D6C9A42CAD19F5000E1713 /* SceneDelegate.swift in Sources */,
+				F2B78F0D2CD9F15600F850B8 /* BadgesContentCell.swift in Sources */,
 				4EF2AA152CC7649E002E1956 /* Icon.swift in Sources */,
+				F29988842CDB549800150CFD /* LeaderBoardCell.swift in Sources */,
 				4EF2AA052CC331C3002E1956 /* OpportunityVC.swift in Sources */,
 				4E5B43782CBCAB7500F7E850 /* CustomAlertView.swift in Sources */,
 				F2D6C9A52CAD19F5000E1713 /* Coordinator.swift in Sources */,
 				F2D6C9A62CAD19F5000E1713 /* MainCoordinator.swift in Sources */,
 				F2D6C9A72CAD19F5000E1713 /* Storyboarded.swift in Sources */,
 				4EF2AA0D2CC5D93B002E1956 /* StorageService.swift in Sources */,
+				F2B78F0B2CD9F0D200F850B8 /* BadgesVC.swift in Sources */,
 				F2D6C9A82CAD19F5000E1713 /* AppCheckProviderFactory.swift in Sources */,
 				4EF2AA132CC7352F002E1956 /* OpportunityDataServices.swift in Sources */,
 				BE7C796A2CCE4FC60057A08F /* IntroChatBotVC.swift in Sources */,
+				F29988822CDB53E700150CFD /* LeaderBoardVC.swift in Sources */,
 				F2D6C9A92CAD19F5000E1713 /* Constants.swift in Sources */,
 				4E5B43762CBCAB2C00F7E850 /* MenuItem.swift in Sources */,
 				4EF2AA092CC4CB97002E1956 /* AcceptanceApplyVC.swift in Sources */,
@@ -523,6 +549,7 @@
 				4EF2AA032CC31874002E1956 /* FiltrationHeaderView.swift in Sources */,
 				F2D6C9B02CAD19F5000E1713 /* HomeVC.swift in Sources */,
 				4EF2AA0B2CC4D09F002E1956 /* StandardAcceptanceVC.swift in Sources */,
+				F29988802CDB2C5E00150CFD /* StudentProgressVC.swift in Sources */,
 				F2D6C9B12CAD19F5000E1713 /* LoginVC.swift in Sources */,
 				F2D6C9B22CAD19F5000E1713 /* MapVC.swift in Sources */,
 				4EF2AA072CC4C1EF002E1956 /* OrganizationVC.swift in Sources */,
@@ -540,6 +567,7 @@
 				BEFB5E502CCBA3E000538D19 /* AboutVC.swift in Sources */,
 				F2D6C9B82CAD19F5000E1713 /* AuthService.swift in Sources */,
 				F2D6C9B92CAD19F5000E1713 /* StudentDataServices.swift in Sources */,
+				F2B78F0F2CD9F17500F850B8 /* BadgesCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
