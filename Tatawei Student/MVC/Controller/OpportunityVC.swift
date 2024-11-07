@@ -283,9 +283,11 @@ extension OpportunityVC: QLPreviewControllerDataSource {
                     .paragraphStyle: textStyle
                 ]
                 var organizationImag: UIImage?
-                StorageService.shared.downloadImage(from: "organisations_icons/uj.jpg") { imag, error in
-                    guard let image = imag else {return}
-                    organizationImag = image
+                if let opportunity = opportunity {
+                    StorageService.shared.downloadImage(from: opportunity.organizationImageLink) { imag, error in
+                        guard let image = imag else {return}
+                        organizationImag = image
+                    }
                 }
                 if let segImage = organizationImag {
                     let topCenterWidth: CGFloat = 60 // Adjust width as needed

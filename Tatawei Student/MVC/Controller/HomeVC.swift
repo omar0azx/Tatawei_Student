@@ -107,9 +107,7 @@ class HomeVC: UIViewController, Storyboarded {
                         self.showQRCodeBTN.backgroundColor = .standr
                         saveOpportunityLocally(self.opportunity[0])
                         self.opportunityName.text = self.opportunity[0].name
-                        print("hi")
                     } else {
-                        print("no")
                         self.showQRCodeBTN.backgroundColor = .systemGray
                         self.opportunityName.text = "لا يوجد لديك فرصة اليوم"
                         resetRatingStatus()
