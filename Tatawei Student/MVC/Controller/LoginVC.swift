@@ -14,6 +14,10 @@ class LoginVC: UIViewController, Storyboarded {
     
     var coordinator: MainCoordinator?
     
+    let attributes: [NSAttributedString.Key: Any] = [
+        .font: UIFont(name: "Cairo-Regular", size: 18) ?? UIFont.systemFont(ofSize: 18)
+    ]
+    
     
     //MARK: - IBOutleats
     
@@ -41,8 +45,6 @@ class LoginVC: UIViewController, Storyboarded {
     //MARK: - IBAcitions
     
     @IBAction func forgetPassword(_ sender: UIButton) {
-        forgetPassword.titleLabel?.font = UIFont(name: "Cairo", size: 13)
-        loginBTN.titleLabel?.font = UIFont(name: "Cairo", size: 18)
         if forgetPassword.titleLabel?.text == "نسيت كلمة المرور ؟" {
             updateUI(title: "إسترجاع كلمة المرور", passwordHidden: true, forgetPasswordTitle: "لدي حساب بالفعل !", loginButtonTitle: "إرسال", createAccountHidden: true)
         } else {
@@ -94,7 +96,8 @@ class LoginVC: UIViewController, Storyboarded {
         titleLabel.text = title
         passwordStackView.isHidden = passwordHidden
         forgetPassword.setTitle(forgetPasswordTitle, for: .normal)
-        loginBTN.setTitle(loginButtonTitle, for: .normal)
+        let attributedTitle = NSAttributedString(string: loginButtonTitle, attributes: self.attributes)
+        loginBTN.setAttributedTitle(attributedTitle, for: .normal)
         createAccountStackView.isHidden = createAccountHidden
     }
     

@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import CoreImage.CIFilterBuiltins
-
 
 class HomeVC: UIViewController, Storyboarded {
     
@@ -19,8 +17,9 @@ class HomeVC: UIViewController, Storyboarded {
 
     var coordinator: MainCoordinator?
     
-    var arrOppt = [Opportunity]()
-    
+    var opportunity = [Opportunity]()
+    var finishedOpportunities = [Opportunity]()
+            
     //MARK: - IBOutleats
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -44,15 +43,15 @@ class HomeVC: UIViewController, Storyboarded {
     }
     
     override func viewIsAppearing(_ animated: Bool) {
-        setUpProgressAnimat()
         loadStudentOpportunities()
+        setUpProgressAnimat()
         setupUI()
     }
     
     
     //MARK: - IBAcitions
     @IBAction func historyBTN(_ sender: Any) {
-        coordinator?.viewPreviousOpportunitiesVC()
+        coordinator?.viewPreviousOpportunitiesVC(opportunities: finishedOpportunities)
     }
     
     @IBAction func showQRCodeBTN(_ sender: Any) {
@@ -73,12 +72,11 @@ class HomeVC: UIViewController, Storyboarded {
             hoursAchievedLBL.text = "\(Int(student.hoursCompleted))"
             progressView.addSubview(hoursAchievedLBL)
             progressView.addSubview(textHoursLBL)
-            print(student.opportunities)
         }
     }
     
+    
     func loadStudentOpportunities() {
-        // Check if the current student has any opportunities
         if let studentOpportunities = Student.currentStudent?.opportunities, !studentOpportunities.isEmpty {
             
             // Proceed only if studentOpportunities is non-empty
@@ -89,12 +87,26 @@ class HomeVC: UIViewController, Storyboarded {
                     return
                 }
                 DispatchQueue.main.async {
-                    self.arrOppt = opportunities
+                    self.opportunity = opportunities.sorted {
+                        guard let date1 = $0.formattedDate, let date2 = $1.formattedDate else {
+                            return false
+                        }
+                        return date1 < date2
+                    }
+                    if self.opportunity[0].date == DateFormatter.localizedString(from: Date(), dateStyle: .short, timeStyle: .none) {
+                        saveOpportunityLocally(self.opportunity[0])
+                    } else {
+                        resetRatingStatus()
+                    }
+                    self.finishedOpportunities = self.opportunity.filter{$0.status == .finished}
+                    self.opportunity = self.opportunity.filter{$0.status == .open || $0.status == .inProgress}
                     self.collectionView.reloadData()
                 }
             }
         } else {
             // Handle the case where the opportunities array is empty
+            opportunity = []
+            collectionView.reloadData()
             print("No opportunities available for the current student.")
             
         }
@@ -140,7 +152,17 @@ class HomeVC: UIViewController, Storyboarded {
         shapeLayer.add(basicAnimation, forKey: "urBasic")
     }
     
-
+    func updateStudentData() {
+        if let schoolID = Student.currentStudent?.school {
+            StudentDataServices.shared.getStudentData(schoolID: schoolID, studentID: Student.currentID) { status, error in
+                if status! {
+                    print("Success to update locally storage")
+                } else {
+                    print("Have problem when update locally storage")
+                }
+            }
+        }
+    }
 
 }
 
@@ -148,26 +170,34 @@ class HomeVC: UIViewController, Storyboarded {
 extension HomeVC: UICollisionBehaviorDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if arrOppt.count == 0 {
+        if opportunity.count == 0 {
             emtyMessage.isHidden = false
             emtyMessage.alpha = 1
         } else {
             emtyMessage.isHidden = true
             emtyMessage.alpha = 0
         }
-        return arrOppt.count
+        return opportunity.count
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cellColorAndIcon = Icon(index: arrOppt[indexPath.row].iconNumber, categories: arrOppt[indexPath.row].category).icons
+        let cellColorAndIcon = Icon(index: opportunity[indexPath.row].iconNumber, categories: opportunity[indexPath.row].category).opportunityIcon
         var organizationImag: UIImage?
-        StorageService.shared.downloadImage(from: arrOppt[indexPath.row].organizationImageLink) { imag, error in
+        StorageService.shared.downloadImage(from: opportunity[indexPath.row].organizationImageLink) { imag, error in
             guard let image = imag else {return}
             organizationImag = image
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OpportunitiesCell", for: indexPath) as! OpportunitiesCell
-        cell.configOpportunity(backgroundColor: cellColorAndIcon.1, opportunityImage: cellColorAndIcon.0, opportunityName: arrOppt[indexPath.row].name, opportunityTime: arrOppt[indexPath.row].time, opportunityHour: arrOppt[indexPath.row].hour, opportunityDate: arrOppt[indexPath.row].date, organizationImage: organizationImag ?? #imageLiteral(resourceName: "P2.svg"), status: arrOppt[indexPath.row].isAccepted!)
+        if opportunity[indexPath.row].date == DateFormatter.localizedString(from: Date(), dateStyle: .short, timeStyle: .none) {
+            opportunity[indexPath.row].date  = "اليوم"
+        }
+        cell.configOpportunity(backgroundColor: cellColorAndIcon.1, opportunityImage: cellColorAndIcon.0, opportunityName: opportunity[indexPath.row].name, opportunityTime: opportunity[indexPath.row].time, opportunityHour: opportunity[indexPath.row].hour, opportunityDate: opportunity[indexPath.row].date, organizationImage: organizationImag ?? #imageLiteral(resourceName: "P2.svg"), status: opportunity[indexPath.row].isAccepted!)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        coordinator?.viewOpportunityVC(opportunity: opportunity[indexPath.row])
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

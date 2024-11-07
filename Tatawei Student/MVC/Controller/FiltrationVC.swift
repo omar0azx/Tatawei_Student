@@ -19,24 +19,33 @@ class FiltrationVC: UIViewController, Storyboarded {
     
     weak var delegate: DataFiltrationDelegate?
     
-    var interestsType: [InterestCategories] = [.All, .Tourism, .Technical, .Sports, .Social, .Healthy, .Financial, .Environmental, .Cultural, .Arts, .religious]
+    var interestsType: [InterestCategories] = [.myInterests, .All, .Tourism, .Technical, .Sports, .Social, .Healthy, .Financial, .Environmental, .Cultural, .Arts, .religious]
     let cities: [Cities] = [.MyLocation, .All, .Riyadh, .Jeddah, .Macca, .Madenah, .Taif, .Dammam, .Abha]
     
     var selectedInterestsTypeIndexPath: IndexPath?
     var selectedCityIndexPath: IndexPath?
     
+    var interest: InterestCategories = .myInterests
+    var city: Cities = .MyLocation
+    
     
     //MARK: - IBOutleats
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var locationMessage: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        collectionView.semanticContentAttribute = .forceRightToLeft
+        setDefaultSelections()
+        collectionView.reloadData()
     }
     
 
     //MARK: - IBAcitions
+    
     @IBAction func didPressedCancel(_ sender: UIButton) {
         dismiss(animated: true)
     }
@@ -48,7 +57,19 @@ class FiltrationVC: UIViewController, Storyboarded {
     
     
     //MARK: - Functions
-
+    
+    func setDefaultSelections() {
+        selectedInterestsTypeIndexPath = IndexPath(row: interestsType.firstIndex(of: interest) ?? 0, section: 0)
+        selectedCityIndexPath = IndexPath(row: cities.firstIndex(of: city) ?? 1, section: 1)
+        if city == .MyLocation {
+            locationMessage.isHidden = false
+            locationMessage.alpha = 1
+        } else {
+            locationMessage.isHidden = true
+            locationMessage.alpha = 0
+        }
+    }
+    
 }
 
 extension FiltrationVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -107,6 +128,13 @@ extension FiltrationVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
             
             // Handle selection in "المدينة" (City) section
         } else if indexPath.section == 1 {
+            if indexPath.row == 0 {
+                locationMessage.isHidden = false
+                locationMessage.alpha = 1
+            } else {
+                locationMessage.isHidden = true
+                locationMessage.alpha = 0
+            }
             if let selectedIndex = selectedCityIndexPath, selectedIndex == indexPath {
                 // Deselect if the same cell is clicked
                 selectedCityIndexPath = nil
@@ -138,5 +166,3 @@ extension FiltrationVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
        }
 
 }
-
-

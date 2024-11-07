@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E11EBFC2CCDEB0500D68045 /* tatawei.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E11EBFB2CCDEB0500D68045 /* tatawei.json */; };
+		4E31BD972CD5DF7100454FCD /* RatingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E31BD962CD5DF7100454FCD /* RatingVC.swift */; };
 		4E5B43742CBCAAF200F7E850 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B43732CBCAAF200F7E850 /* SettingsCell.swift */; };
 		4E5B43762CBCAB2C00F7E850 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B43752CBCAB2C00F7E850 /* MenuItem.swift */; };
 		4E5B43782CBCAB7500F7E850 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B43772CBCAB7500F7E850 /* CustomAlertView.swift */; };
@@ -28,6 +29,9 @@
 		4EF2AA152CC7649E002E1956 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2AA142CC7649B002E1956 /* Icon.swift */; };
 		BE7C796A2CCE4FC60057A08F /* IntroChatBotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7C79692CCE4FC60057A08F /* IntroChatBotVC.swift */; };
 		BE8594C22CC070C300EC84F6 /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8594C12CC070C300EC84F6 /* WebVC.swift */; };
+		BE92CCB12CDA527D00DF146F /* QuestionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE92CCB02CDA527D00DF146F /* QuestionsVC.swift */; };
+		BE92CCB52CDA58FA00DF146F /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE92CCB42CDA58FA00DF146F /* QuestionCell.swift */; };
+		BE92CCB72CDA5E3200DF146F /* Quations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE92CCB62CDA5E3200DF146F /* Quations.swift */; };
 		BEFB5E502CCBA3E000538D19 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB5E4F2CCBA3E000538D19 /* AboutVC.swift */; };
 		F2197A342CCE668F00D2607E /* QRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2197A332CCE668F00D2607E /* QRCodeVC.swift */; };
 		F257C4982CCB672B00C0B0C1 /* PreviousOpportunitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F257C4972CCB672B00C0B0C1 /* PreviousOpportunitiesCell.swift */; };
@@ -74,12 +78,12 @@
 		F2D6C9B72CAD19F5000E1713 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C9912CAD19F5000E1713 /* Student.swift */; };
 		F2D6C9B82CAD19F5000E1713 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C9992CAD19F5000E1713 /* AuthService.swift */; };
 		F2D6C9B92CAD19F5000E1713 /* StudentDataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C99A2CAD19F5000E1713 /* StudentDataServices.swift */; };
-		F2D6C9BA2CAD19F5000E1713 /* CairoRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9742CAD19F5000E1713 /* CairoRegular.ttf */; };
-		F2D6C9BB2CAD19F5000E1713 /* CairoBlack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9752CAD19F5000E1713 /* CairoBlack.ttf */; };
-		F2D6C9BC2CAD19F5000E1713 /* CairoBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9762CAD19F5000E1713 /* CairoBold.ttf */; };
-		F2D6C9BD2CAD19F5000E1713 /* CairoLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9772CAD19F5000E1713 /* CairoLight.ttf */; };
-		F2D6C9BE2CAD19F5000E1713 /* CairoMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9782CAD19F5000E1713 /* CairoMedium.ttf */; };
-		F2D6C9BF2CAD19F5000E1713 /* CairoSemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9792CAD19F5000E1713 /* CairoSemiBold.ttf */; };
+		F2D6C9BA2CAD19F5000E1713 /* Cairo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9742CAD19F5000E1713 /* Cairo-Regular.ttf */; };
+		F2D6C9BB2CAD19F5000E1713 /* Cairo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9752CAD19F5000E1713 /* Cairo-Black.ttf */; };
+		F2D6C9BC2CAD19F5000E1713 /* Cairo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9762CAD19F5000E1713 /* Cairo-Bold.ttf */; };
+		F2D6C9BD2CAD19F5000E1713 /* Cairo-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9772CAD19F5000E1713 /* Cairo-Light.ttf */; };
+		F2D6C9BE2CAD19F5000E1713 /* Cairo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9782CAD19F5000E1713 /* Cairo-Medium.ttf */; };
+		F2D6C9BF2CAD19F5000E1713 /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9792CAD19F5000E1713 /* Cairo-SemiBold.ttf */; };
 		F2D6C9C02CAD19F5000E1713 /* correct.json in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C97F2CAD19F5000E1713 /* correct.json */; };
 		F2D6C9C12CAD19F5000E1713 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9802CAD19F5000E1713 /* loading.json */; };
 		F2D6C9C22CAD19F5000E1713 /* warning.json in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9812CAD19F5000E1713 /* warning.json */; };
@@ -92,6 +96,7 @@
 /* Begin PBXFileReference section */
 		4E11EBFB2CCDEB0500D68045 /* tatawei.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = tatawei.json; sourceTree = "<group>"; };
 		4E14CFC02C9E2FE400103405 /* Tatawei Student.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tatawei Student.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E31BD962CD5DF7100454FCD /* RatingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingVC.swift; sourceTree = "<group>"; };
 		4E5B43732CBCAAF200F7E850 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		4E5B43752CBCAB2C00F7E850 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		4E5B43772CBCAB7500F7E850 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
@@ -111,6 +116,9 @@
 		4EF2AA142CC7649B002E1956 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 		BE7C79692CCE4FC60057A08F /* IntroChatBotVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroChatBotVC.swift; sourceTree = "<group>"; };
 		BE8594C12CC070C300EC84F6 /* WebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
+		BE92CCB02CDA527D00DF146F /* QuestionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsVC.swift; sourceTree = "<group>"; };
+		BE92CCB42CDA58FA00DF146F /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
+		BE92CCB62CDA5E3200DF146F /* Quations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quations.swift; sourceTree = "<group>"; };
 		BEFB5E4F2CCBA3E000538D19 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		F2197A332CCE668F00D2607E /* QRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeVC.swift; sourceTree = "<group>"; };
 		F257C4972CCB672B00C0B0C1 /* PreviousOpportunitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousOpportunitiesCell.swift; sourceTree = "<group>"; };
@@ -132,12 +140,12 @@
 		F2D6C9702CAD19F5000E1713 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F2D6C9712CAD19F5000E1713 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		F2D6C9722CAD19F5000E1713 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
-		F2D6C9742CAD19F5000E1713 /* CairoRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CairoRegular.ttf; sourceTree = "<group>"; };
-		F2D6C9752CAD19F5000E1713 /* CairoBlack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CairoBlack.ttf; sourceTree = "<group>"; };
-		F2D6C9762CAD19F5000E1713 /* CairoBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CairoBold.ttf; sourceTree = "<group>"; };
-		F2D6C9772CAD19F5000E1713 /* CairoLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CairoLight.ttf; sourceTree = "<group>"; };
-		F2D6C9782CAD19F5000E1713 /* CairoMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CairoMedium.ttf; sourceTree = "<group>"; };
-		F2D6C9792CAD19F5000E1713 /* CairoSemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CairoSemiBold.ttf; sourceTree = "<group>"; };
+		F2D6C9742CAD19F5000E1713 /* Cairo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Regular.ttf"; sourceTree = "<group>"; };
+		F2D6C9752CAD19F5000E1713 /* Cairo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Black.ttf"; sourceTree = "<group>"; };
+		F2D6C9762CAD19F5000E1713 /* Cairo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Bold.ttf"; sourceTree = "<group>"; };
+		F2D6C9772CAD19F5000E1713 /* Cairo-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Light.ttf"; sourceTree = "<group>"; };
+		F2D6C9782CAD19F5000E1713 /* Cairo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Medium.ttf"; sourceTree = "<group>"; };
+		F2D6C9792CAD19F5000E1713 /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
 		F2D6C97B2CAD19F5000E1713 /* AppCheckProviderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCheckProviderFactory.swift; sourceTree = "<group>"; };
 		F2D6C97C2CAD19F5000E1713 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F2D6C97D2CAD19F5000E1713 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
@@ -251,12 +259,12 @@
 		F2D6C97A2CAD19F5000E1713 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				F2D6C9742CAD19F5000E1713 /* CairoRegular.ttf */,
-				F2D6C9752CAD19F5000E1713 /* CairoBlack.ttf */,
-				F2D6C9762CAD19F5000E1713 /* CairoBold.ttf */,
-				F2D6C9772CAD19F5000E1713 /* CairoLight.ttf */,
-				F2D6C9782CAD19F5000E1713 /* CairoMedium.ttf */,
-				F2D6C9792CAD19F5000E1713 /* CairoSemiBold.ttf */,
+				F2D6C9742CAD19F5000E1713 /* Cairo-Regular.ttf */,
+				F2D6C9752CAD19F5000E1713 /* Cairo-Black.ttf */,
+				F2D6C9762CAD19F5000E1713 /* Cairo-Bold.ttf */,
+				F2D6C9772CAD19F5000E1713 /* Cairo-Light.ttf */,
+				F2D6C9782CAD19F5000E1713 /* Cairo-Medium.ttf */,
+				F2D6C9792CAD19F5000E1713 /* Cairo-SemiBold.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -295,6 +303,7 @@
 				F2B78F0C2CD9F15600F850B8 /* BadgesContentCell.swift */,
 				F2B78F0E2CD9F17500F850B8 /* BadgesCell.swift */,
 				F29988832CDB549800150CFD /* LeaderBoardCell.swift */,
+				BE92CCB42CDA58FA00DF146F /* QuestionCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -306,6 +315,7 @@
 				F2D6C9842CAD19F5000E1713 /* Cells */,
 				F2D6C9852CAD19F5000E1713 /* ContainerVC.swift */,
 				F2D6C98C2CAD19F5000E1713 /* NavigationVC.swift */,
+				4E31BD962CD5DF7100454FCD /* RatingVC.swift */,
 				F2D6C98E2CAD19F5000E1713 /* StudentsAccountVC.swift */,
 				F2D6C98B2CAD19F5000E1713 /* MapVC.swift */,
 				F2D6C98A2CAD19F5000E1713 /* LoginVC.swift */,
@@ -327,6 +337,7 @@
 				BE7C79692CCE4FC60057A08F /* IntroChatBotVC.swift */,
 				F299887F2CDB2C5E00150CFD /* StudentProgressVC.swift */,
 				F29988812CDB53E700150CFD /* LeaderBoardVC.swift */,
+				BE92CCB02CDA527D00DF146F /* QuestionsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -342,6 +353,7 @@
 				4E5B43752CBCAB2C00F7E850 /* MenuItem.swift */,
 				F2D6C9912CAD19F5000E1713 /* Student.swift */,
 				F2B78F062CD9EA1000F850B8 /* Badges.swift */,
+				BE92CCB62CDA5E3200DF146F /* Quations.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -470,13 +482,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2D6C9BA2CAD19F5000E1713 /* CairoRegular.ttf in Resources */,
-				F2D6C9BB2CAD19F5000E1713 /* CairoBlack.ttf in Resources */,
-				F2D6C9BC2CAD19F5000E1713 /* CairoBold.ttf in Resources */,
+				F2D6C9BA2CAD19F5000E1713 /* Cairo-Regular.ttf in Resources */,
+				F2D6C9BB2CAD19F5000E1713 /* Cairo-Black.ttf in Resources */,
+				F2D6C9BC2CAD19F5000E1713 /* Cairo-Bold.ttf in Resources */,
 				4E11EBFC2CCDEB0500D68045 /* tatawei.json in Resources */,
-				F2D6C9BD2CAD19F5000E1713 /* CairoLight.ttf in Resources */,
-				F2D6C9BE2CAD19F5000E1713 /* CairoMedium.ttf in Resources */,
-				F2D6C9BF2CAD19F5000E1713 /* CairoSemiBold.ttf in Resources */,
+				F2D6C9BD2CAD19F5000E1713 /* Cairo-Light.ttf in Resources */,
+				F2D6C9BE2CAD19F5000E1713 /* Cairo-Medium.ttf in Resources */,
+				F2D6C9BF2CAD19F5000E1713 /* Cairo-SemiBold.ttf in Resources */,
 				F2D6C9C02CAD19F5000E1713 /* correct.json in Resources */,
 				F2D6C9C12CAD19F5000E1713 /* loading.json in Resources */,
 				F2D6C9C22CAD19F5000E1713 /* warning.json in Resources */,
@@ -516,6 +528,7 @@
 				F2D6C9A92CAD19F5000E1713 /* Constants.swift in Sources */,
 				4E5B43762CBCAB2C00F7E850 /* MenuItem.swift in Sources */,
 				4EF2AA092CC4CB97002E1956 /* AcceptanceApplyVC.swift in Sources */,
+				BE92CCB72CDA5E3200DF146F /* Quations.swift in Sources */,
 				4EF2A9F82CC206D8002E1956 /* Cities.swift in Sources */,
 				F26CDBF52CB1B09400AAFFB6 /* OpportunitiesCell.swift in Sources */,
 				F2D6C9AA2CAD19F5000E1713 /* MessageView.swift in Sources */,
@@ -532,6 +545,7 @@
 				4EF2A9FA2CC2E988002E1956 /* Organization.swift in Sources */,
 				4EF2A9FE2CC3134E002E1956 /* FiltrationCell.swift in Sources */,
 				4EF2AA002CC31362002E1956 /* FiltrationVC.swift in Sources */,
+				BE92CCB52CDA58FA00DF146F /* QuestionCell.swift in Sources */,
 				4EF2AA032CC31874002E1956 /* FiltrationHeaderView.swift in Sources */,
 				F2D6C9B02CAD19F5000E1713 /* HomeVC.swift in Sources */,
 				4EF2AA0B2CC4D09F002E1956 /* StandardAcceptanceVC.swift in Sources */,
@@ -543,6 +557,8 @@
 				F2D6C9B42CAD19F5000E1713 /* ProfileVC.swift in Sources */,
 				F2D6C9B52CAD19F5000E1713 /* StudentsAccountVC.swift in Sources */,
 				F2D6C9B62CAD19F5000E1713 /* InterestCategories.swift in Sources */,
+				4E31BD972CD5DF7100454FCD /* RatingVC.swift in Sources */,
+				BE92CCB12CDA527D00DF146F /* QuestionsVC.swift in Sources */,
 				F2197A342CCE668F00D2607E /* QRCodeVC.swift in Sources */,
 				F2D6C9B72CAD19F5000E1713 /* Student.swift in Sources */,
 				F269FB092CB5914400058592 /* CustomBackgroundView.swift in Sources */,
@@ -588,14 +604,14 @@
 				DEVELOPMENT_TEAM = 95R6F629SF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Tatawei Student/Info.plist";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "السماح للتطبيق بإستخدام موقعك";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "السماح بإستخدام الموقع";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "السماح للتطبيق بإستخدام موقعك لإستخدامه في البحث عن فرص قريبه منك";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "السماح بإستخدام الموقع لإستخدامه في البحث عن فرص قريبه منك";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -620,14 +636,14 @@
 				DEVELOPMENT_TEAM = 95R6F629SF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Tatawei Student/Info.plist";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "السماح للتطبيق بإستخدام موقعك";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "السماح بإستخدام الموقع";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "السماح للتطبيق بإستخدام موقعك لإستخدامه في البحث عن فرص قريبه منك";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "السماح بإستخدام الموقع لإستخدامه في البحث عن فرص قريبه منك";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

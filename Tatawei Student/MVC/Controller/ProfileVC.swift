@@ -16,6 +16,7 @@ class ProfileVC: UIViewController, Storyboarded {
     
     var settings: [MenuItem] = [
         MenuItem(image: UIImage(systemName: "globe")!, label: .termsAndConditions),
+        MenuItem(image: UIImage(systemName: "globe")!, label: .FrequentlyAskedQuestions),
         MenuItem(image: UIImage(systemName: "info.circle.fill")!, label: .about),
         MenuItem(image: UIImage(systemName: "lock.open.rotation")!, label: .resetPassword),
         MenuItem(image: UIImage(systemName: "trash.fill")!, label: .deleteAccount),
@@ -24,6 +25,7 @@ class ProfileVC: UIViewController, Storyboarded {
     
     //MARK: - IBOutleats
     
+    @IBOutlet weak var studentImage: UIImageView!
     @IBOutlet weak var studentName: UILabel!
     @IBOutlet weak var studentEmail: UILabel!
     @IBOutlet weak var studentOpportunities: UILabel!
@@ -51,7 +53,7 @@ class ProfileVC: UIViewController, Storyboarded {
     
     func getStudentInformation() {
         if let student = Student.currentStudent {
-            
+            studentImage.image = student.gender == .male ? #imageLiteral(resourceName: "man.svg") : #imageLiteral(resourceName: "women.svg")
             studentName.text = student.name
             studentEmail.text = student.email
             studentOpportunities.text = student.opportunities.count == 0 ? "0": String(student.opportunities.count)
@@ -81,6 +83,10 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
         case .termsAndConditions:
             
             coordinator?.viewWebVC(url: "https://publuu.com/flip-book/698725/1553903")
+            
+        case .FrequentlyAskedQuestions:
+        self.coordinator?.viewQuestionsVC()
+            
             // About Us
         case .about:
         self.coordinator?.viewAboutVC()

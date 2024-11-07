@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SwiftUICore
 
 class OpportunitiesCell: UICollectionViewCell {
     

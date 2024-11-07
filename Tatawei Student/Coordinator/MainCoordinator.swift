@@ -48,6 +48,12 @@ final class MainCoordinator: Coordinator {
         navigationController.present(vc, animated: true)
     }
     
+    func viewQuestionsVC() {
+        let vc = QuestionsVC.instantiate()
+        vc.coordinator = self
+        navigationController.present(vc, animated: true)
+    }
+    
     func viewLoginVC() {
         let vc = LoginVC.instantiate()
         vc.coordinator = self
@@ -106,10 +112,12 @@ final class MainCoordinator: Coordinator {
         navigationController.present(vc, animated: true)
     }
 
-    func viewFiltrationVC(data: DataFiltrationDelegate) {
+    func viewFiltrationVC(data: DataFiltrationDelegate, interest: InterestCategories, city: Cities) {
         let vc = FiltrationVC.instantiate()
         vc.coordinator = self
         vc.delegate = data
+        vc.interest = interest
+        vc.city = city
         vc.modalPresentationStyle = .fullScreen
         navigationController.present(vc, animated: true)
     }
@@ -120,6 +128,19 @@ final class MainCoordinator: Coordinator {
         vc.opportunity = opportunity
         vc.modalPresentationStyle = .fullScreen
         navigationController.present(vc, animated: true)
+    }
+    
+    func viewReportVC(opportunity: Opportunity) {
+        let vc = OpportunityVC.instantiate()
+        vc.coordinator = self
+        vc.opportunity = opportunity
+        vc.mode = .shareReport
+        vc.modalPresentationStyle = .fullScreen
+        if let topViewController = navigationController.presentedViewController {
+            topViewController.present(vc, animated: true, completion: nil)
+        } else {
+            navigationController.present(vc, animated: true, completion: nil)
+        }
     }
     
     func viewOrganizationVC(organizationID: String) {
@@ -159,9 +180,10 @@ final class MainCoordinator: Coordinator {
         }
     }
     
-    func viewPreviousOpportunitiesVC() {
+    func viewPreviousOpportunitiesVC(opportunities: [Opportunity]) {
         let vc = PreviousOpportunitiesVC.instantiate()
         vc.coordinator = self
+        vc.arrOppt = opportunities
         vc.modalPresentationStyle = .fullScreen
         self.navigationController.present(vc, animated: true)
     }
@@ -175,9 +197,17 @@ final class MainCoordinator: Coordinator {
     func viewQRCodeVC() {
         let vc = QRCodeVC.instantiate()
         vc.coordinator = self
-        vc.modalPresentationStyle = .overFullScreen // Change to overFullScreen
+        vc.modalPresentationStyle = .overFullScreen
         self.navigationController.present(vc, animated: true)
     }
 
+    func viewRatingVC(opportunity: Opportunity) {
+        let vc = RatingVC.instantiate()
+        vc.coordinator = self
+        vc.opportunity = opportunity
+        vc.modalPresentationStyle = .overFullScreen
+        self.navigationController.present(vc, animated: true)
+    }
+    
 }
 

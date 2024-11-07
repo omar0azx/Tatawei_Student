@@ -10,7 +10,7 @@ import GoogleMaps
 import CoreLocation
 
 protocol DataSelectionDelegate: AnyObject {
-    func didSelectData(address: String, coordinates: String)
+    func didSelectData(address: String, latitude: Double, longitude: Double)
 }
 
 class MapVC: UIViewController, Storyboarded, CLLocationManagerDelegate, GMSMapViewDelegate {
@@ -80,7 +80,7 @@ class MapVC: UIViewController, Storyboarded, CLLocationManagerDelegate, GMSMapVi
             let coordinates = location.coordinate // Get the coordinates from the location
             
             // Pass both address and coordinates to the delegate
-            self?.delegate?.didSelectData(address: address ?? "Unknown location", coordinates: "(\(coordinates.latitude), \(coordinates.longitude)")
+            self?.delegate?.didSelectData(address: address ?? "Unknown location", latitude: coordinates.latitude, longitude: coordinates.longitude)
             self?.dismiss(animated: true)
         }
     }
@@ -105,11 +105,11 @@ class MapVC: UIViewController, Storyboarded, CLLocationManagerDelegate, GMSMapVi
         guard let location = locations.first else { return }
         lastKnownLocation = location
         
-        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: 15.0)
+        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: 13.0)
         mapView.animate(to: camera)
         
         // Draw an initial circle with a default radius
-        addCircleToMap(at: location, radius: 1000) // Default to 5 km
+        addCircleToMap(at: location, radius: 5000) // Default to 5 km
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
