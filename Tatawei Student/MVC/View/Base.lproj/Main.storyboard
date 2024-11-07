@@ -2222,8 +2222,8 @@
                                         <fontDescription key="fontDescription" name="Cairo-Medium" family="Cairo" pointSize="16"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="افطار غير صائم" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsY-qJ-DZ6">
-                                        <rect key="frame" x="256.66666666666669" y="142" width="70.333333333333314" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsY-qJ-DZ6">
+                                        <rect key="frame" x="327" y="142" width="0.0" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="18" id="dYB-KB-c5G"/>
                                         </constraints>
@@ -2233,7 +2233,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wem-I3-kk3" customClass="DesignableButton" customModule="Tatawei_Student" customModuleProvider="target">
                                         <rect key="frame" x="177" y="174" width="134" height="39"/>
-                                        <color key="backgroundColor" red="0.0039215686269999999" green="0.66274509800000003" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
                                         <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="12"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="إظهار QR كود">
@@ -2703,7 +2703,9 @@ secondary</string>
                         <outlet property="descriptionHoursLBL" destination="auf-pp-Nvo" id="Mu6-Yr-Mc5"/>
                         <outlet property="emtyMessage" destination="pon-ez-L50" id="gTA-vM-3xC"/>
                         <outlet property="hoursAchievedLBL" destination="JsJ-Bm-OGg" id="xi8-Q6-OrN"/>
+                        <outlet property="opportunityName" destination="dsY-qJ-DZ6" id="SJv-DZ-HUL"/>
                         <outlet property="progressView" destination="8BC-hi-sM7" id="ENb-NG-X9K"/>
+                        <outlet property="showQRCodeBTN" destination="wem-I3-kk3" id="KaH-FV-Cwe"/>
                         <outlet property="textHoursLBL" destination="sVZ-mD-HBB" id="1QL-vY-9Xz"/>
                         <outlet property="welcomeLBL" destination="rcD-Wf-NwQ" id="Trr-Ay-3Bl"/>
                     </connections>
@@ -3650,13 +3652,13 @@ secondary</string>
                                         <rect key="frame" x="242.66666666666663" y="329" width="129.33333333333337" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="عدد الطلاب المطلوبين " textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8I-ln-Dz1">
-                                                <rect key="frame" x="0.0" y="0.0" width="129.33333333333334" height="26.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="129.33333333333334" height="23.666666666666668"/>
                                                 <fontDescription key="fontDescription" name="Cairo-Medium" family="Cairo" pointSize="14"/>
                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="طالب مسجل" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQB-q3-yyY">
-                                                <rect key="frame" x="56.333333333333343" y="26.333333333333371" width="73" height="23.666666666666671"/>
+                                                <rect key="frame" x="56.333333333333343" y="23.666666666666629" width="73" height="26.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="Cairo-Medium" family="Cairo" pointSize="14"/>
                                                 <color key="textColor" name="standr"/>
                                                 <nil key="highlightedColor"/>
@@ -4387,7 +4389,7 @@ secondary</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sTk-fb-s86">
                                 <rect key="frame" x="0.0" y="182" width="402" height="712"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PyS-bh-83G">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PyS-bh-83G">
                                         <rect key="frame" x="0.0" y="20" width="402" height="692"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
@@ -4464,7 +4466,7 @@ secondary</string>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                            <color key="backgroundColor" systemColor="systemGray4Color"/>
                                                             <constraints>
                                                                 <constraint firstItem="MdZ-4j-ttt" firstAttribute="leading" secondItem="kwo-Rl-Pya" secondAttribute="leading" id="9vr-97-kgR"/>
                                                                 <constraint firstAttribute="bottom" secondItem="MdZ-4j-ttt" secondAttribute="bottom" constant="20" id="NcM-Qd-F2w"/>
@@ -4501,7 +4503,7 @@ secondary</string>
                                         </connections>
                                     </tableView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstItem="PyS-bh-83G" firstAttribute="leading" secondItem="sTk-fb-s86" secondAttribute="leading" id="DFp-Oh-1yp"/>
                                     <constraint firstItem="PyS-bh-83G" firstAttribute="top" secondItem="sTk-fb-s86" secondAttribute="top" constant="20" id="K8i-dN-JU0"/>
@@ -4717,6 +4719,11 @@ secondary</string>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4jY-xb-Rbs">
                                         <rect key="frame" x="0.0" y="69.999999999999943" width="402" height="341.33333333333331"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <view key="tableFooterView" contentMode="scaleToFill" id="WvY-2e-C5t">
+                                            <rect key="frame" x="0.0" y="132" width="402" height="81"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="settingsCell" rowHeight="54" id="tM7-c5-ZxG" customClass="SettingsCell" customModule="Tatawei_Student" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="50" width="402" height="54"/>
@@ -4854,7 +4861,7 @@ secondary</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ba4-ws-Qhw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6161" y="-211"/>
+            <point key="canvasLocation" x="6159.7014925373132" y="-211.44164759725399"/>
         </scene>
         <!--OrganizationVC-->
         <scene sceneID="9Ck-Vj-hfk">
@@ -5408,34 +5415,34 @@ secondary</string>
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="scrollViewTexturedBackgroundColor">
             <color red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
-            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="viewFlipsideBackgroundColor">
             <color red="0.12156862745098039" green="0.12941176470588237" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

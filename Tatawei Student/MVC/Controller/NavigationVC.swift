@@ -151,7 +151,9 @@ class NavigationVC: ContainerVC, Storyboarded {
         let hasRated = UserDefaults.standard.bool(forKey: "hasRatedOpportunityKey")
         if hasRated == false {
             if let opportunity = Opportunity.currentOpportunity {
-                coordinator?.viewRatingVC(opportunity: opportunity)
+                if opportunity.status == .finished && (opportunity.isAccepted ?? false) == true {
+                    coordinator?.viewRatingVC(opportunity: opportunity)
+                }
             }
         } else {
             print("Can't rated opportunity")

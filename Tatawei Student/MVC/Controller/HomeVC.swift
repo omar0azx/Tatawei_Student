@@ -29,8 +29,11 @@ class HomeVC: UIViewController, Storyboarded {
     @IBOutlet weak var welcomeLBL: UILabel!
     @IBOutlet weak var hoursAchievedLBL: UILabel!
     @IBOutlet weak var descriptionHoursLBL: UILabel!
+    @IBOutlet weak var opportunityName: UILabel!
     
     @IBOutlet weak var emtyMessage: UILabel!
+    
+    @IBOutlet weak var showQRCodeBTN: DesignableButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +58,12 @@ class HomeVC: UIViewController, Storyboarded {
     }
     
     @IBAction func showQRCodeBTN(_ sender: Any) {
-        coordinator?.viewQRCodeVC()
+        if showQRCodeBTN.backgroundColor == .standr {
+            coordinator?.viewQRCodeVC()
+        } else {
+            let errorView = MessageView(message: "لا توجد لديك فرصة حاليا لتفعيل الرمز", animationName: "warning", animationTime: 2)
+            errorView.show(in: self.view)
+        }
     }
     
     
@@ -93,13 +101,17 @@ class HomeVC: UIViewController, Storyboarded {
                         }
                         return date1 < date2
                     }
-                    if self.opportunity[0].date == DateFormatter.localizedString(from: Date(), dateStyle: .short, timeStyle: .none) {
-                        saveOpportunityLocally(self.opportunity[0])
-                    } else {
-                        resetRatingStatus()
-                    }
                     self.finishedOpportunities = self.opportunity.filter{$0.status == .finished}
                     self.opportunity = self.opportunity.filter{$0.status == .open || $0.status == .inProgress}
+                    if self.opportunity[0].date == DateFormatter.localizedString(from: Date(), dateStyle: .short, timeStyle: .none) {
+                        self.showQRCodeBTN.backgroundColor = .standr
+                        saveOpportunityLocally(self.opportunity[0])
+                        self.opportunityName.text = self.opportunity[0].name
+                    } else {
+                        self.showQRCodeBTN.backgroundColor = .systemGray
+                        self.opportunityName.text = "لا يوجد لديك فرصة اليوم"
+                        resetRatingStatus()
+                    }
                     self.collectionView.reloadData()
                 }
             }
