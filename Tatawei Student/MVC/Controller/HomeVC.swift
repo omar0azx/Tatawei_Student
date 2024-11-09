@@ -72,6 +72,11 @@ class HomeVC: UIViewController, Storyboarded {
         coordinator?.viewStudentProgressVC()
     }
     
+    
+    @IBAction func openScoreBoard(_ sender: UIButton) {
+        coordinator?.viewScoreBoardVC()
+    }
+    
     //MARK: - Functions
     
     private func setupUI() {

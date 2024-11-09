@@ -1154,10 +1154,10 @@
             </objects>
             <point key="canvasLocation" x="3453" y="-1030"/>
         </scene>
-        <!--Leader BoardVC-->
+        <!--Score BoardVC-->
         <scene sceneID="tJ5-fY-MoF">
             <objects>
-                <viewController storyboardIdentifier="LeaderBoardVC" id="JzH-an-OTU" customClass="LeaderBoardVC" customModule="Tatawei_Student" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScoreBoardVC" id="JzH-an-OTU" customClass="ScoreBoardVC" customModule="Tatawei_Student" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JsZ-VO-uYJ">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1186,70 +1186,55 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lg-54-tte" customClass="DesignableButton" customModule="Tatawei_Student" customModuleProvider="target">
-                                <rect key="frame" x="15" y="176" width="116" height="39"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="116" id="3am-vC-iVF"/>
-                                    <constraint firstAttribute="height" constant="39" id="oBB-x4-3sp"/>
-                                </constraints>
-                                <color key="tintColor" systemColor="viewFlipsideBackgroundColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="مدرستي">
-                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="filterBySchoolBTN:" destination="JzH-an-OTU" eventType="touchUpInside" id="Fie-aw-EWa"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6U-oZ-Wea" customClass="DesignableButton" customModule="Tatawei_Student" customModuleProvider="target">
-                                <rect key="frame" x="143" y="176" width="116" height="39"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="nvx-0P-Hsa"/>
-                                </constraints>
-                                <color key="tintColor" systemColor="viewFlipsideBackgroundColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="مدينتي">
-                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="filterByCityBTN:" destination="JzH-an-OTU" eventType="touchUpInside" id="o2b-EE-RPi"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fml-0V-xUs" customClass="DesignableButton" customModule="Tatawei_Student" customModuleProvider="target">
-                                <rect key="frame" x="271" y="176" width="116" height="39"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="UXq-9z-Kwl"/>
-                                    <constraint firstAttribute="width" constant="116" id="X7y-g1-JsC"/>
-                                </constraints>
-                                <color key="tintColor" systemColor="viewFlipsideBackgroundColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="الكل">
-                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="filterByAllBTN:" destination="JzH-an-OTU" eventType="touchUpInside" id="xsp-dk-uvt"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wkY-2g-Hl6" customClass="DesignableView" customModule="Tatawei_Student" customModuleProvider="target">
-                                <rect key="frame" x="-891" y="259" width="2184" height="1109"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ERu-17-aFP">
+                                <rect key="frame" x="15" y="176" width="372" height="39"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mcG-7K-hvI">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lg-54-tte" customClass="DesignableButton" customModule="Tatawei_Student" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="181" height="39"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="39" id="oBB-x4-3sp"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="الكل">
+                                            <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didPressedFiltered:" destination="JzH-an-OTU" eventType="touchUpInside" id="PGL-jC-xkJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fml-0V-xUs" customClass="DesignableButton" customModule="Tatawei_Student" customModuleProvider="target">
+                                        <rect key="frame" x="191" y="0.0" width="181" height="39"/>
+                                        <color key="backgroundColor" name="standr"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="39" id="UXq-9z-Kwl"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="مدرستي">
+                                            <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didPressedFiltered:" destination="JzH-an-OTU" eventType="touchUpInside" id="hof-ot-yyN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wkY-2g-Hl6" customClass="DesignableView" customModule="Tatawei_Student" customModuleProvider="target">
+                                <rect key="frame" x="-891" y="255" width="2184" height="1113"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mcG-7K-hvI">
                                         <rect key="frame" x="898" y="42" width="389" height="539"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1279,7 +1264,7 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9q-20-0gl">
                                                                     <rect key="frame" x="44" y="15" width="213" height="22"/>
                                                                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="12"/>
-                                                                    <color key="textColor" systemColor="systemGray5Color"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -1371,32 +1356,28 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vku-hk-l5F"/>
-                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
+                            <constraint firstItem="ERu-17-aFP" firstAttribute="top" secondItem="b3q-9w-GW6" secondAttribute="bottom" constant="15" id="08C-6l-e4E"/>
                             <constraint firstItem="f2c-5Y-WiX" firstAttribute="top" secondItem="JsZ-VO-uYJ" secondAttribute="top" constant="40" id="0Si-ch-qag"/>
                             <constraint firstItem="wkY-2g-Hl6" firstAttribute="leading" secondItem="JsZ-VO-uYJ" secondAttribute="leading" constant="-891" id="4f2-zb-OHZ"/>
-                            <constraint firstAttribute="trailing" secondItem="fml-0V-xUs" secondAttribute="trailing" constant="15" id="AvF-6Y-bJX"/>
                             <constraint firstAttribute="bottom" secondItem="wkY-2g-Hl6" secondAttribute="bottom" constant="-494" id="GCu-Cm-wY3"/>
                             <constraint firstAttribute="trailing" secondItem="f2c-5Y-WiX" secondAttribute="trailing" constant="20" id="McE-P8-Pa4"/>
+                            <constraint firstItem="f2c-5Y-WiX" firstAttribute="top" secondItem="JsZ-VO-uYJ" secondAttribute="top" constant="40" id="Qc6-J5-Xdy"/>
                             <constraint firstAttribute="trailing" secondItem="b3q-9w-GW6" secondAttribute="trailing" constant="20" id="RR8-Ha-y67"/>
                             <constraint firstItem="b3q-9w-GW6" firstAttribute="top" secondItem="f2c-5Y-WiX" secondAttribute="bottom" constant="24" id="RWm-Lh-5zc"/>
-                            <constraint firstItem="j6U-oZ-Wea" firstAttribute="leading" secondItem="2lg-54-tte" secondAttribute="trailing" constant="12" id="Rig-ff-k9E"/>
-                            <constraint firstItem="2lg-54-tte" firstAttribute="leading" secondItem="JsZ-VO-uYJ" secondAttribute="leading" constant="15" id="Vr8-e3-3LC"/>
-                            <constraint firstItem="wkY-2g-Hl6" firstAttribute="top" secondItem="j6U-oZ-Wea" secondAttribute="bottom" constant="44" id="Xg8-iF-and"/>
-                            <constraint firstItem="fml-0V-xUs" firstAttribute="leading" secondItem="j6U-oZ-Wea" secondAttribute="trailing" constant="12" id="cau-eK-SIc"/>
+                            <constraint firstItem="wkY-2g-Hl6" firstAttribute="top" secondItem="ERu-17-aFP" secondAttribute="bottom" constant="40" id="Xiq-AE-jId"/>
                             <constraint firstItem="b3q-9w-GW6" firstAttribute="leading" secondItem="JsZ-VO-uYJ" secondAttribute="leading" constant="20" id="fLE-dA-bfp"/>
-                            <constraint firstItem="2lg-54-tte" firstAttribute="top" secondItem="b3q-9w-GW6" secondAttribute="bottom" constant="15" id="gOe-Aw-lDj"/>
-                            <constraint firstItem="fml-0V-xUs" firstAttribute="top" secondItem="b3q-9w-GW6" secondAttribute="bottom" constant="15" id="i8v-SD-j8z"/>
-                            <constraint firstItem="j6U-oZ-Wea" firstAttribute="top" secondItem="b3q-9w-GW6" secondAttribute="bottom" constant="15" id="lw8-ka-aJA"/>
                             <constraint firstAttribute="trailing" secondItem="wkY-2g-Hl6" secondAttribute="trailing" constant="-891" id="mnR-1o-orf"/>
+                            <constraint firstAttribute="trailing" secondItem="ERu-17-aFP" secondAttribute="trailing" constant="15" id="qra-Oi-vF8"/>
+                            <constraint firstItem="ERu-17-aFP" firstAttribute="leading" secondItem="JsZ-VO-uYJ" secondAttribute="leading" constant="15" id="uid-jb-VjT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vU2-7d-316"/>
                     <connections>
-                        <outlet property="filterByAllButton" destination="fml-0V-xUs" id="S09-KF-FfB"/>
-                        <outlet property="filterByCityButton" destination="j6U-oZ-Wea" id="UVQ-uN-6kZ"/>
-                        <outlet property="filterBySchoolButton" destination="2lg-54-tte" id="MHZ-Mr-14V"/>
                         <outlet property="tableView" destination="mcG-7K-hvI" id="Vi3-mN-c4P"/>
+                        <outletCollection property="filteredBTN" destination="fml-0V-xUs" collectionClass="NSMutableArray" id="NqI-dz-taL"/>
+                        <outletCollection property="filteredBTN" destination="2lg-54-tte" collectionClass="NSMutableArray" id="rtI-NF-qfZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxI-2g-Zin" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2359,30 +2340,13 @@ secondary</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcD-Wf-NwQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🖐🏼اهلا" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcD-Wf-NwQ">
                                 <rect key="frame" x="77" y="64" width="300" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="6Gy-iT-dCv"/>
                                     <constraint firstAttribute="height" constant="36" id="DL9-Bd-Bbm"/>
                                 </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="🖐🏼">
-                                        <attributes>
-                                            <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" metaFont="system" size="30"/>
-                                            <font key="NSOriginalFont" metaFont="system" size="30"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="اهلا">
-                                        <attributes>
-                                            <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" metaFont="system" size="30"/>
-                                            <font key="NSOriginalFont" size="30" name="BodoniSvtyTwoOSITCTT-Book"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -2407,7 +2371,7 @@ secondary</string>
                                     <fragment content="من">
                                         <attributes>
                                             <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
+                                            <font key="NSFont" size="16" name="Cairo-Regular"/>
                                             <font key="NSOriginalFont" metaFont="system" size="16"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -2415,14 +2379,14 @@ secondary</string>
                                     <fragment content=" ">
                                         <attributes>
                                             <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
+                                            <font key="NSFont" size="16" name="Cairo-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="الرائع">
                                         <attributes>
                                             <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
+                                            <font key="NSFont" size="16" name="Cairo-Regular"/>
                                             <font key="NSOriginalFont" metaFont="system" size="16"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -2430,14 +2394,14 @@ secondary</string>
                                     <fragment content=" ">
                                         <attributes>
                                             <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
+                                            <font key="NSFont" size="16" name="Cairo-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="رؤيتك">
                                         <attributes>
                                             <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
+                                            <font key="NSFont" size="16" name="Cairo-Regular"/>
                                             <font key="NSOriginalFont" metaFont="system" size="16"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -2445,14 +2409,14 @@ secondary</string>
                                     <fragment content=" ">
                                         <attributes>
                                             <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
+                                            <font key="NSFont" size="16" name="Cairo-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="مرة">
                                         <attributes>
                                             <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
+                                            <font key="NSFont" size="16" name="Cairo-Regular"/>
                                             <font key="NSOriginalFont" metaFont="system" size="16"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -2460,14 +2424,14 @@ secondary</string>
                                     <fragment content=" ">
                                         <attributes>
                                             <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
+                                            <font key="NSFont" size="16" name="Cairo-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="أخرى">
                                         <attributes>
                                             <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
+                                            <font key="NSFont" size="16" name="Cairo-Regular"/>
                                             <font key="NSOriginalFont" metaFont="system" size="16"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -2475,7 +2439,7 @@ secondary</string>
                                     <fragment content="!">
                                         <attributes>
                                             <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" metaFont="system" size="16"/>
+                                            <font key="NSFont" size="16" name="Cairo-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -2685,6 +2649,19 @@ secondary</string>
                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAZ-je-LIs">
+                                <rect key="frame" x="30" y="42" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="R3H-vy-mJx"/>
+                                    <constraint firstAttribute="width" constant="50" id="mTb-uV-pgl"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGrayColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chart.bar.xaxis" catalog="system"/>
+                                <connections>
+                                    <action selector="openScoreBoard:" destination="rH6-7n-X28" eventType="touchUpInside" id="3XO-ve-1dO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hk6-Yj-2eW"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
@@ -2697,6 +2674,7 @@ secondary</string>
                             <constraint firstItem="d4v-ar-i0D" firstAttribute="top" secondItem="IQa-mW-1WW" secondAttribute="bottom" constant="16" id="BGd-4G-2aF"/>
                             <constraint firstItem="MqH-JP-n35" firstAttribute="leading" secondItem="Wiz-5p-AoE" secondAttribute="leading" constant="35" id="Ddk-HK-1Ww"/>
                             <constraint firstItem="rcD-Wf-NwQ" firstAttribute="top" secondItem="Wiz-5p-AoE" secondAttribute="top" constant="64" id="FT9-jN-Fy5"/>
+                            <constraint firstItem="nAZ-je-LIs" firstAttribute="top" secondItem="hk6-Yj-2eW" secondAttribute="top" constant="-20" id="FZE-Vh-zeO"/>
                             <constraint firstItem="FbN-nk-YoV" firstAttribute="top" secondItem="rcD-Wf-NwQ" secondAttribute="bottom" constant="7" id="J2m-v1-8lB"/>
                             <constraint firstItem="rcD-Wf-NwQ" firstAttribute="height" secondItem="Wiz-5p-AoE" secondAttribute="height" multiplier="0.0411899" id="KWv-CK-9Ly"/>
                             <constraint firstItem="HPv-s4-2dC" firstAttribute="top" secondItem="d4v-ar-i0D" secondAttribute="bottom" constant="9" id="OTF-1n-LrR"/>
@@ -2712,6 +2690,7 @@ secondary</string>
                             <constraint firstItem="rcD-Wf-NwQ" firstAttribute="leading" secondItem="Wiz-5p-AoE" secondAttribute="leading" constant="77" id="mDA-ga-Ixd"/>
                             <constraint firstItem="pon-ez-L50" firstAttribute="centerX" secondItem="HPv-s4-2dC" secondAttribute="centerX" id="tFx-Dm-NQq"/>
                             <constraint firstAttribute="trailing" secondItem="d4v-ar-i0D" secondAttribute="trailing" constant="27" id="vS2-Kx-DRQ"/>
+                            <constraint firstItem="nAZ-je-LIs" firstAttribute="leading" secondItem="hk6-Yj-2eW" secondAttribute="leading" constant="30" id="z4w-Og-G9w"/>
                             <constraint firstItem="MqH-JP-n35" firstAttribute="top" secondItem="FbN-nk-YoV" secondAttribute="bottom" constant="30" id="zRc-K7-OyO"/>
                         </constraints>
                         <variation key="default">
@@ -5368,6 +5347,7 @@ secondary</string>
         <image name="book.fill" catalog="system" width="128" height="95"/>
         <image name="bookmark.fill" catalog="system" width="110" height="128"/>
         <image name="calendar.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="chart.bar.xaxis" catalog="system" width="128" height="97"/>
         <image name="chatBotAi" width="338" height="371"/>
         <image name="checklist" width="31" height="31"/>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
