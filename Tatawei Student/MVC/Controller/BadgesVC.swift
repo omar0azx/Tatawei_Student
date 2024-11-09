@@ -20,7 +20,8 @@ class BadgesVC: UIViewController, Storyboarded {
 
     @IBOutlet weak var lastBadgeImage: UIImageView!
     @IBOutlet weak var lastBadgeName: UILabel!
-
+    @IBOutlet weak var badgesLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -74,7 +75,15 @@ extension BadgesVC: UITableViewDelegate , UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1 
+        if hoursBadges.count == 0 {
+            badgesLabel.text = "لا يوجد أوسمة تم الحصول عليها بعد"
+            lastBadgeImage.image = #imageLiteral(resourceName: "emty.png")
+            lastBadgeName.text = "لا يوجد"
+            hoursBadges.append(Badge(name: "لا يوجد", image: #imageLiteral(resourceName: "emty.png")))
+            skillsBadges.append(Badge(name: "لا يوجد", image: #imageLiteral(resourceName: "emty.png")))
+            
+        }
+        return 1
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

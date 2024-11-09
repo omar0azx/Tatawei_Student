@@ -57,16 +57,19 @@ class StudentProgressVC: UIViewController, Storyboarded {
     //MARK: - Functions
 
     func updateBadgeLabel() {
-//        guard let lastBadgeName = allBadgesForStudent.last?.name else { return }
-//        
-//        let fullText = "مبروك حصولك على وسام \(lastBadgeName)"
-//        
-//        let attributedString = NSMutableAttributedString(string: fullText)
-//        
-//        let badgeNameRange = (fullText as NSString).range(of: lastBadgeName)
-//        
-//        attributedString.addAttribute(.foregroundColor, value: UIColor.standr, range: badgeNameRange)
-//        lastBadegName.attributedText = attributedString
+        
+        if let studentHours = Student.currentStudent?.hoursCompleted {
+            if studentHours >= 5 {
+                lastBadegName.text = "يمكنك رؤية جميع الأوسمة التي تم الحصول عليها"
+                lastBadegImage.image = #imageLiteral(resourceName: "مختم التطوع")
+            } else {
+                lastBadegName.text = "لم تكمل أي ساعة تطوعية"
+                lastBadegImage.image = #imageLiteral(resourceName: "emty.png")
+            }
+        } else {
+            
+        }
+
     }
 
     private func setUpProgressAnimat() {

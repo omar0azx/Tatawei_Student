@@ -49,6 +49,7 @@ class HomeVC: UIViewController, Storyboarded {
         updateStudentData()
         loadStudentOpportunities()
         setUpProgressAnimat()
+        handleAnimation()
         setupUI()
     }
     

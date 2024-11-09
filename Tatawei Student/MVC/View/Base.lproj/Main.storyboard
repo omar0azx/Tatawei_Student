@@ -1454,13 +1454,11 @@
                                             <action selector="showAllBadges:" destination="h8m-v6-1sR" eventType="touchUpInside" id="wBV-Gl-XSg"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7w-QN-3BV">
-                                        <rect key="frame" x="331" y="156" width="215" height="98"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="يمكنك رؤية جميع الأوسمة التي تم الحصول عليها" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7w-QN-3BV">
+                                        <rect key="frame" x="310" y="156" width="257" height="98"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="98" id="0yW-eo-Asu"/>
                                         </constraints>
-                                        <string key="text">مبروك حصولك على
-الوسام</string>
                                         <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1610,7 +1608,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="4uS-hD-onN" secondAttribute="trailing" constant="383" id="0z3-Bc-HHw"/>
                                     <constraint firstItem="4uS-hD-onN" firstAttribute="leading" secondItem="Q8c-t7-7To" secondAttribute="leading" constant="382" id="604-sB-PxM"/>
-                                    <constraint firstAttribute="trailing" secondItem="E7w-QN-3BV" secondAttribute="trailing" constant="331" id="9xY-Lg-HV1"/>
+                                    <constraint firstAttribute="trailing" secondItem="E7w-QN-3BV" secondAttribute="trailing" constant="310" id="9xY-Lg-HV1"/>
                                     <constraint firstItem="SW1-2C-JDv" firstAttribute="top" secondItem="E7w-QN-3BV" secondAttribute="bottom" constant="32" id="C1l-z2-WU6"/>
                                     <constraint firstItem="SW1-2C-JDv" firstAttribute="leading" secondItem="Q8c-t7-7To" secondAttribute="leading" constant="278" id="C3V-pp-l17"/>
                                     <constraint firstItem="XXj-6U-Yov" firstAttribute="top" secondItem="4uS-hD-onN" secondAttribute="top" id="E6U-zF-vcK"/>
@@ -1618,7 +1616,7 @@
                                     <constraint firstItem="4uS-hD-onN" firstAttribute="top" secondItem="Q8c-t7-7To" secondAttribute="top" constant="36" id="JJM-Rd-iVY"/>
                                     <constraint firstItem="E7w-QN-3BV" firstAttribute="top" secondItem="4uS-hD-onN" secondAttribute="bottom" constant="8" id="YTL-0a-KSt"/>
                                     <constraint firstItem="XXj-6U-Yov" firstAttribute="trailing" secondItem="4uS-hD-onN" secondAttribute="trailing" id="qSY-ws-xW8"/>
-                                    <constraint firstItem="E7w-QN-3BV" firstAttribute="leading" secondItem="Q8c-t7-7To" secondAttribute="leading" constant="331" id="t51-wk-GMh"/>
+                                    <constraint firstItem="E7w-QN-3BV" firstAttribute="leading" secondItem="Q8c-t7-7To" secondAttribute="leading" constant="310" id="t51-wk-GMh"/>
                                     <constraint firstAttribute="trailing" secondItem="SW1-2C-JDv" secondAttribute="trailing" constant="279" id="yKH-3a-4Er"/>
                                     <constraint firstItem="XXj-6U-Yov" firstAttribute="leading" secondItem="4uS-hD-onN" secondAttribute="leading" id="zR1-YP-Owd"/>
                                 </constraints>
@@ -1901,6 +1899,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="wRA-aX-xq6"/>
                     <connections>
+                        <outlet property="badgesLabel" destination="aXf-TG-omy" id="uNF-ay-qa8"/>
                         <outlet property="lastBadgeImage" destination="A8v-vu-PbZ" id="VwD-IE-8g6"/>
                         <outlet property="lastBadgeName" destination="6jq-fW-HTJ" id="6Ln-Le-b0Z"/>
                     </connections>
@@ -3531,7 +3530,7 @@ secondary</string>
                                     <constraint firstAttribute="height" constant="50" id="B9M-TP-nYo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="27"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fTp-DW-uWq">
