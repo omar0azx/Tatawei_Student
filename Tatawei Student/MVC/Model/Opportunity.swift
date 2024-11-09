@@ -29,7 +29,6 @@ struct Opportunity: Codable {
     var latitude: Double
     var longitude: Double
     var studentsNumber: Int
-    var registeredSudents: Int
     var organizationImageLink: String
     var organizationID: String
     var organizationName: String

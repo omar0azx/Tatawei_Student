@@ -77,7 +77,7 @@ class ExploreVC: UIViewController, Storyboarded, DataFiltrationDelegate {
                     let userLocation = CLLocation(latitude: self.userLatitude, longitude: self.userLongitude)
                     
                     self.searchedOpportunities = self.opportunities.filter { opportunity in
-                        let matchesInterest = (self.interestFiltration == .All) || (opportunity.category == self.interestFiltration)
+                        let matchesInterest = (self.interestFiltration == .All) || (opportunity.category == self.interestFiltration || student.interests.contains(opportunity.category))
                         
                         let matchesLocation: Bool
                         if self.locationFiltration == .MyLocation {

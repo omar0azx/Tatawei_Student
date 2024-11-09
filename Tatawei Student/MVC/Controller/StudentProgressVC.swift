@@ -29,12 +29,14 @@ class StudentProgressVC: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        percentageValue.text = "\(Int((Student.currentStudent?.hoursCompleted ?? 5) / 40 * 100))%"
-        lastBadegImage.image = allBadgesForStudent.last?.image
-        totalOpportunities.text = "\(Student.currentStudent?.opportunities.count ?? 5) / ف"
-        remainHours.text = "5 / س"
-        compleatedHours.text = "\(Int(Student.currentStudent?.hoursCompleted ?? 5)) / س"
+        
+        if let student = Student.currentStudent {
+            percentageValue.text = "\(Int((student.hoursCompleted) / 40 * 100))%"
+//            lastBadegImage.image = allBadgesForStudent.last?.image
+            totalOpportunities.text = "\(student.opportunities.count) / ف"
+            remainHours.text = "5 / س"
+            compleatedHours.text = "\(Int(student.hoursCompleted)) / س"
+        }
 
         updateBadgeLabel()
         setUpProgressAnimat()
@@ -48,20 +50,26 @@ class StudentProgressVC: UIViewController, Storyboarded {
         dismiss(animated: true)
     }
     
-
+    @IBAction func showAllBadges(_ sender: UIButton) {
+        coordinator?.viewBadgesVC()
+    }
+    
     //MARK: - Functions
 
     func updateBadgeLabel() {
-        guard let lastBadgeName = allBadgesForStudent.last?.name else { return }
         
-        let fullText = "مبروك حصولك على وسام \(lastBadgeName)"
-        
-        let attributedString = NSMutableAttributedString(string: fullText)
-        
-        let badgeNameRange = (fullText as NSString).range(of: lastBadgeName)
-        
-        attributedString.addAttribute(.foregroundColor, value: UIColor.standr, range: badgeNameRange)
-        lastBadegName.attributedText = attributedString
+        if let studentHours = Student.currentStudent?.hoursCompleted {
+            if studentHours >= 5 {
+                lastBadegName.text = "يمكنك رؤية جميع الأوسمة التي تم الحصول عليها"
+                lastBadegImage.image = #imageLiteral(resourceName: "مختم التطوع")
+            } else {
+                lastBadegName.text = "لم تكمل أي ساعة تطوعية"
+                lastBadegImage.image = #imageLiteral(resourceName: "emty.png")
+            }
+        } else {
+            
+        }
+
     }
 
     private func setUpProgressAnimat() {
