@@ -13,19 +13,16 @@ class AuthService {
     
     static let shared = AuthService()
     
-    private init () {}
-    
-    
     //MARK:- Register
     
-    func registerUserWith(email: String, password: String, name: String, phoneNumber: String, gender: Gender, city: String, school: String, level: String, hoursCompleted: Float, location: String, latitude: Double, longitude: Double, interests: [InterestCategories], opportunities: [String], completion: @escaping (_ error: Error?) ->Void) {
+    func registerUserWith(email: String, password: String, name: String, phoneNumber: String, gender: Gender, city: String, school: String, level: String, isStudentAccepted: Int, hoursCompleted: Float, pastHours: Float, location: String, latitude: Double, longitude: Double, interests: [InterestCategories], opportunities: [String], badges: [String: Int], completion: @escaping (_ error: Error?) ->Void) {
         
         
         Auth.auth().createUser(withEmail: email, password: password) { (authResults, error) in
             completion(error)
             
             if authResults?.user != nil {
-                let student = Student(id: authResults!.user.uid, name: name, phoneNumber: phoneNumber, email: email, gender: gender, city: city, school: school, level: level, isStudentRegisteredScool: false, hoursCompleted: hoursCompleted, location: location, latitude: latitude, longitude: longitude, interests: interests, opportunities: opportunities)
+                let student = Student(id: authResults!.user.uid, name: name, phoneNumber: phoneNumber, email: email, gender: gender, city: city, school: school, level: level, isStudentAccepted: isStudentAccepted, hoursCompleted: hoursCompleted, pastHours: pastHours, location: location, latitude: latitude, longitude: longitude, interests: interests, opportunities: opportunities, badges: badges)
                 StudentDataServices.shared.saveUserToFirestore(student)
                 saveUserLocally(student)
                 

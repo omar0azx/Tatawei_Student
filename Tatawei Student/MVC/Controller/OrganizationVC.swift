@@ -54,8 +54,8 @@ class OrganizationVC: UIViewController, Storyboarded {
                     self.organisationImage.image = organizationImag
                     self.organisationName.text = organisation.name
                     self.organisationEmail.text = organisation.email
-                    self.organisationRate.text = String(organisation.rate)
-                    self.numberOfResidents.text = String(organisation.volunteersNumber)
+                    self.organisationRate.text = String(format: "%.1f", organisation.rate)
+                    self.numberOfResidents.text = "(\(organisation.numberOfReviewers)) مراجع"
                     self.organisationDescription.text = organisation.description
                     
                 } else {

@@ -209,5 +209,22 @@ final class MainCoordinator: Coordinator {
         self.navigationController.present(vc, animated: true)
     }
     
+    func viewStudentProgressVC() {
+        let vc = StudentProgressVC.instantiate()
+        vc.coordinator = self
+        vc.modalPresentationStyle = .fullScreen
+        self.navigationController.present(vc, animated: true)
+    }
+    
+    func viewBadgesVC() {
+        let vc = BadgesVC.instantiate()
+        vc.coordinator = self
+        vc.modalPresentationStyle = .fullScreen
+        if let topViewController = navigationController.presentedViewController {
+            topViewController.present(vc, animated: true, completion: nil)
+        } else {
+            navigationController.present(vc, animated: true, completion: nil)
+        }    }
+    
 }
 

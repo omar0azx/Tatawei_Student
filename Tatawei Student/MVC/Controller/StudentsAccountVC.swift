@@ -34,6 +34,9 @@ class StudentsAccountVC: UIViewController, Storyboarded, DataSelectionDelegate {
     var locationLatitude: Double?
     var locationLongitude: Double?
     
+    var hasAcceptedTerms = false
+        
+    
     //MARK: - IBOutleats
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -178,8 +181,10 @@ class StudentsAccountVC: UIViewController, Storyboarded, DataSelectionDelegate {
             nextBTN.isEnabled = true
             
         default:
-            let loadView = MessageView(message: "يرجى الإنتظار", animationName: "loading", animationTime: 1)
-            loadView.show(in: self.view)
+            if mode == .editProfile {
+                let loadView = MessageView(message: "يرجى الإنتظار", animationName: "loading", animationTime: 1)
+                loadView.show(in: self.view)
+            }
             backBTN.alpha = 1
             nextBTN.isEnabled = false
         }
@@ -257,15 +262,23 @@ class StudentsAccountVC: UIViewController, Storyboarded, DataSelectionDelegate {
                 return // Do not increment
             } else {
                 if mode == .register {
-                    registerUser()
+                    showCustomTermsView(onConfirm: {
+                        print("Account Deleted")
+                        let loadView = MessageView(message: "يرجى الإنتظار", animationName: "loading", animationTime: 1)
+                        loadView.show(in: self.view)
+                        self.registerUser()
+                    }, onCancel: {
+                        self.nextBTN.isEnabled = true
+                        print("Cancelled")
+                    })
                 } else {
                     updateUser()
                 }
             }
-            stepNumber += 1
             updateStepsUI()
             
         default:
+            stepNumber = 2
             print("validInformation")
         }
     }
@@ -274,7 +287,15 @@ class StudentsAccountVC: UIViewController, Storyboarded, DataSelectionDelegate {
     //MARK:- Register User
     
     private func registerUser() {
-        AuthService.shared.registerUserWith(email: emailTF.text!, password: passwordTF.text!, name: nameTF.text!, phoneNumber: phoneNumberTF.text!, gender: Gender(rawValue: genderTF.text!)!, city: cityTF.text!, school: "00001", level: levelTF.text!, hoursCompleted: 0, location: mapInformation.text!, latitude: locationLatitude ?? 0, longitude: locationLongitude ?? 0, interests: selectedInterestsType, opportunities: []) { error in
+        let allSkillsBadges = [SkillsBadges.leadership.rawValue: 0,
+                         SkillsBadges.adaptability.rawValue: 0,
+                         SkillsBadges.communication.rawValue: 0,
+                         SkillsBadges.teamwork.rawValue: 0,
+                         SkillsBadges.resilience.rawValue: 0,
+                         SkillsBadges.problemSolving.rawValue: 0,
+                         SkillsBadges.creativity.rawValue: 0,
+                         SkillsBadges.criticalThinking.rawValue: 0]
+        AuthService.shared.registerUserWith(email: emailTF.text!, password: passwordTF.text!, name: nameTF.text!, phoneNumber: phoneNumberTF.text!, gender: Gender(rawValue: genderTF.text!)!, city: cityTF.text!, school: schoolTF.text!, level: levelTF.text!, isStudentAccepted: 0, hoursCompleted: 0, pastHours: 0, location: mapInformation.text!, latitude: locationLatitude ?? 0, longitude: locationLongitude ?? 0, interests: selectedInterestsType, opportunities: [], badges: allSkillsBadges) { error in
             if error == nil {
                 let successView = MessageView(message: "تم تسجيلك بنجاح، سيتم نقلك للصفحة الرئيسية بعد لحظات", animationName: "correct", animationTime: 1)
                 successView.show(in: self.view)
@@ -386,7 +407,6 @@ class StudentsAccountVC: UIViewController, Storyboarded, DataSelectionDelegate {
     }
     
 }
-
 
 
 extension StudentsAccountVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

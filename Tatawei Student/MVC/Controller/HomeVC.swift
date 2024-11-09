@@ -46,6 +46,7 @@ class HomeVC: UIViewController, Storyboarded {
     }
     
     override func viewIsAppearing(_ animated: Bool) {
+        updateStudentData()
         loadStudentOpportunities()
         setUpProgressAnimat()
         setupUI()
@@ -66,6 +67,9 @@ class HomeVC: UIViewController, Storyboarded {
         }
     }
     
+    @IBAction func showTheBadges(_ sender: UIButton) {
+        coordinator?.viewStudentProgressVC()
+    }
     
     //MARK: - Functions
     
@@ -140,7 +144,7 @@ class HomeVC: UIViewController, Storyboarded {
         // Set up the shape layer.
         shapeLayer.path = circularPath.cgPath
         progressView.layer.addSublayer(shapeLayer)
-        shapeLayer.strokeColor = UIColor(#colorLiteral(red: 0.1647058824, green: 0.1647058824, blue: 0.1647058824, alpha: 1)).cgColor
+        shapeLayer.strokeColor = UIColor(#colorLiteral(red: 0.163447082, green: 0.09048426896, blue: 0.01918461733, alpha: 1)).cgColor
         
         shapeLayer.strokeEnd = 0
         shapeLayer.lineWidth = 9.5

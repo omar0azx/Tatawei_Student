@@ -64,6 +64,8 @@ class RatingVC: UIViewController, Storyboarded {
         
         UserDefaults.standard.set(true, forKey: "hasRatedOpportunityKey")
         rateTheOrganisation(rate: rate)
+        addHoursForStudent()
+        
         
     }
     
@@ -116,6 +118,17 @@ class RatingVC: UIViewController, Storyboarded {
         }
     }
     
+    func addHoursForStudent() {
+        if let opportunity = opportunity {
+            StudentDataServices.shared.updateStudentHours(additionalHours: Float(opportunity.hour)) { error in
+                if (error != nil) {
+                    print("Rating success")
+                } else {
+                    print("Rating have error")
+                }
+            }
+        }
+    }
 
 }
 

@@ -27,13 +27,15 @@ struct Student: Codable {
     var city: String
     var school: String
     var level: String
-    var isStudentRegisteredScool: Bool
+    var isStudentAccepted: Int
     var hoursCompleted: Float
+    var pastHours: Float
     var location: String
     var latitude: Double
     var longitude: Double
     var interests: [InterestCategories]
     var opportunities: [String]
+    var badges: [String: Int]
     
     static var currentID: String {
         return Auth.auth().currentUser!.uid

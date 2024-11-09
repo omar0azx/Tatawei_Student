@@ -118,21 +118,22 @@ class StudentDataServices {
             }
         }
     }
-
+    
     
     func updateStudentAccount(updatedData: Student, completion: @escaping (_ error: Error?) -> Void) {
         // Get reference to the student's document in Firestore
         let studentRef = FirestoreReference(.schools).document(Student.currentStudent!.school)
             .collection("students").document(Student.currentID)
-
+        
         studentRef.getDocument { (document, error) in
             if let document = document, document.exists {
-                if let data = document.data(), let hoursCompleted = data["hoursCompleted"] as? Float, let isStudentRegisteredScool = data["isStudentRegisteredScool"] as? Bool, let studrntOpportunity = data["opportunities"] as? [String]  {
+                if let data = document.data(), let hoursCompleted = data["hoursCompleted"] as? Float, let isStudentAccepted = data["isStudentAccepted"] as? Int, let studrntOpportunity = data["opportunities"] as? [String], let badges = data["badges"] as? [String: Int] {
                     
                     var updatedStudent = updatedData
                     updatedStudent.hoursCompleted = hoursCompleted
-                    updatedStudent.isStudentRegisteredScool = isStudentRegisteredScool
+                    updatedStudent.isStudentAccepted = isStudentAccepted
                     updatedStudent.opportunities = studrntOpportunity
+                    updatedStudent.badges = badges
                     
                     // Convert updatedStudent to a dictionary using JSONEncoder
                     do {
@@ -144,7 +145,7 @@ class StudentDataServices {
                                     print("Error updating student data: \(error.localizedDescription)")
                                     completion(error)
                                 } else {
-                    
+                                    
                                     saveUserLocally(updatedStudent)
                                     print("Student data successfully updated.")
                                     completion(nil)
@@ -155,76 +156,114 @@ class StudentDataServices {
                         print("Error encoding student data: \(error.localizedDescription)")
                         completion(error)
                     }
+                } else {
+                    print("Error fetching hoursCompleted value: \(error?.localizedDescription ?? "Unknown error")")
+                    completion(error)
+                }
+                
             } else {
-                print("Error fetching hoursCompleted value: \(error?.localizedDescription ?? "Unknown error")")
+                print("Document does not exist or error fetching document: \(error?.localizedDescription ?? "Unknown error")")
                 completion(error)
             }
-                
-        } else {
-            print("Document does not exist or error fetching document: \(error?.localizedDescription ?? "Unknown error")")
-            completion(error)
         }
     }
-}
-
-
-
-
-//MARK:- Download users using IDs
-
-func downloadStudentFromFirestore(withIds: [String], schoolID: String, completion: @escaping(_ allUsers: [Student])->Void) {
     
-    var count = 0
-    var usersArray: [Student] = []
-    
-    for userID in withIds {
+    func updateStudentHours(additionalHours: Float, completion: @escaping (_ error: Error?) -> Void) {
+        // Get reference to the student's document in Firestore
+        let studentRef = FirestoreReference(.schools).document(Student.currentStudent!.school)
+            .collection("students").document(Student.currentID)
         
-        FirestoreReference(.schools).document(schoolID).collection("students").document(userID).getDocument { (querySnapshot, error) in
+        studentRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                if let data = document.data(), let currentHoursCompleted = data["hoursCompleted"] as? Float {
+                    
+                    let updatedHoursCompleted = currentHoursCompleted + additionalHours // Add the additional hours
+                    
+                    // Update Firestore with the new hoursCompleted value
+                    studentRef.updateData(["hoursCompleted": updatedHoursCompleted]) { error in
+                        if let error = error {
+                            print("Error updating hoursCompleted: \(error.localizedDescription)")
+                            completion(error)
+                        } else {
+                            // Optionally update the locally saved student data
+                            if var currentStudent = Student.currentStudent {
+                                currentStudent.hoursCompleted = updatedHoursCompleted
+                                saveUserLocally(currentStudent)
+                            }
+                            print("hoursCompleted successfully updated to: \(updatedHoursCompleted)")
+                            completion(nil)
+                        }
+                    }
+                } else {
+                    print("Error fetching hoursCompleted value: \(error?.localizedDescription ?? "Unknown error")")
+                    completion(error)
+                }
+            } else {
+                print("Document does not exist or error fetching document: \(error?.localizedDescription ?? "Unknown error")")
+                completion(error)
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    //MARK:- Download users using IDs
+    
+    func downloadStudentFromFirestore(withIds: [String], schoolID: String, completion: @escaping(_ allUsers: [Student])->Void) {
+        
+        var count = 0
+        var usersArray: [Student] = []
+        
+        for userID in withIds {
             
-            guard let document = querySnapshot else {
+            FirestoreReference(.schools).document(schoolID).collection("students").document(userID).getDocument { (querySnapshot, error) in
+                
+                guard let document = querySnapshot else {
+                    return
+                }
+                let user = try? document.data(as: Student.self)
+                
+                usersArray.append (user!)
+                count+=1
+                
+                if count == withIds.count {
+                    completion (usersArray)
+                }
+                
+            }
+        }
+        
+        
+        
+    }
+    
+    
+    
+    //MARK:- Download all users
+    func downloadAllStudentsFromFirestore(schoolID: String, completion: @escaping (_ allUsers: [Student])->Void) {
+        
+        var users: [Student] = []
+        
+        FirestoreReference(.schools).document(schoolID).collection("students").getDocuments { (snapshot, error) in
+            guard let documents = snapshot?.documents else {
+                print ("No documents found")
                 return
             }
-            let user = try? document.data(as: Student.self)
             
-            usersArray.append (user!)
-            count+=1
-            
-            if count == withIds.count {
-                completion (usersArray)
+            let allUsers = documents.compactMap { (snapshot) -> Student? in
+                return try? snapshot.data(as: Student.self)
             }
             
+            for user in allUsers {
+                if Student.currentID != user.id {
+                    users.append(user)
+                }
+            }
+            completion(users)
         }
     }
     
-    
-    
-}
-
-
-
-//MARK:- Download all users
-func downloadAllStudentsFromFirestore(schoolID: String, completion: @escaping (_ allUsers: [Student])->Void) {
-    
-    var users: [Student] = []
-    
-    FirestoreReference(.schools).document(schoolID).collection("students").getDocuments { (snapshot, error) in
-        guard let documents = snapshot?.documents else {
-            print ("No documents found")
-            return
-        }
-        
-        let allUsers = documents.compactMap { (snapshot) -> Student? in
-            return try? snapshot.data(as: Student.self)
-        }
-        
-        for user in allUsers {
-            if Student.currentID != user.id {
-                users.append(user)
-            }
-        }
-        completion(users)
-    }
-}
-
 }
 

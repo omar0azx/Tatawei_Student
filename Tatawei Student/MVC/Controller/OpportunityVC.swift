@@ -50,7 +50,6 @@ class OpportunityVC: UIViewController, Storyboarded {
     @IBOutlet weak var opportunityLocation: UILabel!
     @IBOutlet weak var opportunityHour: UILabel!
     @IBOutlet weak var opportunityStudentsNumber: UILabel!
-    @IBOutlet weak var opportunityStudentsRegisted: UILabel!
     
     @IBOutlet weak var applyBTN: DesignableButton!
     
@@ -78,8 +77,8 @@ class OpportunityVC: UIViewController, Storyboarded {
     
     @IBAction func didPressedApply(_ sender: UIButton) {
         
-        if let opportunity = opportunity, let isStudentRegisteredScool = Student.currentStudent?.isStudentRegisteredScool {
-            if isStudentRegisteredScool {
+        if let opportunity = opportunity, let isStudentRegisteredScool = Student.currentStudent?.isStudentAccepted {
+            if isStudentRegisteredScool == 1 {
                 let loadView = MessageView(message: "يرجى الإنتظار", animationName: "loading", animationTime: 1)
                 loadView.show(in: self.view)
             }
@@ -134,6 +133,22 @@ class OpportunityVC: UIViewController, Storyboarded {
         }
     }
     
+    
+    @IBAction func openLocationInGoogleMaps(_ sender: UIButton) {
+        if let opportunity = opportunity {
+            if let url = URL(string: "comgooglemaps://?q=\(opportunity.latitude),\(opportunity.longitude)&center=\(opportunity.latitude),\(opportunity.longitude)&zoom=14") {
+                // Check if Google Maps is installed
+                if UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                } else {
+                    // Fallback to open in browser if Google Maps app is not installed
+                    let browserUrl = URL(string: "https://www.google.com/maps/search/?api=1&query=\(opportunity.latitude),\(opportunity.longitude)")!
+                    UIApplication.shared.open(browserUrl, options: [:], completionHandler: nil)
+                }
+            }
+        }
+    }
+    
     //MARK: - Functions
     
     func getOpportunituInformaion() {
@@ -151,6 +166,7 @@ class OpportunityVC: UIViewController, Storyboarded {
             opportunityHour.text = "ساعات \(opportunity.hour)"
             opportunityLocation.text = opportunity.location
             organisationName.text = opportunity.organizationName
+            opportunityStudentsNumber.text = "عدد الطلاب المطلوبين \(opportunity.studentsNumber)"
             organisationImage.image = organizationImag
         }
     }
@@ -203,7 +219,7 @@ class OpportunityVC: UIViewController, Storyboarded {
             }
         } else {
             if let student = Student.currentStudent {
-                if student.isStudentRegisteredScool {
+                if student.isStudentAccepted == 1 {
                     if student.opportunities.contains(opportunity!.id) {
                         mode = .cancelApplying
                         let attributedTitle = NSAttributedString(string: "إلغاء التسجيل", attributes: self.attributes)

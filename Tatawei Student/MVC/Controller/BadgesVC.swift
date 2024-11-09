@@ -7,11 +7,14 @@
 
 import UIKit
 
-class BadgesVC: UIViewController {
+class BadgesVC: UIViewController, Storyboarded {
 
     //MARK: - Varibales
     
     var coordinator: MainCoordinator?
+    
+    var hoursBadges = [Badge]()
+    var skillsBadges = [Badge]()
 
     //MARK: - IBOutleats
 
@@ -20,10 +23,38 @@ class BadgesVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        lastBadgeImage.image = allBadgesForStudent.last?.image
-        lastBadgeName.text = allBadgesForStudent.last?.name
-
+        
+        if let student = Student.currentStudent {
+            if student.hoursCompleted >= 5 {
+                let badgeName = HoursBadges.hero.rawValue
+                hoursBadges.append(Badge(name: badgeName, image: UIImage(named: "\(badgeName)")!))
+            }
+            if student.hoursCompleted >= 10 {
+                let badgeName = HoursBadges.legend.rawValue
+                hoursBadges.append(Badge(name: badgeName, image: UIImage(named: "\(badgeName)")!))
+            }
+            if student.hoursCompleted >= 20 {
+                let badgeName = HoursBadges.terrible.rawValue
+                hoursBadges.append(Badge(name: badgeName, image: UIImage(named: "\(badgeName)")!))
+            }
+            if student.hoursCompleted >= 30 {
+                let badgeName = HoursBadges.experienced.rawValue
+                hoursBadges.append(Badge(name: badgeName, image: UIImage(named: "\(badgeName)")!))
+            }
+            if student.hoursCompleted >= 40 {
+                let badgeName = HoursBadges.opportunityKiller.rawValue
+                hoursBadges.append(Badge(name: badgeName, image: UIImage(named: "\(badgeName)")!))
+            }
+            
+            for badge in student.badges.filter({ $0.value >= 5 }) {
+                skillsBadges.append(Badge(name: badge.key, image: UIImage(named: "\(badge.key)")!))
+            }
+            
+        }
+        
+        lastBadgeImage.image = hoursBadges.last?.image
+        lastBadgeName.text = hoursBadges.last?.name
+        
     }
     
     //MARK: - IBAcitions
@@ -62,10 +93,10 @@ extension BadgesVC: UITableViewDelegate , UITableViewDataSource {
         
         if indexPath.section == 0 {
             cell.titleLabel.text = "للساعات التطوعية"
-            cell.collectionView.tag = 0
+            cell.badges = hoursBadges
         } else {
             cell.titleLabel.text = "للمهارات المكتسبة"
-            cell.collectionView.tag = 1
+            cell.badges = skillsBadges
         }
        
         
