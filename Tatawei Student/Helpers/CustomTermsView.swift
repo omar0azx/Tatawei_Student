@@ -68,7 +68,7 @@ class CustomTermsView: UIView {
             """
         termsTextView.isEditable = false
         termsTextView.font = UIFont(name: "Cairo", size: 14)
-        termsTextView.textColor = .darkGray
+        termsTextView.textColor = .label
         termsTextView.translatesAutoresizingMaskIntoConstraints = false
         termsTextView.textAlignment = .right
         termsTextView.backgroundColor = .systemGray4
