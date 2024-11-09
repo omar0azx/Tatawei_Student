@@ -26,6 +26,8 @@ class StudentDataServices {
     
     static let shared = StudentDataServices()
     
+    private let db = Firestore.firestore()
+    
     func saveUserToFirestore(_ user: Student) {
         do {
             
@@ -39,9 +41,7 @@ class StudentDataServices {
     
     // MARK: - Download User from Firestore
     func getStudentByCollectionGroup(studentID: String) {
-        
-        let db = Firestore.firestore()
-        
+                
         // Create a collection group query for the "students" subcollection
         let studentsQuery = db.collectionGroup("students").whereField("id", isEqualTo: studentID)
         
@@ -205,65 +205,68 @@ class StudentDataServices {
         }
     }
     
-    
-    
-    
-    
-    //MARK:- Download users using IDs
-    
-    func downloadStudentFromFirestore(withIds: [String], schoolID: String, completion: @escaping(_ allUsers: [Student])->Void) {
-        
-        var count = 0
-        var usersArray: [Student] = []
-        
-        for userID in withIds {
-            
-            FirestoreReference(.schools).document(schoolID).collection("students").document(userID).getDocument { (querySnapshot, error) in
-                
-                guard let document = querySnapshot else {
-                    return
-                }
-                let user = try? document.data(as: Student.self)
-                
-                usersArray.append (user!)
-                count+=1
-                
-                if count == withIds.count {
-                    completion (usersArray)
-                }
-                
-            }
-        }
-        
-        
-        
-    }
-    
-    
-    
-    //MARK:- Download all users
-    func downloadAllStudentsFromFirestore(schoolID: String, completion: @escaping (_ allUsers: [Student])->Void) {
-        
+    //MARK:- Download all studnts from current student school
+    func getAllStudentsFromSchool(schoolID: String, completion: @escaping (_ allUsers: [Student], _ error: Error?)->Void) {
         var users: [Student] = []
         
         FirestoreReference(.schools).document(schoolID).collection("students").getDocuments { (snapshot, error) in
-            guard let documents = snapshot?.documents else {
-                print ("No documents found")
+            // Handle error case
+            if let error = error {
+                print("Error getting documents: \(error.localizedDescription)")
+                completion([], error) // Return an empty array on error
                 return
             }
             
+            // Guard against empty snapshot
+            guard let documents = snapshot?.documents else {
+                print("No documents found")
+                completion([], error) // Return an empty array if no documents exist
+                return
+            }
+            
+            // Parse all users and filter out the current student
             let allUsers = documents.compactMap { (snapshot) -> Student? in
                 return try? snapshot.data(as: Student.self)
             }
             
-            for user in allUsers {
-                if Student.currentID != user.id {
-                    users.append(user)
-                }
-            }
-            completion(users)
+            users.append(contentsOf: allUsers)
+            
+            
+            // Completion handler with filtered list of users
+            completion(users, nil)
         }
     }
+
+    //MARK:- Download all students
+    func getAllStudents(completion: @escaping (_ allUsers: [Student], _ error: Error?)->Void) {
+        var users: [Student] = []
+        
+        // Perform the collection group query to get students across all schools
+        db.collectionGroup("students").getDocuments { (snapshot, error) in
+            // Handle error case
+            if let error = error {
+                print("Error getting documents: \(error.localizedDescription)")
+                completion([], error) // Return an empty array on error
+                return
+            }
+            
+            // Guard against empty snapshot
+            guard let documents = snapshot?.documents else {
+                print("No students found")
+                completion([], error) // Return an empty array if no documents exist
+                return
+            }
+            
+            // Parse all users from the documents
+            let allUsers = documents.compactMap { (snapshot) -> Student? in
+                return try? snapshot.data(as: Student.self)
+            }
+            
+            // Return the list of all users in the completion handler
+            completion(allUsers, nil)
+        }
+    }
+
     
 }
 

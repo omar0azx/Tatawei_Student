@@ -233,7 +233,15 @@ final class MainCoordinator: Coordinator {
             topViewController.present(vc, animated: true, completion: nil)
         } else {
             navigationController.present(vc, animated: true, completion: nil)
-        }    }
+        }
+    }
+    
+    func viewScoreBoardVC() {
+        let vc = ScoreBoardVC.instantiate()
+        vc.coordinator = self
+        vc.modalPresentationStyle = .fullScreen
+        self.navigationController.present(vc, animated: true)
+    }
     
 }
 
