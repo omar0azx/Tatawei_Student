@@ -19,7 +19,10 @@ final class MainCoordinator: Coordinator {
     
     //MARK: Initial View Controller
     func start() {
-        autoLogin()
+        viewIntroTataweiVC()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+            self.autoLogin()
+        }
     }
     
     func autoLogin() {
@@ -52,6 +55,12 @@ final class MainCoordinator: Coordinator {
         let vc = QuestionsVC.instantiate()
         vc.coordinator = self
         navigationController.present(vc, animated: true)
+    }
+    
+    func viewIntroTataweiVC() {
+        let vc = IntroTataweiVC.instantiate()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
     }
     
     func viewLoginVC() {

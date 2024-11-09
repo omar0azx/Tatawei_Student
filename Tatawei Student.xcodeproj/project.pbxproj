@@ -33,6 +33,7 @@
 		BE92CCB12CDA527D00DF146F /* QuestionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE92CCB02CDA527D00DF146F /* QuestionsVC.swift */; };
 		BE92CCB52CDA58FA00DF146F /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE92CCB42CDA58FA00DF146F /* QuestionCell.swift */; };
 		BE92CCB72CDA5E3200DF146F /* Quations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE92CCB62CDA5E3200DF146F /* Quations.swift */; };
+		BEF2AC532CE0009300E4C6A1 /* IntroTataweiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF2AC522CE0009300E4C6A1 /* IntroTataweiVC.swift */; };
 		BEFB5E502CCBA3E000538D19 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB5E4F2CCBA3E000538D19 /* AboutVC.swift */; };
 		F2197A342CCE668F00D2607E /* QRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2197A332CCE668F00D2607E /* QRCodeVC.swift */; };
 		F257C4982CCB672B00C0B0C1 /* PreviousOpportunitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F257C4972CCB672B00C0B0C1 /* PreviousOpportunitiesCell.swift */; };
@@ -121,6 +122,7 @@
 		BE92CCB02CDA527D00DF146F /* QuestionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsVC.swift; sourceTree = "<group>"; };
 		BE92CCB42CDA58FA00DF146F /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
 		BE92CCB62CDA5E3200DF146F /* Quations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quations.swift; sourceTree = "<group>"; };
+		BEF2AC522CE0009300E4C6A1 /* IntroTataweiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroTataweiVC.swift; sourceTree = "<group>"; };
 		BEFB5E4F2CCBA3E000538D19 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		F2197A332CCE668F00D2607E /* QRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeVC.swift; sourceTree = "<group>"; };
 		F257C4972CCB672B00C0B0C1 /* PreviousOpportunitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousOpportunitiesCell.swift; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 				F29988812CDB53E700150CFD /* LeaderBoardVC.swift */,
 				F2B78F0A2CD9F0D200F850B8 /* BadgesVC.swift */,
 				BE92CCB02CDA527D00DF146F /* QuestionsVC.swift */,
+				BEF2AC522CE0009300E4C6A1 /* IntroTataweiVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 				F2D6C9AF2CAD19F5000E1713 /* ForgetPasswordVC.swift in Sources */,
 				4EF2A9F62CC1F49C002E1956 /* Opportunity.swift in Sources */,
 				F29A802C2CCA927900FDA7EC /* PreviousOpportunitiesVC.swift in Sources */,
+				BEF2AC532CE0009300E4C6A1 /* IntroTataweiVC.swift in Sources */,
 				4E5B43742CBCAAF200F7E850 /* SettingsCell.swift in Sources */,
 				F257C4982CCB672B00C0B0C1 /* PreviousOpportunitiesCell.swift in Sources */,
 				4EF2A9FA2CC2E988002E1956 /* Organization.swift in Sources */,

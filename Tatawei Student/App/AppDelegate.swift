@@ -21,9 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppCheck.setAppCheckProviderFactory(providerFactory)
         AppCheck.setAppCheckProviderFactory(AppCheckDebugProviderFactory())
         FirebaseApp.configure()
-        
-        Thread.sleep(forTimeInterval: 1.0)
-        
+                
         GMSServices.provideAPIKey("AIzaSyADEz8PXDl2MCv4hAy8tnDtDxRX-z6PJMk")
         
         IQKeyboardManager.shared.enable = true
