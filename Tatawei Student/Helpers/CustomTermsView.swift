@@ -62,16 +62,30 @@ class CustomTermsView: UIView {
     }
     
     private func setupTermsTextView() {
-        termsTextView.text = """
-            1. الشروط
+        // Set up the text with a tappable link
+        let termsText = """
+            الشروط
             من خلال الوصول إلى هذا الموقع، فإنك توافق على الالتزام بشروط وأحكام الاستخدام هذه...
+            اضغط هنا لرؤية الشروط والأحكام
+
             """
+
+        let attributedString = NSMutableAttributedString(string: termsText)
+
+        // Find the range for "من خلال" and make it clickable
+        let linkRange = (termsText as NSString).range(of: "اضغط هنا لرؤية الشروط والأحكام")
+        attributedString.addAttribute(.link, value: "https://drive.google.com/file/d/1Bu1MXmMzC-D92-4p6hgOVoNiv_fuMGmD/view?usp=share_link", range: linkRange)
+        
+        termsTextView.attributedText = attributedString
         termsTextView.isEditable = false
         termsTextView.font = UIFont(name: "Cairo", size: 14)
         termsTextView.textColor = .label
-        termsTextView.translatesAutoresizingMaskIntoConstraints = false
         termsTextView.textAlignment = .right
         termsTextView.backgroundColor = .systemGray4
+        termsTextView.linkTextAttributes = [
+            .foregroundColor: UIColor.systemBlue
+        ]
+        termsTextView.translatesAutoresizingMaskIntoConstraints = false
         containerView.addSubview(termsTextView)
         
         NSLayoutConstraint.activate([
@@ -113,6 +127,12 @@ class CustomTermsView: UIView {
             termsTextView.bottomAnchor.constraint(equalTo: declineButton.topAnchor, constant: -20)
         ])
     }
+        
+        private func openTermsAndConditions() {
+            if let url = URL(string: "https://publuu.com/flip-book/698725/1553903") {
+                UIApplication.shared.open(url)
+            }
+        }
     
     @objc private func acceptTapped() {
         confirmAction?()

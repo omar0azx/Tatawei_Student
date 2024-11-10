@@ -82,7 +82,7 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
             // Change Language
         case .termsAndConditions:
             
-            coordinator?.viewWebVC(url: "https://publuu.com/flip-book/698725/1553903")
+            coordinator?.viewWebVC(url: "https://drive.google.com/file/d/1Bu1MXmMzC-D92-4p6hgOVoNiv_fuMGmD/view?usp=share_link")
             
         case .FrequentlyAskedQuestions:
         self.coordinator?.viewQuestionsVC()

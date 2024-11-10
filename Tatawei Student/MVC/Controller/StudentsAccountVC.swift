@@ -283,6 +283,10 @@ class StudentsAccountVC: UIViewController, Storyboarded, DataSelectionDelegate {
         }
     }
     
+    func showTermsAndConditions() {
+            coordinator?.viewWebVC(url: "https://publuu.com/flip-book/698725/1553903")
+        }
+    
     
     //MARK:- Register User
     
