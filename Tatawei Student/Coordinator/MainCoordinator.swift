@@ -20,7 +20,7 @@ final class MainCoordinator: Coordinator {
     //MARK: Initial View Controller
     func start() {
         viewIntroTataweiVC()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.autoLogin()
         }
     }

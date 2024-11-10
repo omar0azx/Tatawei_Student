@@ -17,7 +17,6 @@ class IntroTataweiVC: UIViewController, Storyboarded {
     //MARK: - IBOutleats
     
     @IBOutlet weak var tatawei: UIStackView!
-    
     @IBOutlet weak var titel: UILabel!
     
     override func viewDidLoad() {
@@ -36,14 +35,14 @@ class IntroTataweiVC: UIViewController, Storyboarded {
     
     func animateViews() {
         // Fade back in
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             UIView.animate(withDuration: 1) {
                 self.tatawei.isHidden = false
                 self.tatawei.alpha = 1
                 self.loadViewIfNeeded()
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                UIView.animate(withDuration: 1) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                UIView.animate(withDuration: 0.5) {
                     self.titel.isHidden = false
                     self.titel.alpha = 1
                     self.loadViewIfNeeded()

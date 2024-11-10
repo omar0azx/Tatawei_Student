@@ -318,6 +318,7 @@
 			children = (
 				4EF2AA012CC31835002E1956 /* CellsHeader */,
 				F2D6C9842CAD19F5000E1713 /* Cells */,
+				BEF2AC522CE0009300E4C6A1 /* IntroTataweiVC.swift */,
 				F2D6C9852CAD19F5000E1713 /* ContainerVC.swift */,
 				F2D6C98C2CAD19F5000E1713 /* NavigationVC.swift */,
 				4E31BD962CD5DF7100454FCD /* RatingVC.swift */,
@@ -343,7 +344,6 @@
 				F29988812CDB53E700150CFD /* ScoreBoardVC.swift */,
 				F2B78F0A2CD9F0D200F850B8 /* BadgesVC.swift */,
 				BE92CCB02CDA527D00DF146F /* QuestionsVC.swift */,
-				BEF2AC522CE0009300E4C6A1 /* IntroTataweiVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

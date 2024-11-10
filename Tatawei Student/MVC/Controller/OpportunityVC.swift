@@ -172,7 +172,7 @@ class OpportunityVC: UIViewController, Storyboarded {
     }
     
     func displayAlertMessage() {
-        let alertController = UIAlertController(title: "إنتظار قبول المدرسة", message: "لن تستطيع التقديم على الفرص التطوعية حتى يتم قبولك من قبل مشرف الطوع في مدرستك", preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: "إنتظار قبول المدرسة", message: "لن تستطيع التقديم على الفرص التطوعية حتى يتم قبولك من قبل مشرف التطوع في مدرستك", preferredStyle: .actionSheet)
         let OKAction = UIAlertAction(title: "حسنا", style: .default)
         alertController.addAction(OKAction)
         self.present(alertController, animated: true, completion: nil)

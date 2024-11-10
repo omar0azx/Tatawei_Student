@@ -9,7 +9,7 @@ import UIKit
 
 enum MenuItemType: String {
     case termsAndConditions = "الشروط والأحكام"
-    case FrequentlyAskedQuestions = "الاسئله المتداوله"
+    case FrequentlyAskedQuestions = "الأسئلة الشائعة"
     case about = "عن تطوعي"
     case resetPassword = "تغيير كلمة المرور"
     case deleteAccount = "حذف الحساب"
