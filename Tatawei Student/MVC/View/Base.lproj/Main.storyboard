@@ -5467,7 +5467,7 @@ secondary</string>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="mappin.circle.fill" catalog="system" width="128" height="123"/>
         <image name="mdi-volunteer" width="32" height="32"/>
-        <image name="mobile" width="29.666666030883789" height="56.666667938232422"/>
+        <image name="mobile" width="89" height="170.66667175292969"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="proof-of-concept" width="170.66667175292969" height="170.66667175292969"/>

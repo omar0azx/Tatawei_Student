@@ -106,7 +106,7 @@ class StudentDataServices {
                 let student = try document.data(as: Student.self)
                 
                 saveUserLocally(student)
-                print("Student found and saved locally: \(student)")
+                print("Student found and saved locally: student")
                 
                 completion(true, nil)
                 
@@ -127,12 +127,11 @@ class StudentDataServices {
         
         studentRef.getDocument { (document, error) in
             if let document = document, document.exists {
-                if let data = document.data(), let hoursCompleted = data["hoursCompleted"] as? Float, let isStudentAccepted = data["isStudentAccepted"] as? Int, let studrntOpportunity = data["opportunities"] as? [String], let badges = data["badges"] as? [String: Int] {
+                if let data = document.data(), let hoursCompleted = data["hoursCompleted"] as? Float, let isStudentAccepted = data["isStudentAccepted"] as? Int, let badges = data["badges"] as? [String: Int] {
                     
                     var updatedStudent = updatedData
                     updatedStudent.hoursCompleted = hoursCompleted
                     updatedStudent.isStudentAccepted = isStudentAccepted
-                    updatedStudent.opportunities = studrntOpportunity
                     updatedStudent.badges = badges
                     
                     // Convert updatedStudent to a dictionary using JSONEncoder

@@ -154,7 +154,7 @@ class OpportunityVC: UIViewController, Storyboarded {
     func getOpportunituInformaion() {
         if let opportunity = opportunity {
             var organizationImag: UIImage?
-            StorageService.shared.downloadImage(from: opportunity.organizationImageLink) { imag, error in
+            StorageService.shared.downloadImage(from: "organisations_icons/\(opportunity.id).jpg") { imag, error in
                 guard let image = imag else {return}
                 organizationImag = image
             }
@@ -220,7 +220,7 @@ class OpportunityVC: UIViewController, Storyboarded {
         } else {
             if let student = Student.currentStudent {
                 if student.isStudentAccepted == 1 {
-                    if student.opportunities.contains(opportunity!.id) {
+                    if student.opportunities.keys.contains(opportunity!.id) {
                         mode = .cancelApplying
                         let attributedTitle = NSAttributedString(string: "إلغاء التسجيل", attributes: self.attributes)
                         self.applyBTN.setAttributedTitle(attributedTitle, for: .normal)
@@ -300,7 +300,7 @@ extension OpportunityVC: QLPreviewControllerDataSource {
                 ]
                 var organizationImag: UIImage?
                 if let opportunity = opportunity {
-                    StorageService.shared.downloadImage(from: opportunity.organizationImageLink) { imag, error in
+                    StorageService.shared.downloadImage(from: "organisations_icons/\(opportunity.organizationID).jpg") { imag, error in
                         guard let image = imag else {return}
                         organizationImag = image
                     }

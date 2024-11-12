@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NavigationVC: ContainerVC, Storyboarded {
+class NavigationVC: ContainerVC, Storyboarded, HomeVCDelegate {
     
     
     //MARK: - Varibales
@@ -26,7 +26,6 @@ class NavigationVC: ContainerVC, Storyboarded {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupCurvedView()
-        rateTheOrganisation()
         self.navigate(to: 0)
         for (index, button) in navButton.enumerated() {
             button.tag = index
@@ -38,7 +37,7 @@ class NavigationVC: ContainerVC, Storyboarded {
     //MARK: - IBAcitions
     
     @IBAction func didPressNavButton(_ sender: UIButton) {
-        rateTheOrganisation()
+
         if sender.tag < viewControllers.count {
             switch sender.tag {
                 
@@ -147,21 +146,12 @@ class NavigationVC: ContainerVC, Storyboarded {
         }
     }
     
-    func rateTheOrganisation() {
-        let hasRated = UserDefaults.standard.bool(forKey: "hasRatedOpportunityKey")
-        if hasRated == false {
-            if let opportunity = Opportunity.currentOpportunity {
-                if opportunity.status == .finished && (opportunity.isAccepted ?? false) == true {
-                    coordinator?.viewRatingVC(opportunity: opportunity)
-                }
-            }
-        } else {
-            print("Can't rated opportunity")
-        }
-
+    func rateTheOrganisation(opportunity: Opportunity) {
+        // Implement the rate organization logic here
+        coordinator?.viewRatingVC(opportunity: opportunity)
     }
 }
-    
+
 
 
     

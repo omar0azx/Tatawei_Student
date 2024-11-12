@@ -7,12 +7,17 @@
 
 import UIKit
 
+protocol HomeVCDelegate: AnyObject {
+    func rateTheOrganisation(opportunity: Opportunity)
+}
+
 class HomeVC: UIViewController, Storyboarded {
     
     
     //MARK: - Varibales
+        
+    weak var delegate: HomeVCDelegate?
     
-    // The shape layer used to display the progress.
     let shapeLayer = CAShapeLayer()
 
     var coordinator: MainCoordinator?
@@ -98,7 +103,7 @@ class HomeVC: UIViewController, Storyboarded {
         if let studentOpportunities = Student.currentStudent?.opportunities, !studentOpportunities.isEmpty {
             
             // Proceed only if studentOpportunities is non-empty
-            OpportunityDataServices.shared.getStudentOpportunities(opportunityIDs: studentOpportunities) { opportunities, error in
+            OpportunityDataServices.shared.getStudentOpportunities(opportunityIDs: Array(studentOpportunities.keys)) { opportunities, error in
                 
                 if let error = error {
                     print("Error fetching student opportunities: \(error.localizedDescription)")
@@ -113,14 +118,18 @@ class HomeVC: UIViewController, Storyboarded {
                     }
                     self.finishedOpportunities = self.opportunity.filter{$0.status == .finished}
                     self.opportunity = self.opportunity.filter{$0.status == .open || $0.status == .inProgress}
-                    if self.opportunity[0].date == DateFormatter.localizedString(from: Date(), dateStyle: .short, timeStyle: .none) {
+                    if self.opportunity.first?.date == DateFormatter.localizedString(from: Date(), dateStyle: .short, timeStyle: .none) {
                         self.showQRCodeBTN.backgroundColor = .standr
-                        saveOpportunityLocally(self.opportunity[0])
-                        self.opportunityName.text = self.opportunity[0].name
+                        saveOpportunityLocally(self.opportunity.first!)
+                        self.opportunityName.text = self.opportunity.first!.name
                     } else {
                         self.showQRCodeBTN.backgroundColor = .systemGray
                         self.opportunityName.text = "لا يوجد لديك فرصة اليوم"
-                        resetRatingStatus()
+                    }
+                    if let opportunity = self.finishedOpportunities.first(where: { opportunity in
+                        studentOpportunities[opportunity.id] == false && opportunity.status == .finished
+                    }) {
+                        self.delegate?.rateTheOrganisation(opportunity: opportunity)
                     }
                     self.collectionView.reloadData()
                 }
@@ -134,7 +143,6 @@ class HomeVC: UIViewController, Storyboarded {
         }
     }
 
-    
     private func setUpProgressAnimat() {
         // Create a circular path for the progress view.
         let circularPath = UIBezierPath(arcCenter: CGPoint(x: progressView.bounds.width / 2, y: progressView.bounds.height / 2), radius: 45, startAngle: -CGFloat.pi / 2, endAngle: CGFloat.pi * 2, clockwise: true)
@@ -206,7 +214,7 @@ extension HomeVC: UICollisionBehaviorDelegate, UICollectionViewDataSource, UICol
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cellColorAndIcon = Icon(index: opportunity[indexPath.row].iconNumber, categories: opportunity[indexPath.row].category).opportunityIcon
         var organizationImag: UIImage?
-        StorageService.shared.downloadImage(from: opportunity[indexPath.row].organizationImageLink) { imag, error in
+        StorageService.shared.downloadImage(from: "organisations_icons/\(opportunity[indexPath.row].organizationID).jpg") { imag, error in
             guard let image = imag else {return}
             organizationImag = image
         }

@@ -84,8 +84,10 @@ final class MainCoordinator: Coordinator {
         let exploreVC = ExploreVC.instantiate()
         let educationVC = EducationVC.instantiate()
         let profileVC = ProfileVC.instantiate()
+    
         
         homeVC.coordinator = self
+        homeVC.delegate = navigationVC
         exploreVC.coordinator = self
         educationVC.coordinator = self
         profileVC.coordinator = self

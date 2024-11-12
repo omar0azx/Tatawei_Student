@@ -124,10 +124,10 @@ class OpportunityDataServices {
     private func updateStudentOpportunities(studentRef: DocumentReference, opportunityID: String, completion: @escaping (_ status: Bool, _ error: Error?) -> Void) {
         studentRef.getDocument { (document, error) in
             if let document = document, document.exists {
-                var opportunities = document.get("opportunities") as? [String] ?? []
+                var opportunities = document.get("opportunities") as? [String: Bool] ?? [:]
                 
-                if !opportunities.contains(opportunityID) {
-                    opportunities.append(opportunityID)
+                if opportunities[opportunityID] == nil { // Check if the opportunityID doesn't exist yet
+                    opportunities[opportunityID] = false // defult
                     studentRef.updateData(["opportunities": opportunities]) { error in
                         if let error = error {
                             print("Error updating student opportunities: \(error)")
@@ -147,6 +147,25 @@ class OpportunityDataServices {
             }
         }
     }
+
+    func updateOpportunityInFirestore(studentID: String, schoolID: String, opportunityId: String, completion: @escaping (Bool, Error?) -> Void) {
+
+        let userRef = FirestoreReference(.schools).document(schoolID).collection("students").document(studentID)
+
+        // Update the opportunity's value to true in the opportunities map
+        userRef.updateData([
+            "opportunities.\(opportunityId)": true
+        ]) { error in
+            if let error = error {
+                print("Error updating opportunity in Firestore: \(error)")
+                completion(false, error)
+            } else {
+                print("Opportunity \(opportunityId) successfully updated to true.")
+                completion(true, nil)
+            }
+        }
+    }
+
     
     func getStudentOpportunities(opportunityIDs: [String], completion: @escaping (_ opportunities: [Opportunity], _ error: Error?) -> Void) {
         guard !opportunityIDs.isEmpty else {

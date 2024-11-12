@@ -13,6 +13,7 @@
 		4E5B43742CBCAAF200F7E850 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B43732CBCAAF200F7E850 /* SettingsCell.swift */; };
 		4E5B43762CBCAB2C00F7E850 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B43752CBCAB2C00F7E850 /* MenuItem.swift */; };
 		4E5B43782CBCAB7500F7E850 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B43772CBCAB7500F7E850 /* CustomAlertView.swift */; };
+		4EB20A682CE29DC000F7937A /* correct.json in Resources */ = {isa = PBXBuildFile; fileRef = 4EB20A672CE29DC000F7937A /* correct.json */; };
 		4EF2A9F22CC074AA002E1956 /* ExploreOpportunitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2A9F12CC074AA002E1956 /* ExploreOpportunitiesCell.swift */; };
 		4EF2A9F62CC1F49C002E1956 /* Opportunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2A9F52CC1F49C002E1956 /* Opportunity.swift */; };
 		4EF2A9F82CC206D8002E1956 /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2A9F72CC206CE002E1956 /* Cities.swift */; };
@@ -86,7 +87,6 @@
 		F2D6C9BD2CAD19F5000E1713 /* Cairo-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9772CAD19F5000E1713 /* Cairo-Light.ttf */; };
 		F2D6C9BE2CAD19F5000E1713 /* Cairo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9782CAD19F5000E1713 /* Cairo-Medium.ttf */; };
 		F2D6C9BF2CAD19F5000E1713 /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9792CAD19F5000E1713 /* Cairo-SemiBold.ttf */; };
-		F2D6C9C02CAD19F5000E1713 /* correct.json in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C97F2CAD19F5000E1713 /* correct.json */; };
 		F2D6C9C12CAD19F5000E1713 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9802CAD19F5000E1713 /* loading.json */; };
 		F2D6C9C22CAD19F5000E1713 /* warning.json in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9812CAD19F5000E1713 /* warning.json */; };
 		F2D6C9C32CAD19F5000E1713 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2D6C9942CAD19F5000E1713 /* LaunchScreen.storyboard */; };
@@ -103,6 +103,7 @@
 		4E5B43732CBCAAF200F7E850 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		4E5B43752CBCAB2C00F7E850 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		4E5B43772CBCAB7500F7E850 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
+		4EB20A672CE29DC000F7937A /* correct.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = correct.json; sourceTree = "<group>"; };
 		4EF2A9F12CC074AA002E1956 /* ExploreOpportunitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreOpportunitiesCell.swift; sourceTree = "<group>"; };
 		4EF2A9F52CC1F49C002E1956 /* Opportunity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opportunity.swift; sourceTree = "<group>"; };
 		4EF2A9F72CC206CE002E1956 /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
@@ -153,7 +154,6 @@
 		F2D6C97B2CAD19F5000E1713 /* AppCheckProviderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCheckProviderFactory.swift; sourceTree = "<group>"; };
 		F2D6C97C2CAD19F5000E1713 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F2D6C97D2CAD19F5000E1713 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
-		F2D6C97F2CAD19F5000E1713 /* correct.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = correct.json; sourceTree = "<group>"; };
 		F2D6C9802CAD19F5000E1713 /* loading.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		F2D6C9812CAD19F5000E1713 /* warning.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = warning.json; sourceTree = "<group>"; };
 		F2D6C9832CAD19F5000E1713 /* InterestsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsCell.swift; sourceTree = "<group>"; };
@@ -288,8 +288,8 @@
 		F2D6C9822CAD19F5000E1713 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				4EB20A672CE29DC000F7937A /* correct.json */,
 				4E11EBFB2CCDEB0500D68045 /* tatawei.json */,
-				F2D6C97F2CAD19F5000E1713 /* correct.json */,
 				F2D6C9802CAD19F5000E1713 /* loading.json */,
 				F2D6C9812CAD19F5000E1713 /* warning.json */,
 			);
@@ -495,9 +495,9 @@
 				F2D6C9BD2CAD19F5000E1713 /* Cairo-Light.ttf in Resources */,
 				F2D6C9BE2CAD19F5000E1713 /* Cairo-Medium.ttf in Resources */,
 				F2D6C9BF2CAD19F5000E1713 /* Cairo-SemiBold.ttf in Resources */,
-				F2D6C9C02CAD19F5000E1713 /* correct.json in Resources */,
 				F2D6C9C12CAD19F5000E1713 /* loading.json in Resources */,
 				F2D6C9C22CAD19F5000E1713 /* warning.json in Resources */,
+				4EB20A682CE29DC000F7937A /* correct.json in Resources */,
 				F2D6C9C32CAD19F5000E1713 /* LaunchScreen.storyboard in Resources */,
 				F2D6C9C42CAD19F5000E1713 /* Main.storyboard in Resources */,
 				F2D6C9C52CAD19F5000E1713 /* Assets.xcassets in Resources */,

@@ -16,7 +16,7 @@ enum Gender: String, Codable {
 struct StudentOpportunity: Codable {
     var isAccepted: Bool
 }
- 
+
 struct Student: Codable {
     
     var id: String
@@ -34,7 +34,7 @@ struct Student: Codable {
     var latitude: Double
     var longitude: Double
     var interests: [InterestCategories]
-    var opportunities: [String]
+    var opportunities: [String: Bool]
     var badges: [String: Int]
     
     static var currentID: String {

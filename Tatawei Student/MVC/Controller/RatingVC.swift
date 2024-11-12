@@ -62,9 +62,7 @@ class RatingVC: UIViewController, Storyboarded {
             }
         }
         
-        UserDefaults.standard.set(true, forKey: "hasRatedOpportunityKey")
         rateTheOrganisation(rate: rate)
-        addHoursForStudent()
         
         
     }
@@ -91,7 +89,7 @@ class RatingVC: UIViewController, Storyboarded {
             OpportunityDataServices.shared.getOrganisationData(organisationID: opportunity.organizationID, completion: { organisation in
                 if let organisation = organisation {
                     var organizationImag: UIImage?
-                    StorageService.shared.downloadImage(from: organisation.organizationImageLink) { imag, error in
+                    StorageService.shared.downloadImage(from: "organisations_icons/\(organisation.id).jpg") { imag, error in
                         guard let image = imag else {return}
                         organizationImag = image
                     }
@@ -110,7 +108,16 @@ class RatingVC: UIViewController, Storyboarded {
         if let opportunity = opportunity {
             OpportunityDataServices.shared.updateOrganizationRating(organisationID: opportunity.organizationID, newRate: rate) { status, error in
                 if status {
-                    print("Rating success")
+                    if let studentSchoolID = Student.currentStudent?.school {
+                        OpportunityDataServices.shared.updateOpportunityInFirestore(studentID: Student.currentID, schoolID: studentSchoolID, opportunityId: opportunity.id) { success, error in
+                            if success {
+                                self.addHoursForStudent()
+                                self.updateStudentData()
+                            } else {
+                                print("Can't Change value for opportunity")
+                            }
+                        }
+                    }
                 } else {
                     print("Rating have error")
                 }
@@ -129,6 +136,19 @@ class RatingVC: UIViewController, Storyboarded {
             }
         }
     }
+    
+    func updateStudentData() {
+        if let schoolID = Student.currentStudent?.school {
+            StudentDataServices.shared.getStudentData(schoolID: schoolID, studentID: Student.currentID) { status, error in
+                if status! {
+                    print("Success to update locally storage")
+                } else {
+                    print("Have problem when update locally storage")
+                }
+            }
+        }
+    }
+    
 
 }
 

@@ -47,13 +47,12 @@ class OrganizationVC: UIViewController, Storyboarded {
             OpportunityDataServices.shared.getOrganisationData(organisationID: organizationID, completion: { organisation in
                 if let organisation = organisation {
                     var organizationImag: UIImage?
-                    StorageService.shared.downloadImage(from: organisation.organizationImageLink) { imag, error in
+                    StorageService.shared.downloadImage(from: "organisations_icons/\(organisation.id).jpg") { imag, error in
                         guard let image = imag else {return}
                         organizationImag = image
                     }
                     self.organisationImage.image = organizationImag
                     self.organisationName.text = organisation.name
-                    self.organisationEmail.text = organisation.email
                     self.organisationRate.text = String(format: "%.1f", organisation.rate)
                     self.numberOfResidents.text = "(\(organisation.numberOfReviewers)) مراجع"
                     self.organisationDescription.text = organisation.description

@@ -29,7 +29,6 @@ struct Opportunity: Codable {
     var latitude: Double
     var longitude: Double
     var studentsNumber: Int
-    var organizationImageLink: String
     var organizationID: String
     var organizationName: String
     var isAccepted: Bool?
@@ -64,11 +63,3 @@ func saveOpportunityLocally(_ opportunity: Opportunity) {
         print(error.localizedDescription)
     }
 }
-
-func resetRatingStatus() {
-    UserDefaults.standard.set(false, forKey: "hasRatedOpportunityKey")
-    userDefaults.removeObject(forKey: kCURRENTOPPORTUNITY)
-    userDefaults.synchronize()
-}
-
-

@@ -141,12 +141,12 @@ extension ExploreVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cellColorAndIcon = Icon(index: searchedOpportunities[indexPath.row].iconNumber, categories: searchedOpportunities[indexPath.row].category).opportunityIcon
         var organizationImag: UIImage?
-        StorageService.shared.downloadImage(from: searchedOpportunities[indexPath.row].organizationImageLink) { imag, error in
+        StorageService.shared.downloadImage(from: "organisations_icons/\(searchedOpportunities[indexPath.row].organizationID).jpg") { imag, error in
             guard let image = imag else {return}
             organizationImag = image
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ExploreOpportunitiesCell", for: indexPath) as! ExploreOpportunitiesCell
-        cell.configOpportunity(backgroundColor: cellColorAndIcon.1, opportunityImage: cellColorAndIcon.0, opportunityName: searchedOpportunities[indexPath.row].name, opportunityTime: searchedOpportunities[indexPath.row].time, opportunityHours: searchedOpportunities[indexPath.row].hour, opportunityCity: searchedOpportunities[indexPath.row].city.rawValue, organizationImage: organizationImag ?? #imageLiteral(resourceName: "P2.svg"))
+        cell.configOpportunity(backgroundColor: cellColorAndIcon.1, opportunityImage: cellColorAndIcon.0, opportunityName: searchedOpportunities[indexPath.row].name, opportunityTime: searchedOpportunities[indexPath.row].time, opportunityHours: searchedOpportunities[indexPath.row].hour, opportunityCity: searchedOpportunities[indexPath.row].city.rawValue, organizationImage: organizationImag ?? #imageLiteral(resourceName: "tatawei"))
         return cell
     }
     

@@ -299,7 +299,7 @@ class StudentsAccountVC: UIViewController, Storyboarded, DataSelectionDelegate {
                          SkillsBadges.problemSolving.rawValue: 0,
                          SkillsBadges.creativity.rawValue: 0,
                          SkillsBadges.criticalThinking.rawValue: 0]
-        AuthService.shared.registerUserWith(email: emailTF.text!, password: passwordTF.text!, name: nameTF.text!, phoneNumber: phoneNumberTF.text!, gender: Gender(rawValue: genderTF.text!)!, city: cityTF.text!, school: schoolTF.text!, level: levelTF.text!, isStudentAccepted: 0, hoursCompleted: 0, pastHours: 0, location: mapInformation.text!, latitude: locationLatitude ?? 0, longitude: locationLongitude ?? 0, interests: selectedInterestsType, opportunities: [], badges: allSkillsBadges) { error in
+        AuthService.shared.registerUserWith(email: emailTF.text!, password: passwordTF.text!, name: nameTF.text!, phoneNumber: phoneNumberTF.text!, gender: Gender(rawValue: genderTF.text!)!, city: cityTF.text!, school: schoolTF.text!, level: levelTF.text!, isStudentAccepted: 0, hoursCompleted: 0, pastHours: 0, location: mapInformation.text!, latitude: locationLatitude ?? 0, longitude: locationLongitude ?? 0, interests: selectedInterestsType, opportunities: [:], badges: allSkillsBadges) { error in
             if error == nil {
                 let successView = MessageView(message: "تم تسجيلك بنجاح، سيتم نقلك للصفحة الرئيسية بعد لحظات", animationName: "correct", animationTime: 1)
                 successView.show(in: self.view)
