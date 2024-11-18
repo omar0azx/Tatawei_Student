@@ -153,10 +153,9 @@ class OpportunityVC: UIViewController, Storyboarded {
     
     func getOpportunituInformaion() {
         if let opportunity = opportunity {
-            var organizationImag: UIImage?
-            StorageService.shared.downloadImage(from: "organisations_icons/\(opportunity.id).jpg") { imag, error in
+            StorageService.shared.downloadImage(from: "organisations_icons/\(opportunity.organizationID).jpg") { imag, error in
                 guard let image = imag else {return}
-                organizationImag = image
+                self.organisationImage.image = image
             }
             opportunityImage.image = Icon(index: opportunity.iconNumber, categories: opportunity.category).opportunityIcon.0
             opportunityView.backgroundColor = Icon(index: opportunity.iconNumber, categories: opportunity.category).opportunityIcon.1
@@ -167,7 +166,6 @@ class OpportunityVC: UIViewController, Storyboarded {
             opportunityLocation.text = opportunity.location
             organisationName.text = opportunity.organizationName
             opportunityStudentsNumber.text = "عدد الطلاب المطلوبين \(opportunity.studentsNumber)"
-            organisationImage.image = organizationImag
         }
     }
     

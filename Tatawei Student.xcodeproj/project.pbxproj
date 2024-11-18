@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E11EBFC2CCDEB0500D68045 /* tatawei.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E11EBFB2CCDEB0500D68045 /* tatawei.json */; };
 		4E31BD972CD5DF7100454FCD /* RatingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E31BD962CD5DF7100454FCD /* RatingVC.swift */; };
 		4E32614A2CDFAA8400005B6A /* CustomTermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3261492CDFAA7A00005B6A /* CustomTermsView.swift */; };
 		4E5B43742CBCAAF200F7E850 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B43732CBCAAF200F7E850 /* SettingsCell.swift */; };
@@ -96,7 +95,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4E11EBFB2CCDEB0500D68045 /* tatawei.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = tatawei.json; sourceTree = "<group>"; };
 		4E14CFC02C9E2FE400103405 /* Tatawei Student.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tatawei Student.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E31BD962CD5DF7100454FCD /* RatingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingVC.swift; sourceTree = "<group>"; };
 		4E3261492CDFAA7A00005B6A /* CustomTermsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTermsView.swift; sourceTree = "<group>"; };
@@ -289,7 +287,6 @@
 			isa = PBXGroup;
 			children = (
 				4EB20A672CE29DC000F7937A /* correct.json */,
-				4E11EBFB2CCDEB0500D68045 /* tatawei.json */,
 				F2D6C9802CAD19F5000E1713 /* loading.json */,
 				F2D6C9812CAD19F5000E1713 /* warning.json */,
 			);
@@ -491,7 +488,6 @@
 				F2D6C9BA2CAD19F5000E1713 /* Cairo-Regular.ttf in Resources */,
 				F2D6C9BB2CAD19F5000E1713 /* Cairo-Black.ttf in Resources */,
 				F2D6C9BC2CAD19F5000E1713 /* Cairo-Bold.ttf in Resources */,
-				4E11EBFC2CCDEB0500D68045 /* tatawei.json in Resources */,
 				F2D6C9BD2CAD19F5000E1713 /* Cairo-Light.ttf in Resources */,
 				F2D6C9BE2CAD19F5000E1713 /* Cairo-Medium.ttf in Resources */,
 				F2D6C9BF2CAD19F5000E1713 /* Cairo-SemiBold.ttf in Resources */,

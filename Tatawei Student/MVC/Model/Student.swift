@@ -28,8 +28,9 @@ struct Student: Codable {
     var school: String
     var level: String
     var isStudentAccepted: Int
+    var lastOpportunity: String
     var hoursCompleted: Float
-    var pastHours: Float
+    var newHours: Float
     var location: String
     var latitude: Double
     var longitude: Double
