@@ -167,7 +167,7 @@ class StudentDataServices {
         }
     }
     
-    func updateStudentHours(additionalHours: Float, completion: @escaping (_ error: Error?) -> Void) {
+    func updateStudentHours(additionalHours: Float, newHours: Int, lastOpportunity: String, completion: @escaping (_ error: Error?) -> Void) {
         // Get reference to the student's document in Firestore
         let studentRef = FirestoreReference(.schools).document(Student.currentStudent!.school)
             .collection("students").document(Student.currentID)
@@ -179,7 +179,7 @@ class StudentDataServices {
                     let updatedHoursCompleted = currentHoursCompleted + additionalHours // Add the additional hours
                     
                     // Update Firestore with the new hoursCompleted value
-                    studentRef.updateData(["hoursCompleted": updatedHoursCompleted]) { error in
+                    studentRef.updateData(["hoursCompleted": updatedHoursCompleted, "newHours": newHours, "lastOpportunity": lastOpportunity]) { error in
                         if let error = error {
                             print("Error updating hoursCompleted: \(error.localizedDescription)")
                             completion(error)
@@ -203,6 +203,32 @@ class StudentDataServices {
             }
         }
     }
+    
+    func updateStudentOpportunities(opportunityID: String, completion: @escaping (_ error: Error?) -> Void) {
+        // Get reference to the student's document in Firestore
+        let studentRef = FirestoreReference(.schools)
+            .document(Student.currentStudent!.school)
+            .collection("students")
+            .document(Student.currentID)
+        
+        // Update the document by removing the opportunityID from the opportunities array
+        studentRef.updateData([
+            "opportunities": FieldValue.arrayRemove([opportunityID])
+        ]) { error in
+            if let error = error {
+                print("Error removing opportunity ID from student's opportunities array: \(error.localizedDescription)")
+                completion(error)
+            } else {
+                print("Successfully removed opportunity ID from student's opportunities array.")
+                if var student = Student.currentStudent {
+                    student.opportunities.removeValue(forKey: opportunityID)
+                    saveUserLocally(student)
+                }
+                completion(nil)
+            }
+        }
+    }
+
     
     //MARK:- Download all studnts from current student school
     func getAllStudentsFromSchool(schoolID: String, completion: @escaping (_ allUsers: [Student], _ error: Error?)->Void) {

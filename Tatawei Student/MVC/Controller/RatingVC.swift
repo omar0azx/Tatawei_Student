@@ -127,7 +127,7 @@ class RatingVC: UIViewController, Storyboarded {
     
     func addHoursForStudent() {
         if let opportunity = opportunity {
-            StudentDataServices.shared.updateStudentHours(additionalHours: Float(opportunity.hour)) { error in
+            StudentDataServices.shared.updateStudentHours(additionalHours: Float(opportunity.hour), newHours: opportunity.hour, lastOpportunity: opportunity.id) { error in
                 if (error != nil) {
                     print("Rating success")
                 } else {

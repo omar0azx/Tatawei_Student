@@ -109,6 +109,7 @@ class HomeVC: UIViewController, Storyboarded {
                     print("Error fetching student opportunities: \(error.localizedDescription)")
                     return
                 }
+                
                 DispatchQueue.main.async {
                     self.opportunity = opportunities.sorted {
                         guard let date1 = $0.formattedDate, let date2 = $1.formattedDate else {
@@ -116,18 +117,29 @@ class HomeVC: UIViewController, Storyboarded {
                         }
                         return date1 < date2
                     }
+                    
+                    let studentNotAttendance = self.opportunity.contains { $0.status == .finished && $0.isAttended == false }
+                    if studentNotAttendance {
+                        if let opportunityToRemove = self.opportunity.first(where: { $0.status == .finished && $0.isAttended == false }) {
+                            StudentDataServices.shared.updateStudentOpportunities(opportunityID: opportunityToRemove.id) { error in
+                                if let error = error {
+                                    print("Failed to update opportunities: \(error.localizedDescription)")
+                                } else {
+                                    print("Opportunities array updated successfully.")
+                                    if let index = self.opportunity.firstIndex(where: { $0.id == opportunityToRemove.id }) {
+                                        self.opportunity.remove(at: index)
+                                        print("Opportunity removed from local array.")
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
                     self.finishedOpportunities = self.opportunity.filter{$0.status == .finished}
                     self.opportunity = self.opportunity.filter{$0.status == .open || $0.status == .inProgress}
-                    if self.opportunity.first?.date == DateFormatter.localizedString(from: Date(), dateStyle: .short, timeStyle: .none) {
-                        self.showQRCodeBTN.backgroundColor = .standr
-                        saveOpportunityLocally(self.opportunity.first!)
-                        self.opportunityName.text = self.opportunity.first!.name
-                    } else {
-                        self.showQRCodeBTN.backgroundColor = .systemGray
-                        self.opportunityName.text = "لا يوجد لديك فرصة اليوم"
-                    }
+                    self.handleTodayOpportunity()
                     if let opportunity = self.finishedOpportunities.first(where: { opportunity in
-                        studentOpportunities[opportunity.id] == false && opportunity.status == .finished
+                        studentOpportunities[opportunity.id] == false && opportunity.status == .finished && opportunity.isAttended == true
                     }) {
                         self.delegate?.rateTheOrganisation(opportunity: opportunity)
                     }
@@ -140,6 +152,17 @@ class HomeVC: UIViewController, Storyboarded {
             collectionView.reloadData()
             print("No opportunities available for the current student.")
             
+        }
+    }
+    
+    func handleTodayOpportunity() {
+        if self.opportunity.first?.date == DateFormatter.localizedString(from: Date(), dateStyle: .short, timeStyle: .none) {
+            self.showQRCodeBTN.backgroundColor = .standr
+            saveOpportunityLocally(self.opportunity.first!)
+            self.opportunityName.text = self.opportunity.first!.name
+        } else {
+            self.showQRCodeBTN.backgroundColor = .systemGray
+            self.opportunityName.text = "لا يوجد لديك فرصة اليوم"
         }
     }
 

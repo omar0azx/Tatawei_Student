@@ -32,6 +32,7 @@ struct Opportunity: Codable {
     var organizationID: String
     var organizationName: String
     var isAccepted: Bool?
+    var isAttended: Bool?
     
     var formattedDate: Date? {
             let dateFormatter = DateFormatter()

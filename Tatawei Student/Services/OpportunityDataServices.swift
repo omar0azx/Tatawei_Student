@@ -98,7 +98,7 @@ class OpportunityDataServices {
             completion(true, nil)
         }
     }
-
+    
     private func updateOpportunityRegistration(opportunityRef: DocumentReference, studentID: String, completion: @escaping (_ status: Bool, _ error: Error?) -> Void) {
 
         opportunityRef.getDocument { (document, error) in
@@ -106,8 +106,9 @@ class OpportunityDataServices {
                 print("Student ID already registered in opportunity.")
                 completion(false, nil)
             } else {
+                
                 // Set the 'isAccepted' field only for this student
-                opportunityRef.setData(["isAccepted": false]) { error in
+                opportunityRef.setData(["isAccepted": false, "isAttended": false]) { error in
                     if let error = error {
                         print("Error registering student in opportunity: \(error)")
                         completion(false, error)
@@ -173,7 +174,6 @@ class OpportunityDataServices {
             return
         }
         
-        let db = Firestore.firestore()
         var opportunityDict: [String: Opportunity] = [:] // Dictionary to store opportunities by ID
         let dispatchGroup = DispatchGroup()
 
@@ -196,8 +196,10 @@ class OpportunityDataServices {
                             document.reference.collection("studentOpportunity").document(Student.currentID).getDocument { (studentDoc, error) in
                                 if error == nil {
                                     opportunity.isAccepted = studentDoc?.data()?["isAccepted"] as? Bool ?? false
+                                    opportunity.isAttended = studentDoc?.data()?["isAttended"] as? Bool ?? false
                                 } else {
-                                    opportunity.isAccepted = false // Default if not registered
+                                    opportunity.isAccepted = false
+                                    opportunity.isAttended = false
                                 }
                                 // Add to dictionary using opportunity ID as the key
                                 opportunityDict[opportunityID] = opportunity
