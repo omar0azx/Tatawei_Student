@@ -9,14 +9,13 @@ import UIKit
 
 class ProfileVC: UIViewController, Storyboarded {
     
-    
     //MARK: - Varibales
     
     var coordinator: MainCoordinator?
     
     var settings: [MenuItem] = [
-        MenuItem(image: UIImage(systemName: "globe")!, label: .termsAndConditions),
-        MenuItem(image: UIImage(systemName: "globe")!, label: .FrequentlyAskedQuestions),
+        MenuItem(image: UIImage(systemName: "book.pages.fill")!, label: .termsAndConditions),
+        MenuItem(image: UIImage(systemName: "questionmark.bubble.fill")!, label: .FrequentlyAskedQuestions),
         MenuItem(image: UIImage(systemName: "info.circle.fill")!, label: .about),
         MenuItem(image: UIImage(systemName: "lock.open.rotation")!, label: .resetPassword),
         MenuItem(image: UIImage(systemName: "trash.fill")!, label: .deleteAccount),

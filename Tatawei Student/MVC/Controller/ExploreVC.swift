@@ -154,9 +154,9 @@ extension ExploreVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
         let collectionWidth = collectionView.bounds.width
         
         if collectionWidth / 2 < 300 {
-            return CGSize(width: view.frame.width / 2.25, height: view.frame.height * 0.29)
+            return CGSize(width: view.frame.width / 2.25, height: view.frame.height * 0.3)
         } else {
-            return CGSize(width: view.frame.width / 3.25, height: view.frame.height * 0.39)
+            return CGSize(width: view.frame.width / 3.25, height: view.frame.height * 0.4)
         }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

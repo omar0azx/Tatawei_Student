@@ -2576,21 +2576,24 @@ secondary</string>
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="W4c-i8-5dd">
-                                                            <rect key="frame" x="70" y="103.33333333333333" width="59" height="43.666666666666671"/>
+                                                            <rect key="frame" x="70" y="117" width="59" height="30"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="وقت الفرصه" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiI-37-mnI">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="وقت الفرصه" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiI-37-mnI">
                                                                     <rect key="frame" x="0.0" y="0.0" width="59" height="19"/>
                                                                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="10"/>
                                                                     <color key="textColor" red="0.20392156862745098" green="0.20392156862745098" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ساعات الفرصه" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8g-lX-0pP">
-                                                                    <rect key="frame" x="0.0" y="24.666666666666671" width="59" height="19"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ساعات الفرصه" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8g-lX-0pP">
+                                                                    <rect key="frame" x="0.0" y="19" width="59" height="11"/>
                                                                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="10"/>
                                                                     <color key="textColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="3WI-LY-E4J"/>
+                                                            </constraints>
                                                         </stackView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cRa-NU-EHQ" customClass="DesignableView" customModule="Tatawei_Student" customModuleProvider="target">
                                                             <rect key="frame" x="103" y="157" width="30" height="30"/>
@@ -2624,8 +2627,8 @@ secondary</string>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="افطار غير صايم" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05r-6J-4p0">
-                                                            <rect key="frame" x="41" y="65" width="88" height="28.333333333333329"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="افطار غير صايم" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05r-6J-4p0">
+                                                            <rect key="frame" x="10" y="65" width="119" height="42"/>
                                                             <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="15"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -2637,7 +2640,7 @@ secondary</string>
                                                                 <constraint firstAttribute="width" constant="28" id="cye-0f-zF4"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="9"/>
-                                                            <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
+                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NH8-xS-LOM">
@@ -2666,6 +2669,7 @@ secondary</string>
                                                         <constraint firstItem="W4c-i8-5dd" firstAttribute="top" secondItem="05r-6J-4p0" secondAttribute="bottom" constant="10" id="ixm-0F-xjR"/>
                                                         <constraint firstAttribute="trailing" secondItem="cRa-NU-EHQ" secondAttribute="trailing" constant="6" id="j5V-Kt-gcs"/>
                                                         <constraint firstAttribute="trailing" secondItem="05r-6J-4p0" secondAttribute="trailing" constant="10" id="jiq-Jc-jed"/>
+                                                        <constraint firstItem="05r-6J-4p0" firstAttribute="leading" secondItem="Qs5-9p-MCf" secondAttribute="leading" constant="10" id="onp-Na-BU9"/>
                                                         <constraint firstAttribute="bottom" secondItem="NH8-xS-LOM" secondAttribute="bottom" constant="1" id="s9V-ke-lBi"/>
                                                         <constraint firstItem="NH8-xS-LOM" firstAttribute="leading" secondItem="Qs5-9p-MCf" secondAttribute="leading" constant="44" id="sIV-SG-yTh"/>
                                                         <constraint firstAttribute="trailing" secondItem="W4c-i8-5dd" secondAttribute="trailing" constant="10" id="zB2-ha-Wp9"/>
@@ -2953,10 +2957,10 @@ secondary</string>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="46J-UL-HYn">
                                         <rect key="frame" x="10" y="5" width="362" height="394"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QIv-Ta-hza">
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QIv-Ta-hza">
                                             <size key="itemSize" width="158" height="244"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="50" height="50"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
@@ -2977,14 +2981,14 @@ secondary</string>
                                                                         <constraint firstAttribute="height" constant="100" id="eI8-FS-Yki"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="opp name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfj-lM-WAi">
-                                                                    <rect key="frame" x="53.666666666666664" y="70" width="84.333333333333343" height="37.666666666666657"/>
-                                                                    <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="20"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="opp name" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfj-lM-WAi">
+                                                                    <rect key="frame" x="10" y="70" width="128" height="34"/>
+                                                                    <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="18"/>
                                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-3" translatesAutoresizingMaskIntoConstraints="NO" id="zy2-bw-3ex">
-                                                                    <rect key="frame" x="92.666666666666671" y="117.66666666666666" width="45.333333333333329" height="68"/>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-5" translatesAutoresizingMaskIntoConstraints="NO" id="zy2-bw-3ex">
+                                                                    <rect key="frame" x="92.666666666666671" y="130" width="45.333333333333329" height="64"/>
                                                                     <subviews>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JsR-T3-XjT">
                                                                             <rect key="frame" x="0.0" y="0.0" width="45.333333333333336" height="24.666666666666668"/>
@@ -3005,7 +3009,7 @@ secondary</string>
                                                                             </subviews>
                                                                         </stackView>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="abh-R2-8iw">
-                                                                            <rect key="frame" x="0.0" y="21.666666666666686" width="45.333333333333336" height="24.666666666666671"/>
+                                                                            <rect key="frame" x="0.0" y="19.666666666666657" width="45.333333333333336" height="24.666666666666671"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hour" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0We-5l-1vr">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="25.333333333333332" height="24.666666666666668"/>
@@ -3023,7 +3027,7 @@ secondary</string>
                                                                             </subviews>
                                                                         </stackView>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="S6v-FT-O21">
-                                                                            <rect key="frame" x="0.0" y="43.333333333333343" width="45.333333333333336" height="24.666666666666671"/>
+                                                                            <rect key="frame" x="0.0" y="39.333333333333343" width="45.333333333333336" height="24.666666666666671"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="city" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5H-9p-ea4">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="25.333333333333332" height="24.666666666666668"/>
@@ -3068,10 +3072,11 @@ secondary</string>
                                                             <constraints>
                                                                 <constraint firstItem="afT-n2-ega" firstAttribute="top" secondItem="MWx-Y3-F2U" secondAttribute="top" constant="-30" id="9Cz-x9-bcy"/>
                                                                 <constraint firstItem="Rfj-lM-WAi" firstAttribute="top" secondItem="afT-n2-ega" secondAttribute="bottom" id="Bti-Km-25G"/>
+                                                                <constraint firstAttribute="bottom" secondItem="zy2-bw-3ex" secondAttribute="bottom" constant="15" id="KQO-CM-kNb"/>
                                                                 <constraint firstAttribute="trailing" secondItem="afT-n2-ega" secondAttribute="trailing" id="PR3-1z-xW0"/>
                                                                 <constraint firstAttribute="bottom" secondItem="HsF-xy-SOA" secondAttribute="bottom" constant="10" id="PoD-tU-JzF"/>
                                                                 <constraint firstItem="HsF-xy-SOA" firstAttribute="leading" secondItem="MWx-Y3-F2U" secondAttribute="leading" constant="10" id="bMc-cr-8Cv"/>
-                                                                <constraint firstItem="zy2-bw-3ex" firstAttribute="top" secondItem="Rfj-lM-WAi" secondAttribute="bottom" constant="10" id="gTk-gE-mET"/>
+                                                                <constraint firstItem="Rfj-lM-WAi" firstAttribute="leading" secondItem="MWx-Y3-F2U" secondAttribute="leading" constant="10" id="e0d-w3-aD1"/>
                                                                 <constraint firstAttribute="trailing" secondItem="zy2-bw-3ex" secondAttribute="trailing" constant="10" id="gjd-PU-12O"/>
                                                                 <constraint firstAttribute="trailing" secondItem="Rfj-lM-WAi" secondAttribute="trailing" constant="10" id="h5f-Fx-dmN"/>
                                                             </constraints>
@@ -3101,6 +3106,10 @@ secondary</string>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
+                                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5GE-0p-Ag5">
+                                            <rect key="frame" x="0.0" y="244" width="362" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionReusableView>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <integer key="value" value="40"/>
@@ -4010,7 +4019,7 @@ secondary</string>
                                                             <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                    <color key="backgroundColor" systemColor="systemGray4Color"/>
                                                     <constraints>
                                                         <constraint firstItem="qYL-uQ-XF3" firstAttribute="centerY" secondItem="Q1c-y0-ab8" secondAttribute="centerY" id="3zu-OL-cnL"/>
                                                         <constraint firstItem="Sb4-i5-TvQ" firstAttribute="top" secondItem="Md2-Uf-mB9" secondAttribute="bottom" constant="1.3333333333333357" id="4g9-Gm-VHj"/>
@@ -5548,9 +5557,6 @@ secondary</string>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="viewFlipsideBackgroundColor">
             <color red="0.12156862745098039" green="0.12941176470588237" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

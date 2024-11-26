@@ -76,7 +76,7 @@ class OpportunityDataServices {
             .collection("students").document(Student.currentID)
         
         studentRef.updateData([
-            "opportunities": FieldValue.arrayRemove([opportunity.id])
+            "opportunities.\(opportunity.id)": FieldValue.delete()
             ]) { error in
                 if let error = error {
                     // An error occurred during the update
