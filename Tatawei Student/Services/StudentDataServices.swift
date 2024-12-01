@@ -38,6 +38,26 @@ class StudentDataServices {
         
     }
     
+    func getSchools(completion: @escaping ([String: String]) -> Void) {
+        var schools: [String: String] = [:] // Dictionary to store [id: name]
+        db.collection("schools").getDocuments { snapshot, error in
+            if let error = error {
+                print("Error fetching schools: \(error.localizedDescription)")
+                completion([:]) // Return empty dictionary on error
+                return
+            }
+            
+            snapshot?.documents.forEach { document in
+                let id = document.documentID
+                let name = document.get("schoolName") as? String ?? ""
+                schools[id] = name
+            }
+            
+            completion(schools) // Return the dictionary on success
+        }
+    }
+
+    
     
     // MARK: - Download User from Firestore
     func getStudentByCollectionGroup(studentID: String) {
@@ -127,12 +147,13 @@ class StudentDataServices {
         
         studentRef.getDocument { (document, error) in
             if let document = document, document.exists {
-                if let data = document.data(), let hoursCompleted = data["hoursCompleted"] as? Float, let isStudentAccepted = data["isStudentAccepted"] as? Int, let badges = data["badges"] as? [String: Int] {
+                if let data = document.data(), let hoursCompleted = data["hoursCompleted"] as? Float, let isStudentAccepted = data["isStudentAccepted"] as? Int, let badges = data["badges"] as? [String: Int], let school = data["school"] as? String {
                     
                     var updatedStudent = updatedData
                     updatedStudent.hoursCompleted = hoursCompleted
                     updatedStudent.isStudentAccepted = isStudentAccepted
                     updatedStudent.badges = badges
+                    updatedStudent.school = school
                     
                     // Convert updatedStudent to a dictionary using JSONEncoder
                     do {

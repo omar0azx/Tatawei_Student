@@ -290,21 +290,13 @@
                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="-8" translatesAutoresizingMaskIntoConstraints="NO" id="Rb8-ZY-6uZ">
                                         <rect key="frame" x="0.0" y="33" width="0.0" height="87"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fP9-vq-VfY">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="تطوعي" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fP9-vq-VfY">
                                                 <rect key="frame" x="0.0" y="0.0" width="0.0" height="55"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="55" id="MAw-3T-y0L"/>
                                                 </constraints>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="تطوعي">
-                                                        <attributes>
-                                                            <color key="NSColor" name="spare"/>
-                                                            <font key="NSFont" metaFont="system" size="30"/>
-                                                            <font key="NSOriginalFont" size="30" name="NotoSansSyriac-Regular"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
+                                                <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="30"/>
+                                                <color key="textColor" name="spare"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzE-p2-ake">
@@ -789,7 +781,7 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="التالي">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                            <fontDescription key="titleFontDescription" name="Cairo-Regular" family="Cairo" pointSize="18"/>
                                         </buttonConfiguration>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2443,12 +2435,12 @@ secondary</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🖐🏼اهلا" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcD-Wf-NwQ">
-                                <rect key="frame" x="77" y="64" width="300" height="36"/>
+                                <rect key="frame" x="294.66666666666669" y="64" width="82.333333333333314" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="6Gy-iT-dCv"/>
                                     <constraint firstAttribute="height" constant="36" id="DL9-Bd-Bbm"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="30"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -2793,7 +2785,6 @@ secondary</string>
                             <constraint firstAttribute="trailing" secondItem="FbN-nk-YoV" secondAttribute="trailing" constant="50" id="eWV-bu-48H"/>
                             <constraint firstAttribute="trailing" secondItem="HPv-s4-2dC" secondAttribute="trailing" id="f9X-TF-ty6"/>
                             <constraint firstItem="IQa-mW-1WW" firstAttribute="leading" secondItem="Wiz-5p-AoE" secondAttribute="leading" constant="40" id="j3w-5l-ODP"/>
-                            <constraint firstItem="rcD-Wf-NwQ" firstAttribute="leading" secondItem="Wiz-5p-AoE" secondAttribute="leading" constant="77" id="mDA-ga-Ixd"/>
                             <constraint firstItem="pon-ez-L50" firstAttribute="centerX" secondItem="HPv-s4-2dC" secondAttribute="centerX" id="tFx-Dm-NQq"/>
                             <constraint firstAttribute="trailing" secondItem="d4v-ar-i0D" secondAttribute="trailing" constant="27" id="vS2-Kx-DRQ"/>
                             <constraint firstItem="nAZ-je-LIs" firstAttribute="leading" secondItem="hk6-Yj-2eW" secondAttribute="leading" constant="30" id="z4w-Og-G9w"/>
@@ -3337,7 +3328,7 @@ secondary</string>
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                                <color key="backgroundColor" red="0.77515161700833746" green="0.86732211020519334" blue="0.87870227990645522" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstItem="CEE-5r-l0b" firstAttribute="leading" secondItem="VDO-q8-yaU" secondAttribute="leading" constant="10" id="3zj-Sm-yGD"/>
                                                     <constraint firstItem="uJE-Tl-4aG" firstAttribute="top" secondItem="VDO-q8-yaU" secondAttribute="top" id="BFh-2D-1ce"/>
@@ -3391,7 +3382,7 @@ secondary</string>
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                                <color key="backgroundColor" red="0.87843483690000002" green="0.84624026712649281" blue="0.80647913056576204" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstItem="KEa-Ef-Eel" firstAttribute="top" secondItem="tWI-wp-mcz" secondAttribute="top" id="69F-5v-WEO"/>
                                                     <constraint firstAttribute="trailing" secondItem="RnH-6C-Ogw" secondAttribute="trailing" constant="10" id="C2N-la-LZg"/>
@@ -3455,7 +3446,7 @@ secondary</string>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                        <color key="backgroundColor" red="0.8633640714319033" green="0.8243419798271473" blue="0.88574557834201384" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="4zS-hJ-XBZ" firstAttribute="top" secondItem="nlk-04-Fs7" secondAttribute="top" constant="112" id="1xw-YW-Su5"/>
@@ -4002,19 +3993,19 @@ secondary</string>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اسم الفرصة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3U-MH-76m">
-                                                            <rect key="frame" x="73" y="17" width="191" height="12"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                            <rect key="frame" x="73" y="6.3333333333333339" width="191" height="19"/>
+                                                            <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="10"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تاريخ الفرصة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sb4-i5-TvQ">
-                                                            <rect key="frame" x="73" y="49" width="191" height="12"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                            <rect key="frame" x="73" y="52.333333333333336" width="191" height="19.000000000000007"/>
+                                                            <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="وقت الفرصة " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Md2-Uf-mB9">
-                                                            <rect key="frame" x="73" y="35.666666666666664" width="191" height="12"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                            <rect key="frame" x="73" y="32" width="191" height="19"/>
+                                                            <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </label>

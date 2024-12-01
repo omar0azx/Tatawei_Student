@@ -24,6 +24,9 @@ class StudentsAccountVC: UIViewController, Storyboarded, DataSelectionDelegate {
     
     var stepNumber = 0
     
+    var schools: [String: String] = [:] // Store the schools globally
+    var selectedSchoolID: String?
+    
     var cities: [String] = ["", Cities.Jeddah.rawValue, Cities.Riyadh.rawValue, Cities.Macca.rawValue, Cities.Madenah.rawValue, Cities.Taif.rawValue, Cities.Dammam.rawValue, Cities.Abha.rawValue]
     var gender: [String] = ["", Gender.male.rawValue, Gender.female.rawValue]
     
@@ -77,9 +80,36 @@ class StudentsAccountVC: UIViewController, Storyboarded, DataSelectionDelegate {
         definePageType()
         genderTF.convertToPicker(options: gender)
         cityTF.convertToPicker(options: cities)
-        schoolTF.convertToPicker(options: ["", "شباب الفهد", "الأقصى", "الأندلس", "الحمدانية"])
+        getSchools()
         levelTF.convertToPicker(options: ["", "أولى ثانوي", "ثاني ثانوي", "ثالث ثانوي"])
         self.hideKeyboardWhenTappedAround()
+    }
+    
+    func getSchools() {
+        StudentDataServices.shared.getSchools { schools in
+            DispatchQueue.main.async {
+                self.schools = schools // Store the schools in the property
+                var schoolNames = Array(schools.values)
+                schoolNames.insert("", at: 0) // Insert an empty string as the first option
+                self.schoolTF.convertToPicker(options: schoolNames)
+                
+                // When the picker value changes
+                self.schoolTF.addTarget(self, action: #selector(self.schoolSelected(_:)), for: .editingDidEnd)
+                if self.mode == .editProfile {
+                    guard let student = Student.currentStudent else {return}
+                    self.schoolTF.text = schools[student.school]
+                }
+            }
+        }
+    }
+    
+    @objc func schoolSelected(_ sender: UITextField) {
+        // Get the selected value (school name)
+        if let selectedSchoolName = sender.text {
+            // Find the corresponding ID
+            selectedSchoolID = schools.first { $0.value == selectedSchoolName }?.key
+            print("Selected School ID: \(selectedSchoolID ?? "None")")
+        }
     }
     
     func definePageType() {
@@ -299,7 +329,7 @@ class StudentsAccountVC: UIViewController, Storyboarded, DataSelectionDelegate {
                          SkillsBadges.problemSolving.rawValue: 0,
                          SkillsBadges.creativity.rawValue: 0,
                          SkillsBadges.criticalThinking.rawValue: 0]
-        AuthService.shared.registerUserWith(email: emailTF.text!, password: passwordTF.text!, name: nameTF.text!, phoneNumber: phoneNumberTF.text!, gender: Gender(rawValue: genderTF.text!)!, city: cityTF.text!, school: schoolTF.text!, level: levelTF.text!, isStudentAccepted: 0, lastOpportunity: "", hoursCompleted: 0, newHours: 0, location: mapInformation.text!, latitude: locationLatitude ?? 0, longitude: locationLongitude ?? 0, interests: selectedInterestsType, opportunities: [:], badges: allSkillsBadges) { error in
+        AuthService.shared.registerUserWith(email: emailTF.text!, password: passwordTF.text!, name: nameTF.text!, phoneNumber: phoneNumberTF.text!, gender: Gender(rawValue: genderTF.text!)!, city: cityTF.text!, school: selectedSchoolID!, level: levelTF.text!, isStudentAccepted: 0, lastOpportunity: "", hoursCompleted: 0, newHours: 0, location: mapInformation.text!, latitude: locationLatitude ?? 0, longitude: locationLongitude ?? 0, interests: selectedInterestsType, opportunities: [:], badges: allSkillsBadges) { error in
             if error == nil {
                 let successView = MessageView(message: "تم تسجيلك بنجاح، سيتم نقلك للصفحة الرئيسية بعد لحظات", animationName: "correct", animationTime: 1)
                 successView.show(in: self.view)
